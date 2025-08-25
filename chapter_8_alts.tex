@@ -1,0 +1,915 @@
+\documentclass[../notes_compiled.tex]{subfiles}
+
+
+\begin{document}
+
+\section{Alternative Investments}
+
+\subsection{Feature, methods, and structures}
+\begin{itemize}
+\item Alternative investments offer diversification to an investor, with respect to traditional investment. It expands the universe of potential investments, and typically carries low correlations with traditional assets
+\item Alternative investments are typically less liquid, and have longer time horizons that traditional investments. The minimum investment size is typically much greater, and often requires more specialised knowledge. As such, they ten to command higher fees (mangement and performance)
+
+\item Characteristics of alternative investments include
+\begin{itemize}
+\item Information structures that facilitate direct investment by management
+\item Information asymmetry between the fund mangers and investors in the fund
+\item Difficulty in accurately measuring performance
+\end{itemize}
+
+\item Types of alternative investments include
+\begin{itemize}
+\item Private capital (Equity and debt)
+\item Real estate
+\item Natural resources (Commodities, farmland, timberland)
+\item Infrastructure (Public-private partnerships)
+\item Digital assets (Cryptocurrencies)
+\item Hedge funds (Alpha-seeking strategies)
+\end{itemize}
+
+\item Alterntative investment methods include
+\begin{itemize}
+\item Fund investing -- Investing in a pool of assets alongside other investors
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,l]}, width = 0.8\textwidth}
+\hline[1.25pt]
+\SetCell[r=1,c=1]{c}\textbf{Advantages} & \SetCell[r=1,c=1]{c}\textbf{Disadvantages} \\ \hline
+Fund manager expertise & Large capital investment \\
+Diversification & Long investment horizon \\
+Lower investor involvement & Limited transparency and informational asymmetry \\
+& Higher management / incentive fees \\ \hline[1.25pt]
+\end{tblr}
+\caption{Advantages and disadvantages of fund investing}
+\end{table}
+\item A term sheet will detail
+\begin{multicols}{3}
+\begin{itemize}
+\item Investment policy 
+\item Fee structure
+\item Requirements
+\end{itemize}
+\end{multicols}
+\item Co-investing -- Fund investing with the right to directly invest in assets alongside the fund manager
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,l]}, width = 0.8\textwidth}
+\hline[1.25pt]
+\SetCell[r=1,c=1]{c}\textbf{Advantages to investors} & \SetCell[r=1,c=1]{c}\textbf{Advantages to fund managers} \\ \hline
+Lower fees & \SetCell[r=2]{l}Increase in availability of investment funds \\
+More control \\
+Benefit from mager expertise & Expand scope and diversification of investments \\ \hline[1.25pt]
+\end{tblr}
+\caption{Advantages of co-investing to investors and fund managers}
+\end{table}
+
+\item Direct investing -- Investor purchases assets
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,l]}, width = 0.8\textwidth}
+\hline[1.25pt]
+\SetCell[r=1,c=1]{c}\textbf{Advantages} & \SetCell[r=1,c=1]{c}\textbf{Disadvantages} \\ \hline
+No fees & Requires expertise \\
+Full control & High minimum investment \\
+& Lack of diversification \\ \hline[1.25pt]
+\end{tblr}
+\caption{Advantages and disadvantages of direct investing}
+\end{table}
+\end{itemize}
+\end{itemize}
+
+\subsection{Compensation structures}
+\begin{itemize}
+\item Typically, this refers to limited partnerships.:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,3,l]}, width = 0.8\textwidth}
+\hline[1.25pt]
+General partner & Fund manager \\
+Limited partner & Accredited investors -- Limited liability, no management responsibility \\
+Limited partnership agreement & Sets out fund rules and guidance, alongside operational details \\
+Side letters & Special terms negotiated by individual limited partners (LPs) \\
+Master Limited Partnership & Specialises in natural resources and real estate \\ \hline[1.25pt]
+\end{tblr}
+\caption{The involved parties and agreements with regards to a typical compensation structure of a limited partnership}
+\end{table}
+\item The compensation structure is typically split out into management and performance fees.
+\begin{itemize}
+\item Management fees
+\begin{itemize}
+\item Typically 1-2\% of AUM (Fixed cost to the investor)
+\item Independent of performance. For hedge funds, this refers to the AUM. For private capital funds, this refers to the committed capital (Not just the invested capital)
+\end{itemize}
+\item Performance fees
+\begin{itemize}
+\item Paid to general partners / fund managers based on fund performance
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsubsection{Performance fees}
+\begin{itemize}
+\item A fund may use either a soft hurdle or hard hurdle to determine performance fees
+\begin{itemize}
+\item Soft hurdle (benefits GP)
+\begin{itemize}
+\item \% increase in the investment of value, contingent on beating a minimum performance
+\end{itemize}
+\item Hard hurdle (benefits LP)
+\begin{itemize}
+\item Only paid on the excess above some threshold
+\end{itemize}
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a fund that has returned 15\% over the past year. The fund has a hurdle rate of 6\%, and there is an 80/20 split between the LP and GP
+}
+\begin{itemize}
+{\color{RoyalBlue}
+\begin{multicols}{2}
+\item Under a soft hurdle:
+\begin{gather*}
+15\%>6\% \\
+\text{GP}=20\% \times 15\% = 3\%
+\end{gather*}
+\item Under a hard hurdle:
+\begin{align*}
+GP&=20\%\times(15\%-6\%)\\
+&=1.8\%
+\end{align*}
+\end{multicols}
+}
+\end{itemize}
+\item A catch-up clause may be implemented to benefit the LP. In this case, everything up to the hurdle rate goes to the LP. A ``catch-up’’ clause is then implemented on the next portion of earnings to accelerate the GP’s compensation up to the soft hurdle level. From then on, it behaves the same as a soft hurdle.
+{\color{RedViolet}
+\item Consider a fund which has a 10\% hurdle rate with a catch-up clause. The performance fee is 20/80 in the LP’s favour. In this case, the first 10\% of gains goes to the LP. The next 2.5\% go to the GP. Anything over 12.5\% is then split 20:80 between the GP and LP.
+}
+\vspace{-.2cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath catch_up.pdf}
+  \caption{GP compensation as a function of performance.}
+\end{figure}
+\vspace{-.5cm}
+\item A high water mark is sometimes put in place to prevent double payment for the same gains. In this case, performance fees are only paid on gains over the previous high investment value.
+\item A clawback provision may also be implemented. In this instance, any losses can be recovered by the LPs by prior excess incentive payments
+\item The waterfall structure determines how cashflows are allocated to GPs and LPs in a limited partnership agreement.
+\begin{itemize}
+\item Deal-by-deal ``American Waterfall’’ (Better for GP)
+\begin{itemize}
+\item Distributed as fund exits each investment
+\item Shared between GP / LP
+\end{itemize}
+\item Whole-of-fund ``European Waterfall’’ (Better for LP)
+\begin{itemize}
+\item LP receives everything until the hudle rate is cleared
+\item After the hurdle rate is cleared, the GP participates in further profits
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsection{Alternative investment performance and returns}
+\begin{itemize}
+\item Risks of alternative investments include
+\begin{itemize}
+\item Timing of cash flows over an investment’s life cycle
+\item Use of leverage by fund managers
+\item Valuation of investments that do not necessarily have observable market prices
+\item Complexity of fees, taxes, and accounting
+\end{itemize}
+\item Timing of cash flows of a fund is broadly split into three phases. This is well represented by the ``J-curve effect’’
+\begin{enumerate}
+\item Capital commitment phase
+\begin{itemize}
+\item Identifying what to include in portfolio
+\begin{itemize}
+\item Negative returns
+\item Fees
+\item No cash flows
+\end{itemize}
+\end{itemize}
+\item Capital deployment phase
+\begin{itemize}
+\item Investing in assets
+\begin{gather*}
+\phantom{In}\text{Outflows}>\text{Inflows}\phantom{Out}
+\end{gather*}
+\end{itemize}
+\item Capital distribution phase
+\begin{itemize}
+\item Price appreciation of asset
+\begin{gather*}
+\phantom{Out}\text{Inflows}>\text{Outflows}\phantom{In}
+\end{gather*}
+\end{itemize}
+\end{enumerate}
+\vspace{-.5cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath J_curve.pdf}
+  \caption{Typical J-curve for fund returns}
+\end{figure}
+\vspace{-.2cm}
+\item Performance appraisal
+\begin{itemize}
+\item Private capital and real estate involve cash outflows and inflows over the life of an investment. We can therefore define
+{\small
+\begin{equation}
+\text{Multiple of invested capital} = \frac{\text{Total capital returned}+\text{Value of remaining assets}}{\text{Total capital paid in}}.
+\end{equation}
+}
+This does not however consider the timing of any cash flows. It does not accurately reflect the time value of money, or risk associated with the investment. To account for this, we can instead use the internal rate of return.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Use of leverage}
+\begin{itemize}
+\item A private fund may use leverage to amplify returns.
+\item Given the unlevered portfolio return, $r$, the leveraged return is given by
+\begin{equation}
+r_{L} = \frac{r(V_{O} + V_{B})-r_{B}V_{B}}{V_{O}}, \label{levered-return}
+\end{equation}
+where the subscripts $O$ and $B$ refer to an investers own and borrowed funds respectively. The use of leverage amplifies any gains, but also any losses too.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a fund which has 200mn capital. It adds leverage of 100mn at a cost of $r_{B}=5\%$. Calculate the levered return if in the following year, the fund returns either 10\% or $-5\%$.
+}
+{\color{RoyalBlue}
+\item[] Using equation \ref{levered-return}, in the case of 10\% return,
+\begin{align*}
+r_{L} &= \frac{0.1\times(200 + 100) - 0.05 \times 100}{200} \\
+&=\frac{30 -5}{200} \\
+&=0.125=12.5\%
+\end{align*}
+\item[] In the case of a $-5\%$ annual return,
+\begin{align*}
+r_{L} &= \frac{-0.05\times(200 + 100) - 0.05 \times 100}{200} \\
+&=\frac{-15-5}{200} \\
+&= -0.10 = -10\%
+\end{align*}
+}
+\end{itemize}
+
+\subsubsection{Valuation of investments}
+\begin{itemize}
+\item The fair value hierarchy has three classification levels
+\begin{enumerate}
+\item Assets trading in active markets. Quoted prices are readily available.
+\item Assets do not have readily-available quoted prices. Direct / indirect observable inputs may be used to value an asset
+\item Assets require estimates / unobservable inputs to value them
+\end{enumerate}
+\end{itemize}
+
+\subsubsection{Redemptions}
+\begin{itemize}
+\item Redemptions in alternative assets are not as simple as assets which are actively traded in markets. Funds may charge a redemption fee, and institute lock-up and notice periods.
+\begin{itemize}
+\item Lock-up period -- Time after initial investment over which LPs cannot request redemption without incurring significant fees
+\item Notice period -- Typically 30 -- 90 days, this defines the time within which a fund must fulfil a redemption request.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Return calculations}
+\begin{itemize}
+\item Hedge funds in particular are subject to both survivorship bias and backfill / selection bias. There is no requirement for them to report returns. Hedge funds that have failed are often not included either. Therefore, the hedge funds for which data is available tends to be those that have been successful over a long period of time. Indices that look at such funds therefore tend to overstate returns and understate risk of an average hedge fund.
+\item Before-fee returns are the same as those in traditional investments
+\item After-fee returns adjust for cash flows after management and performance fees have been levied.
+\begin{gather}
+\text{Total fee} = mV_{1} + \text{Max}(0, p(V_{1}-V_{0}) \\
+\text{Rate of return after fees} = \frac{V_{1}-V_{0}-\text{Total fees}}{V_{0}}
+\end{gather}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a fund which has has a standard 2/20 fee structure based on beginning assets. The performance fee is calculated net of the management fee. The fund employs a soft-hurdle approach to calculating the performance fee, and also has a high-water mark. The value of the fund at the beginning of the next three years is as follows.
+\begin{align*}
+V_{0}&=110.0\text{ mn} & V_{1}&=100.2\text{ mn} & V_{2}&=119.0\text{ mn}
+\end{align*}
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item After year 1:
+\begin{itemize}
+\item The management fee is
+\begin{equation*}
+0.02 \times 110,000,000 = 2,200,000
+\end{equation*}
+\item The performance fee is calculated as follows.
+\begin{gather*}
+\text{Value net of management fee} = 100,200,000 - 2,200,000 = 98,000,000, \\
+\text{Return net of management fee} = \frac{98,000,000}{110,000,000}-1 = -10.9\%. \hspace{1cm} (<5\%)
+\end{gather*}
+As the return is less than 5\%, there is no performance fee
+\end{itemize}
+\item After year 2:
+\begin{itemize}
+\item The mangement fee is 
+\begin{equation*}
+0.02 \times (100,200,000 - 2,200,000) = 0.02 \times 98,000,000 = 1,960,000
+\end{equation*}
+\item The performance fee is
+\begin{gather*}
+\text{Value net of management fee} = 119,000,000 - 1,960,000 = 117,040,000, \\
+\text{Return net of management fee} = \frac{117,040,000}{98,000,000}-1 = 19.4\%, \hspace{1cm} (>5\%) \\
+\text{Performance fee} =0.2 \times(119,000,000 - 1,960,000 - \underbrace{110,000,000}_{\text{High-water mark}}) = 1,410,000, \\
+\text{Total fee} = 3,470,000, \\
+\text{After-fee return} = \frac{119,000,000 - 3,470,000}{98,000,000} -1 = 18\%.
+\end{gather*}
+\end{itemize}
+\end{itemize}
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider an investor who has invested $60,000,000$ in a fund of funds. The fee structure for this fund is 1/10 based on year-end values, and the performance fee is independent of management fees.
+}
+{\color{RoyalBlue}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,2,c] Q[m,2,c]}, width = 0.4\textwidth, rows = {fg = RedViolet}}
+& $T_{0}$ & $T_{1}$ \\
+$\alpha$ & 40 mn & 45 mn \\
+$\beta$ & 20mn & 28 mn
+\end{tblr}
+\end{table}
+\begin{align*}
+\text{Value before fees} &= 45,000,000 + 28,000,000 = 73,000,000 \\
+\text{Gain in value} &= 73,000,000 - 60,000,000 = 13,000,000
+\end{align*}
+\begin{align*}
+\text{Management fee} &= 0.01 \times 73,000,000 = 730,000 \\
+\text{Performance fee} &=0.1 \times 13,000,000 = 1,300,000 \\
+\text{Total fee}&= 730,000 + 1,300,000 = 2,030,000
+\end{align*}
+\begin{align*}
+\text{Value after fees} &= 73,000,000 - 2,030,000 = 70,970,000 \\
+\text{Return after fees} &= \frac{70,970,000 - 60,000,000}{60,000,000} = 18.28\%
+\end{align*}
+\item[] The direct investment return would have been $\dfrac{73,000,000 - 60,000,000}{60,000,000}=21.67\%$
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a private equity fund which invests 100 mn in VC in a firm, which it then sells for 130 mn. It also invesets 100 mn in an LBO which it then sell for 80 mn. The fund has an incentive fee of 20\%, and no clawback provisions
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item Under an American waterfall structure (deal-by-deal):
+\begin{align*}
+\text{VC firm:}& & &0.2\times (130-100) = 6 \\
+\text{LBO firm:}& & &80 < 100 \text{ so no performance fee} 
+\end{align*}
+The after-fee return is therefore
+\begin{equation*}
+\text{After-fee return} = \frac{130 + 80 -6}{200} -1 = 2\% \text{ to the LP}
+\end{equation*}
+\item Under a European waterfall structure (whole-of-fund):
+\begin{equation*}
+0.2\times(130 + 80 - 200) = 2
+\end{equation*}
+The after-fee return is therefore
+\begin{equation*}
+\text{After-fee return} = \frac{130 + 80 - 2}{200}-1 = 4\%. \text{ to the LP}
+\end{equation*}
+We can clearly see the American waterfall is better for the GP, and the European waterfall is better for the LP
+\end{itemize}
+}
+{\color{RedViolet}
+\item[] Assuming the fund with an American waterfall structure exited the VC firm in Y1 and the LBO in Y2, what would the effect of a clawback provision be?
+}
+{\color{RoyalBlue}
+\item[] The total gain across two years is
+\begin{equation*}
+\text{Total gain} = 130 + 80 - 200 = +10\text{ mn}.
+\end{equation*}
+The performance fee is therefore $0.2 \times 10 = 2$ mn on the whole portfolio. We saw earlier that the performance fee on VC exit is 6 mn, so the LP can ``claw-back’’ $6-2=4$ mn upon the exiting of the LBO position in Y2.
+}
+\end{itemize}
+
+\subsection{Investments in private capital (Equity \& debt)}
+\begin{itemize}
+\item Private capital finances ``portfolio companies’’ \underline{without} the issuance of publicly-traded securities. While it provides good diversification from traditional assets, it also requires management skill.
+\item Private equity involves investment in a private company or taking a public company private. Strategies for this include
+\begin{multicols}{3}
+\item Leveraged buyout, LBO
+\begin{itemize}
+\item Financed by debt
+\end{itemize}
+\item Venture capital, VC
+\begin{itemize}
+\item High risk / reward
+\end{itemize}
+\item Private investment in private equity
+\end{multicols}
+\end{itemize}
+
+\subsubsection{LBO}
+\begin{itemize}
+\item This is the most common private equity strategy, and is largely funded by debt. There are two types:
+\begin{itemize}
+\item Management buyout, MBO: The current managers are involved with purchase and remain with the company
+\item Management buyin, MBI: External investors replace the managers of the acquired company
+\end{itemize}
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] c Q[m,1,c] c Q[m,1,c]}, width = 0.95\textwidth}
+\textbf{VC} & $\longrightarrow$ & \textbf{Growth Capital}  & $\longrightarrow$ & \textbf{LBO} \\
+Start-up & & Established business & & Mature business \\
+& & ``Growth Equity’’ & & MBO / MBI, high leverage \\
+& & Primary capital & & Secondary capital
+\end{tblr}
+\caption{The private equity spectrum of investments}
+\end{table}
+\subsubsection{Venture capital}
+\begin{enumerate}
+\item Formative stage
+\begin{itemize}
+\item Pre-seed capital / angel investing. Focus of company is geared toward business plans and market potential
+\item Seed stage / seed capital. Focus of company is geared toward product development and market research
+\item Early stage / start-up stage. Focus of company is geared toward beginning production and sales
+\end{itemize}
+\item Later stage
+\begin{itemize}
+\item Company expansion and early growth
+\end{itemize}
+\item Mezzanine stage financing
+\begin{itemize}
+\item Preparation for IPO. If a company makes it to IPO, it is considered to be a successful investment for the VC investor. The IPO is the most lucrative for the private investor, grants continued upside, and also generates good publicity for the P/E firm
+\end{itemize}
+\end{enumerate}
+\subsubsection{Private equity exit strategies}
+\begin{itemize}
+\item Trade sale
+\begin{itemize}
+\item Sell portfolio company to a strategic buyer (i.e. a competitor)
+\end{itemize}
+\item Public listing
+\begin{itemize}
+\item IPO - direct listing, special purpose acquisition company (SPAC)
+\end{itemize}
+\item Recapitalisation
+\begin{itemize}
+\item Issue portfolio company ``debt’’ to fund dividend payment to private equity owner
+\end{itemize}
+\item Secondary sale
+\begin{itemize}
+\item Sell portfolio company to another private equity investor
+\end{itemize}
+\item Write-off / liquidation
+\begin{itemize}
+\item Take a loss from an unsuccessful investment
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Private debt}
+\begin{itemize}
+\item Direct lending
+\begin{itemize}
+\item Includes leveraged loans using money borrowed from other sources
+\end{itemize}
+\item Venture debt
+\begin{itemize}
+\item Lending to start-up companies. Often convertible or with warrants, therefore this carries an equity upside
+\end{itemize}
+\item Mezzanine debt
+\begin{itemize}
+\item Subordinated to existing debt
+\end{itemize}
+\item Distressed debt
+\begin{itemize}
+\item Buying a company in / near default. A distressed debt investor may be an active participant in the restructuring of a company
+\end{itemize}
+\item Unitranche debt
+\begin{itemize}
+\item Combines all classes of debt into a single loan with a representative interest rate
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Real estate and infrastructure}
+\begin{itemize}
+\item Real estate investments cover residential properties (~75\% of the market), which covers single-family homes, and commercial property, which covers office buildings, shopping centres, industrial / warehouse / distribution, and rental residential
+\begin{itemize}
+\item With single-family homes, the property owner is responsible for maintenance, insurance, and mortgage principal and interest payments, with the home acting as collateral on the loan)
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c |c Q[m,1,c] c | c Q[m,1,c] c|c}, width = 0.95\textwidth}
+\SetCell[c=2]{c}&& \SetCell[r=1,c=1]{c} \textbf{Debt} & \SetCell[c=2]{c}&& \SetCell[r=1,c=1]{c} \textbf{Equity} & \SetCell[c=2]{c} &\\ \cline{2-7}
+\SetCell[r=7]{c}\textbf{Private}&& & && Direct ownership \\
+&& & && Sole ownership \\
+&& Mortgage debt &&& Joint ventures \\
+&& Construction loans &&& Limited partnerships \\
+&& Mezzanine debt &&& Indirect ownership \\
+&& &&& Real estate funds \\
+&& &&& Private REITs \\ \cline{2-7}
+\SetCell[r=6]{c}\textbf{Public}&& &&& Publicly traded shares \\
+&& MBS / CMBS / CMOs &&& Construction \\
+&& Covered bonds &&& Operating \\
+&& Mortgage REITs &&& Development \\
+&& Mortgage ETFs &&& Public REITs \\
+&& &&& UCITS / Mutual funds / ETFs \\ \cline{2-7}
+\end{tblr}
+\end{table}
+\item Direct real estate investment benefits include
+\begin{itemize}
+\item[+] Control over investments
+\item[+] Diversification from traditional assets
+\item[+] Favourable tax treatment of real estate investments
+\end{itemize}
+and drawbacks include
+\begin{itemize}
+\item Illiquidity of assets and opacity of pricing
+\item Additional complexity of managing and maintaining property assets
+\item Specialised knowledge required when choosing investments
+\item High level of capital required upfront to invest
+\item Concentration risk
+\end{itemize}
+
+\item Indirect real estate investments may be made through REITs. REITs are:
+\begin{itemize}
+\item Exempt from double taxation, (if >90\% dividends paid out)
+\item Exchange traded, (thus providing liquidity)
+\item Managed by specialists in the asset class.
+\end{itemize}
+Types of REITs include
+\begin{itemize}
+\item Equity REITs -- real estate
+\item Mortgage REITs -- lending
+\item Hybrid REITs -- Combination
+\end{itemize}
+\item REIT stragegies involve
+\begin{itemize}
+\item Core real estate strategies
+\begin{itemize}
+\item High quality commercial and residential property to deliver stable returns
+\item Open-ended structure
+\item Indefinite lives
+\end{itemize}
+\item Riskier investment strategies
+\begin{itemize}
+\item Core-plus real estate strategies [modest redevelopment]
+\item Value-add real estate strategies [monetary development]
+\item Opportunistic ``Speculation’’ real estate strageies [large-scale development]
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Infrastructure investments}
+\begin{itemize}
+\item Infrastructure projects are long-lived assets providing essential economic or social public services. These include
+\begin{itemize}
+\item Transport [economic]
+\item Utilities [economic]
+\item Communications [economic]
+\item Hospitals [social]
+\item Prisons [social]
+\end{itemize}
+\item Cash flows from infrastructure investments include
+\begin{itemize}
+\item Availability payments
+\item Usage-based payments (tolls)
+\item Take-or-pay (buyer pays a minimum purchase price for the asset)
+\end{itemize}
+\item Direct investment in infrastructure requires large upfront investment size, low liquidity of the asset, and a requirement to operate / maintain the asset over its useful life
+\item Indirect investment may be made through ETFs, listed mutual funds, master limited partnerships (energy only), or publicly traded infrastructure securities
+\item Infastrucutre investments may be
+\begin{itemize}
+\item Brownfield (built on existing sites) -- High yielding, but lower growth potential
+\item Greenfield (built on planned sites) -- Lower yielding, but carry higher risk and potential reward
+\end{itemize}
+\item Generally, infrastructure assets provide good diversification from traditional assets, but are only suitable for long-term investors, such as institutional investors
+\item Risks associated with infrastructure assets include regulatory risk which is intrinsic to the asset class, alongside risks stemming from financial leverage, cash flows, construction, and operation of the asset
+\end{itemize}
+
+\subsubsection{Diversification benefits}
+\begin{itemize}
+\item Private equity and private debt have a lower correlation to traditional investment returns.
+\item The ``Vintage year’’ is the first year of a fund’s investment
+\item From highest risk / return to lowest;
+\begin{multicols}{3}
+\begin{enumerate}
+\item[1.] Private equity
+\item[4.] Senior direct lending
+\item[2.] Mezzanine debt
+\item[5.] Senior real estate debt
+\item[3.] Unitranche debt
+\item[6.] Infrastructure debt
+\end{enumerate}
+\end{multicols}
+\end{itemize}
+
+\subsection{Natural resources}
+\begin{itemize}
+\item Natural resource investments include investments in
+\begin{itemize}
+\item Raw land -- Price appreciation, lease, location, aternative use (Direct / partnership owned)
+\item Commodities -- Gain exposure through the use of derivatives
+\item Farmland / timberland -- Requires knowledge of the underlying resource
+\end{itemize}
+\item Investments can be made through
+\begin{multicols}{2}
+\begin{itemize}
+\item Direct investments
+\item ETFs
+\item REITs
+\item Limited partnerships
+\item Limited liability corporations
+\item[]
+\end{itemize}
+\end{multicols}
+\end{itemize}
+\subsubsection{Farmland / Timberland}
+\begin{itemize}
+\item Commodities include
+\begin{multicols}{3}
+\begin{itemize}
+\item Metals
+\item Agricultural products
+\item Energy productss
+\end{itemize}
+\end{multicols}
+They do not provide any cash flows. Return comes from price changes in the underlying assets.
+\item Typically, farmland and timberland provides a higher average return with lower volatility than global stocks
+\end{itemize}
+
+\subsubsection{Commodities}
+\begin{itemize}
+\item Commodity exposure can be achieved through:
+\begin{itemize}
+\item Derivatives: $\underbrace{\text{Futures}}_{\text{Exchange}}$,  $\underbrace{\text{Forwards}}_{\text{OTC}}$, $\underbrace{\text{Options,}}_{\text{\tiny{OTC / Exchange}}}$ $\underbrace{\text{Swaps}}_{\text{OTC}}$, where the benefit of exchange-traded derivatives is that there is no counterparty risk due to novation of contracts through a CCP.
+\item ETPs: Suitable for investors restricted to holding equity shares only
+\item Commodity valuation is given by
+\small{\begin{equation}
+\text{Futures price} \approx \text{Spot price} \times (1 + \text{Risk free}) + \text{Storage cost} - \text{Convenience yield}
+\end{equation}}
+The convenience yield is the value of having a physical commodity available for use. [Non-monetary benefits]
+\begin{align*}
+\text{Low convenience yield}& & &\Longrightarrow &  \text{Cont}&\text{ango} & \Longrightarrow && \text{Future}&> \text{Spot} \\
+\text{High convenience yield}& & &\Longrightarrow & \text{Backwa}&\text{rdation}& \Longrightarrow && \text{Future}&<\text{Spot}
+\end{align*}
+\item Risks of investing in commodities include
+\begin{itemize}
+\item Lack of liquidity
+\item High fixed cost of production of commodity
+\item Physical assets subject to adverse weather and natural disasters
+\item Supply / demand effects on underlying physical price
+\end{itemize}
+
+\item Returns on commodities are typically higher than global stocks and bonds. They provide a good hedge against inflation, and have a characteristic low corrleation with global stocks and bonds
+\item Prices are more sensitive to geopolitical and weather-related factors
+\end{itemize}
+\end{itemize}
+
+\subsection{Hedge funds}
+\begin{itemize}
+\item Hedge funds are privately held, and are limited to qualified and accredited investors (usually an income and net worth eligibility screen)
+\item Drivers of return are usually market inefficiencies and price volatility.
+\item They typically invest in traditional asset classes, sometimes enhancing returns through the use of leverage and / or derivatives
+\item They are usually evaluated on either a total or risk-adjusted return basis
+\item Hedge funds differ from ETFs and mutual funds in a number of ways:
+\begin{itemize}
+\item Less regulation
+\item Flexible mandates
+\item High managment and performance fees
+\item Low transparency and high information asymmetry between managers and investors
+\item Low liauisity (lock-up periods, notice periods, liquidity gates)
+\end{itemize}
+\item Hedge funds can be organised into:
+\begin{itemize}
+\item Commingled funds
+\begin{itemize}
+\item Master-feeder structure -- Tax-efficient, economies of scale, allows for funding from global investors
+\end{itemize}
+\item Separately-managed accounts
+\begin{itemize}
+\item Customside portfolio, appropriate for large / institutional investors
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Hedge fund strategies}
+\begin{itemize}
+\item Equities
+\begin{itemize}
+\item Fundamental long / short -- Capture $\alpha$, net long exposure
+\item Fundamental growth -- Identify high growth companies, capital appreciation
+\item Fundamental value -- Identify undervalued companies (potential for increase in revenues and cash flows)
+\item Market neutral -- Equal values in long and short positions
+\item Short bias -- Net short exposure
+\end{itemize}
+\item Event-driven
+\begin{itemize}
+\item Merger-arbitrage -- Buy shares of the target firm and short shares of the acquirer
+\item Distressed / restructuring -- Buy undervalued shares during restructuring if the restructure will increase the value
+\item Activist shareholder -- Gain board seats to influence and drive decsions and policy
+\item Special situations -- Spinoffs, asset sales, security issuance / repurchase
+\end{itemize}
+\item Relative value
+\begin{itemize}
+\item Convertible arbitrage fixed income -- Convertible bonds vs underlying common stock
+\item Specific fixed income -- ABS, MBS, high yield
+\item General fixed income -- Various issuers and types (Look for inconsistencies in rates)
+\item Multistrategy -- Across asset classes and markets
+\end{itemize}
+\item Opportunistic
+\begin{itemize}
+\item Macros strategies -- Trade securities, currencies, commodities based on global trends
+\item Managed futures -- ``Commodity trading advisors’’ -- Trade commodity futures, incorporated financial futures
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Hedge fund structures}
+\begin{itemize}
+\item Hedge funds may be organised as a
+\begin{itemize}
+\item Limited partnership / limited liability structure
+\begin{itemize}
+\item General partner (fund manager) receives compensation based on performance
+\item Private placement memorandum -- Contractual relationship
+\item Indefinite life
+\end{itemize}
+\item Fund-of-funds
+\begin{itemize}
+\item This is where a hedge fund invests in other hedge funds
+\item While this strategy requires a lower minimum investment compared to the underlying hedge funds, and offers greater diversification, it also requires an additional layer of fees for the fund-of-funds hedge fund, on top of the underlying funds
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Hedge fund returns}
+\begin{itemize}
+\item This may come through any of
+\begin{enumerate}
+\item Market beta -- Return from broad index
+\item Strategy beta -- Return from specific sectors
+\item Alpha -- Manager-specific returns
+\end{enumerate}
+\item Performance measured by indices of hedge funds is often overstated. Hedge fund indices show biased returns from
+\begin{itemize}
+\item Survivorship bias, (25\% fail within 3 years)
+\item Selection bias (Only strong returns are published, non-representative index)
+\item Backfill bias, (Only strong returns disclosed)
+\end{itemize}
+This creates an upward bias on returns and downward bias on risk
+\end{itemize}
+
+
+\subsection{Digital Assets}
+\begin{itemize}
+\item Digital assets are those which are electronically stored, created, and transferred
+\item Distributed ledger technology (DLT) is used to secure and validate the assets
+\item The distributed ledger is the register for all transactions:
+\begin{multicols}{2}
+\item[] Benefits
+\begin{itemize}
+\item[+] Accuracy
+\item[+] Transparency
+\item[+] Security
+\item[+] Rapid ownership transfer
+\item[+] Peer-to-peer interaction
+\end{itemize}
+\item[] Disadvantages
+\begin{itemize}
+\item Data protection concerns
+\item Privacy violation potential
+\item Requirement for computational power
+\item[]
+\item[]
+\end{itemize}
+\end{multicols}
+\end{itemize}
+
+\subsubsection{DLT Networks}
+\begin{itemize}
+\item DLT networks consist of a digital ledger, consensus netwrk, and a network of participants
+\item DLT networks use cryptography to encrypt and store data
+\item Smart contracts are self-executing computer programs based on pre-determined criteria
+\item Blockchain records information sequentially within blocks which are linked together. It is then secured through cryptography
+\vspace{-.4cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath blockchain.pdf}
+  \caption{The steps involved with adding a transaction to a digital ledger}
+\end{figure}
+\end{itemize}
+\vspace{-1cm}
+\subsubsection*{Consensus protocols}
+\begin{itemize}
+\item This is a set of rules which determines how blocks may be chained together
+\begin{itemize}
+\item Proof-of-work protocol
+\begin{itemize}
+\item When a transaction is completed, miners use a computer to solve a cryptographic problem which verifies the transaction
+\end{itemize}
+\item Proof-of-state protocol
+\begin{itemize}
+\item Network participants pledge collateral to guarantee the validity of a block
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Forms of DLT networks}
+\begin{itemize}
+\item Permissionless
+\begin{itemize}
+\item Transactions are visible to all users
+\item Any user can execute a transaction
+\item Transactions are verified by consensus mechanisms, \underline{not} the central authority
+\end{itemize}
+\item Permissioned
+\begin{itemize}
+\item Users are restricted from some activities
+\item More cost-effective than open, decentralised, permissionless networks
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Types of digital assets}
+\begin{itemize}
+\item Digital assets include cryptocurrencies such as 
+\begin{multicols}{2}
+\begin{itemize}
+\item Bitcoin, Ethereum, etc.
+\item Altcoins (stablecoins / memecoins)
+\item Central Bank Digital Currencies
+\end{itemize}
+\end{multicols}
+and tokens, such as
+\begin{multicols}{2}
+\begin{itemize}
+\item Non-fungible tokens (NFTs)
+\item Security tokens (ICOs)
+\item Utility tokens
+\item Governance tokens
+\end{itemize}
+\end{multicols}
+\item Comaprison to other asset classes
+\begin{itemize}
+\item Digital assets have inherent value differences -- They yield no cash flows (interest / dividend payments) and thus have no fundamental value
+\item Digital assets have transaction value differences -- They are recorded on decentralised digital ledgers
+\item Digital assets have different media of exchange -- Their use may be restricted, and they primarily transact online
+\item Digital assets have different regulations, and typically trade on unregulated exchanges
+\end{itemize}
+\item Exchanges for trading in bitcoin and other cryptocurrencies include
+\begin{itemize}
+\item Centralised exchanges
+\begin{itemize}
+\item Privately-held, and offer trading platforms for price transparency and volume information
+\item Most popular type of crypto exchange
+\item Trade directly and electronically on private servers
+\end{itemize}
+\item Decentralised exchanges
+\begin{itemize}
+\item Implement decentralised blockchain principles
+\item No centralised authority -- operates on distributed framework
+\end{itemize}
+\end{itemize}
+\item Direct investment in cryptocurrency occurs when a transaction is recorded on the blockchain (validated and permanently stored
+\begin{itemize}
+\item Examples include purchasing tokens on a cryptocurrency exchange, trading an NFT, or investing in an ICO. 
+\item Fraud risk from this include scam ICOS, ``pump-and-dump’’ schemes, market manipulation, and theft
+\end{itemize}
+\item Indirect investment in crypto currency can be done through
+\begin{multicols}{2}
+\begin{itemize}
+\item Crypto coin trusts
+\item Crypto futures contracts
+\item Crypto ETPs
+\item Crypto-related stocks
+\item Crypto-focused hedge funds
+\item []
+\end{itemize}
+\end{multicols}
+\end{itemize}
+
+\subsubsection{Digital investment in non-digital assets}
+\begin{itemize}
+\item Digital investments in non-digital assets can be made through asset-backed tokens. These represent digital ownership of physical / financial assets
+\item Collateralised by the underyling asset, this may increase liquidity of expensifve assets
+\item Classified as securities, these asset-backed tokens allow for an immutable record of ownership
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.95\textwidth}
+\SetCell[r=1,c=2]{l} \textbf{Returns} \\ \hline
+& & \textbf{BTC} & \textbf{S\&P 500} & \textbf{MSCI World} & \textbf{BBG Agg} \\
+&\textbf{Average} & 8.84\% & 1.13\% & 0.66\% & 0.16\% \\
+&\textbf{Standard deviation} & 0.32 & 0.04 & 0.04 & 0.01 \\
+&\textbf{Coefficient of variation} &  3.66 & 3.43 & 6.09 & 8.16 
+\end{tblr}
+\caption{Table of long term characteristics of returns of Bitcoin compared to other commonly tracked indices}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.95\textwidth}
+\SetCell[r=1,c=2]{l} \textbf{Correlations} \\ \hline
+& & \textbf{BTC} & \textbf{S\&P 500} & \textbf{MSCI World} & \textbf{BBG Agg} \\
+&\textbf{BTC} & 1 & --- & --- & --- \\
+&\textbf{S\&P 500} & 0.21 & 1 & --- & --- \\
+&\textbf{MSCI World} &  0.22 & 0.97 & 1 & --- \\
+&\textbf{BBG Agg} &  0.14 & 0.25 & 0.33 & 1
+\end{tblr}
+\caption{Table of long term correlation of returns of Bitcoin compared to other commonly tracked indices. Note the lower correlations between BTC and others.}
+\end{table}
+
+
+\end{document}
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.6\textwidth]{\imgpath ABCP.pdf}
+%  \caption{Figure with relative path}
+%\end{figure}

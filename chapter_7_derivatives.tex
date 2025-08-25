@@ -1,0 +1,1000 @@
+\documentclass[../notes_compiled.tex]{subfiles}
+
+
+\begin{document}
+
+\section{Derivatives}
+
+\subsection{Instruments and market features}
+\begin{itemize}
+\item Derivatives are securities that derive value from an underlying, typically a price or interest rate.
+\item Examples of the underlying include
+\begin{multicols}{2}
+\begin{itemize} 
+\item  Equity / Equity indices
+\item Bond / Bond indices, interest rates
+\item Hard \& soft commodities
+\item Credit / Credit indices
+\end{itemize}
+\end{multicols}
+\item Derivative markets can either be:
+\begin{itemize}
+\item OTC markets -- Formal / informal networks
+\begin{itemize}
+\item Dealers (market makers) trade with users and among themselves
+\item Securities are customisable, and as a result are less liquid and less transparent than exchange-traded derivatives. As a result, this tends to incur higher trading costs.
+\item Many OTC markets are required to have a CCP (novation) and collateral deposits, thereby reducing counterparty risk.
+\end{itemize}
+\item Exchange traded derivatives -- Formal networks
+\begin{itemize}
+\item Market makers post buy / sell prices, and enter into offsetting trades with users
+\item Contracts are standardised (Delivery date / Quantity / Underlying / Delivery obligations)
+\item Central clearing is present (Collateral deposits / Mark-to-market / Novation by exchange (less CP risk))
+\item Standardised securities give greater liquidity and lower transaction costs
+\item Clearing and settlement processes are efficient
+\end{itemize}
+\end{itemize}
+
+\subsection{Forward and futures contracts}
+\subsubsection{Forward contracts}
+\begin{itemize}
+\item Forwards are customised, so there tends to be no active secondary market for forward contracts.
+\item Forward contracts specify a specific asset, and a specific expiry date upon which delivery of the asset occurs
+\begin{itemize}
+\item The long party gains if the asset price at delivery exceeds the forward price
+\item The short party gains if the asset price at delivery is less than the forward price
+\item[] \emph{Long (short) position buys (sells) underlying}
+\end{itemize}
+
+\item Forward contract settlement involves two types
+\begin{itemize}
+\item Delivery
+\begin{itemize}
+\item Short delivers underlying to long in exchange for cash payment of the forward price
+\end{itemize}
+\item Cash settlement
+\begin{itemize}
+\item Negative side of he contract pays the positive side, where this is determined by the difference between forward contract-specified price and current market price
+\end{itemize}
+\end{itemize}
+\item An owner of shares can hedge their position with derivatives
+\begin{itemize}
+\item To hedge: If long the underlying, an investor should hedge this by going short on a forward contract
+\end{itemize}
+\item An investor with no position can speculate on price movements using derivatives
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a forward contract where the long party agrees to buy 100 shares of ABC corp. from the short on November 15 at a price of \$30 per share (set at incpetion of contract)
+}
+{\color{RoyalBlue}
+\item[] \textbf{IF:} Deliverable contract; 100 shares transferred in return for a $\$3,000$ payment.
+\item[] \textbf{IF:} Cash-settled contract;
+\begin{align*}
+\text{Long receives}:&(\text{Spot} - 30) \times 100, \\
+\text{Short pays}:&(\text{Spot} - 30)\times 100.
+\end{align*}
+If the spot price at settlement is \$35, the net effect of this payment is a \$500 gain to the buyer and \$500 loss to the seller.
+}
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Futures contracts}
+\begin{itemize}
+\item Futures contracts bear many similarities to forward contracts, however a key difference is that the contracts are standardised
+\item Futures contracts trade on an exchange, thus providing an active secondary market. Exchange-traded contracts require a margin deposit, and CCP clearing means there is no risk of CP default.
+\item Characteristics of futures contracts
+\begin{itemize}
+\item Quantity / quality of the underlying must be specified, alongside a delivery date / time and location
+\end{itemize}
+\item The exchange will specify
+\begin{itemize}
+\item Minimum price fluctuation ``tick’’. (Precision to whic hthe price is measured)
+\begin{itemize}
+\item Tick size measure in unit of price
+\item Tick value measured in USD
+\end{itemize}
+\item Daily price limit
+\item Clearing house must act as CCP
+\item Margin posted and marked-to-market daily
+\item Margin is collateral (NOT a loan)
+\end{itemize}
+\item Initial margin -- deposited at inception of contract
+\item Maintenance margin -- minimum margin that triggers a margin call. When the posted margin falls below the maintenance margin, variation margin must be deposited to make up the difference
+\item Settlement price -- Average of trades during closing period (30 sec -- 2 min) used to calculate the required margin
+\item Spot price -- Price of underlying asset for immediate delivery
+\begin{itemize}
+\item Future price tends to spot price as time progresses. At expiration, settlement price and spot price are identical
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Price limits}
+\begin{itemize}
+\item Exchanges place a limit on how much the contract price is permitted to change each day. Exchange members are prohibited from trading at prices outside these limits.
+\item Some exchanges have circuit breakers instead
+\end{itemize}
+
+\subsubsection*{Marking to market}
+\begin{itemize}
+\item Marking to market is the concept of adjusting the margin balance daily for daily variation in the futures price
+\item After adjusting margin balance for daily gain / lss, the futures price and settlement price are equivalent
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a futures contract to buy $5,000$ bu. wheat at \$10 per bu. The initial margin is $\$2,500$, and the maintenance margin is $\$2,000$.
+\item[] \textbf{Day 2:} The settlement price at the end of day 2 is \$9.95.
+}
+{\color{RoyalBlue}
+\item[] This represents the new futures contract price. The new margin is therefore
+\begin{equation*}
+\text{New margin} = 2,500 - 5,000(10-9.95) = 2,250>\text{Maintenance margin}.
+\end{equation*}
+This is above the maintenance margin, so no variation margin is required.
+}
+{\color{RedViolet}
+\item[] \textbf{Day 3:} The settlement price at the end of day 3 is \$9.85.
+}
+{\color{RoyalBlue}
+\item[] This represents the new futures contract price. The new margin is therefore
+\begin{equation*}
+\text{New margin} = 2,250 - 5,000(9.95-9.85) - 1,750<\text{Maintenance margin}.
+\end{equation*}
+This is below the maintenance margin, so the buyer of the contract is required to deposit \$750 of variation margin to make the value of the contract back up to $\$2,500$.
+}
+\end{itemize}
+
+\subsubsection{Swap agreements}
+\begin{itemize}
+\item For a notional amount, each party makes periodic payments based on an interest rate, or on the performance of an index / bond / portfolio / comodity
+\item Payments are typically \underline{netted} (principal exchanged for securities)
+\begin{itemize}
+\item This may or may not require margin (Today, margin requirements are becoming more common, but are not strictly necessary)
+\item This may have multiple settlement dates
+\end{itemize}
+\item These are custom instruments, equivalent to a series of individual forward contracts
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a swap agreement witha notional principal of \$10 mn. The floating rate is a 90-day SOFR, and the annualised fixed rate is 2\%. The Tenor of the swap agreement is 2 years, and settlement is quarterly. Payments are netted.
+}
+{\color{RoyalBlue}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, rows = {fg = RoyalBlue}, width = 0.75\textwidth}
+& $T_{0}$ & $T_{90}$ & $T_{180}$ & $\cdots$ \\
+Fixed & & $\frac{2\%}{4}$ & $\frac{2\%}{4}$ & $\cdots$ \\
+Floating & & $\frac{\text{90-day SOFR}_{T_{0}}}{4}$ & $\frac{\text{90-day SOFR}_{T_{90}}}{4}$ & $\cdots$
+\end{tblr}
+\end{table}
+\item[] At $T_{i}$, we know the 90-day SOFR rate which is to be settled at $T_{i+90}$. The difference between the two payments is calculated, and a single payment is made to settle the difference.
+}
+\end{itemize}
+
+\subsubsection{Credit default swaps (CDS)}
+\begin{itemize}
+\item In a CDS, the buyer of the protection makes periodic payments (``Coupons’’ $\equiv$ Insurance premiums). The protection seller only pays out of pocket if a credit event (i.e. default) occurs
+\item Changes in probability of default or loss given default increases the swap fixed payment (and spread of the underlying)
+\item CDS is used to hedge or take on credit risk
+\item The buyer is short credit risk.
+\end{itemize}
+
+\subsection{Options}
+\subsubsection{Option basics}
+\begin{itemize}
+\item An option buyer (owner, long position) pays the premium on an option to purchase the \underline{right} to exercise an option at a future date.
+\item An option seller (writer, short position) is obliged to give / take receipt of an asset for that fixed price only if the owner exercises the option.
+\begin{itemize}
+\item The owner of a call option holds the right to \underline{buy} (``call from the market’’) an underlying at a strike price. The writer therefore must deliver the asset to the option owner at expiry, if exercised.
+\item The owner of a put option holds the right to \underline{sell} an underlying asset ata a strike price. The writer must therefore purchase the asset from the option owner at expiry, if exercised.
+\end{itemize}
+\item European options are exercisable \underline{only} at expiration
+\item American options are exercisable \underline{at any time} until expiration
+\end{itemize}
+
+\subsubsection{Call options}
+\vspace{-.4cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath call_options.pdf}
+  \caption{Profit / Loss chart for a typical call option. The owner will exercise the option if the asset value at expiration exceeds the strike price. Breakeven is at $X+C$.}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,2,c]}, width = 0.95\textwidth}
+\hline[1.25pt]
+$S<X$ & Option not exercised & Buyer loses full premium \\
+$X<S<X+C$ & Option exercised & Buyer realises smaller loss than premium \\
+$S>X+C$ & Option exercised & Buyer realises pure gain \\ \hline[1.25pt]
+\end{tblr}
+\caption{Profit / Loss criteria for a typical call option}
+\end{table}
+
+\subsubsection{Put options}
+\vspace{-.4cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath put_options.pdf}
+  \caption{Profit / Loss chart for a typical put option. The owner will exercise the option if the asset value at expiration is below the strike price. Breakeven is at $X-P$.}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,2,c]}, width = 0.95\textwidth}
+\hline[1.25pt]
+$S>X$ & Option not exercised & Buyer loses full premium \\
+$X>S>X-P$ & Option exercised & Buyer realises smaller loss than premium \\
+$S<X-P$ & Option exercised & Buyer realises pure gain \\ \hline[1.25pt]
+\end{tblr}
+\caption{Profit / Loss criteria for a typical put option}
+\end{table}
+
+\subsubsection{Forward commitments and contingent claims}
+\begin{itemize}
+\item Futures, forward contracts, and swaps are forward commitments. They carry with them an obligation to fulfill the terms of the contract
+\item Options and credit derivatives are contingent claims. The obligation of one party depends on an event (exercise by option holder, default of an issuer, etc.)
+\end{itemize}
+
+\subsection{Benefits, risks, issuer and investor uses}
+\subsubsection*{Benefits}
+\begin{itemize}
+\item Transfer / manage risk
+\item Easier to get a short position (compared to a short sale
+\item Lower transaction costs than cash market
+\item Less cash required, so greater degree of leverage
+\item Greater liquidity (Higher traded volume than spot markets)
+\item Gives information on
+\begin{itemize}
+\item Expected volatility
+\item Estimates of future price / interest rates (spot vs forward)
+\begin{equation}
+\underbrace{\text{Price}}_{\text{Premium}} = \text{Price}(\text{Time}, \text{Spot}, \text{Strike}, R_{f}, \text{Vol.})
+\end{equation}
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection*{Risks}
+\begin{itemize}
+\item Basis risk
+\begin{itemize}
+\item Underlying mismatch with hedged risk (Does derivative match instrument trying to hedge)
+\item Mismatch of expiration debt and date of hedged transaction
+\end{itemize}
+
+\item Liquidity risk
+\begin{itemize}
+\item Mismatch of derivative cash flows with those of existing risk to be hedged (i.e. variation margin calls)
+\end{itemize}
+
+\item Counterparty credit risk
+\begin{itemize}
+\item Depends on derivative position and margin requirements
+\end{itemize}
+
+\item Systemic risks
+\begin{itemize}
+\item Excessive speculation may have an adverse impact on financial markets. (Comes from leverage / contagion)
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection*{Uses by corporate issuers}
+\begin{itemize}
+\item Used to reduce duration risk of fixed-rate debt with floating-rate payer swap.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath swap_1.pdf}
+  \caption{Swap agreement used to protect against duration risk}
+\end{figure}
+{\color{RedViolet}
+\item An airline can hedge risk for fuel costs by buying jet fuel futures. The airline goes short fuel and long fuel futures.
+\item An international corporation can hedge uncertainty about future payments and receipts in a foreign currency with forwards / futures
+}
+\item Hedge accounting uses gains an losses on derivatives to offset the effects of changing asset and liability values
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath swap_2.pdf}
+  \caption{Swap agreement used for hedge accounting to reduce uncertainty about future floating-rate interest payments}
+\end{figure}
+{\color{RedViolet}
+\item Currency forward to reduce uncertainty about the value of foreign currency payment / receipt
+}
+
+\item Fair value hedges are those such as a gold miner’s inventory hedged by selling forward contracts in gold
+\item A floating rate payer swap may be used to offset changes in the balance sheet value of fixed-rate bond liability
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath swap_3.pdf}
+  \caption{Swap agreement used to to manage changes in the balance sheet value of assets / liabilities}
+\end{figure}
+\item A net value hedge is used to hedge the value of a foreign company’s subsidiary equity on a paret’s balance sheet wih currency forwards
+
+\end{itemize}
+
+\subsubsection*{Uses by investors}
+\begin{itemize}
+\item Speculation of price by buying futures / forward contracts
+\item Increase (decrease) of duration in a portfolio by buying (selling) a fixed-rate swap. The fixed rate swap has negative duration since the floating rate is less sensitive to interest rate moves
+\item Altering risk of an equity portfolio
+\begin{enumerate}
+\item Buy index forward to increase risk exposure
+\item Sell index forward to decrease risk exposure
+\item Buy index puts to limit downside ``Protected put’’
+\item Buy index calls ot leverage upside
+\end{enumerate}
+\end{itemize}
+
+\subsection{Arbitrage, replication, and cost of carry}
+\label{cash-and-carry}
+\subsubsection*{Arbitrage}
+\begin{itemize}
+\item Arbitrage is a risk-free strategy. For two assets that have the same future payoffs, regardless of future events, but are available for different prices, buyng the lower priced asset and simultaneously selling the higher-priced asset gives a ``riskless arbitrage profit’’
+\item The action of arbitrageurs pushes the price difference to zero
+\end{itemize}
+
+\subsubsection*{Replication}
+\begin{itemize}
+\item We can replicate a derivative by creating a portfolio that has future payoffs identical to that of the derivative. 
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a long forward contract to buy shares in ABC. corp at 31.50 in 1 year, with the current trading price of ABC being 30. Compare this to borrowing 30 at a risk free rate, and holding the physical stock for a year. (Assume no dividend)
+}
+{\color{RoyalBlue}
+\item[] We are not told the risk free rate, but can infer an estimate given the spot and future price of the asset.
+\begin{equation*}
+S_{0} = \frac{S_{\text{future}}}{(1+R_{f})^{T}} \hspace{1cm}\Rightarrow \hspace{1cm}R_{f} = \frac{31.50}{30} -1 = 5\%
+\end{equation*}
+The initial cost of each is zero. The payoff at time $T$ is $S_{T}-31.50$. So 31.50 is the no-arbitrage 1-year forward price, $F_{0}(T)$, of an ABC share when $R_{f} = 5\%$. Therefore,
+\begin{equation*}
+F_{0}(T) = S_{0}(1+R_{f})^{T}.
+\end{equation*} 
+\item[] If $F_{0}(T) = 32$, the forward price is greater than the arbitrage-free price. Therefore an investor should sell the forward contract ``short contract’’ and borrow to buy the underlying. This results in a riskless gain. \underline{``Cash and carry arbitrage’’}
+\item[] If $F_{0}(T) = 31$, the forward price is less than the arbitrage-free price. Therefore an investor should buy the forward contract ``long contract’’ and short the underlying, investing at the risk free rate. This results in a riskless gain. \underline{``Reverse cash and carry arbitrage’’}
+}
+\end{itemize}
+
+\subsubsection*{Benefits and costs}
+\begin{itemize}
+\item The benefits and costs of holding the underlying must be factored into the forward price of an asset. the Benefits include any monetary benefits (cash flows, dividends, etc.) and non-monetary benefits (convenience yield). Costs include storage and insureance costs, which are mostly monetary costs. The inclusion of the risk free rate is the opportunity cost of holding the asset.
+\begin{align}
+F_{0}(T) &= \left\{ s_{0} - PV_{0}(\text{Benefits}) + PV_{0}(\text{Costs}) \right\} + (1+R_{f})^{T} \label{cost-benefit} \\
+&= S_{0}(1+R_{f})^{T} - FV(\text{Benefits}) + FV(\text{Costs}) \nonumber
+\end{align}
+Equation \ref{cost-benefit} shows us that an increase in the present value of any benefits lowers the price of the futures contract, and an increase in the present value of any costs raises the price of the futures contract.
+
+\item Note that equation \ref{cost-benefit} uses discrete compounding periods. If the compounding is continuous, 
+\begin{align}
+& & FV &= Se^{rT} & &\left[e^{rT} = \lim_{n\rightarrow\infty}\left[1+\frac{rT}{n}\right]^{n}\right],
+\end{align}
+and therefore
+\begin{equation}
+F_{0}(T) = s_{0}\cdot e^{(R_{f} + c - i)}
+\end{equation}
+where $c$ is the cot, and $i$ is the benefit.
+\end{itemize}
+
+\subsection{Forward exchange rates}
+\begin{itemize}
+\item We recall from \S\ref{sec-no-arbitrage-forward}, equation \ref{forward-exchange-rates}, that 
+\begin{align}
+\frac{\text{Forward}(A)}{\text{Forward}(B)} &= \frac{(1+{R_{f}}^{A})^{T}}{(1+{R_{f}}^{B})^{T}} \cdot \frac{\text{Spot}(A)}{\text{Spot}(B)} \text{ for discrete compounding} \\
+&= e^{{R_{f}}^{A} - {R_{f}}^{B}} \cdot \frac{\text{Spot}(A)}{\text{Spot}(B)} \text{ for continuous compounding}
+\end{align}
+Higher domestic interest rates lead to depreciation of the domestic currency.
+\end{itemize}
+
+\subsection{Pricing and valuation of forward contracts}
+\begin{itemize}
+\item Recall equation \ref{cost-benefit} under the assumption that there are no monetary or non-monetary benefits / costs associated with a given underlying.
+\begin{align}
+F_{0}(T) &= \left\{ s_{0} - PV_{0}(\text{Benefits}) + PV_{0}(\text{Costs}) \right\} + (1+R_{f})^{T} \nonumber \\
+&= S_{0}(1+R_{f})^{T}
+\end{align}
+The no-arbitrage price is the forward price that ensures the forward has a value of zero at initiation of the contract.
+\item[] At time $t$, 
+\begin{equation}
+V_{t}(T) = \underbrace{S_{t}}_{\text{Current price}} - \underbrace{\frac{F_{0}(T)}{(1+R_{f})^{T-t}},}_{\text{$PV$ of forward contract}}
+\end{equation}
+and at settlement, when $t=T$,
+\begin{equation}
+V_{t=T}(T) = S_{t} - F_{0}(T),
+\end{equation}
+More generally, we can write
+\begin{equation}
+V_{t}(T) = S_{t} - PV_{t}(F_{0}(T)). \label{forward-value}
+\end{equation}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a long position ina one-year forward contract, with a price of 35. The risk free rate is 3\%. After 9 months, the spot price of the underlying is 36.. What is the present value of the forward contract.
+}
+{\color{RoyalBlue}
+\item[] Using equation \ref{forward-value},
+\begin{align}
+V_{t = \text{9 months}}(\text{1 Yr}) &= 36 - \frac{35}{(1.03)^{0.25}}, \\
+&=1.26.
+\end{align}
+}
+\end{itemize}
+
+\subsection{Forward rate agreements (FRA)}
+\begin{itemize}
+\item This covers how forward prices are determined for interest rate-based products
+\item By CFA exam convention, a party that is ``long FRA’’ will pay a fixed rate and receive a floating (underlying MRR).
+\item At settlement, the difference between the fixed and floating is paid. So if the $MRR > \text{Fixed}$, the long receives the difference, and if the $MRR < \text{Fixed}$, then the long pays the difference.
+\item Replicating an FRA can be done as follows.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth]{\imgpath FRA.pdf}
+  \caption{Mechanism showing the contracts and agreements required to recreate an FRA}
+\end{figure}
+\item Generally, a company will tend to borrow using bank finance at a floating rate.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a company borrowing \$10 mn for 6 months, with the loan commencing in 3 months time. In order to fix the interest payments they will make on this loan, they enter into a long position of an FRA.
+}
+{\color{RoyalBlue}
+\item[] Calculating the no-arbitrage forward rate for a 6m MRR beginning 3m from today, if the spot 3m rate is 1\%, and the spot 9m rate is 1.2\% (both annualised)
+\begin{align*}
+1 + 0.012 \times \frac{9}{12} &= \left( 1 + 0.01 \times \frac{3}{12} \right) \left( 1 + F_{3,6} \times \left( \frac{6}{12} \right) \right) \\
+\Rightarrow F_{3,6} &= 0.01297 \\
+&=1.297\%
+\end{align*}
+where the usual notation for forward rates is used.
+}
+
+\item FRA payoffs for the long party involve receipt of $(MRR - \text{Fixed})$, discounted by the $MRR$ from teh end to the start of the borrowing period, where the fixed rate is set by the FRA.
+\item An FRA may be used for 
+\begin{itemize}
+\item Company expecting to borrow in the future can fix borrowing costs with a pay-fixed position in an FRA.
+\item Company expecting to lend in the future can fix the lending rate with a pay-floating position in an FRA.
+\end{itemize}
+\end{itemize}
+
+\subsection{Pricing and valuation of futures contracts}
+\begin{itemize}
+\item[] Notation: Forward contracts are denoted with capital $F$. Futures contracts are typically denoted with a lower case $f$.
+\item Much in the same way as forward contracts, as in equation \ref{cost-benefit}, the price at initiation is defined by 
+\begin{equation}
+f_{0}(T) = \left\{ s_{0} - PV_{0}(\text{Benefits}) + PV_{0}(\text{Costs}) \right\} + (1+R_{f})^{T}
+\end{equation}
+\item After initiation, the price of a forward does not change. The value changes as the asset price varies, but the price remains unchanged. The price of a futures contract however does change. The value changes as asset price changes due to mark-to-market cash flows. The value returns to zero on a daily basis as gains / losses are settled.
+\item The MTM value is given by
+\begin{equation}
+\text{MTM value} = \Delta \text{Settlement}
+\end{equation}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a long futures contract on gold at $1,870$ / oz, for 100 oz.
+
+}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,3,c] Q[m,3,c]}, width = 0.95\textwidth, rows = {fg = RoyalBlue}}
+Day 0 & Price = settlement price = $1,870$ \\ \\
+\SetCell[r=3]{l}Day 1 & Settlement price = $1,875$ & MTM value = 5 $\times 100$ = 500 \\
+& 500 addition to margin \\
+& New futures price = $1,875$ & MTM value = 0 \\ \\
+\SetCell[r=3]{l}Day 2 & Settlement price = $1,855$ & MTM value = $-20 \times 100 = -200$ \\
+& $2,000$ deduction from margin \\
+& New futures price = $1,855$ & MTM value = 0
+\end{tblr}
+\end{table}
+
+
+\end{itemize}
+
+\subsection{Forward vs futures prices}
+\begin{itemize}
+\item Because futures have daily MTM cash flows, if interest rates are positively correlated with the underlying asset value, a long futures position is preferred to a forward with no cash flows.
+\begin{equation*}
+\text{Long u/l }\uparrow \Rightarrow \text{Futures price } \uparrow, 
+\end{equation*}
+therefore any profits from the margin calls can be reinvested at the higher interest rate. As there is a higher rate when lending, as compared to borrowing, the long position in this contract is preferable. 
+\item It is worth noting that this works in theory, but in practice, there are no significant price / value idfferences
+\item[]
+\item Short term interest rate futures
+\begin{itemize}
+\item Based on deposit at end of contract
+\item IMM index convention
+\item Price = 100 $-$ annualised forward rate. As the price falls, the forward rate increases
+\end{itemize}
+\item Long position interest rate futures increase in value when the forward rate falls
+\item Long FRA (paying fixed) gains when the floating rate rises. In order to hedge borrowing costs, an investor shoul go long on an FRA and short an interest rate future.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a long futures contract for 1mn on a 6-month MRR priced at 97.50
+}
+{\color{RoyalBlue}
+\item[] The price is given by
+\begin{equation*}
+\text{Price} = (1 - \underbrace{\text{Annualised MRR}}_{2.5\%}) \times 100.
+\end{equation*}
+Each basis point change in the MRR changes the payoff by
+\begin{equation*}
+0.0001 \times \frac{6}{12} \times 1,000,000 = 50.
+\end{equation*}
+This is a linear payoff.
+\item[] If the MRR is 2.44\% at settlement, the futures price is $100-2.44=97.56$. The long party receives payments of \begin{equation*}
+(2.50\% - 2.44\%) \times \frac{6}{12} \times 1,000,000 = 300.
+\end{equation*}
+Therefore 300 is the additional interest required to be paid on a six month deposit.
+
+\item[] If we consider an equivalent FRA (Fixed rate of 2.5\%), 
+\begin{itemize}
+\item At settlement, with MRR = 2.51\%, the payment to the long party is 
+\begin{equation*}
+\frac{50}{\left( 1 + \frac{0.0251}{2}\right)} = 49.3803
+\end{equation*}
+\item At settlement, with MRR = 2.49\%, the payment that the long party must make is 
+\begin{equation*}
+\frac{50}{\left(1 + \frac{0.0249}{2} \right)} = 49.3852
+\end{equation*}
+These are the present values of the pay-offs at the end of each borrowing / lending period. The asymmetry in the payoffs comes from convexity, which as we can see here works against the long position.
+\end{itemize}
+}
+\end{itemize}
+\subsubsection{Convexity of forward payoffs}
+\begin{itemize}
+\item Gain from interest rate decrease is larger than the loss from an increase.
+\item Similar to bond convexity, forward convexity favours the investor
+\item Payoff difference is smaller for short-dated FRAs 
+\end{itemize}
+
+
+\subsection{Pricing and valuation of interest rate swaps}
+\begin{itemize}
+\item A fixed-rate swap payer pays a fixed rate and receives MRR $\times$ some notional on each payment date
+\item Each payment is equivalent ot an FRA at the swap fixed rate
+\begin{equation*}
+\Rightarrow \text{Swap} \equiv \left\{\text{FRAs at swap (fixed) rate}\right\}
+\end{equation*}
+\item At initiation, the swap has zero value, but the individual FRAs may have non-zero values.
+\item If we consider a one-year quarterly pay fixed-swap agremement, 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.95\textwidth]{\imgpath ir_swap.pdf}
+  \caption{Diagram showing the mechanism and agreements involved in a quarterly pay fixed swap agreement, with a life of 1 year. The MRRs are all add-on rates. The MRR at $T=i$ determines the payment to be made at $T=i+90$}
+\end{figure}
+\item[] The zero-arbitrage $F_{0}$s are not all the same, but for the purposes of the swap, we can assume they are. The values may be positive or negative.
+\item The swap price is the fixed rate. At initiation, the swap value is zero, as the following relationship is true:
+\begin{equation*}
+PV(\text{Fixed payments}) = PV(\text{Floating payments}).
+\end{equation*}
+We can also see that by combining different contracts,
+\begin{equation*}
+\text{Pay-floating swap} + \text{Fixed-rate debt} \Rightarrow \text{Floating-rate debt}.
+\end{equation*}
+A pay-floating swap loses value when the forward rate curve expectations shift upward.
+\begin{equation*}
+\text{IR expectations } \uparrow \Rightarrow \text{Forwar rates } \uparrow.
+\end{equation*}
+For a pay-floating, the floating payments increase, but the fixed are unchanged, so the value of the contract falls. The opposite is true for a pay-fixed agreement.
+
+\item A swap can be priced given the set of spot rates, $\{S_{1}, S_{2}, S_{3}, \cdots, S_{n}\}$. Using these spot rates, the set of forward rates, $\{F_{0,1}, F_{1,1}, F_{2,1}, \cdots, F_{n,1}\}$ can be inferred.
+{\small
+\begin{align*}
+F_{0,1}&=S_{1}, & F_{1,1} &=\frac{(1+S_{2})^{2}}{(1+S_{1})} - 1, & F_{2,1} &= \frac{(1 + S_{3})^{3}}{(1 + S_{2})^{2}} -1,  & \cdots, & &F_{n,1} &= \frac{(1 + S_{n})^{n}}{(1 + S_{n-1})^{n-1}} -1.
+\end{align*}
+}
+The present value of the floating rate payments is therefore given by
+\begin{equation}
+PV(\text{Floating}) = \frac{F_{0,1}}{(1 + S_{1})} + \frac{F_{1,1}}{(1 + s_{2})^{2}} + \frac{F_{2,1}}{(1 + S_{3})^{3}} + \cdots \frac{F_{n,1}}{(1 + S_{n})^{n}}
+\end{equation}
+
+The present value of the fixed payments must be equal to the present value of the floating payments at inception of the contract.
+\begin{equation}
+PV(\text{Fixed}) = \frac{\text{Fixed}}{(1 + S_{1})} + \frac{\text{Fixed}}{(1 + s_{2})^{2}} + \frac{\text{Fixed}}{(1 + S_{3})^{3}} + \cdots \frac{\text{Fixed}}{(1 + S_{n})^{n}}
+\end{equation}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider an annual-pay agreement, where the 1-year, 2-year, and 3-year spot rates are 1.2\%, 1.3\% and 1.4\% respectively. What is the value of the fixed payment required for a zero-value swap.
+}
+{\color{RoyalBlue}
+\item[] We can see easily calculate the forward rates using the principal of no-arbitrage, which gives forward rates of
+\begin{align*}
+F_{0,1}&=1.2\%, & F_{1,1} &=1.4001\%, & F_{2,1} &= 1.6003\%.
+\end{align*}
+The $PV$ of the expected floating rate payments is therefore
+\begin{equation*}
+PV(\text{Floating}) = \frac{0.012}{1.012} + \frac{0.014001}{1.013^{2}} + \frac{0.016003}{1.014^{3}} = 0.040859.
+\end{equation*}
+By construction, this gives us
+\begin{gather*}
+PV(\text{Floating}) = \frac{\text{Fixed}}{1.012} + \frac{\text{Fixed}}{1.013^{2}} + \frac{\text{Fixed}}{1.014^{3}} = 0.040859. \\
+\Rightarrow \text{Fixed} = 0.0139815\text{, for a zero-value swap}
+\end{gather*}
+}
+\item The price of the swap is determined by the fixed rate which satisfies $PV(\text{Fixed}) = PV(\text{Floating})$.
+\item The value of a swap is given by
+\begin{equation}
+PV(\text{Remaining floating}) - PV(\text{Remaining fixed}).
+\end{equation}
+An increase in expected MRR increases the value to the fixed-rate payer.
+\end{itemize}
+
+\subsection{Pricing and valuation of options}
+\subsubsection*{Intrinsic value}
+\begin{itemize}
+\item For a European option, this is the amount by which an option is \underline{in} the money.
+\begin{align*}
+&\text{European call:} & &\text{Max}\left(0, [S-X]\right) & &\text{In the money if }S>X \\
+&\text{European put:} & &\text{Max}\left(0, [X-S]\right) & &\text{In the money if }S<X
+\end{align*}
+The intrinsic value is floored at zero. By construction, it \underline{cannot} be negative.
+\end{itemize}
+
+\subsubsection*{Moneyness}
+\begin{itemize}
+\item The option premium is defined as
+\begin{equation}
+\text{Option premium} = \text{Intrinsic value} + \text{Time value}.
+\end{equation}
+The time value for an option is also floored at zero, and tends to zero over time.
+\end{itemize}
+
+\subsubsection*{Forwards vs contingent claims}
+\begin{itemize}
+\item Forward and future commitments have
+\begin{itemize}
+\item Zero value at initiation $F_{0}(T) = 0$, $f_{0}(T) = 0$.
+\item Symmetric payoffs, no upfront payment
+\item Unlimited gains / losses (except by zero asset / underlying price)
+\end{itemize}
+\item Contingent claims (options) have
+\begin{itemize}
+\item Positive value at issuance
+\begin{equation}
+\text{Option premium} = PV(\text{Expected payoff at expiry})
+\end{equation}
+\item Asymmetric payoffs
+\begin{align*}
+\text{Max. loss} =& \text{Option price for long put / call} \\
+&\text{Long party has a capped loss} \\
+\text{Max. gain} =& \text{Option price for short put / call} \\
+&\text{Short party has a capped gain}
+\end{align*}
+\end{itemize}
+\item Arbitrage puts limits on the minimum and maximum values (premia) of options
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,3,c] Q[m,2,c]}, width = 0.85\textwidth}
+\hline[1.25pt]
+\textbf{Option} & \textbf{Minimum value} & \textbf{Maximum value} \\ \hline
+Call, $c_{t}$ & Max$\left[ 0, S_{t} - X(1 + R_{f})^{-(T-t)} \right]$ & $S_{t}$ \\
+Put, $p_{t}$ & Max$\left[ 0, X(1 + R_{f})^{-(T-t)} - S_{t}\right]$ & $X(1 + R_{f})^{-(T-t)}$ \\ \hline[1.25pt]
+\end{tblr}
+\caption{Option price (premia) minimum and maximum values. For the minimum value in both cases, we compare the current price to the present value of the future strike price.}
+\end{table}
+\item Consider a portfolio which has the following positions, given in table \ref{table-model-portfolio}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,5,l]}, width = 0.75\textwidth}
+\hline[1.25pt]
+\SetCell[r=2]{c} Long & ATM call option \\
+& ZCB, same maturity as option, par value = option strike \\ \hline
+Short & Underlying stock \\ \hline[1.25pt]
+\end{tblr}
+\caption{Positions in a hypothetical portfolio involving a call option}
+\label{table-model-portfolio}
+\end{table}
+The value of the portfolio at time $t$ is given by
+\begin{align}
+\text{Value}(t) &= c_{t} + PV(X)-S_{t}, \label{hyp-call-port}\\
+&=c_{t} + \frac{X}{(1+R_{f})^{-(T-t)}} - S_{t} \nonumber
+\end{align}
+At expiry, depending on whether the asset price is above or below the strike price, the individual positions take on the following values:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,3,c] Q[m,2,c]}, width = 0.75\textwidth}
+\hline[1.25pt]
+& $S_{T}>X$ & $S_{T}<X$ \\ \hline
+$c_{T}$ & $S_{T}-X$ & 0 \\
+ZCB & $X$ & $X$ \\
+Stock & $S_{T}$ & $S_{T}$ \\ \hline
+$PV$ & $S_{T}-X + X-S_{T}=0$ & $0+X-S_{T}>0$ \\ \hline[1.25pt]
+\end{tblr}
+\caption{Value of the the various components of the call option portfolio at option expiry}
+\label{hyp-call-port-table}
+\end{table}
+
+\item Using equation \ref{hyp-call-port}, and the results of table \ref{hyp-call-port-table}, we can establish a minimum value of the call option, $c_{t}$, which is that
+\begin{equation}
+c_{t}\geq S_{t} - \frac{X}{(1+R_{f})^{-(T-t)}}.
+\end{equation}
+
+\item We can go through a very similar exercise for a portfolio that instead holds a put option. In this case, we find:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,5,l]}, width = 0.75\textwidth}
+\hline[1.25pt]
+\SetCell[r=2]{c} Long & ATM put option \\
+& Underlying stock \\ \hline
+Short & ZCB, same maturity as option, par value = option strike \\ \hline[1.25pt]
+\end{tblr}
+\caption{Positions in a hypothetical portfolio involving a put option}
+\label{table-model-portfolio-put}
+\end{table}
+
+The value of the portfolio at time $t$ is given by
+\begin{align}
+\text{Value}(t) &= p_{t}  + S_{t} - PV(X), \label{hyp-put-port}\\
+&=p_{t} + S_{t} - \frac{X}{(1+R_{f})^{-(T-t)}} \nonumber
+\end{align}
+At expiry, depending on whether the asset price is above or below the strike price, the individual positions take on the following values:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,3,c] Q[m,2,c]}, width = 0.75\textwidth}
+\hline[1.25pt]
+& $S_{T}>X$ & $S_{T}<X$ \\ \hline
+$p_{T}$ & 0 & $X-S_{T}$ \\
+Stock & $S_{T}$ & $S_{T}$ \\
+ZCB & $X$ & $X$ \\ \hline
+$PV$ & $0+S_{T}-X>0$  & $X - S_{T} + S_{T} - X=0$\\ \hline[1.25pt]
+\end{tblr}
+\caption{Value of the the various components of the put option portfolio at option expiry}
+\label{hyp-put-port-table}
+\end{table}
+
+\item Using equation \ref{hyp-put-port}, and the results of table \ref{hyp-put-port-table}, we can establish a minimum value of the put option, $p_{t}$, which is that
+\begin{equation}
+p_{t}\geq \frac{X}{(1+R_{f})^{-(T-t)}} - S_{t}.
+\end{equation}
+
+\end{itemize}
+\clearpage
+\subsection{Factors affecting option values}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,c] Q[m,1,c] Q[m,1,c] Q[m,2.5,c]}, width = 0.9\textwidth}
+\hline[1.25pt]
+\textbf{Factor} & \textbf{Impact on call} & \textbf{Impact on put} \\ \hline
+High asset price & $c_{t}\phantom{,}\uparrow$ & $p_{t}\phantom{,}\downarrow$ & \SetCell[r=2]{c} Intrinsic value \\
+High exercise price & $c_{t}\phantom{,}\downarrow$ & $p_{t}\phantom{,}\uparrow$ & \\ \cline{Z}
+High volatility & $c_{t}\phantom{,}\uparrow$ & $p_{t}\phantom{,}\uparrow$ & \SetCell[r=2]{c} Time value \\
+Long time to expiry & $c_{t}\phantom{,}\uparrow$ & $p_{t}\phantom{,}\uparrow$ & \\\cline{Z}
+High risk-free rate & $c_{t}\phantom{,}\uparrow$ & $p_{t}\phantom{,}\downarrow$ & High $R_{f}$ lowers $PV(X)$. Think about intrinsic value \\\cline{Z}
+High benefit of holding & $c_{t}\phantom{,}\downarrow$ & $p_{t}\phantom{,}\uparrow$ & Opposite for costs\\ \hline[1.25pt]
+\end{tblr}
+\caption{Table contianing the impact of various factors on option prices. This holds in most instances, except for when $T\gg1$, $X\gg S_{t}$, in which case an investor is better off investing at the risk-free rate.}
+\end{table}
+
+\subsection{Option replication using put-call parity}
+\begin{itemize}
+\item We can use put-call parity of European options only, as there is no uncertainty in the time of exercise of the option, as opposed to an American option.
+\item A protective put position comprises
+\begin{equation}
+\text{Protective Put} = \text{Long stock} + \text{Long put}
+\end{equation}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{\imgpath protective_put.pdf}
+  \caption{Protective put pay-off diagram}
+\end{figure}
+\begin{align*}
+\text{If $S\leq X$, payoff } =  S + (X-S) = X \hspace{1cm} &| \hspace{1cm} \text{If $S\geq X$, payoff } =  S + 0 = S
+\end{align*}
+\item A fiduciary call position comprises a long position in both a call option, and zero coupon bond with par value equal to strike price, and the same maturity of the option.
+\begin{align*}
+\text{If $S\leq X$, payoff } =  0 + X = X \hspace{1cm} &| \hspace{1cm} \text{If $S\geq X$, payoff } =  X + S - X = S
+\end{align*}
+By construction, we can see that this has identical payoffs. As such, they must have the same total value of the portfolio, through the principal of no-arbitrage. Therefore,
+\begin{equation}
+c_{t} + \frac{X}{(1+R_{f})^{T}} = p_{t} + S. \label{put-call-parity}
+\end{equation}
+This gives us an expression relating to the put-call parity of European options. This expression can be rearranged in order to create a synthetic put, call or stock position.
+\begin{align}
+\text{Synthetic put}\phantom{s}&& p_{t} &= c_{t} - S + PV(X) &&\\
+\text{Synthetic call}\phantom{s}&& c_{t} &= p_{t} + S - PV(X) &&\\
+\text{Synthetic stock}&& s &= c_{t} + PV(X) - p_{t} &&
+\end{align}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a stock trading at 52. The risk free rate is 5\%. If a 3m put option with a strike price of 50 is valued at 1.50 today, what is the value of a 3m call today?
+}
+{\color{RoyalBlue}
+\begin{align*}
+c_{t} &= p_{t} + S - PV(X) \\
+&=1.5+52-\frac{50}{(1+5\%)^{0.25}} \\
+&=4.11
+\end{align*}
+}
+\end{itemize}
+
+\subsection{Put-call-forward parity}
+\begin{itemize}
+\item An underlying asset may also be replicated through the use of a forward contract and a risk-free bond which pays the forward price at expiration. (Think back to the cash and carry model, \S\ref{cash-and-carry}). Here, 
+\begin{equation}
+S_{0} = \frac{F_{0}(T)}{(1+R_{f})^{T}}.
+\end{equation}
+Therefore, equation \ref{put-call-parity} can be rewritten as
+\begin{equation}
+\frac{F_{0}(T)}{(1+R_{f})^{T}} + p_{t} = \frac{X}{(1+R_{f})^{T}}+c_{t}.
+\end{equation}
+\item We can link these ideas back to the capital structure of a firm. Recalling that for any firm,
+\begin{equation*}
+\text{Assets} = \text{Liability} + \text{Equity},
+\end{equation*}
+the ``Assets” refers to the market value of firm assets, $V_{0}$, otherwise known as the firm value. The liabilities can be likened to a zero-coupon bond, which has a par value at redemption equal to the size of the outstanding debt.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.6\textwidth}
+\hline[1.25pt]
+& \textbf{Solvency} & \textbf{Insolvency} \\
+& $V_{T}>D$ & $V_{T}<D$ \\ \hline
+Equity value & $V_{t} - D$ & 0 \\
+Debt & $D$ & $V_{T}$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\item[] Looking at this, we can draw some parallels with options.
+\begin{itemize}
+\item The equity payoff is equivalent to a call option where $D$ is the strike price (long call option)
+\item The debt payoff is equivalent to going short a put option
+\end{itemize}
+\item Risky debt, or debt of the company can be recreated through a combination of risk-free debt and short put option position:
+\begin{equation}
+\text{Risk debt} = \underbrace{\text{Risk-free debt}}_{\frac{X}{(1+R_{f})^{T}}} - \text{Put option}.
+\end{equation}
+An investor goes short a put option in order to receive the option premium. This is equivalent to the credit risk premium.
+\item Recalling pu-call parity, from equation \ref{put-call-parity}, we find
+\begin{align}
+c_{0} + PV(D) &= p_{0} + V_{0} \\
+\text{Firm value, }V_{0} &=\underbrace{c_{0}}_{\text{Equity}} + \underbrace{PV(D)-p_{0}}_{\text{Debt}}
+\end{align}
+\end{itemize}
+
+\subsection{Derivative valuation using a one-period binomial model}
+\begin{itemize}
+\item We recall
+\begin{equation*}
+\text{Option value (Premium)} = PV(\text{Expected pay-off at expiry}).
+\end{equation*}
+Under a one-period binomial model, we allow the asset price to move exactly once, either up or down. 
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,0.6,c] Q[m,1,c] Q[m,1,c]}, width = 0.7\textwidth}
+\hline[1.25pt]
+\textbf{Today} & \textbf{Expiry} & \textbf{Pay-off} \\ \hline
+\SetCell[r=2]{c}$S_{0}$ & $S_{+}$ up move & $\text{Max}(0,S_{+}-X)=c_{+}$ \\
+ & $S_{-}$ down move & $\text{Max}(0,S_{-}-X)=c_{-}$ \\ \hline[1.25pt]
+\end{tblr}
+\caption{Pay-offs for a one-period binomial model used to price an option}
+\end{table}
+\item[] For this, we  need to know $X,R_{f},\sigma$\footnote{$\sigma$ drives the up / down move. It is assumed that the volatility is constant}
+
+\item To be precise, the value of $\S_{\pm}$ is given by
+\begin{equation*}
+S_{\pm} = S_{0}e^{\pm\sigma\sqrt{\delta t}},
+\end{equation*}
+however this is unlikely to be tested.
+
+\item A risk-free portfolio will hold a long position in an underlying and go short a call option. The fact that it is risk-free implies the value at the end of the period will be the same regardless of whether the price moves up or down. We must therefore determine the hedge ratio which results in $V_{+} = V_{-}$,
+\begin{gather}
+V_{T} = V_{\pm} \\
+V_{T} = \begin{cases}V_{+}=hS_{+} - c_{+} \\ V_{-}=hS_{-}-c_{-}\end{cases} \label{vpm}
+\end{gather}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider
+\begin{align*}
+S_{0}&=50, & S_{+}&=60, & S_{-}&=42, & X&=55.
+\end{align*}
+}
+{\color{RoyalBlue}
+The value of the call option at expiry in each circumstance is
+\begin{align*}
+c_{+}&=\text{Max}(0,S_{+}-X)=\text{MAX}(0, 60-55)=5 \\
+c_{-}&=\text{Max}(0,S_{-}-X)=\text{MAX}(0, 42-55)=0
+\end{align*}
+Then, we can determine the hedge ratio by rearranging equation \ref{vpm} to give
+\begin{align*}
+hS_{+} - c_{+} &=hS_{-}-c_{-}, \\
+h(S_{+} - S_{-})&=c_{+} - c_{-}, \\
+h&=\frac{c_{+}-c_{-}}{S_{+}-S_{-}}, \\
+&=\frac{5-0}{60-42}, \\
+&= \frac{5}{18} = 0.278.
+\end{align*}
+Therefore, an investor needs 0.278 shares to offset each short call. We know that this portfolio should return the same value, regardless of whether the asset price moves up to $S_{+}$ or down to $S_{-}$. As such, it should return the risk-free rate. In other words,
+\begin{equation*}
+\frac{V_{T}}{V_{0}}=1+R_{f},
+\end{equation*}
+where $V_{T}$ is given by 
+\begin{align*}
+V_{T} &=\underbracket{hS_{+}}_{0.278\cdot60}-\phantom{,}\underbracket{c_{+}}_{5} = \underbracket{hS_{-}}_{0.278\cdot42}-\phantom{,}\underbracket{c_{-}}_{0} \\
+&=11.68
+\end{align*}
+Given a risk-free rate of $R_{f}=3\%$, 
+\begin{align*}
+\frac{V_{T}}{V_{0}} &= \frac{11.68}{V_{0}} = 1+3\%, \\
+V_{0}&=\frac{11.68}{1.03}=11.34.
+\end{align*}
+We can use the same expression but evaluated at time $t=0$ to find the initial value of the portfolio in terms of the present value of the stock and the call option.
+\begin{gather*}
+V_{0}=hS_{0}-c_{0} = 0.278\times50 - c_{0} = 11.34, \\
+c_{0}=2.56,
+\end{gather*}
+So the option premium is 2.56.
+}
+
+\item We can use a very similar method to value a put option. In this case, the risk-free portfolio is constructed by going long in both the stock and a put option.
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider
+\begin{align*}
+S_{0}&=50, & S_{+}&=60, & S_{-}&=42, & X&=48.
+\end{align*}
+}
+{\color{RoyalBlue}
+The value of the call option at expiry in each circumstance is
+\begin{align*}
+p_{+}&=\text{Max}(0,X-S_{+})=\text{MAX}(0, 48-55)=0 \\
+p_{-}&=\text{Max}(0,X-S_{-})=\text{MAX}(0, 48-42)=6
+\end{align*}
+Then, we can determine the hedge ratio by rearranging equation \ref{vpm} to give
+\begin{align*}
+hS_{+} + p_{+} &=hS_{-}+p_{-}, \\
+h(S_{+} - S_{-})&=-p_{+} + p_{-}, \\
+h&=\frac{-p_{+}+p_{-}}{S_{+}-S_{-}}, \\
+&=\frac{-0+6}{60-42}, \\
+&= \frac{6}{18} = 0.333.
+\end{align*}
+Therefore, an investor needs 0.333 shares to offset each long put position. Again, we know that this portfolio should return the same value, regardless of whether the asset price moves up to $S_{+}$ or down to $S_{-}$.
+\begin{align*}
+V_{T} &=\underbracket{hS_{+}}_{0.333\cdot60}+\phantom{,}\underbracket{c_{+}}_{0} = \underbracket{hS_{-}}_{0.333\cdot42}-\phantom{,}\underbracket{c_{-}}_{6} \\
+&=20
+\end{align*}
+Given again, a risk-free rate of $R_{f}=3\%$, 
+\begin{align*}
+\frac{V_{T}}{V_{0}} &= \frac{20}{V_{0}} = 1+3\%, \\
+V_{0}&=\frac{20}{1.03}=19.42.
+\end{align*}
+
+\begin{gather*}
+V_{0}=hS_{0}+p_{0} = 0.333\times50 +p_{0} = 19.42, \\
+p_{0}=2.75,
+\end{gather*}
+So the option premium is 2.75.
+}
+
+\end{itemize}
+
+\subsubsection{Risk-neutral pricing}
+\begin{itemize}
+\item The value of the option is given by the present value of the expected pay-off of that option.
+\begin{align}
+\pi_{+}&=\text{Risk-neutral probability of up-move}=\frac{1+R_{f}-D}{U-D}, \label{pi-plus} \\
+\pi_{-}&=\text{Risk-neutral probability of down-move}=1-\pi_{u}, \label{pi-minus}
+\end{align}
+where $U$ and $D$ are the factors of an up and down move respectively.
+\item[] Combining these in an expectation calculation, we find
+\begin{equation}
+\text{Option value} = \frac{\pi_{+}c_{+} + \pi_{-}c_{-}}{(1+R_{f})^{T}}, \label{option-value}
+\end{equation}
+Without loss of generality, we can assume a call option, but the same process is applicable to a put option.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a stock priced at 30. The risk free rate is 7\%, and the up / down move factors are 1.15 and 0.87 respectively. A call option has a strike price of 30, with an expiry in one year’s time.
+}
+{\color{RoyalBlue}
+\begin{align*}
+S_{0}=\begin{cases}S_{+} = 1.15\times30=34.50\text{, }c_{+}=4.50, \\ S_{-} = 0.87\times30=26.10\text{, }c_{-}=0,\end{cases} \\
+h=\frac{4.50-0}{34.50-26.10}=0.536,
+\end{align*}
+So the portfolio must go long 0.536 units of stock to offset each short call contract. The risk free portfolio will be positioned long stock and short the call option.
+\begin{align*}
+V_{T}=V_{\pm}&=0.536\times26.10=13.99 ,\\
+V_{0}&=\frac{13.99}{1.07}=13.075, \\
+&=hS_{0}-c_{0}, \\
+c_{0}&=16.08-13.075, \\
+c_{0}&=3.005.
+\end{align*}
+We can then use equation \ref{option-value} to work out the probability of an up and down move.
+\begin{align*}
+c_{0} &=  \frac{\pi_{+}c_{+} + \pi_{-}c_{-}}{(1+R_{f})^{T}}, \\
+3.005 &= \frac{\pi_{+}\cdot4.5 + (1-\pi_{+})\cdot0}{(1.07)}, \\
+\pi_{+}&=\frac{3.005\times1.07}{4.50}, \\
+\pi_{+}&=0.715, \hspace{1cm} \pi_{-}=0.285.
+\end{align*}
+We could have used equations \ref{pi-plus} and \ref{pi-minus} instead, which recovers the same results.
+\begin{gather*}
+\pi_{+}=\frac{1+R_{f}-D}{U-D}=\frac{1+0.07-0.87}{1.15-0.87}=0.715, \\
+\pi_{-}=1-\pi_{u}=1-0.715=0.285.
+\end{gather*}
+}
+\end{itemize}
+
+\end{document}
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.6\textwidth]{\imgpath ABCP.pdf}
+%  \caption{Figure with relative path}
+%\end{figure}

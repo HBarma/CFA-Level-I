@@ -1,0 +1,163 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{datetime}
+\usepackage{indentfirst}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{tabularray}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[font=footnotesize, skip=1pt]{caption}
+\usepackage[font=scriptsize, skip=1pt]{subcaption}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{draftwatermark}
+
+\usepackage{subfiles}
+
+% Adjust section, subsection, and subsubsection number widths
+\setlength{\cftsecnumwidth}{3em}    % Section number width
+\setlength{\cftsubsecnumwidth}{3em} % Subsection number width
+\setlength{\cftsubsubsecnumwidth}{4em} % Subsubsection number width
+
+% Set space after numbers to ensure alignment
+\renewcommand{\cftsecafterpnum}{\hspace{1em}}  % After section number
+\renewcommand{\cftsubsecafterpnum}{\hspace{1em}}  % After subsection number
+\renewcommand{\cftsubsubsecafterpnum}{\hspace{1em}}  % After subsubsection number
+
+% Align the title to the right after the section number
+\setlength{\cftsecindent}{0em}  % Adjust indent for section titles
+\setlength{\cftsubsecindent}{1.5em} % Adjust indent for subsection titles
+\setlength{\cftsubsubsecindent}{2.5em} % Adjust indent for subsubsection titles
+
+\definecolor{BLKorange}{RGB}{255, 71, 19}
+\definecolor{BLKyellow}{RGB}{255, 206, 0}
+\definecolor{BLKpink}{RGB}{252, 155, 179}
+\definecolor{BLKgreen}{RGB}{0, 139, 92}
+\definecolor{BLKpurple}{RGB}{158, 121, 217}
+\definecolor{BLKred}{RGB}{192, 11, 40}
+
+\definecolor{customblue}{RGB}{24, 122, 186}
+
+
+\hypersetup{
+    colorlinks,
+    linkcolor={blue},
+    citecolor={blue},
+    urlcolor={blue}
+}
+
+\newcommand{\imgpath}{./images/}
+
+
+\newdateformat{Datea}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
+\newdateformat{Dateb}{\monthname[\THEMONTH] \THEYEAR}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Corr}{Corr}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+% Set the text for the watermark
+\SetWatermarkText{DRAFT}
+
+\SetWatermarkScale{8}    % Size of the watermark
+\SetWatermarkColor[gray]{0.9}  % Set the color of the watermark (optional, default is light gray)
+\SetWatermarkAngle{45}   % Angle of the watermark (optional)
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\Dateb\today}
+\chead{\begin{tabular}[t]{@{}l@{}}\\CFA Level I Notes\end{tabular}}
+\lhead{H Barma}
+\rfoot{Page \thepage\ of \pageref*{LastPage}}
+
+%\renewcommand{\thesection}{\Roman{section}} 
+%\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{Page \thepage\ of \pageref*{LastPage}}}
+
+
+\begin{document}
+\begin{titlepage}
+\vfill
+\title{\textbf{CFA Level I Notes - 2025 Syllabus}}
+\author{H. Barma}
+ \date{\emph{Compiled \Datea\today}}
+\maketitle
+\thispagestyle{plain}
+\thispagestyle{empty}
+\vfill
+\end{titlepage}
+\clearpage
+
+
+
+\clearpage
+
+\section*{Introduction}
+These notes are written to match the 2025 syllabus of the Level I CFA exam. If you notice any errors, corrections, or segments which require a more detailed explanation, I will be very grateful. \newline \par
+
+This set of notes is intended to be fairly comprehensive, and offer a detailed explanation of the majority of topics covered by the syllabus. It does not however touch on all points of the syllabus, and so other sources are recommended to be used. In general, it takes a reasonably broad view of each topic. These notes are also written agnostic of the type of question an exam is likely to ask on each topic. \newline \par
+
+Examples are given for some topics where calculations are required. I will endeavour to add more over time, but for the examples that are given, these are indicative of the types of calculation that may be required in the exam. \newline \par
+
+A quick disclaimer about the figures -- These are all designed using Matplotlib in Python. These are not always done to scale or plotted using relevant formulas to define some of the curve. I have used a combination of polynomials and exponential functions to produce most of them, based on the ideas they are intended to illustrate. The ``final’’ versions seen here are the result of making an initial guess based on the expected relationships and behaviour, and subsequently varying the input parameters.
+\clearpage
+
+\tableofcontents
+\clearpage
+
+
+\subfile{sections/chapter_1_quants}
+\clearpage
+
+\subfile{sections/chapter_2_economics}
+\clearpage
+
+\subfile{sections/chapter_3_features_of_corporate_issuers}
+\clearpage
+
+\subfile{sections/chapter_4_financial_statement_analysis}
+\clearpage
+
+\subfile{sections/chapter_5_equity}
+\clearpage
+
+\subfile{sections/chapter_6_fixed_income}
+\clearpage
+
+\subfile{sections/chapter_7_derivatives}
+\clearpage
+
+\subfile{sections/chapter_8_alts}
+\clearpage
+
+\subfile{sections/chapter_9_portfolio_management}
+\clearpage
+
+\subfile{sections/chapter_10_ethics}
+\clearpage
+
+\end{document}

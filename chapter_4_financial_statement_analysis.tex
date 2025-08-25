@@ -1,0 +1,3618 @@
+\documentclass[../notes_compiled.tex]{subfiles}
+
+
+\begin{document}
+
+\section{Financial Statement Analysis}
+\subsection{Financial statement roles}
+\begin{itemize}
+\item The Financial statement analysis framework consists of the following steps
+\begin{enumerate}
+\item Objective and context of analysis
+\item Gather data
+\item Process data
+\item Analyse / interpret data
+\item Conclusions and recommendations
+\item Update analysis periodically
+\end{enumerate}
+\item Role of financial reporting
+\begin{itemize}
+\item Showing performance of a business to investors / creditors by preparing and presenting financial statements
+\end{itemize}
+\item Role of financial statement analysis
+\begin{itemize}
+\item Using information in a company's financial statements, alongside other relevant information, in order to make economic decisions on
+\begin{itemize}
+\item Security valuation
+\item Acquisitions
+\item Credit worthiness
+\end{itemize}
+\item Evaluating a company's past performance and current financial position to form opinions about risk factors and a firm's ability to earn profits and generate future cash flows.
+\end{itemize}
+\item Standard setting bodies
+\begin{itemize}
+\item US -- Financial Accounting Standards Board (FASB) set out the US Generally Accepted Accounting Principles (\textbf{USGAAP})
+\item Internations Accounting Standards Board (IASB) set out the International Financial Reporting Standards (\textbf{IFRS})
+\end{itemize}
+\end{itemize}
+
+\subsection{Financial reporting requirements and regulation}
+\begin{itemize}
+\item US -- SEC
+\item Members of the EU have their own regulators as well as EU-wide regulations
+\item International Organisation of Securities Commission (IOSCO)
+\end{itemize}
+
+\subsubsection{SEC Filings and forms}
+\begin{itemize}
+\item S1 -- Registration of securities for public sale
+\item 10K -- Annual report [AUDITED]
+\item 10Q -- Quarterly report
+\item DEF 14A -- Proxy statements; issued to shareholders when a vote is required, for example
+\begin{itemize}
+\item Board elections
+\item Management compensation
+\item Stock options
+\end{itemize}
+\item 8K -- Material events
+\item 144 -- Issuance of unregistered stock
+\item 3,4,5 -- Share transactions with corporate insiders
+\end{itemize}
+
+\subsubsection{Footnotes and supplementary schedules}
+\begin{multicols}{2}
+\begin{itemize}
+\item Basis of presentation
+\item Accounting methods / assumptions
+\item Further information on amounts in primary statements
+\item Acquisitions / disposals
+\item Contingencies
+\item Legal proceedings
+\item Stock options, benefit plans
+\item Significant customers
+\item Segment data
+\item Related party transactions
+\item Post-balance sheet events
+\end{itemize}
+\end{multicols}
+\begin{itemize}
+\item Segment reporting
+\begin{itemize}
+\item A reportable business or geographic segment is one where \emph{at least 10\% of a firm's revenue, income or assets, \textbf{and} totalling 75\% of external sales}. For each segment, a firm must report
+\begin{multicols}{2}
+\begin{itemize}
+\item Revenue (internal + external)
+\item Profits
+\item Assets
+\item Liabilities
+\item Capex
+\item Depreciation
+\item Amortisation
+\item Other non-cash expenses
+\item Income tax expense
+\item Share of equity-accounted investment results
+\end{itemize}
+\end{multicols}
+\end{itemize}
+\item Mangement discussion and analysis (MD\&A) ``Operating and financial review''
+\begin{itemize}
+\item Nature of the business
+\item Management's objectives
+\item Past performance and performance measures used
+\item Key relationships, resources, risks
+\item Trends in sales and expenses
+\item Discussion of critical accounting choices
+\item Effects of inflation, price changes, uncertainties on future results
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Audit report}
+\begin{itemize}
+\item Independent review of a company's financial statements
+\item Reasonable assurance that the report is free of material errors
+\textcolor{blue}{
+\item Under US GAAP, must provide opinion on internal controls}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,c] c Q[m,4,l]}, width = 0.9\textwidth}
+Unqualified && Unmodified / clean \\
+Qualified && Exceptions to specific parts of accounting principles \\
+Adverse && Statements not presented fairly \\
+Disclaimer of opinion && Unable to form an opinion
+\end{tblr}
+\end{table}
+\item Auditor's opinion
+\begin{itemize}
+\item Responsibility of \textbf{management} to prepare accounts
+\item Properly prepared in accordance with GAAP -- provides reasonable assurance (not guarantee) that statements are free of material error
+\item Accounting principles and estimates chosen are reasonable
+\end{itemize}
+\item Key audit matters
+\begin{itemize}
+\item Highlights accounting choices of greatest significance (i.e. about pensions).
+\item Choices requiring judgement / estimates
+\item How significant transactions were accounted for
+\item Choices that are complex, that the auditor believes to have a significant likelihood of being mis-stated
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Choice of accounting standards}
+\begin{itemize}
+\item There are differences between USGAAP and IFRS in terms of how some things are treated, and so adjustments are sometimes necessary when comparing two companies to reconcile these differences. More on this later, but examples of where differences arise are
+\begin{itemize}
+\item Treatment of development costs
+\item LIFO vs FIFO inventory valuation
+\item Reversal of inventory write-downs
+\end{itemize}
+\item Reporting standards are also subject to change. This means we must:
+\begin{itemize}
+\item Monitor new products / transactions
+\item Monitor regulator actions
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Supplementary sources of information}
+\begin{multicols}{2}
+\begin{itemize}
+\item Issuer sources
+\begin{itemize}
+\item Earnings calls
+\item Press releases
+\end{itemize}
+\item Public third-party sources
+\begin{itemize}
+\item Industry reports
+\item Government agency reports
+\item Social media
+\end{itemize}
+\item Proprietary third-party sources
+\begin{itemize}
+\item Analyst reports
+\item Third party consultancies
+\item Bloomberg
+\end{itemize}
+\item Proprietary primary research
+\begin{itemize}
+\item Commissioned studies
+\item Specialist advice
+\end{itemize}
+\end{itemize}
+\end{multicols}
+
+\subsection{Revenue recognition}
+\begin{itemize}
+\item For both IFRS and USGAAP, revenue is recognised in the period earned, that is, when goods / services are transferred, and when payment is probable. There is a five-step method for revenue recognition:
+\begin{enumerate}
+\item Identify \textbf{contract} with customer
+\item Identify \textbf{performance obligations} in contracts
+\item Determine a total transaction price
+\item Allocate transaction price to performance obligations
+\item Recognise revenue as / when each obligation is satisfied
+\end{enumerate}
+\item Disclosure requirements are:
+\begin{itemize}
+\item Contracts with customers, disaggregated into categories
+\item Contract-related assets and liabilities
+\begin{itemize}
+\item Balances and changes
+\item Remaining performance obligations
+\item Transaction prices allocated to them
+\item Significant judgements / changes in judgement
+\end{itemize}
+\end{itemize}
+\item Progress toward completion of a performance obligation can be measured by either
+\begin{itemize}
+\item Input \% (Fraction of total estimated costs incurred to date
+\item Output \% (Fraction of measurable milestone)
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Warehouse built for \$10mn. Estimated construction cost is \$8mn.
+}
+\begin{itemize}
+{\color{RedViolet}
+\item If in first year, the constructor spends \$4mn in costs;
+}
+{\color{RoyalBlue}
+\begin{equation*}
+\text{Input \%} \Rightarrow \frac{4}{8} = 50\%
+\end{equation*}
+so \$5mn in revenue realised in Y1.
+}
+{\color{RedViolet}
+\item If in second year, the constructor spends a further \$2mn in costs.
+}
+{\color{RoyalBlue}
+\begin{equation*}
+\text{Input \%} \Rightarrow \frac{4+2}{8} = 50\%
+\end{equation*}
+so \$7.5mn in revenue since beginning, and \$2.5mn recognised in Y2.
+}
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} A travel agent sells a flight for \$10,000. Takes \$1,000 commission, and the rest goes to airline. There is no credit or inventory risk for the travel agent.
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item If acting as agent, revenue = \$1,000 commission
+\item If acting as principal, revenue = \$10,000, expense = \$9,000
+\item[] These have the same absolute gross profit, but the gross profit margin for each case is different.
+\begin{equation*}
+\text{Gross Profit Margin} = \frac{\text{Gross Profit}}{\text{Revenue}}
+\end{equation*}
+Therefore;
+\begin{itemize}
+\item If acting as agent, GPM = 100\%
+\item If acting as principal, GPM = 10\%
+\end{itemize}
+\end{itemize}
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Fast food company franchises its name. They receive a royalty fee of 2\%, as well as a licensing fee.
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item Revenue disaggregated into
+\begin{enumerate}
+\item Revenue from company-owned restaurants
+\item Franchies royalty and licensing fees
+\item Revenue from suppliers to franchisees (equipment + materials)
+\end{enumerate}
+\end{itemize}
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} A software supplier offers customers a choice of:
+\begin{enumerate}
+\item Purchase license, locally install
+\item Subscribe to a cloud-based solution
+\item This is effectively a contract for a service, and so revenue is recognised over the life of a contract.
+\end{enumerate}
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item Under purchase of a license, for IFRS, either
+\begin{enumerate}
+\item Report revenue over the life of the contract
+\item Report revenue at the outset of a contract
+\end{enumerate}
+The choice is dependent on access to ongoing updates / enhancements
+\end{itemize}
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} A customer pays for goods ahead of shipping.
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item Revenue would typically be deferred, unless \textbf{all} of the following criteria are satisfied:
+\begin{enumerate}
+\item Customer asked for arrangement
+\item Goods identifiable as belonging to the customer
+\item Goods complete and ready for transfer
+\item Goods cannot be redirected to another customer
+\end{enumerate}
+\end{itemize}
+}
+\end{itemize}
+
+\subsection{Expense recognition}
+\begin{itemize}
+\item On an accrual basis, there are three main methods of recognising expenses.
+\begin{enumerate}
+\item Matching principle -- Match costs against associated revenues, i.e. inventory and warranty expense
+\item Capitalisation -- Recognise cost of asset on a balance sheet and expense it to the income statement over its life
+\item Period costs -- Expenditures that less directly match the timing of revenues
+\end{enumerate}
+This has analysis implications on
+\begin{multicols}{2}
+\begin{itemize}
+\item Inventory valuation
+\item Warranty expense
+\item Depreciation
+\item Amortization
+\item Doubtful debt provisions
+\item Research and development
+\end{itemize}
+\end{multicols}
+and so requires estimates and assumptions that will have a material impact on net income
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Matching principle from units perspective
+\item[] Assume a firm starts the year with 20 units, buys 90 during the year, and sells 100 during the year.
+}
+{\color{RoyalBlue}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,c] Q[m,1,c]}, width = 0.5\textwidth, rows = {fg=RoyalBlue}}
+& \SetCell[r=1, c=2]{c} Units & \\
+Sales & & 100 \\
+Beginning inventory & 20 & \\
+Purchases & 90 & \\ \cline{2} 
+Available for sale & 110 & \\
+Ending inventory (B/S) & (10) & \\ \cline{2-3}
+Cost of goods sold (I/S) & & 100
+\end{tblr}
+\end{table}
+}
+
+{\color{RedViolet}
+Assume the original 20 units cost \$400 in total, and the 90 units purchased during the year were bought at the following prices:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1.25,c] Q[m,1,r]}, width = 0.65\textwidth, rows = {fg=RedViolet}}
+Purchase & Units & Price per unit & Total cost \\
+1 & 20 & \$22 & \$440 \\
+2 & 30 & \$25 & \$750 \\
+3 & 30 & \$28 & \$840 \\
+4 & 10 & \$30 & \$300 \\ \cline{4}
+& & & \$2,330
+\end{tblr}
+\end{table}
+
+And given a sales price for the 100 units of \$35 each, this gives a total revenue of \$3,500. The 10 unsold units at the end of the year are comprised of 8 units from purchase 4, and 2 from purchase 3. These had a total cost of
+\begin{equation*}
+8\times\$30 + 2\times\$28 = \$296.
+\end{equation*}
+}
+
+{\color{RoyalBlue}
+\item[] The gross profit can then be calculated to be
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,r] Q[m,1,r]}, width = 0.5\textwidth, rows = {fg=RoyalBlue}}
+& \SetCell[r=1, c=2]{c} \$ Amount & \\
+Sales & & \$3,500 \\
+Beginning inventory & \$400 & \\
+Purchases & \$2330 & \\ \cline{2} 
+Available for sale & \$2,730 & \\
+Ending inventory (B/S) & (\$296) & \\ \cline{2-3}
+Cost of goods sold (I/S) & & \$2,434 \\ \cline{3}
+Gross Profit & & \$1,066
+\end{tblr}
+\end{table}
+}
+\end{itemize}
+
+\subsubsection{ Capitalising vs expensing}
+\begin{itemize}
+\item Costs are capitalised as a balance sheet asset, or expensed in the income statement.
+\begin{itemize}
+\item Capitalising -- spreading an asset's cost over multiple periods, creating a balance sheet asset. This should be done, if benefits extend over multiple periods. The total amount may include additional costs to prepare the asset for use.
+\item Expensing -- Taking an asset's cost as an expense on the income statement in the current period. This should be done if benefits beyond one period are unlikely / highly uncertain.
+\begin{itemize}
+\item Subsequent expenditures that provide benefits beyond one year are capitalised
+\item Subsequent expenditures that do not provide benefits beyond one year are expensed
+\end{itemize}
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Costs related to manufacturing expenses
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2.5,l] Q[m,0.5,r] l}, width = 0.7\textwidth, rows = {fg=RedViolet}, column{2} = {halign=r}, column{3} = {fg=RoyalBlue}}
+Purchase cost & & \\
+Freight in & 250,000 &  Capitalise \\
+Taxes & & \\
+Installation & 10,000 & Capitalise \\
+Training & 7,500 & Expense when incurred \\
+Repair / maintenance & 35,000 & Expense when incurred \\
+Rebuilding cost & 85,000 & Capitalise
+\end{tblr}
+\end{table}
+}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider some machinery purchased for \$12,000. It has an estimated useful life of 4 years, with no salvage value. Depreciation is calculated usinga a straight line method, and is tax-deductible. There are no assets and liabilities except or cash and PP\&E. Revenue is \$30,000 per year. The operating profit margin (before equipment) is 40\%. The tax rate is 30\%, with no dividends paid.
+}
+
+{\color{RoyalBlue}
+\begin{table}[h!]
+\small
+\centering
+\begin{tblr}{colspec={lrrrrrrrr}, rows = {fg=RedViolet}, column{3,5,7,9} = {fg=Cyan}, column{2,4,6,8} = {fg=NavyBlue}, row{1} = {fg=RedViolet}}
+\SetCell[r=2]{c} \textbf{Income Statement} & \SetCell[c=2]{c}Y1 && \SetCell[c=2]{c}Y2 && \SetCell[c=2]{c}Y3 && \SetCell[c=2]{c}Y4 & \\
+& \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ \\
+Revenue & 30,000 & 30,000 & 30,000 & 30,000 & 30,000 & 30,000 & 30,000 & 30,000 \\
+OPM (40\%) & 12,000 & 12,000 & 12,000 & 12,000 & 12,000 & 12,000 & 12,000 & 12,000 \\
+Depreciation expense & (3,000) & (12,000) & (3,000) & 0 & (3,000) & 0 & (3,000) & 0 \\ \cline{2-Z}
+Income before tax & 9,000 & 0 & 9,000 & 12,000 & 9,000 & 12,000 & 9,000 & 12,000 \\
+Tax (30\%) & (2,700) & 0 & (2,700) & (3,600) & (2,700) & (3,600) & (2,700) & (3,600) \\ \cline{2-Z}
+Net income & 6,300 & 0 & 6,300 & 8,400 & 6,300 & 8,400 & 6,300 & 8,400
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\small
+\centering
+\begin{tblr}{colspec={lrrrrrrrr}, rows = {fg=RedViolet}, column{3,5,7,9} = {fg=Cyan}, column{2,4,6,8} = {fg=NavyBlue}, row{1} = {fg=RedViolet}}
+\SetCell[r=2]{c} \textbf{Balance Sheet} & \SetCell[c=2]{c}Y1 && \SetCell[c=2]{c}Y2 && \SetCell[c=2]{c}Y3 && \SetCell[c=2]{c}Y4 & \\
+& \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ \\
+Cash & 37,300 & 40,000 & 46,600 & 48,400 & 55,900 & 56,800 & 65,200 & 65,200\\
+PP\&E (net) & 9,000 & 0 & 6,000 & 0 & 3,000 & 0 & 0 & 0 \\ \cline{2-Z}
+Total assets & 46,300 & 40,000 & 52,600 & 48,400 & 58,900 & 56,800 & 65,200 & 65,200 \\ \\
+Share capital and APIC & 40,000 & 40,000 & 40,000 & 40,000 & 40,000 & 40,000 & 40,000 & 40,000 \\
+Retained earnings & 6,300 & 0 & 12,600 & 8,400 & 18,900 & 16,800 & 25,200 & 25,200 \\ \cline{2-Z}
+Total equity & 46,300 & 40,000 & 52,600 & 48,400 & 58,900 & 56,800 & 65,200 & 65,200
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\small
+\centering
+\begin{tblr}{colspec={lrrrrrrrr}, rows = {fg=RedViolet}, column{3,5,7,9} = {fg=Cyan}, column{2,4,6,8} = {fg=NavyBlue}, row{1} = {fg=RedViolet}}
+\SetCell[r=2]{c} \textbf{Cash Flow Statement} & \SetCell[c=2]{c}Y1 && \SetCell[c=2]{c}Y2 && \SetCell[c=2]{c}Y3 && \SetCell[c=2]{c}Y4 & \\
+& \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ & \SetCell{c}\$ \\
+CFO & 9,300 & 0 & 9,300 & 8,400 & 9,300 & 8,400 & 9,300 & 8,400 \\
+CFI & (12,000) & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+CFF & 40,000 & 40,000 & 0 & 0 & 0 & 0 & 0 & 0 \\ \cline{2-Z}
+Change in cash & 37,300 & 40,000 & 9,300 & 8,400 & 9,300 & 8,400 & 9,300 & 8,400 \\
+Opening cash & 0 & 0 & 37,300 & 40,000 & 46,600 & 48,400 & 55,900 & 56,800 \\ \cline{2-Z}
+Closing cash & 37,300 & 40,000 & 46,600 & 48,400 & 55,900 & 56,800 & 65,200 & 65,200
+\end{tblr}
+\end{table}
+
+For each of these tables, the dark blue columns represent the statement if the asset were to be capitalised, and the light blue if the asset were to be expensed.
+}
+
+\item From this example, we can see the effect that capitalising / expensing has on each of the following:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {>{\bfseries}Q[m,2,l] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth, column{2} = {fg=NavyBlue}, column{3} = {fg=Cyan}}
+& \textbf{Capitalise} & \textbf{Expense} \\
+Assets and Equity & Higher & Lower \\
+Net Income (Y1) & Higher & Lower \\
+Net Income (Y2+) & Lower & Higher \\
+Income variability & Lower & Higher \\
+ROA, ROE (Y1) & Higher & Lower \\
+ROA, ROE (Y2+) & Lower & Higher \\
+Debt ratio, Debt-to-equity & Lower & Higher \\
+Operating Cash Flow (CFO) & Higher & Lower \\ 
+Investing Cash Flow (CFI) & Lower & Higher
+\end{tblr}
+\end{table}
+
+\item The interest expense on funds spent constructing a capital asset is capitalised as part of the following:
+\begin{itemize}
+\item The asset's value on the balance sheet (self-use)
+\item The asset's value in inventory (for sale to others)
+\end{itemize}
+Under IFRS, capitalised interest is reduced by any income on borrowings invested temporarily.
+
+\item We define interest coverage as
+\begin{equation}
+\text{Interest coverage} = \frac{EBIT}{\text{Interest Expense}}
+\end{equation}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider capitalisation of interest where EBIT = \$160m, the interest expense is \$80m, the interest capitalised is \$20m, and depreciation from the prior year capitalisation is \$10m. Calculate is the interest coverage before / after adjusting for capitalised interest.
+}
+{\color{RoyalBlue}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,c]}, width = 0.5\textwidth, rows={fg=RoyalBlue}}
+Before adjustment & $\dfrac{160}{80}=2$ \\ \\
+After adjustment & $\dfrac{160+10}{80+20} = 1.7$
+\end{tblr}
+\end{table}
+
+If $CFO=\$70$m, then $CFI = -\$50$m. This is because interest paid is accounted for in CFO, aside from capitalised interest.
+}
+
+{\color{RedViolet}
+Ignoring tax, what is the impact of the interest capitalisation (\$20m) on CFO and CFI?
+}
+
+{\color{RoyalBlue}
+\$20m interest was capitalised through CFI. Had this been expensed, CFI would be $-\$30$m ($-\$50\mathrm{m} + \$20\mathrm{m}$), and CFO would be \$50m ($\$70\mathrm{m} - \$20\mathrm{m}$). No adjustment to the depreciation is necessary as this is a non-cash charge.
+}
+\end{itemize}
+
+\subsubsection{Research and Development}
+\label{randd}
+\begin{itemize}
+\item Internally developed intangibles are expensed as incurred except for R\&D, and software development costs. Research involves discovery of new knowledge and understanding. Development costs involve translation of research findings into a plan
+\begin{itemize}
+\item[IFRS] Research expensed, development may be capitalised if the project is technically feasible, resources exist to complete the project, a market exists for the product, and there is an intention to complete and sell the product.
+\item[USGAAP] Research and development are both expensed
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Software}
+\label{software}
+\begin{itemize}
+\item Software developed for sale
+\begin{itemize}
+\item[IFRS] and USGAAP permit costs to be expensed as incurred, until technological feasibility is established. This requires a judgement call from management.
+\end{itemize}
+
+\item Software developed for internal use
+\begin{itemize}
+\item[IFRS] Same treatment as if software were for sale
+\item[USGAAP] Costs are expensed as incurred, until it is probable that the firm will complete the project and use as intended
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Non-recurring items}
+\begin{itemize}
+\item These are unusual or infrequent items that are material for a business.
+\item These are reported pre-tax, before net income from continuing operations
+\item Items include
+\begin{itemize}
+\item Gain (loss) from disposal of business segment / assets
+\item Gain (loss) from sale of investment in a subsidiary
+\item Provisions for environmental remdiation
+\item Impairments , write-offs, write-downs, restructuring
+\item Integration expense for recently acquired business
+\end{itemize}
+These items should be excluded from forecasts
+\end{itemize}
+
+\subsubsection{Discontinued operations}
+\begin{itemize}
+\item Operations that management has decided to dispose of but has either not yet done so, or has done so in the current year after generating PnL.
+\item This is reported net of taxes, after net income from continuing operations.
+\item Assets, operations, financing activities must be physically and operationally distinct from the firm.
+\item Again, these items should be excluded from forecasts
+\end{itemize}
+
+\subsection{Accounting changes}
+\begin{itemize}
+\item A change in accounting policy, for example revenue recognition, requires \textbf{retrospective application}
+\item A change in accounting estimates is treated prospectively, and does not require restatement of prior-period earnings
+\item[]
+\item Prior period adjustments
+\begin{itemize}
+\item Correcting errors, changing from inacceptable to acceptable methodology
+\item This typically requires retrospective application, and restatement of prior year's earnings
+\item The nature and impact of the error / change must be disclosed
+\end{itemize}
+\item[]
+\item Scope changes
+\begin{itemize}
+\item Mergers and acquisitions reduce comparability
+\item Balance sheet of parent / subsidiary combined at acquisition date
+\item Changes in scope are not required for disclosure
+\end{itemize}
+\item[]
+\item Exchange rates
+\begin{itemize}
+\item Overseas trade / subsidiaries may operate in foreign currencies
+\item Sales and purchases must be converted to the reporting currency
+\item Changes in exchange rates do not need to be disclosed
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Earnings per share (EPS)}
+\begin{itemize}
+\item Simple vs complex capital structures should be considered when calculating EPS.
+\item A simple capital structure is one which contains no potentially dilutive securities. In this instance, only basic EPS must be reported.
+\item A complex capital structure does contain potentially dilutive securities. In this instance, basic and diluted EPS must be reported. Potentially dilutive securities include
+\begin{itemize}
+\item Stock options
+\item Warrants
+\item Convertible debt
+\item Convertible preferred stock
+\end{itemize}
+any of which may become common stock.
+\end{itemize}
+
+\subsubsection{Basic EPS}
+\begin{itemize}
+\item Basic EPS is defined
+\begin{equation}
+\text{Basic EPS} = \frac{\text{Net income} - \text{Preference dividends}}{\text{Weighted avg. \# common stock}} \label{basic-eps}
+\end{equation}
+The denominator of equation \ref{basic-eps} can be affected by various events during the year. This includes:
+\begin{itemize}
+\item Stock dividends -- A 10\% stock dividend would increase shares outstanding by 10\%
+\item Stock split -- A 2-for-1 stock split would increase shares outstanding by 100\%
+\item Stock issue
+\end{itemize}
+In calculating the weighted average shares outstanding, stock dividends and stock splits are applied retroactively to the beginning of the year or issue date of new stock. New stock is weighted by fraction of the year that the new stock was outstanding. So a new issuance of 300 shares on $1^{\text{st}}$ July would increase the weighted average shares outstanding by $300 \times \frac{6}{12}$ since it was outstanding for 6 of 12 months in the year.
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a company with shares outstanding at the beginning of the year, and the following events occurring throughout the year.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,r] Q[m,2,l]}, width = 0.65\textwidth, rows = {fg=RedViolet}}
+1-Jan & 10,000 shares outstanding \\
+1-Apr & 4,000 shares issued \\
+1-Jul & 10\% stock dividend \\
+1-Sep & 3,000 shares repurchased
+\end{tblr}
+\end{table}
+
+The company has net income of \$10,000, and pays out \$1,000 in preference dividends and \$1,750 in common dividends.
+}
+
+
+{\color{RoyalBlue}
+We first apply the stock dividend retrospectively on the initial shares outstanding and any share-related events before the stock dividend (in this case the share issuance on April 1). We then calculate the weighted average
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {crcrcrcrcrl}, rows = {fg=RoyalBlue}}
+1-Jan & $1.1$&$\times$&$10,000$&$=$ & 11,000 & $\times$&$\frac{12}{12}$&$=$ & 11,000 & + \\
+1-Apr & $1.1$&$\times$&$4,000$&$=$ & 4,400 & $\times$&$\frac{9}{12}$&$=$ & 3,300 & + \\
+1-Jan & && $3,000$&$=$ & 3,000 & $\times$&$\frac{4}{12}$&$=$ & 1,000 & $-$  \\ \cline{10,Z}
+&&&&&&&&&13,300
+\end{tblr}
+\end{table}
+
+From this, using equation \ref{basic-eps}, we can see
+\begin{equation*}
+\text{Basic EPS} = \frac{10,000 - 1,000}{13,300} = \$0.68
+\end{equation*}
+}
+\end{itemize}
+
+\subsubsection{Diluted EPS}
+\begin{itemize}
+\item A security is considered dilutive if the EPS would decrease upon its conversion to common stock. (Anti-dilutive securities increase the EPS upon conversion)
+\item Diluted EPS is defined
+\begin{equation}
+\text{Diluted EPS} = \frac{\splitfrac{\text{Net income} - \text{Preferred dividends}}{\splitfrac{+ \text{Convertible preferred dividends}}{+ \text{Convertible debt interest}(1-t)}}}{\splitfrac{\text{Weighted average shares}}{\splitfrac{+ \text{Shares from convertible preferred shares}}{\splitfrac{+\text{Shares from conversion of convertible debt}}{+\text{Shares issuable from options / warrants}}}}}
+\end{equation}
+We should only include securities that would reduce the EPS below the basic EPS in the calculation. The criteria for this is:
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec={Q[m,1,l] Q[m,2,c]}, width = 0.65\textwidth}
+Convertible preference shares & $\dfrac{\text{Dividends}}{\text{New shares}} < \text{Basic EPS}$ \\
+Convertible debt & $\dfrac{\text{Interest}(1-t)}{\text{New shares}} < \text{Basic EPS}$ \\
+Options / warrants & $\text{Average price} > \text{Exercise price}$
+\end{tblr}
+\end{table}
+
+If any of these conditions are satisfied, then the security can be considered dilutive.
+
+{\color{RedViolet}
+\item[]\textbf{EXAMPLE:} Convertible preference stock
+\begin{itemize}
+\item[] Consider a company which has \$4,000,000 available to common shareholders (Net income $-$ Preferred dividends = \$4,000,000) and 2,000,000 ordinary shares outstanding. This company also has \$5,000,000 of 7\% convertible preferred stock outstanding all year. Terms of conversion are such that \$10 nominal value of preferred stock can be converted to 1.1 common shares.
+\end{itemize}
+}
+
+{\color{RoyalBlue}
+\begin{align*}
+\text{Diluted EPS}  &=\frac{\$4,000,000 + (\$5,000000 \times 7\%)}{2,000,000 + \frac{\$5,000,000}{10}\times1.1} \\
+&=\frac{\$4,350,000}{2,550,000} \\
+&=\$1.71
+\end{align*}
+\begin{itemize}
+\item[] Which is less that the basic EPS, so this is a dilutive security. Alternatively, since $\frac{350,000}{500,000} < 2.00$, we can immediately tell that this is a dilutive security.
+\end{itemize}
+}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Convertible bonds
+\begin{itemize}
+\item[] Consider a company with 1,000,000 shares outstanding, and \$2,5000,000 available to common shareholders. It is subject to a corporate tax rate of 30\%. The company has \$2,000,000 par value of 5\% convertible bonds outstanding. \$1,000 par value may be converted to 120 common shares.
+\end{itemize}
+}
+{\color{RoyalBlue}
+\begin{align*}
+\text{Diluted EPS} &= \frac{\$2,500,000 + \overbrace{\overbracket{0.05 \times \$2,000,000}^{\text{Interest}} \times \overbracket{(1-0.3)}^{\text{After tax}}}^{70,000}}{1,000,000 + \underbrace{\underbracket{\frac{2,000,000}{1,000}\times120}_{\text{Additional shares}}}_{240,000}} \\
+\text{Diluted EPS} &= \$2.07
+\end{align*}
+Which is less than the basic EPS so this is a dilutive security. Alternatively, since $\frac{70,000}{240,000}<2.5$, we can immediately tell that this is a dilutive security.
+}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Convertible bonds
+\begin{itemize}
+\item[] Consider a compnay which has \$1,200,000 available to common shareholders. The weighted average number of common stock during the year is 500,000, and the average price of common stock during the year is \$20. This company has 100,000 options outstanding at an exercise price of \$15.
+\end{itemize}
+}
+{\color{RoyalBlue}
+\begin{itemize}
+\item[] The steps to solve this problem are as follows:
+\end{itemize}
+\begin{enumerate}
+\item Calculate the number of common shares created if options are exercised
+\item Calculate cash received from exercise
+\item Calculate the number of shares that can be purchase at the average market price with exercise proceeds
+\item Calculate net increase in common share outstanding (step 1 $-$ step 2) to give the number of new shares issued
+\end{enumerate}
+\begin{equation*}
+\text{Basic EPS} = \frac{\$1,200,000}{500,000} = \$2.40
+\end{equation*}
+Step 1 is to work out the number of common shares created. We assume that all cash proceeds from option exercise are used to buy back as many shares as possible from the market, and the difference is made up by issuance of new shares. The cash proceeds are $\$100,000 \times 15 = \$1,500,000$, which when taking the average market price of \$20, allows $\frac{\$1,500,000}{\$20} = 75,000$ share to be repurchased with cash proceeds. Given there are 100,000 options outstanding, a further 25,000 shares must be issued to make up the difference. Numerically, this gives
+\begin{align*}
+100,000 - \frac{100,000\times\$15}{\$20} &= 100,000 - 75,000 \\
+&= 25,000
+\end{align*}
+
+The diluted EPS is therefore
+\begin{equation*}
+\text{Diluted EPS} = \frac{\$1,200,000}{500,000 + 25,000} = \$2.29
+\end{equation*}
+}
+
+\end{itemize}
+
+
+\subsection{Vertical common-size Income statements}
+\begin{itemize}
+\item Each line of the income statement is calculated as a fraction of the total sales (revenue)
+\begin{equation*}
+\frac{\text{Income statement account}}{\text{Sales (\text{$\equiv$ Revenue})}}
+\end{equation*}
+The advantages of this are:
+\begin{itemize}
+\item Converts income statement to relative percentages
+\item Useful for comparing entities of different sizes
+\item Compare \% to the strategy discussed in the MD\&A segment
+\item Allows for time series or cross-sectional use
+\item Gross and net profit margin are common size ratios
+\end{itemize}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}
+
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.1,l] Q[m,0.9,r] r !{\color{RedViolet}\vrule width 1.25pt} Q[m,0.9,r] r Q[m,1,l]}, width = 0.95\textwidth, rows = {fg = RedViolet}, column{3,5} = {fg = RoyalBlue}}
+& \SetCell[c=2]{c} \textbf{North Co.} & & \SetCell[c=2]{c} \textbf{South Co.} & & \\
+Revenue & 75,000,000 & & 3,500,000 & & \\
+Cost of goods sold & 52,000,000 & 70\% & 700,000 & 20\% & \\
+Gross profit & 22,500,000 & 30\% & 2,800,000 & 80\% & {\footnotesize Gross profit margin} \\
+Admin expense & 11,250,000 & 15\% & 525,000 & 15\% & \\
+Research expense & 3,750,000 & 5\% & 700,000 & 20\% \\
+Operating profit & 7,500,000 & 10\% & 1,575,000 & 45\% & {\tiny Operating profit margin}
+\end{tblr}
+\end{table}
+
+
+From this, we can see that the gross profit is increased by increasing sales and / or lowering costs. The operating profit is increased purely by lowering expenses.
+}
+\end{itemize}
+
+\subsection{Intangible assets and marketable securities}
+\label{intangibles}
+\begin{itemize}
+\item All assets are classified as tangible or intangible. Intangible assets can be further split into two categories:
+\begin{itemize}
+\item Identifiable intangibles -- These can be acquired singularly, linked to rights, and privilege having a finite benefit period. These are amortized over the useful lifetime
+\item Unidentifiable intangibles -- These cannot be acquired singularly, and may have indefinite benefit periods, for example goodwill. These are not amortized, and are instead reviewed annually for impairment
+\end{itemize}
+
+\item An intangible asset may only be recognised if it can be measured reliably.
+\begin{itemize}
+\item[IFRS] Recognise either at cost or revaluation method (if an active market for the asset exists)
+\item[US GAAP] Recognise at cost only
+\end{itemize}
+This does not account for internally-generated intangibles.
+
+\item Typical intangibles include
+\begin{multicols}{2}
+\begin{itemize}
+\item Purchased patents / copyrights
+\item Purchased brands / trademarks
+\item Direct response advertising
+\item Purchased franchise and license costs
+\item Computer software development costs
+\item Goodwill
+
+\end{itemize}
+\end{multicols}
+
+\item Expensed items include
+\begin{multicols}{2}
+\begin{itemize}
+\item Internally generated brands
+\item Start-uup costs
+\item Training costs
+\item Administrative costs, general overhead
+\item Advertising and promotion
+\item Relocation costs
+\item Redundancy costs
+\item Research and development\footnote{Development is capitalised under IFRS, see \S \ref{randd}}
+\end{itemize}
+\end{multicols}
+\item[] For IFRS, having a working prototype is sufficient to constitute technical feasibility.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,2,l]}, width = 0.5\textwidth}
+\SetCell[r=3]{l} Capitalise & Materials  \\
+& Direct labour \\
+& Production labour \\
+& \\
+Expense & Administrative overhead
+\end{tblr}
+\end{table}
+\end{itemize}
+
+
+\subsubsection{Goodwill}
+\label{goodwill}
+\begin{itemize}
+\item The difference between the acquisition price and fair market value of the acquired firm's net assets is called good will
+\begin{equation}
+\text{Net assets} = \text{Assets} - \text{Liabilities} \label{netassets}
+\end{equation}
+The additional amount paid represents the amount paid for assets not on the balance sheet. The fair value estimate involves management discretion. Goodwill is not amortised, as it is an unidentifiable intangible asset.
+
+\item Impairment indicates that goodwill often results from overpayment to acquire an entity. You should remove the impact of goodwill from any ratios calculated.
+\begin{itemize}
+\item Remove goodwill from assets
+\item Remove any impairment from the income statement
+\item Evaluate business acquisitions considering purchase price, net assets, and earnings prospects
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Financial instruments (marketable securities)}
+\begin{itemize}
+\item Financial instruments and other marketable securities include
+\begin{multicols}{2}
+\begin{itemize}
+\item Stocks
+\item Bonds
+\item Receivables
+\item Notes to receivables
+\item Loans to others
+\item Derivatives
+\end{itemize}
+\end{multicols}
+They are measured at historical cost, amortised cost or fair value, and attributed to other comprehensive income (OCI)
+
+\item Fair value assets use mark-to-market accounting. This covers:
+\begin{itemize}
+\item Trading / held-for-trading securities
+\begin{itemize}
+\item Debt held with the intention to sell in the near term
+\item Quoted equity
+\item[] Unrealised gain / loss on these is put through the income statement
+\end{itemize}
+\item Available-for-sale / fair value through OCI securities. This includes debt available for sale.
+\item Derivatives (stand-alone or embedded in a non-derivative instrument)
+\item Assets with fair value exposures hedged by derivatives
+\item[]
+\item[] Dividend incom, interest income, and realised PnL is put through the income statement
+\end{itemize}
+
+
+\item Assets measured at cost or amortised cost include
+\begin{multicols}{3}
+\begin{itemize}
+\item Unlisted instruments
+\item Held-to-maturity investments
+\item Loans
+\item Receivables
+\item All other liabilities (bonds, notes payable, trade payables)
+\end{itemize}
+\end{multicols}
+
+\item Deferred tax liabilities are a measure of taxable temporary differences between the income tax expense (income statement) and taxes payable (tax return). This is a temporary difference due to timing. For tax purposes, accelerated depreciation is used, whereas straight-line depreciation is used for financial reporting
+\item Any differences should eventually reverse when all taxes are paid
+
+\end{itemize}
+
+
+\subsection{Common size balance sheets}
+\begin{itemize}
+\item Similar to the common-size income statement, here, all balance sheet accounts are expressed as a percentage of the total assets on the balance sheet. This allows for comparisons over time, as well as cross sectional comparisons.
+
+\begin{equation*}
+\frac{\text{Balance sheet account}}{\text{Total assets}}
+\end{equation*}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {r Q[m,1,l] c r Q[m,1,l]}, width = 0.75\textwidth}
+& Cash & & & Current liabilities \\
++ & Accounts receivable & & + & Long-term debt \\ \cline{4-5}
++ & Inventory & & & Total liabilities \\
++ & Plant and equipment & & + & Equity \\ \cline{4-5}
++ & Goodwill & & & \textbf{Total liabilities + Equity} \\ \cline{1-2}
+& \textbf{Total assets} & & & \\
+\end{tblr}
+\end{table}
+\item From this, we can easily see that the following relation must hold,
+
+\begin{equation}
+\text{Assets} = \text{Liabilities} + \text{Equity}
+\end{equation}
+
+\end{itemize}
+
+\subsection{Ratios}
+\begin{itemize}
+\item Liquidity ratios (short-term debt):
+\begin{gather}
+\text{Current ratio} = \frac{\text{Current assets}}{\text{Current liabilities}} \label{currentratio}\\ \\
+\text{Quick ratio} = \frac{\text{Cash + Marketable securities + Receivables}}{\text{Current liabilities}} \label{quickratio} \\ \\
+\text{Cash ratio} = \frac{\text{Cash + Marketable securities}}{\text{Current liabilities}} \label{cashratio}
+\end{gather}
+
+\item Solvency ratios
+\begin{align}
+\text{Total debt ratio} &= \frac{\text{Total debt}}{\text{Total assets}} \\ \nonumber \\
+\text{Financial leverage} &= \frac{\text{Total assets}}{\text{Total equity}}
+\end{align}
+
+\end{itemize}
+
+
+\subsection{Cash flow statements}
+
+\subsubsection{Introduction}
+
+\begin{itemize}
+\item Cash flow is usually split out into three components.
+\begin{itemize}
+\item Operating cash flow (CFO)
+\item Investing cash flow (CFI)
+\item Financing cash flow (CFF)
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,r] c Q[m,1.3,l]}, width = 0.85\textwidth}
+& Operating cash flow CFO & $\longrightarrow$ & Current assets, current liabilities \\
++ & Investing cash flow CFI & $\longrightarrow$ & Non-current assets \\
++ & Financing cash flow CFF & $\longrightarrow$ & Non-current liabilities, equity \\ \cline{2}
+& Change in cash balance & & \\
++ & Beginning cash balance & & \\ \cline{2}
+& Ending cash balance
+\end{tblr}
+\end{table}
+\end{itemize}
+\begin{itemize}
+\item Earnings can be considered high quality if $CFO \gtrsim \text{Reported earnings}$. Operating activities relate to current assets and liabilities
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{c r c |[1.25pt] c r c}
+\SetCell[c=6]{c} Accounts Receivable ``T'' Account & & & & & \\ \hline[1.25pt]
+Amount B / Fwd & 10,000 &&& 63,000 & Cash collections \\
+Sales & 68,000 &&& 15,000 & Amount C/Fwd \\ \cline{2,5}
+& 78,000 &&& 78,000
+\end{tblr}
+\end{table}
+\begin{itemize}
+\item Increases and decreases in assets, liabilities, and equity involve the use of cash.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] Q[m,1,c] Q[m,1,c]}, width = 0.65\textwidth}
+& Increase & Decrease \\
+Assets & Outflow & Inflow \\
+Liabilities and equity & Inflow & Outflow
+\end{tblr}
+\caption{Table showing the effect changes in assets, liabilities, and equity has on a cash levels}
+\label{assetliability}
+\end{table}
+
+
+An increase in receivables or inventory uses cash -- cash is spent to buy assets. An increase in payables generates cash -- cash is received and must be paid back later.
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2.5,l] Q[m,0.8,r] Q[m,0.8,c] Q[m,0.8,r]}, width = 0.75\textwidth}
+& \SetCell[r=1,c=1]{c} Y2 & & \SetCell[r=1,c=1]{c} Y1 \\
+Revenue (I/S) & 2,000,000 & & 1,800,000 \\
+Accounts Receivable (B/S) & 900,000 & $\xleftarrow{+ 400,000}$ & 500,000 \\
+Unearned Revenue (B/S) & 1,000,000 & $\xleftarrow{+ 700,000}$ & 300,000 \\
+\end{tblr}
+\end{table}
+Unearned revenue is revenue that has already been paid, but the service has not yet been provided. This is not recorded as a part of revenue, and is classified as a liability.
+\begin{align*}
+\text{Cash collected} &= 2,000,000 -\underbrace{400,000}_{\text{Asset}} + \underbrace{700,000}_{\text{Liability}} \\
+&=2,300,000
+\end{align*}
+\end{itemize}
+
+\newpage
+\subsubsection{Example balance sheet and income statement}
+{\color{RedViolet}
+\begin{itemize}
+\item[] \textbf{Balance sheet}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l Q[m,3,l] r cc r}, width = 0.85\textwidth, rows = {fg = RedViolet}}
+& & \SetCell{c} \textbf{T} &&& \SetCell{c} \textbf{T--1} \\
+\SetCell[c=2]{l} Current Assets \\
+& Cash & 53,000 &&& 11,500 \\
+& Accounts receivable & 10,000 &&& 9,000 \\
+& Inventory & 5,000 &&& 7,000 \\
+\SetCell[c=2]{l} Non-current assets \\
+& Land & 35,000 &&& 40,000 \\
+& Gross PP\&E & 69,000 &&& 60,000 \\
+& Accum. Deprec. & (12,000) &&& (9,000) \\ \cline{3,6}
+& Net PP\&E & 57,000 &&& 51,000 \\
+& Goodwill & 10,000 &&& 10,000 \\ \cline{3,6}
+\SetCell[c=2]{l} Total assets && 170,000 &&& 128,500 \\ \\ \\
+
+\SetCell[c=2]{l} Current liabilities \\
+& Accounts payable & 9,000 &&& 5,000 \\
+& Wages payable & 4,500 &&& 8,000 \\
+& Interest payable & 3,500 &&& 3,000 \\
+& Unearned revenue & 6,000 &&& 2,000 \\
+& Taxes payable & 5,000 &&& 4,000 \\
+& Dividends payable & 6,000 &&& 1,000 \\
+\SetCell[c=2]{l} Non-current liabilities \\
+& Bonds & 15,000 &&& 10,000 \\
+& Deferred tax liabilities & 20,000 &&& 15,000 \\
+\SetCell[c=2]{l} Stockholder's equity\\
+& Common stock & 15,000 &&& 20,000 \\
+& Additional paid-in  capital & 25,000 &&& 30,000 \\
+& Retained earnings & 61,000 &&& 30,500 \\ \cline{3,6}
+&Total liabilities and equity & 170,000 &&& 128,500 
+\end{tblr}
+\end{table}
+
+\newpage
+
+\item[] \textbf{Income statement}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l Q[m,3,l] r cc r}, width = 0.85\textwidth, rows = {fg = RedViolet}}
+\SetCell[c=2]{l} Sales Revenue & & &&& 104,000 \\
+\SetCell[c=2]{l} Expenses \\
+& Cost of goods sold & 40,000 \\
+& Wages & 5,000 \\
+& Depreciation & 7,000 \\
+& Interest & 1,000 \\ \cline{3}
+& Total expenses & &&& 53,000 \\ \cline{6}
+\SetCell[c=2]{l} Income from continuing operations & & &&& 51,000 \\
+\SetCell[c=2]{l} Gain from sale of land & & &&& 10,000 \\
+\SetCell[c=2]{l} Loss on disposal of PP\&E & & &&& 2,000 \\ \cline{6}
+\SetCell[c=2]{l} Pretax income & & &&& 59,000 \\
+\SetCell[c=2]{l} Provision for taxes & & &&& 20,000 \\ \cline{6}
+\SetCell[c=2]{l} Net income & & &&& 39,000
+\end{tblr}
+\end{table}
+
+\item[] The company pays a common dividend of 8,500
+\item[] The company makes a 25,000 investment in assets
+\end{itemize}
+
+\newpage
+}
+\subsubsection{Direct method CFO}
+\begin{enumerate}
+\item Start with revenue on the income statement
+\item Look at balance sheet for any assets / liabilities (typically current) that relate to the income statement item
+\item Compute change in the balance sheet asset / liability
+\item Adjust income statements for changes
+\item Repeat for each line item of income statement
+\item Ignore non-cash charges (i.e. depreciation)
+\end{enumerate}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[t,3,l] r cc Q[t,2,l]}, width = 0.9\textwidth, rows = {fg = RoyalBlue}}
+Sales & 104,000 \\
+$\Delta$ Accounts receivable & (1,000) \\
+$\Delta$ Unearned revenue & 4,000 \\ \cline{2}
+& 107,000 & && Cash collected \\ \\
+
+Cost of goods sold & (40,000) \\
+$\Delta$ Inventory & 2,000 \\
+$\Delta$ Accounts payable & 4,000 \\ \cline{2}
+& (34,000) & && Cash paid to suppliers \\ \\
+
+Operating expense (wages) & (5,000) \\
+Decrease in salaries payable & (3,500) \\ \cline{2}
+& (8,500) & && Cash paid to employees \\ \\
+
+Interest expense & (1,000) \\
+$\Delta$ Interest payable & 500 \\ \cline{2}
+& (500) & && Cash interest paid\\ \\
+
+Tax expense & (20,000) \\
+$\Delta$ Tax payable & 1,000 \\
+$\Delta$ Deferred tax liability & 5,000 \\ \cline{2}
+& (14,000) & && Cash taxes paid
+
+\end{tblr}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] r Q[m,1,r]}, rows = {fg = RoyalBlue}, width = 0.9\textwidth}
+Cash collected from customers & 107,000 & \\
+Cash paid to suppliers & (34,000) \\
+Cash paid to employees & (8,500) \\
+Cash interest paid & (500) \\
+Cash taxes paid & (14,000) \\ \cline{2}
+\textbf{Operating cash flow} & \textbf{50,000}
+\end{tblr}
+\end{table}
+
+\subsubsection{Indirect method CFO}
+\begin{enumerate}
+\item Start with net income
+\item Add back all non-cash charges (i.e. depreciation / amortisation) Subtract gains / add losses on disposal of non-current assets as these are classified under CFI
+\item Adjust net income for changes in the relevant balance sheet items, in accordance with table \ref{assetliability} in terms of addition and subtraction of changes in assets and liabilities.
+\end{enumerate}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l c Q[m,3,l] r c Q[m,2,l]}, width = 0.85\textwidth, rows = {fg = RoyalBlue}}
+& & Net income & 39,000 \\
+& + & Depreciation & 7,000 & & Non-cash charge \\
+& $-$ & Gain from sale of land & (10,000) & & Part of CFI \\
+& + & Loss from disposal of land & 2,000 & & Part of CFI \\
+& + & Increase in deferred taxes & 5,000 \\ \\
+\SetCell[c=6]{l} Current asset and current liability adjustments \\
+& $-$ & Increase in accounts receivable & (1,000) \\
+& + & Decrease in inventory & 2,000 \\
+& + & Increase in accounts payable & 4,000 \\
+& $-$ & Decrease in wages payable & (3,500) \\
+& + & Increase in interest payable & 500 \\
+& + & Increase in unearned revenue & 4,000 \\
+& + & Increase in taxes payable & 1,000 \\ \cline{4}
+& & \textbf{Operating cash flow} & \textbf{50,000}
+\end{tblr}
+\end{table}
+
+\begin{itemize}
+\item We can see that the direct and indirect method both lead to the same result for CFO.
+\item[]
+\item Typical non cash charges that need to be adjusted for
+\item[] \textbf{Add back}
+\begin{multicols}{2}
+\begin{itemize}
+\item Depreciation, depletion, amortisation
+\item Losses on asset disposal
+\item Impairments / writedowns
+\item Losses on early retirement of debt
+\item Amortisation of bond discounts
+\item Increases in DTLs / decreases in DTAs
+\item Losses of equity-associated accounts
+\item[]
+\end{itemize}
+\end{multicols}
+\item[] \textbf{Subtract}
+\begin{multicols}{2}
+\begin{itemize}
+\item Gains on asset disposal
+\item Gains on early retirement of debt
+\item Reversals of impairments / writedowns
+\item Amortisation of bond premiums
+\item Decreases in DTLs / increases in DTAs
+\item[]
+\end{itemize}
+\end{multicols}
+\item[]
+\item[]
+\item IFRS and US GAAP allow for both direct and indirect methods to be used for calculation of CFO, but encourage the use of the direct method. If the direct method is used, then the indirect method must be included as part of the disclosures.
+\begin{itemize}
+\item Most companies report under the indirect method
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Indirect to direct method CFO conversion}
+
+\begin{enumerate}
+\item Aggregate all revenues and gains and all expenses and losses
+\item Remove all non cash charges and disaggregate the remaining items into direct method categories
+\item Convert from accruals to cash flow by adjusting for damages in working capital (customer cash, employee cash, interest cash, etc.)
+\end{enumerate}
+
+\begin{enumerate}
+{\color{RoyalBlue}
+\item[] So, looking at the same example as before, and starting with the income statement
+\item Aggregate all revenue and gains, and expenses and losses to derive the net income
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,2,l] r c Q[t,3,l]}, width = 0.95\textwidth, rows = {fg = RoyalBlue}}
+& & & & Income statement item \\
+& Revenue and gains & 114,000 & & Revenue, gain from sale of land  \\
+$-$ & Expenses and losses & 75,000 & & Expenses, loss on disposal of PP\&E, provision for taxes \\ \cline{3}
+& Net income & 39,000
+\end{tblr}
+\end{table}
+
+\item Remove all non-cash charges and disaggregate the remaining items
+\begin{gather*}
+114,000 - \underbrace{10,000}_{\substack{\text{Gain on} \\ \text{disposal}}} = 104,000 \\
+75,000 - \underbrace{7,000}_{\text{Depreciation}} - \underbrace{2,000}_{\substack{\text{Loss on} \\ \text{disposal}}} - \underbrace{5,000}_{\Delta \text{DTL}} =61,000
+\end{gather*}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Cost of goods sold & & 40,000 \\
++ & Wages & & 5,000 \\
+$-$ & Interest & & 1,000 \\
++ & Tax payable (provision $-$ $\Delta$DTL) & & 69,000 \\ \cline{4}
+& & & 61,000
+\end{tblr}
+\end{table}
+
+\begin{itemize}
+\item[] Cash collected from customers
+\begin{equation*}
+104,000 - \underbrace{1,000}_{\substack{\Delta \text{Accounts} \\ \text{receivable}}} + \underbrace{4,000}_{\substack{\text{Unearned} \\ \text{revenue}}}
+\end{equation*}
+
+\item[] Cash paid to suppliers
+\begin{equation*}
+- \underbrace{40,000}_{\substack{\Delta \text{Cost of} \\ \text{goods sold}}} + \underbrace{2,000}_{\Delta \text{inventory}} + \underbrace{4,000}_{\substack{\Delta \text{Accounts} \\ \text{payable}}}
+\end{equation*}
+
+\item[] Cash interest paid
+\begin{equation*}
+- \underbrace{1,000}_{\substack{\text{Income} \\ \text{statement}}} + \underbrace{500}_{\substack{\text{Interest} \\ \text{payable}}}
+\end{equation*}
+
+\item[] Cash paid to tax authorities
+\begin{equation*}
+- \underbrace{40,000}_{\text{Provision}} - \underbrace{5,000}_{\substack{\text{Increase} \\ \text{in DTL}}} + \underbrace{2,000}_{\text{Tax payable}}
+\end{equation*}
+
+\end{itemize}
+
+
+
+
+
+}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{CFI}
+
+\begin{itemize}
+\item This covers
+\begin{multicols}{2}
+\begin{itemize}
+\item Purchases of PP\&E
+\item Proceeds from sale of assets
+\item Investments in joint ventures and affiliates
+\item Payments for business acquired
+\item Purchases / sales of intangibles
+\item Purchases / sales of marketable securities
+\end{itemize}
+\end{multicols}
+\item This excludes
+\begin{itemize}
+\item Trading securities (Covered by CFO)
+\item Cash equivalents (Listed on the balance sheet)
+\end{itemize}
+\begin{equation}
+CFI = \text{Cash received from asset sales} - \text{Investment in assets}
+\end{equation}
+\begin{equation}
+\text{Gain / loss on disposal} = \text{Cash proceed} - \text{Carrying value at disposal} \label{cashproceed}
+\end{equation}
+\begin{equation}
+\text{Carrying value} = \text{Cost} - \text{Accumulated depreciation} \label{carryingvalue}
+\end{equation}
+\item The relevant income statement and balance sheet items are:
+
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] r cc r}, width = 0.5\textwidth, rows = {fg = RedViolet}}
+& \SetCell{c} \textbf{T} &&& \SetCell{c} \textbf{T--1} \\
+Land & 35,000 &&& 40,000 \\
+Gross PP\&E & 69,000 &&& 60,000 \\
+Accum. Deprec. & (12,000) &&& (9,000) \\ \cline{2,5}
+Net PP\&E & 57,000 &&& 51,000 \\
+\end{tblr}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] r}, width = 0.5\textwidth, rows = {fg = RedViolet}}
+Depreciation & 7,000 \\
+Gain from sale of land & 10,000 \\
+Loss on disposal of PP\&E & 2,000
+\end{tblr}
+\end{table}
+{\color{RedViolet} The company makes a 25,000 investment in assets.}
+\newpage
+
+
+{\color{RoyalBlue}
+The calculation for CFI is then
+
+
+\item[] PP\&E
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Beginning gross PP\&E & & 60,000 \\
++ & PP\&E purchased & & 25,000 \\
+$-$ & Gross PP\&E sold & &\\ \cline{2, 4}
+& Ending gross PP\&E & & 69,000
+\end{tblr}
+\end{table}
+
+so we can see that the Gross PP\&E sold is $60,000 + 25,000 - 69,000 = 16,000$, as all the other components of that equation can be read from the balance sheet.
+\newline
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Beginning accumulated depreciation & & 9,000 \\
++ & Depreciation expense & & 7,000 \\
+$-$ & Accumulated depreciation on disposal of PP\&E & & \\ \cline{2, 4}
+& Ending accumulated depreciation & & 12,000
+\end{tblr}
+\end{table}
+
+so we can see that the accumulated depreciation on disposal of PP\&E is $9,000 + 7,000 - 12,000 = 4,000$, as the other parts can be read from the balance sheet and income statement.
+
+Then, using equation \ref{carryingvalue}, we can work out the carrying value of the PP\&E, 
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Cost & & 16,000 \\
+$-$ & Accumulated depreciation on disposal of PP\&E & & 4,000 \\ \cline{2, 4}
+& Carrying value & & 12,000
+\end{tblr}
+\end{table}
+
+
+Equivalently, 
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Beginning carrying value & & 51,000 \\
+$-$ & Depreciation expense & & (7,000) \\
++ & Additions to PP\&E & & 25,000 \\
+$-$ & Carrying value of assets disposed & & \\ \cline{2, 4}
+& Ending carrying value & & 57,000
+\end{tblr}
+\end{table}
+so the carrying value of assets disposed is $51,000 - (7,000) + 25,000 - 57,000 = 12,000$, same as before.
+
+Now, using equation \ref{cashproceed}, the cash proceed from sales is
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Cash proceed & &  \\
+$-$ & Carrying value at disposal & & (12,000) \\ \cline{2, 4}
+& Ending gross PP\&E & & (2,000)
+\end{tblr}
+\end{table}
+
+\item[] Land (No depreciation)
+\item We can read off the balance sheet that the gain from sale is $10,000$. The carrying value at disposal is the same as the change in land value, which is 
+\begin{equation*}
+\Delta\text{Land value} = 25,000-40,000 = (5,000)
+\end{equation*}
+The cash proceeds is given by 
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Cash proceed & &  \\
+$-$ & Carrying value at disposal & & (5,000)  \\ \cline{2, 4}
+& Gain on sale & & $10,000$
+\end{tblr}
+\end{table}
+
+The CFI is then given by the sum of all proceeds less the sum of all additions
+\begin{equation}
+CFI = \sum\text{Proceeds} - \sum\text{Additions}
+\end{equation}
+\begin{align*}
+\underbrace{10,000}_{PP\&E} + \underbrace{15,000}_{Land} - \underbrace{25,000}_{Investment} = 0
+\end{align*}
+}
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{CFF}
+\begin{itemize}
+\item This covers the issuance, purchase, and redemption of
+\begin{itemize}
+\item Common stock
+\item Preferred stock
+\item Debt
+\end{itemize}
+\item Dividend payments may be included here, but fall under CFO under USGAAP
+
+\begin{equation}
+\text{Net income} - \text{Dividend declared} = \text{Change in retained earnings} \label{declareddividend}
+\end{equation}
+\begin{equation}
+- \text{Dividend declared} + \text{Change in dividends payable} = \text{Cash dividend paid}
+\end{equation}
+
+{\color{RedViolet}
+\item The relevant income statement and balance sheet items are:
+
+\item[] \textbf{Balance Sheet}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l Q[m,3,l] r cc r}, width = 0.65\textwidth, rows = {fg = RedViolet}}
+& & \SetCell{c} \textbf{T} &&& \SetCell{c} \textbf{T--1} \\ \\
+& Dividends payable & 6,000 &&& 1,000 \\
+& Bonds payable & 15,000 &&& 10,000 \\ \\
+\SetCell[c=2]{l} Stockholder's equity \\
+& Common stock & 15,000 &&& 20,000 \\
+& Additional paid-in capital & 25,000 &&& 30,000 \\
+& Retained earnings & 61,000 &&& 30,500
+\end{tblr}
+\end{table}
+
+Other data
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] r}, width = 0.65\textwidth, rows = {fg = RedViolet}}
+Net income & 39,000 \\
+Dividend declared & 8,500
+\end{tblr}
+\end{table}
+
+}
+{\color{RoyalBlue}
+\item The change in debt is $15,000 - 10,000 = 5,000$
+\item The change in common stock is $15,000 + 25,000 - 20,000 - 30,000 = (10,000)$
+\item The change in retained earnings is $61,000 - 30,500 = 30,500$
+\item The cash divided paid is $\underbrace{(8,500)}_{\text{Declared}} + \underbrace{5,000}_{\text{Still payable}} = (3,500)$
+
+Now, using equation \ref{declareddividend},
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RoyalBlue}}
+& Net income & & $39,000$  \\
+$-$ & Dividend declared  \\ \cline{2, 4}
+& Change in retained earnings & & $30,500$
+\end{tblr}
+\end{table}
+we recover the declared dividend of $39,000 - 30,500 = 8,500$ as expected.
+}
+\end{itemize}
+
+
+\subsubsection{Differences between US GAAP and IFRS}
+\begin{itemize}
+\item US GAAP and IFRS differ in their treatment of various items and which category of cash flow they are, or can be, attributed to
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.25,l] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
+& \textbf{USGAAP} & \textbf{IFRS} \\
+Interest received & CFO & CFO / CFI \\
+Interest paid & CFO & CFO / CFF \\
+Dividends received & CFO & CFO / CFI \\
+Dividends paid & CFF & CFO / CFF \\
+Taxes paid & CFO & CFO / CFI + CFF \\
+Bank overdraft & CFF & Cash + equiv.
+\end{tblr}
+\caption{US GAAP and IFRS treatment for different itmes in the income statement}
+\label{cfotreatment}
+\end{table}
+
+\end{itemize}
+
+\subsubsection{Cash flow statement analysis}
+\begin{itemize}
+\item Questions a cash flow statement analysis should aim to answer
+\begin{itemize}
+\item Do regular operations cash flow generate enough cash to sustain the business
+\item Is enough cash generated to pay off maturing debt
+\item Is there a need for additional financing
+\item Is the company able to meet unexpected obligations
+\item Is the company able to take advantage of new opportunities
+\end{itemize}
+
+\item[]
+\item Analyse major sources and uses of cash flow
+\begin{itemize}
+\item What are the major sources and uses
+\item Is CFO sufficient to cover capex
+\end{itemize}
+
+\item Analyse CFO
+\begin{itemize}
+\item What are major determinants of CFO
+\item Is CFO higher or lower than net income
+\item How consistent is the CFO
+\end{itemize}
+
+\item Analyse CFI
+\begin{itemize}
+\item What is cash being spent on
+\item Investing in PP\&E
+\item What acquisitions have been made
+\end{itemize}
+
+\item Analyse CFF
+\begin{itemize}
+\item How is the company financing -- CFI / CFO
+\item Capital being raised or repaid
+\item Dividends returned to owners
+\end{itemize}
+
+\item Common size cash flow statement
+\begin{itemize}
+\item \% of net revenue
+\item[] OR
+\item Each inflow as \% of total inflow
+\item Each outflow as \% of total outflow
+\end{itemize}
+This can be used to find trends over time
+\end{itemize}
+
+
+\subsubsection{Free cash flow}
+\begin{itemize}
+\item Free cash flow is a measure of cash that is available for discretionary use after all capital expenditure has been covered
+
+\item Free cash flow to the firm, FCFF, is the cash available to all investors (equity and debt).
+
+\begin{equation}
+FCFF = \underbrace{\overbrace{NI}^{\substack{\text{Net} \\ \text{income}}} + \overbrace{NCC}^{\substack{\text{Non-cash} \\ \text{charges}}} - \overbrace{WCInv}^{\substack{\text{Working} \\ \text{capital} \\ \text{investment}}}}_{CFO} + \overbrace{\text{Int}(1-t)}^{\substack{\text{Net debt} \\ \text{expense}}} - \overbrace{FCInv}^{\substack{\text{Fixed} \\ \text{capital} \\ \text{investment}}}
+\end{equation}
+
+
+\item Free cash flow to equity, FCFE, is the cash available for distribution to common shareholders, after all obligations have been satisfied.
+\begin{equation}
+FCFE = CFO - FCInv + \text{Net debt expense}
+\end{equation}
+\end{itemize}
+
+
+\subsubsection{Cash flow performance ratios}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
+Cash flow to revenue & $\dfrac{CFO}{\text{Net revenue}}$ \\
+Cash return on assets & $\dfrac{CFO}{\text{Avg. total assets}}$ \\
+Cash return on equity & $\dfrac{CFO}{\text{Avg. equity}}$ \\
+Cash to income & $\dfrac{CFO}{\text{Operating income}}$ \\
+Cash flow per share & $\dfrac{CFO - \text{Preference dividend}}{\text{Net revenue}}$ \\
+Debt coverage & $\dfrac{CFO}{\text{Net revenue}}$ \\
+Interest coverage & $\dfrac{CFO+\text{Interest paid} + \text{Tax paid}}{\text{Interest paid}}$ \\
+Reinvestment ratio & $\dfrac{CFO}{\text{Cash paid for long-term assets}}$ \\
+Debt payment & $\dfrac{CFO}{\text{Cash paid for long-term debt repayment}}$ \\
+Dividend payment & $\dfrac{CFO}{\text{Dividends paid}}$ \\
+Investing and financing & $\dfrac{CFO}{\text{Cash outflows for CFI, CFF}}$
+\end{tblr}
+\end{table}
+
+\subsection{Inventory measurement}
+\begin{itemize}
+\item Take the lower of cost or net realisable value. All IFRS firms and most US GAAP firms, except for those using LIFO or retail inventory cost
+\item The cos includes all costs of bringing inventory to its current location and condition, but excludes
+\begin{multicols}{2}
+\begin{itemize}
+\item Abnormal amounts
+\item Storage costs
+\item Admin overheads
+\item Selling costs
+\end{itemize}
+\end{multicols}
+\item The net realisable value (NRV) is defined as
+\begin{equation}
+\text{Net realisable value} = \text{Est. selling price} - \text{Est. cost of completion} - \text{Selling costs}
+\end{equation}
+If the net realisable value is less than the cost, then this goes straight to the income statement.
+\item Reversal of writedowns is allowed under IFRS, but not under US GAAP. Any reversal however is limited to the original loss (in other words, capped at original cost)
+\item Retail inventory cost methods is the lower of cost or market value. 
+\begin{itemize}
+\item Cost: same as IFRS (US GAAP prohibits reversal of writedown)
+\item Market value: current replacement cost, subject to:
+\begin{itemize}
+\item Upper limit = NRV
+\item Lower limit = NRV $-$ profit margin
+\end{itemize}
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{Example:}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RedViolet}}
+& Selling price & & 225  \\
+$-$ & Selling costs & & 22\\ \cline{2, 4}
+& Net realisable value & & 203
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clcr}, rows = {fg = RedViolet}}
+& Original cost & & 220  \\
+$-$ & Replacement cost & & 197\\ \cline{2, 4}
+& Normal profit margin & & 12
+\end{tblr}
+\end{table}
+
+\begin{equation*}
+\text{Min}(\text{Cost, NRV}) = \text{Min}(210, 203) = 203
+\end{equation*}
+Therefore inventory is written down to 203, recognising a loss of 7.
+
+\begin{equation*}
+\text{Min}(\text{Cost, Market value}) = \text{Min}(210, 197) = 197
+\end{equation*}
+where market value is the current replacement cost, bounded by the NRV (203) and the NRV less the normal profit margin, $=203-12=191$. 197 is \underline{in} this range.
+
+\item If NRV increases to 213 and replacement cost increases to 207
+\begin{itemize}
+\item[] The original cost of 210 is now the lower of cost and NRV.
+\item[]
+\item Under IFRS, the value of inventory may by written up to 210, since 210 is now the minimum of cost and NRV, so the previous loss of 7 is reversed
+\item Under US GAAP, there is no reversal, but since the inventory value is at the lower value, and NRV is higher, greater profit margin is then recorded
+\end{itemize}
+}
+\item Inventory valuation above cost
+\begin{itemize}
+\item Generally, this is not allowed, but is permitted for producers / dealers of commodity-like products
+\item Reported on balance sheet at NRV
+\item If active market exists, quoted market price is used. Otherwise, recent market transactions are used
+\item Unrealised gains / losses are recognised in the income statement
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Inflation impact of FIFO and LIFO}
+\begin{itemize}
+\item In an inflationary environment, later acquisitions are made at a higher price
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,l] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
+& & \textbf{LIFO} & \textbf{FIFO} \\
+& COGS & Higher & Lower \\
+& EBT & Lower & Higher \\
+& Taxes & Lower & Higher \\
+& NI & Lower & Higher \\ \hline
+& Inventory & Lower & Higher \\
+& Working capital & Lower & Higher \\
+& Retained earnings & Lower & Higher \\
+& CFO & Higher & Lower
+\end{tblr}
+\end{table}
+
+
+\item[] Lower tax $\Rightarrow$ Higher CFO
+\item When prices are rising
+\begin{itemize}
+\item FIFO shows an atificially low value of COGS while LIFO is more useful here
+\item LIFO shows an artiicially low value of ending inventory, while FIFO is more useful here.
+\end{itemize}
+If prices are stable, then there is no change
+\item Effects on ratios (Assuming inflationary environment)
+\begin{itemize}
+\item Profitability: FIFO $>$ LIFO (Lower COGS implies a higher margin)
+\item Liquidity: FIFO $>$ LIFO (Higher ending inventory value)
+\item Activity: Inventory turnover under LIFO $>$ FIFO
+\item Solvency: LIFO $>$ FIFO (Higher assets means higher equity)
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection{LIFO liquidation}
+\begin{itemize}
+\item When goods sold exceed goods replaced;
+\begin{itemize}
+\item Older (lower) inventory costs are used, and therefore earnings increase
+\item Higher earnings not sustainable
+\end{itemize}
+\item May be intentional (earnings manipulation) or unintentional (drop in demand, strikes, recession)
+\item Should eliminate liquidation effect by adjusting COGS
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,l] c Q[m,1,r] c Q[m,1,r] c Q[m,1,r]}, rows = {fg = RedViolet}, width = 0.85\textwidth}
+\SetCell[r=1,c=1]{c}\textbf{[Units]} && \SetCell[r=1,c=1]{c}\textbf{T} && \SetCell[r=1,c=1]{c}\textbf{T+1} && \SetCell[r=1,c=1]{c}\textbf{T+2} \\ \\
+Sales && $10,000$ && $12,000$ && $16,000$ \\ \\
+Beginning inventory && 0 && $4,000$ && $7,000$ \\
+Purchases && $14,000$ && $15,000$ && $10,000$ \\ \cline{1,3,5,7}
+Available for sale && $14,000$ && $19,000$ && $17,000$ \\
+Ending inventory && $(4,000)$ && $(7,000)$ && $(1,000)$ \\ \cline{1,3,5,7}
+Cost of sales && $10,000$ && $12,000$ && $16,000$
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,l] c Q[m,1,r] c Q[m,1,r] c Q[m,1,r]}, rows = {fg = RedViolet}, width = 0.85\textwidth}
+\SetCell[r=1,c=1]{c}\text{Prices} && \SetCell[r=1,c=1]{c}\textbf{T} && \SetCell[r=1,c=1]{c}\textbf{T+1} && \SetCell[r=1,c=1]{c}\textbf{T+2} \\
+Sales && 100 && 105 && 110 \\
+Purchases && 80 && 84 && 88
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,l] c Q[m,1,r] c Q[m,0.5,r] Q[m,0.5,r] c Q[m,0.5,r] Q[m,0.5,r]}, rows = {fg = RedViolet}, column{6,9} = {fg=NavyBlue}, column{5,8} = {fg=Cyan}, row{1} = {fg=RedViolet}, width = 0\textwidth}
+\SetCell[r=1,c=1]{c}\textbf{[\$ terms]} && \SetCell[r=1,c=1]{c}\textbf{T} && \SetCell[r=1,c=2]{c}\textbf{T+1} &&& \SetCell[r=1,c=2]{c}\textbf{T+2} & \\
+&& && \SetCell[r=1,c=1]{c} FIFO & \SetCell[r=1,c=1]{c} LIFO && \SetCell[r=1,c=1]{c} FIFO & \SetCell[r=1,c=1]{c} LIFO \\ \\
+Sales && $1,000,000$ && $1,260,000$ &&& $1,760,000$ \\ \\
+Beginning inventory && 0 && $320,000$ &&& $588,000$ & $572,000$ \\
+Purchases && $1,120,000$ && $1,260,000$ &&& $880,000$ \\ \cline{1,3,5,6,8,9}
+Available for sale && $1,120,000$ && $1,580,000$ &&& $1,468,000$ & $1,452,000$ \\
+Ending inventory && $(320,000)$ && $(588,000)$ & $(572,000)$ && $(88,000)$  & $(80,000)$ \\ \cline{1,3,5,6,8,9}
+Cost of goods sold && $800,000$ && $992,000$ & $1,008,000$ && $1,380,000$ & $1,372,000$ \\ \\
+Gross profit && $200,000$ && $268,000$ & $252,000$ && $380,000$ & $388,000$
+\end{tblr}
+\end{table}
+\item[] We can see that the LIFO gross profit is higher
+}
+\end{itemize}
+
+\subsection{Presentation and disclosures}
+\begin{itemize}
+\item Financial statement information
+\begin{itemize}
+\item Cost of sales
+\item Cost flow method (FIFO / LIFO)
+\item Carrying value of total inventory, carrying values by appropriate classification
+\item Carrying value of inventory reported at fair value less selling costs
+\item Write downs / reversals of inventory
+\item Assets pledged as collateral
+\end{itemize}
+\item Inventory analysis
+\begin{itemize}
+\item Increase in raw materials and work-in-process implies an expected increase in demand
+\item Increase in finished goods alone implies expected decrease in demand
+\item Finished goods growing faster than sales implies an expected decrease in demand and obsolete / excessive inventory
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l c Q[m,1,r] c Q[m,1,r] c Q[m,1,r]}, width = 0.65\textwidth, rows = {fg = RedViolet}}
+\SetCell[r=1,c=1]{c} \textbf{[\$ terms]} && \SetCell[r=1,c=1]{c} \textbf{T} && \SetCell[r=1,c=1]{c} \textbf{T+1} && \SetCell[r=1,c=1]{c} \textbf{T+2} \\
+Raw materials && 120 && 207 && 68 \\
+Valuation allowance && $-20$ && $-27$ && $-2$ \\ \cline{3,5,7}
+Net carrying value && 100 && 180 && 66 \\ \\
+
+Work in progress && 50 && 95 && 31 \\
+Valuation allowance && 0 && $-5$ && $-1$ \\ \cline{3,5,7}
+Net carrying value && 50 && 90 && 30 \\ \\
+
+Finished goods && 403 && 706 && 221 \\
+Valuation allowance && $-53$ && $-76$ && $-17$ \\ \cline{3,5,7}
+Net carrying value && 350 && 630 && 204 \\ \\ \hline \hline
+Inventory net carrying value && 500 && 900 && 300 \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+}
+\item Inventory turnover is defined as
+\begin{equation}
+\text{Inventory turnover} = \frac{\text{Cost of sales}}{\text{Avg. inventory}},
+\end{equation}
+days of inventory on hand defined as
+\begin{equation}
+\text{Days of inventory on hand} = \frac{365}{\text{Inventory turnover}},
+\end{equation}
+and sales growth is defined as
+\begin{equation}
+\text{Sales growth} = \frac{\text{Current sales}}{\text{Previous sales}} -1
+\end{equation}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l c Q[m,1,r] c Q[m,1,r] c Q[m,1,r]}, width = 0.65\textwidth, rows = {fg = RedViolet}}
+\SetCell[r=1,c=1]{c} \textbf{[\$ terms]} && \SetCell[r=1,c=1]{c} \textbf{T} && \SetCell[r=1,c=1]{c} \textbf{T+1} && \SetCell[r=1,c=1]{c} \textbf{T+2} \\
+Cost of sales && $2,600$ && $4,700$ &&  \\
+Inventory && 500 && 900 && 300
+\end{tblr}
+\end{table}
+
+
+{\color{RoyalBlue}
+\item We can then calculate inventory turnover for the years T and T+1.
+\begin{gather*}
+\text{Inventory turnover}\big|_{T} = \frac{2,600}{\left[\frac{500+900}{2}\right]} = 3.7 \\ \\
+\text{Inventory turnover}\big|_{T+1} = \frac{4,100}{\left[\frac{900+300}{2}\right]} = 6.8
+\end{gather*}
+Turnover is higher when costs are higher and when average inventory falls.
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l c Q[m,1,r] c Q[m,1,r]}, width = 0.45\textwidth, rows = {fg = RedViolet}}
+& \SetCell[r=1,c=1]{c}\textbf{T} & \SetCell[r=1,c=1]{c}\textbf{T+1} \\
+Revenue & $5,500$ & $7,500$ \\
+Cost of sales & $2,600$ & $4,100$ \\
+Gross profit & $2,900$ & $3,400$ \\
+\end{tblr}
+\end{table}
+If sales for $\text{T}=5,300$, then sales growth is
+\begin{align*}
+\text{T+1}&:\frac{5,500}{5,300}-1=4\% & \text{T+2}&:\frac{7,500}{5,500}-1=36\%
+\end{align*}
+
+Gross profit margin is therefore
+\begin{align*}
+\text{T+1}&:\frac{2,900}{5,500}-1=53\% & \text{T+2}&:\frac{3,400}{7,500}-1=45\%
+\end{align*}
+
+With the current ratio defined in equation \ref{currentratio} as $\frac{\text{Current assets}}{\text{Current liabilities}}$, the quick ratio defined in equation \ref{quickratio} as $\frac{\text{Current assets } - \text{ Inventory}}{\text{Current liabilities}}$, and the cash ratio defined in equation \ref{cashratio} as $\frac{\text{Cash } + \text{ Marketable securities}}{\text{Current liabilities}}$;
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {l c Q[m,1,r] c Q[m,1,r]}, width = 0.85\textwidth, rows = {fg = RedViolet}}
+&& \SetCell[r=1,c=1]{c}\textbf{T} && \SetCell[r=1,c=1]{c}\textbf{T+1} \\
+Cash && $1,250$ && $2,675$ \\
+Trade receivables && $1,520$ && $3,020$ \\
+Inventory && $900$ && $300$ \\ \cline{3,5}
+Inventory && $3,670$ && $5,995$ \\ \\
+
+Current liabilities && $866$ && $1,505$ \\ \\
+
+Current ratio && \SetCell[r=1,c=1]{c}$\dfrac{3,670}{866}=4.23$ && \SetCell[r=1,c=1]{c}$\dfrac{5,995}{1,505}=3.98$ \\
+Quick ratio && \SetCell[r=1,c=1]{c}$\dfrac{3,670-900}{866}=3.13$ && \SetCell[r=1,c=1]{c}$\dfrac{5,995-300}{1,505}=3.78$ \\
+Cash ratio && \SetCell[r=1,c=1]{c}$\dfrac{1,250}{866}=1.44$ && \SetCell[r=1,c=1]{c}$\dfrac{2,675}{1,505}=1.78$
+\end{tblr}
+\end{table}
+}
+\end{itemize}
+
+
+\subsubsection{Intangible long-lived assets}
+\begin{itemize}
+\item Intangible assets lack physical substance. Recall from \S\ref{intangibles} that identifiable intangible assets can be separated from, and controlled by the firm. They are expected to provide probable future benefits and their cost can be reliably measured. 
+\item Unidentifiable intangible assets cannot be separated from the firm (i.e. goodwill)
+\begin{itemize}
+\item Finite-lived intangibles are amortised
+\item Indefinite intangibles are tested for impairment
+\item Internally developed intangibles are expensed as incurred, except for R\&D (\S\ref{randd} )and software development costs. Research costs involve the discovery of new knowledge and understanding, whereas development costs are a translation of research findings into a plan.
+\item[] Under IFRS, research may be expensed, but development may be capitalised. Under US GAAP, both research and development are expensed.
+\end{itemize}
+\item Purchased intangibles are recorded at cost. For a group of assets, the price is disaggregated based on fair value
+\item For intangibles obtained in a business acquisition identifiable net assets are recorded at fair value, and the difference between purchase value and fair value of identifiable assets $(A-L)$ reported as goodwill
+\item Recall from \S\ref{software} on software that for:
+\begin{itemize}
+\item Software developed for sale, under IFRS and US GAAP, costs are expensed as incurred until technological feasibility is established
+\item Software developed for internal use, IFRS has the same treatment as above, but US GAAP expenses costs as incurred until it is probable the firm will complete the project and use the software as intended.
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Impairment and de-recognition}
+\begin{itemize}
+\item Impairment is defined as an unanticipated decline in the carrying value of an asset. This is expensed in the income statement
+\item IFRS
+\begin{itemize}
+\item Annually assess for indications of impairment
+\item Asset is impaired when the book value (carrying value in the balance sheet) is greater than the recoverable amount, which is defined
+\begin{gather}
+\text{Recoverable amount} = \text{Max}(\text{Fair value} - \text{Selling cost}, \text{Value in use}), \\
+\text{Value in use} = \text{PV of future cashflows}.
+\end{gather}
+If there is an impairment, the asset is written-down to the recoverable amount, and a loss is recognised in the income statement.
+\item Loss reversal is allowed up to a maximum of the original loss
+\end{itemize}
+
+\item{US GAAP}
+\begin{itemize}
+\item Assess assets for impairment only when there is an indication that the book value may not be recoverable through future use
+\begin{itemize}
+\item Impairment when: 
+\begin{equation*}
+\text{Book value} > \text{Est. undiscounted future cash flows}
+\end{equation*}
+\item Loss recognition: If the asset is impaired, asset is written down to fair value (or if unknown, the value of the discounted future cash flows. Recognise this loss in the income statement
+\end{itemize}
+\item Loss reversal is prohibited for assets held for use.
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider the following as information about an asset
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] Q[m,1,r] c c}, width = 0.75\textwidth, rows = {fg = RedViolet}}
+Original cost & $900,000$ \\
+Accumulated depreciation & $100,000$ \\
+Expected future cash flows & $795,000$ & & (undiscounted) \\
+Fair value & $790,000$ \\
+Value in use & $785,000$ & & (discounted) \\
+Selling costs & $30,000$
+\end{tblr}
+\end{table}
+\begin{itemize}
+\item Under IFRS:
+\begin{gather*}
+\text{Book value} = 900,000-100,000=800,000
+\end{gather*}
+\begin{gather*} \small
+\text{Recoverable amount} = \text{Max}\begin{cases} &\text{Fair value} - \text{Selling costs} = 790,000 - 30,000 = 760,000 \\ & \text{Value in use} = 785,000 \end{cases}
+\end{gather*}
+\begin{align*}
+\text{Impairment} &= 800,000-785,000 \\
+&=15,000
+\end{align*}
+
+\item Under US GAAP
+\begin{itemize}
+\item Book value = $800,000$, and undiscounted future cash flow = $795,000$. Since the book value is higher, there is an ipairment. So, the asset is written down to its fair value of $790,000$.
+\begin{align*}
+\text{Impairment loss} &= 800,000 - 790,000 \\
+&-10,000
+\end{align*}
+\end{itemize}
+\end{itemize}
+}
+\end{itemize}
+
+\subsubsection{Impact of impairment}
+\begin{multicols}{2}
+\begin{itemize}
+\item Balance sheet
+\begin{itemize}
+\item Decreases assets (Lower net book value)
+\item Decreases equity (Impairment charge)
+\end{itemize}
+
+\item Income statement
+\begin{itemize}
+\item Decreases current net income (Impairment charge)
+\item Increases future net income (Lower depreciation)
+\end{itemize}
+
+\item Cash flow
+\begin{itemize}
+\item Unaffected (Impairment is a non-cash charge)
+\end{itemize}
+
+\item Disclosure
+\begin{itemize}
+\item MD\&A, Footnotes
+\end{itemize}
+
+\item Fixed assets and turnover ratios
+\begin{itemize}
+\item Increase (Lower assets, therefore smaller denominator)
+\end{itemize}
+
+\item Debt-to-equity ratio
+\begin{itemize}
+\item Increase (Lower equity, as equity = A $-$ L)
+\end{itemize}
+
+\item Current-year ROA, ROE $\left(\frac{NI}{A}, \frac{NI}{E}\right)$
+\begin{itemize}
+\item Decrease (\% fall in NI $>$ \% fall in A, E)
+\end{itemize}
+
+\item Future ROA, ROE
+\begin{itemize}
+\item Increase (Lower A, E, higher NI since reduced depreciation)
+\item[]
+\item[]
+\end{itemize}
+\end{itemize}
+\end{multicols}
+
+
+\item Analysis of impairment
+\begin{itemize}
+\item Past earnings overstated due to insufficient depreciation
+\item Management has control of timing / size of impairment loss
+\item Impairments involve judgement -- these estimates will have a material impact on accounts
+\end{itemize}
+
+\item Impairment of long-lived assets
+\begin{itemize}
+\item Assets held for sale (IFRS, USGAAP): Tested for impairment when transferred from held for use to held for sale. Depreciation expense is no longer recognised. The asset is impaired if book value is greater than the net realisable value, defined as
+\begin{equation}
+\text{Net realisable value} = \text{Fair value} - \text{Selling costs}.
+\end{equation}
+If the asset is impaired, write-down to NRV. Both IFRS and USGAAP allow loss reversal up to the original loss
+\end{itemize}
+
+
+\subsubsection{Derecognition of long-lived assets}
+\begin{equation*}
+\text{Proceeds} - \text{Carrying value} = \text{Gain / loss},
+\end{equation*}
+\begin{itemize}
+\item[] where proceeds are attributed to CFI and carrying value is the cost and accumulated depreciation removed from the balance sheet. The gain / loss refers to an accounting gain / loss taken to the income statement
+\item When asset is sold / exchanged
+\begin{itemize}
+\item Carrying value removed from balance sheet
+\item Cash or new asset added to balance sheet (part-exchange)
+\item Gain / loss reported on income statement
+\item Cash proceeds in CFI
+\end{itemize}
+\item When asset is abandoned
+\begin{itemize}
+\item Carrying value removed from balance sheet
+\item Losses reported on income statement
+\begin{equation*}
+\text{Proceeds}=\begin{cases}&\text{0 if abandoned} \\ &\text{Fair value if exchanged} \end{cases}
+\end{equation*}
+\item Discussed in MD\&A and / or footnotes
+\end{itemize}
+\item An asset is classified as held-for-sale once the sales process commences. Take the lower of carrying value or NRV at this point.
+\item[]
+\item A spin-off constitutes the transfer of assets that comprise an entire or subsidiary into a new legal entity
+\end{itemize}
+
+\subsubsection{Long-term asset disclosure}
+\begin{itemize}
+\item IFRS requires the statement of:
+\begin{itemize}
+\item Carrying value of each asset class (plant, land, machinery etc.) is defined as 
+\begin{equation}
+\text{Carrying value} = \text{Cost} - \text{Accumulated depreciation}
+\end{equation}
+\item Either the accumulated depreciation, or amortization and and the depreciation rate
+\item Title restrictions and assets pledged as collateral
+\item For impaired assets, the loss amount, location in income statement (I / S), and the circumstance
+\item For revalued assets, state the revaluation date, how future value is determined, carrying value using historical cost model, and state the revaluation surplus in the OCI (Other Comprehensive Income)
+\end{itemize}
+
+\item US GAAP requires the statement of
+\begin{itemize}
+\item Depreciation expense and depreciation methods
+\item By major asset class (same as before) the balance and the accumulated depreciation
+\item Intangibles as listed plus an estimate of amortization for the next 5 years
+\item For impaired assets, the loss amount, where it falls in the income statement, and circumstances (same as IFRS), how future value is determined, and a descriptions of the asset
+\end{itemize}
+
+\item Depreciation and amortisation under IFRS
+\begin{itemize}
+\item May appear on face f income statement if using the nature of expense approach. Not on face however if using function of expense method. Instead it will appear under COGS of SG\&A
+\item For indirect statement of cash flow -- Depreciation and amortisation are non-cash charges
+\item For direct statement of cash flow -- Does not appear in the CFO computation
+\end{itemize}
+Under US GAAP, reconciliation of direct / indirect methods is required in the footnotes
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Using footnote disclosures}
+\begin{itemize}
+\item Analysts can use financial statement disclosures to estimate the average age of fixed assets and the average depreciable life of fixed assets. This is used to identify old and insufficient assets, alongside any potential need for significant investment. Fixed asset turnover, Total useful life, and average age are defined as
+\begin{gather}
+\text{Fixed asset turnover} = \frac{\text{Revenue}}{\text{Avg. fixed assets}} \\ \nonumber \\
+\text{Total useful life} = \frac{\text{Historical cost}}{\text{Annual depreciation}} \\\nonumber \\
+\text{Average age} = \frac{\text{Accumulated depreciation}}{\text{Annual depreciation}} \\ \nonumber \\
+\frac{\text{Total useful life} - \text{Average age}}{\text{Remaining useful life}} = \frac{\text{Carrying value of net PP\&E}}{\text{Annual depreciation}}
+\end{gather}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a company with gross PP\&E of $3,000,000$, accumulated depreciation of $1,000,000$, and straight-line annual depreciation of $500,000$. We can then calculate
+\begin{align*}
+\text{Avg. age} &= \frac{1,000,000}{500,000} = \text{2 years} \\
+\text{Useful life} &= \frac{3,000,000}{500,000} = \text{6 years} \\
+\text{Remaining life} &= 6-2 = \text{4 years}
+\end{align*}
+}
+
+\end{itemize}
+
+\subsection{Leases}
+\begin{itemize}
+\item A contract \underline{must}
+\begin{enumerate}
+\item Refer to a specific asset
+\item Give the lessee the economic benefits of that asset during the contract
+\item Give the lessee rights over how to use that asset
+\end{enumerate}
+\item Advantages of financing through lease as opposed to purchase include
+\begin{itemize}
+\item Typically lower cost of financing
+\item Little / no up-front payment
+\item Lower risk of obsolescence
+\end{itemize}
+\item IFRS and US GAAP have two classification of leases. These are
+\begin{itemize} 
+\item \textbf{Finance lease} -- Benefits \underline{and} risks of ownership are substantially transferred to the lessee
+\item \textbf{Operating lease} -- Refers to all other long-term leases
+\item[]
+\item Leases less than one year (IFRS, US GAAP), or with a value $<\$5,000$ (IFRS only) are exempt and payments are reported as expenses
+\end{itemize}
+
+\end{itemize}
+
+
+
+\subsubsection{Lessee accounting}
+\begin{itemize}
+\item A lease is classified as a finance lease if \underline{any} of the following criteria are satisfied
+\begin{itemize}
+\item Transfers ownership to lessee
+\item Lessee has the option to buy and expects to exercise it
+\item Lease is for most of the assets useful life
+\item PV of lease payments $\geq$ Fair value of the asset
+\item Lessor has no alternative use for the asset
+\end{itemize}
+
+\item Under IFRS, financing and operating lease treatment is identical:
+\begin{itemize}
+\item Recognise a right-of-use asset ``ROU'' equal to the PV of the lease payments on the balance sheet (discount at the lease or borrowing rate)
+\item Recognise a lease liability of equal amount on the balance sheet
+\item Equity is therefore unchanged at lease inception
+\item Straight-line amortisation of the ROU asset is shown on the balance sheet
+\item Amortisation of the ROU asset and interest component of the lease payment is shown on the income statement
+\item Principal component of the lease payments reduce balance sheet liability and reported under CFF
+\item Asset and liability vary over the life of the lease but reconcile by the end of the term
+\end{itemize}
+
+\item Under USGAAP
+\begin{itemize}
+\item Finance lease treatment is identical to IFRS
+\item Operating lease treatment is the same as a finance lease, except the ROU asset is amortised by the decrease in lease liability in each period
+\begin{equation}
+\text{Lease payment} = \text{Total expense (Amortisation + Interest)}
+\end{equation}
+The ROU asset and liability are therefore the same at all points over the life of the asset
+\end{itemize}
+
+\item Cash flow statement\footnote{See table \ref{cfotreatment} for more information} for finance leases (and operating leases under IFRS)
+\begin{itemize}
+\item Principal payments fall under CFF
+\item Interest payments fall under CFO for US GAAP, and CFO or CFF under IFRS
+\end{itemize}
+
+\item Cash flow statement for operating leases
+\begin{itemize}
+\item The total payment is classified under CFO
+\end{itemize}
+
+
+{\color{RedViolet}
+\label{leaseexample}
+\item[] \textbf{EXAMPLE:} Financing lease -- Consider a company which leases a machine for 4 years. At the end of the contract, the machine is returned to the lessor. There are annual payments of $\$10,000$, and the implicit interest is 5\% (used for ROU asset straight-line amortisation)
+}
+{\color{RoyalBlue}
+\begin{align*}
+N&=4  & I / Y &= 5\%  & PV &= & PMT &= 10,000 & FV &= 0
+\end{align*}
+Then, using CPT PV, the calculator gives a PV of $35,460$ for the ROU asset, the same liability as at the start of the lease. The ROU asset is amortised across the four-year lifespan, giving $\frac{35,460}{4} = 8,865$ / year. Interest repayments fall under CFO for US GAAP, and CFO or CFF for IFRS.
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r]}, rows = {fg = RoyalBlue}, row{3} = {font = \small}, width = 0.95\textwidth}
+\hline[1.25pt]
+ & \SetCell[r=1,c=1]{c} Beginning liability & \SetCell[r=1,c=1]{c} Interest expense (5\%) & \SetCell[r=1,c=1]{c} Lease payment &\SetCell[r=1,c=1]{c} Principal repayment (CFF) &\SetCell[r=1,c=1]{c} Ending liability & \SetCell[r=1,c=1]{c} BV of ROU asset \\ \hline
+& \SetCell[r=1,c=1]{c} $(A)$ & \SetCell[r=1,c=1]{c} $(B)$ & \SetCell[r=1,c=1]{c} $(C)$ & \SetCell[r=1,c=1]{c} $(D)$ & \SetCell[r=1,c=1]{c} $(E)$ \\
+& & \SetCell[r=1,c=1]{c} $0.05 \times (A)$ & & \SetCell[r=1,c=1]{c} $(C)-(B)$ & \SetCell[r=1,c=1]{c} $(A)-(D)$ \\ \hline[1.25pt]
+Y1 & $35,460$ & $1,773$ & $10,000$ & $8,227$ & $27,233$ & $26,595$ \\
+Y2 & $27,233$ & $1,362$ & $10,000$ & $8,638$ & $18,595$ & $17,730$ \\
+Y3 & $18,595$ & $930$    & $10,000$ & $9,070$ & $9,525$   & $8,865$ \\
+Y4 & $9,525$   & $475$    & $10,000$ & $9,525$ & $0$          & $0$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+
+If we were to take the same example, but for an operating lease under US GAAP, the only thing that would change is that the book value of the ROU asset would match the ending liability for every year. With regards to cash flow, the full repayment would be attributed to CFO
+}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.95\textwidth, column{3,5} = {font = \scriptsize, fg  = RoyalBlue}}
+\hline[1.25pt]
+& \SetCell[c=2]{c} \textbf{Finance lease} & & \SetCell[c=2]{c} \textbf{US GAAP Operating lease} \\ \hline[1.25pt]
+Balance sheet ROU asset & Lower & Amortisation $>$ Decrease in liability & Higher \\
+Balance sheet liabilities & Same && Same \\
+Income statement earnings (early) & Lower & ($10,638$, Y1) & Higher & ($10,000$, Y1) \\
+Income statement earnings (late) & Higher & ($9,975$, Y3) & Lower & ($10,000$, Y3) \\
+EBIT & Higher & (only amortisation goes through) & Lower & ($10,000$) \\
+Interest expense & Higher & & Lower & (---, all is part of the lease expense) \\
+Operating cash flow (CFO) & Higher & (Interest only so smaller outflow) & Lower & (Lease part) \\
+Financing cash flow (CFF) & Lower & (Principal so larger outflow) & Higher & --- \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+\end{itemize}
+
+\subsubsection{Lessee disclosures}
+\begin{itemize}
+\item Disclose the carrying amount of ROU asset by class of underlying asset
+\item Cash out flows relating to lease
+\item Interest expense included in the income statement from the lease liability
+\item Depreciation of ROU (amortisation) by asset class
+\item Expenses related to variable lease payments not included in lease liabilities
+\item Additions to ROU assets
+\item Maturity analysis of lease liabilities and current / non-current split
+\item Expenses relating to low-value and short-term leases
+\item Quantitative \underline{and} qualitative information regarding the nature of leasing activities, future cash out flows, restrictions and covenants, sale and leaseback
+\end{itemize}
+
+
+\subsubsection{Lessor accounting}
+\begin{itemize}
+\item From the lessor perspective, finance and operating lease classification is the same.
+\item For a finance lease, under IFRS and US GAAP:
+\begin{itemize}
+\item Remove the leased asset from the balance sheet and replace it with a \textbf{lease receivable asset}
+\begin{equation}
+\text{Lease receivable asset} = \underbrace{\text{PV of lease payments}}_{\text{ROU asset} + \text{Lease liability}}
+\end{equation}
+\item The book value of the lease receivable asset is recognised as a profit or loss
+\item Interest component of the lease payment is recognised as interest income
+\item The principal component of the lease payment reduces the value of the lease receivable asset.
+\item The entire lease payment is a CFO inflow
+\item[]
+\item If manufacturing / dealing the leased equipment is the main business operation, then this is treated as a sales-type lease. 
+\begin{gather*}
+\text{Sales proceeds} = \text{Revenue line} \\
+\text{CV of asset} = \text{Cost of sale}
+\end{gather*}
+\item If the lessor is a financing company, it is treated as a direct financing lease
+\item No gain / loss upon initiation of the lease is recognised on the income statement. The gain / loss is deferred and recognised over the life of the lease as an interest income / expense
+\end{itemize}
+\item For an operating lease, under IFRS and US GAAP:
+\begin{itemize}
+\item Leased asset remains on balance sheet
+\item Lease payments are treated as income
+\item Depreciation and other lease costs are expenses
+\item Entire payment is a CFO inflow
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Same as before (\ref{leaseexample}). We are also told that the current carrying value in inventory of the asset is $30,000$, and that it has a residual value of $2,000$.
+}
+{\color{RoyalBlue}
+\item The revenue recognised is the PV of the lease payments, which is $35,460$ as calculated before. This gives the \textbf{deemed proceeds} of the transaction
+\item The cost of sale is given by
+\begin{align*}
+\text{Cost of sale} &= \text{Carrying value} - \text{PV of residual value} \\
+&= 30,000 - \underbrace{\frac{2,000}{(1+0.05)^{4}}}_{1,645} \\
+&=28,355
+\end{align*}
+The gross profit is therefore
+\begin{align*}
+\text{Gross profit} &= \text{Revenue} - \text{Cost of sale} \\
+&=35,460 - 28,355 \\
+&= 7,105 \text{ gain}
+\end{align*}
+The asset is removed from the inventory, and the lease receivable is is defined as
+\begin{align*}
+\text{Lease receivable} &= \text{PV of lease payment} + \text{PV of residual / salvage value} \\
+&=35,460 + 1,645 \\
+&=37,105, \text{ ``Net investment in lease''}
+\end{align*}
+
+\newpage
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r]}, rows = {fg = RoyalBlue}, width = 0.95\textwidth}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Beginning lease receivable & \SetCell[r=1,c=1]{c}  Interest income & \SetCell[r=1,c=1]{c}  Lease payment received & \SetCell[r=1,c=1]{c}  Principal repayment & \SetCell[r=1,c=1]{c}  Ending lease receivable \\ \hline 
+&  \SetCell[r=1,c=1]{c}  $(A)$ &  \SetCell[r=1,c=1]{c}  $(B)$ & \SetCell[r=1,c=1]{c} $(C)$ & \SetCell[r=1,c=1]{c} $(D)$ &  \SetCell[r=1,c=1]{c}  $(E)$ \\
+& &  \SetCell[r=1,c=1]{c} $(A)\times0.05$ & &  \SetCell[r=1,c=1]{c} $(C)-(D)$ &  \SetCell[r=1,c=1]{c} $(D)-(A)$ \\ \hline[1.25pt]
+Y1 & $37,105$ & $1,855$ & $10,000$ & $8,145$ & $28,960$ \\
+Y2 & $28,960$ & $1,448$ & $10,000$ & $8,552$ & $20,408$ \\
+Y3 & $20,408$ & $1,020$ & $10,000$ & $8,980$ & $11,428$ \\
+Y4 & $11,428$ & $572$ & $10,000$ & $9,428$ & $2,000$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\item If instead this were to be an operating lease, again using the same example
+\item[] The asset remains on the balance sheet (within the PP\&E line item). The yearly depreciation is given by
+\begin{align*}
+\text{Annual depreciation} &= \frac{\text{Current CV in inv.} - \text{Residual value}}{\text{Length of lease}} \\
+&= \frac{30,000-2,000}{4} \\
+&=\frac{28,000}{4} = 7,000
+\end{align*}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r]}, rows = {fg = RoyalBlue}, width = 0.95\textwidth}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Depreciation & \SetCell[r=1,c=1]{c} Net PP\&E & \SetCell[r=1,c=1]{c} Lease revenue & \SetCell[r=1,c=1]{c} Net I / S impact \\ \hline[1.25pt]
+Y1 & $7,000$ & $23,000$ & $10,000$ & $3,000$ \\
+Y2 & $7,000$ & $16,000$ & $10,000$ & $3,000$ \\
+Y3 & $7,000$ & $9,000$ & $10,000$ & $3,000$ \\
+Y4 & $7,000$ & $2,000$ & $10,000$ & $3,000$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+}
+\end{itemize}
+
+\subsubsection{Lessor disclosures}
+\begin{itemize}
+\item Finance leases
+\begin{itemize}
+\item Profit / loss is realised upon derecognition of asset
+\item Finance income relates to the lease receivable asset
+\item Income relates to the variable lease payments
+\item Significant changes in the net investment of the lease
+\item Maturity analysis of the lease payments received
+\item Reconciliation of the un-discounted lease payments to net investment in the lease
+\end{itemize}
+\item Operating leases
+\begin{itemize}
+\item Lease income 00 split out for variable lease payments
+\item Maturity analysis of lease payments receivable
+-- minimum for each of the next 5 years, aggregated beyond
+\item Underlying asset in balance sheet must comply with IAS 16, 36 disclosures
+\end{itemize}
+\end{itemize}
+
+\subsection{Deferred compensation and associated disclosures}
+\begin{itemize}
+\item Deferred compensation can refer to pension schemes (both defined benefit and defined contribution) as well as share-based compensation
+\end{itemize}
+
+\subsubsection{Defined contribution plan reporting}
+\begin{itemize}
+\item Income statement
+\begin{itemize}
+\item Pension expense, equal to the employer contribution
+\end{itemize}
+\item Balance sheet 
+\begin{itemize}
+\item No future obligation to report as liability
+\item If paid, decrease in cash. If not paid, increase in current liability
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DC pension disclosures}
+\begin{itemize}
+\item Annual employer contribution disclosed
+\end{itemize}
+
+\subsubsection{Defined benefit plan reporting}
+\begin{itemize}
+\item Balance sheet
+\begin{itemize}
+\item Funded status is defined by whether
+\begin{align*}
+&\text{Asset} > \text{Liability} \longrightarrow \text{Net pension asset} \\
+&\text{Asset} < \text{Liability} \longrightarrow \text{Net pension liability}
+\end{align*}
+\end{itemize}
+\item The estimated plan liability is based on
+\begin{multicols}{2}
+\begin{itemize}
+\item Salaries
+\item Employee turnover
+\item Average age
+\item Life expectancy
+\item Discount rate
+ \item[]
+\end{itemize}
+\end{multicols}
+\item A defined benefit plan under IFRS
+\begin{itemize}
+\item A change in funded status on the income statement or other comprehensive income comprises
+\begin{enumerate}
+\item Service cost (I / S) -- PV of additional benefits (i.e. an extra year worked), including any changes tto past service costs under changes in plan terms
+\item Net interest expense / income (I / S) -- Net pension asset / liability multiplied by the discount rate
+\item Remeasurements (OCI) -- Actuarial gains . losses and differences (changes in estimates) between actual and expected return on plan assets
+\end{enumerate}
+\end{itemize}
+
+\item A defined benefit plan under US GAAP
+\begin{itemize}
+\item A change in funded status on the income statement or other comprehensive income comprises
+\begin{enumerate}
+\item Service cost (I / S) -- Current period
+\item Interest expense / income (I / S)
+\item Expected return on plan assets (I / S)
+\item Past service cost (OCI)
+\item Actuarial gains / losses (OCI)
+\end{enumerate}
+\end{itemize}
+\item Manufacturing companies allocate a pension expense based on
+\begin{itemize}
+\item Inventory and cost of goods sold for employees who provide direct labour to production
+\item Salary / administrative expense for other employees.
+\item Pension expense details are disclosed in the notes
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DB pension disclosures}
+\begin{itemize}
+\item IAS 19 objectives
+\begin{itemize}
+\item Explain characteristics and risks
+\item Identify amounts in financial statements
+\item Describe how plan affects amounts, timing, and uncertainties relating to future cash flows
+\end{itemize}
+\item Minimum required disclosures
+\begin{itemize}
+\item Nature of plan, governance, regulatory framework, risk exposures
+\item Reconciliation of beginning / ending value for funded status, PV of DBO and plan assets
+\item Sensitivity analysis for key actuarial assumptions
+\item Composition of plan assets by asset type
+\item Expected employer contributions for next period and beyond
+\item Maturity profile of DBO
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Share-based compensation reporting}
+\begin{itemize}
+\item The purpose of share-based compensation is to align interests of managers and shareholders (mitigating the principal-agent dilemma)
+\item Share-based compensation results in no cash out flows
+\item Share-based compensation dilutes the proportional ownership of existing shareholders, thereby reducing the EPS
+\item[]
+\item Share-base compensation reporting:
+\begin{itemize}
+\item Estimate the fair value of share-based compensation at grant date
+\item Expense this to the income statement over the vesting period
+\begin{enumerate}
+\item Stock grants -- Awarded outright, with restrictions, or contingent on performance
+\begin{equation*}
+\text{Fair value} = \text{Share price on grant date}
+\end{equation*}
+\item Performance shares -- Dependent on meeting a set performance target (restricted stock units)
+\item Stock options -- Option to invest in company's stock at exercise price at a future date. If the option exercised, company issues new shares. Option valuation models are used to compute the fair value
+\item Stock-based appreciation rights (SAR) -- Generates cash flow for holders linked to stock performance. Payoffs are similar to stock options, and results in cash out flows for the company when the stock performs well. Non-exchange traded firms may use a version of this called phantom stock.
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Share-based compensation disclosures}
+\begin{itemize}
+\item Nature of plan, key details such as grant date, vesting date, service period, and settlement characteristics
+\item How fair value was determined
+\item Effect of share-based transactions on the income statement and balance sheet
+\end{itemize}
+
+
+\subsection{Tax treatment}
+\subsubsection{Tax return definitions}
+\begin{itemize}
+\item Taxable income -- Amount of income subject to taxes
+\item Taxes payable -- Actual tax liability for the current period
+\item Income tax paid -- Actual cash flow for taxes
+\item Tax loss carry-forward -- Current net taxable loss available to reduce taxes in future years. May result in deferred tax assets
+\item Tax base -- Net amount of asset / liability used for tax reporting
+\end{itemize}
+\subsubsection{Financial reporting definitions}
+\begin{itemize}
+\item Accounting profit -- Pretax financial income, earnings before loss
+\item Income tax expense -- Tax payable + $\Delta$ Deferred tax liability - $\Delta$ Deferred tax asset
+\item Deferred tax liability -- Balance sheet item when taxes payable is less than the income tax expense due to temporary differences
+\item Deferred tax assets -- Balance sheet item when taxes payable is greater than the income tax expense due to temporary differences
+\item Valuation allowance -- Reserve against deferred tax assets that may not reverse in the future
+\item Carrying value -- Balance sheet value of asset or liability
+\end{itemize}
+
+\subsubsection{Difference between accounting profit and taxable income}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {llcrcllcr}, column{4,9} = {fg = RedViolet}}
+\SetCell[c=3]{l} Financial Accounting & & & & \SetCell[c=3]{l} Tax reporting \\
+& Revenue & & $10,000$ & & & Revenue & & $10,000$ \\
+& Accrual-based costs & & $(5,000)$ & & & Tax allowable costs & & $(8,000)$ \\ \cline{3,4,8,9}
+& Pre-tax income & & $5,000)$ & & & Taxable & & $2,000$ \\
+& Tax @ 30\% & & $(1,500)$ & & & Tax payable @ 30\% & & $(600)$ \\ \cline{3,4,8,9}
+& & & $3,500$ & & & & & $1,400$
+\end{tblr}
+\end{table}
+
+The difference between the accounting tax and cash-tax paid is given by
+\begin{equation}
+\underbrace{\text{Income tax expense}}_{\text{Accounting}} = \underbrace{\text{Taxes payable}}_{\text{Tax}} + \Delta\text{Deferred tax}
+\end{equation}
+
+\begin{itemize}
+\item Both DTL and DTA are presented on the balance sheet. Under IFRS, the DTL / DTA is always non-current. Under US GAAP, it is split into current and non-current
+
+\item Temporary (timing) differences
+\begin{itemize}
+\item Differences between the balance sheet carrying value and the tax base of an asset can be temporary or permanent
+\begin{itemize}
+\item Temporary -- Same total passing through the I / S and tax return over time, but different individual periods
+\item Permanent -- Differences that will \underline{not} reverse in the future
+\end{itemize}
+\item Examples can include
+\begin{itemize}
+\item Revenues and expenses recognised in different periods for accounts and tax
+\item Difference in carrying value of asset an liability (i.e. depreciation methods)
+\item Tax loss carry forward (DTA)
+\item Gains an losses calculated differently for tax and financial statement
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DTLs and DTAs}
+\begin{itemize}
+\item For a DTL
+\begin{equation*}
+\text{Tax deduction} > \text{Accounting expense}
+\end{equation*}
+Therefore taxable income is less than the pre-tax profit, and so the tax payable is less than the income tax expense
+\item A DTL arises if revenue is recognised in income statement before the tax return. Expenses are tax deductible before income statement recognition
+\item[]
+\item For a DTA
+\begin{equation*}
+\text{Tax deduction} < \text{Accounting expense}
+\end{equation*}
+Therefore taxable income is greater than the pre-tax profit, and so the tax payable is greater than the income tax expense
+\item A DTA arises if revenue is recognised in income statement after the tax return. Therefore the expenses are tax deductible after the income statement recognition. A DTA also comes from post-employment benefits, unearned revenue, warranty expenses, and tax loss carry forwards
+\item Differences may also arise from a difference in depreciation method. For example, taxes use a double declining method, and accounting uses a straight line method
+\end{itemize}
+
+\subsubsection{Taxable and deductible temporary differences}
+\begin{itemize}
+\item If difference do not revert, then there is no deferred tax.
+\begin{itemize}
+\item Tax exempt income, non-deductible expenses
+\item Tax credits from some expenditures
+\end{itemize}
+The result of this is that the effective tax rate is not equal to the statutory tax rate
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
+\hline[1.25pt]
+\textbf{Balance sheet} & \textbf{Carrying value vs Tax base} & \textbf{DTA / DTL} \\ \hline[1.25pt]
+Asset & CV $>$ TB & DTL \\
+Asset & CV $<$ TB & DTA \\
+Liability & CV $>$ TB & DTA \\
+Liability & CV $<$ TB & DTL \\
+\end{tblr}
+\end{table}
+
+\item Tax expense is the the income statement tax expense / provision
+\begin{equation}
+\text{Tax expense} = \text{Tax payable} + \Delta\text{DTL} - \Delta\text{DTA} \label{taxexpense}
+\end{equation}
+Changes in the tax rate can also impact the DTL / DTA. If the tax rate falls:
+\begin{itemize}
+\item DTL $\downarrow$, therefore the income tax expense $\downarrow$
+\item DTA $\downarrow$, therefore the income tax expense $\uparrow$
+\end{itemize}
+according to equation \ref{taxexpense}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Assuming a statutory tax rate of 30\%;
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1.65,l] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r]}, width = 0.95\textwidth, rows = {fg = RedViolet}, column{2} = {font = \small}}
+\hline[1.25pt]
+\SetCell[r=2,c=2]{c} & &\SetCell[r=1,c=3]{c} \textbf{Tax Return} & & & \SetCell[r=1,c=3]{c} \textbf{Income Statement} \\ \hline
+& & \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 & \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline[1.25pt]
+& Revenue & $100,000$ & $120,000$ & $130,000$ & $95,000$ & $114,000$ & $123,500$ \\ 
+$-$ & Cost of sales & $28,500$ & $34,200$ & $37,050$ & $28,000$ & $34,200$ & $37,050$ \\
+$-$ & Other expenses & $19,950$ & $23,940$ & $25,935$ & $19,950$ & $23,940$ & $25,935$ \\
+$-$ & Depreciation & $10,000$ & $10,000$ & $10,000$ & $8,000$ & $8,000$ & $8,000$ \\
+$-$ & Warranty costs & $2,000$ & $5,000$ & $8,000$ & $0$ & $0$ & $0$ \\
+$-$ & Interest expense & $10,000$ & $12,000$ & $12,500$ & $10,000$ & $12,000$ & $12,500$ \\ \cline{2-Z}
+& Taxable income / EBT & $29,550$ & $34,860$ & $36,515$ & $28,550$ & $35,860$ & $40,015$ \\
+& Tax payable / Tax expense & $8,865$ & $10,458$ & $10,955$ & $8,565$ & $10,758$ & $12,005$ \\ \hline[1.25pt]
+\end{tblr}
+\caption{ Example to show the difference between tax calculation of the tax return compared to the income statement} \label{taxtable}
+\end{table}
+}
+
+{\color{RoyalBlue}
+From table \ref{taxtable}, we can see that the cost of sales, other expenses, and interest expense are all the same, so there is no need to look further at these. 
+\item Depreciation
+\begin{itemize}
+\item Assume acquisition of $40,000$ PP\&E at the start of Y1 with no residual value. Straight-line depreciation over 4 years for tax purposes and 3 years for the accounts. Eventually, $40,000$ will go through both, but different amounts in each intervening year.
+\item For tax purposes -- Allowable depreciation $>$ Income statement depreciation, so there is lower tax intially, and thus a DTL is observed
+\item[] One could also consider the tax base and carrying value rather than depreciation expenses
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,l] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r]}, rows = {fg = RoyalBlue}, width = 0.95\textwidth}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 & \SetCell[r=1,c=1]{c} Y4 & \SetCell[r=1,c=1]{c} Y5 \\ \hline
+Carrying value & $32,000$ & $24,000$ & $16,000$ & $8,000$ & $0$ \\
+Tax base & $30,000$ & $20,000$ & $10,000$ & $0$ & $0$ \\
+Timing difference & $2,000$ & $4,000$ & $6,000$ & $8,000$ & $0$ \\
+DTL at 30\% & $600$ & $1,200$ & $1,800$ & $2,400$ & $0$ \\
+$\Delta DTL$ & $+600$ & $+600$ & $+600$ & $+600$ & $-2,400$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\end{itemize}
+\item Revenue and warranty cost differences
+\begin{itemize}
+\item Income statement revenue -- net of any returns / allowance, i.e. estimated warranty provisions, warranty liability shown on balance sheet
+\item Tax return -- Warranty costs can only be used to save tax when an actual expenditure is incurred
+\item[] Looking at the relevant lines from table \ref{taxtable},
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.65,l] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r] Q[m,1,r]}, width = 0.85\textwidth, rows = {fg = RoyalBlue}, column{2} = {font = \small}}
+\hline[1.25pt]
+\SetCell[r=1,c=2]{c} & &\SetCell[r=1,c=3]{c} \textbf{Tax Return} & & \SetCell[r=1,c=3]{c} \textbf{Income Statement} \\ \hline
+& \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 & \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline[1.25pt]
+Revenue & $100,000$ & $120,000$ & $130,000$ & $95,000$ & $114,000$ & $123,500$ \\ 
+Warranty costs & $2,000$ & $5,000$ & $8,000$ & $0$ & $0$ & $0$ \\ \cline{2-4}
+& \SetCell[r=1,c=3]{c} Actually incurred & &
+\end{tblr}
+\end{table}
+The liability for each of the years is given by the difference in tax return revenue and income statement revenue. So, for Y1, we have $100,000-95,000=5,000$ and so on. This gives us the warranty provision which can be compared to the warranty expenditure in order to find any DTA / DTL.
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {lrrr}, rows = {fg = RoyalBlue}}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline
+Warranty provision & $5,000$ & $6,000$ & $6,500$ \\
+Warranty expenditure & $2,000$ & $5,000$ & $8,000$ \\
+\hline[1.25pt]
+\end{tblr}
+\end{table}
+In words, this gives
+\begin{align}
+\text{Balance sheet warranty liability} =& \text{Original liability} \nonumber \\ 
+&+ \text{Increase in warranty provision from sales} \\
+&- \text{Warranty expenditure} \nonumber
+\end{align}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {lrrr}, rows = {fg = RoyalBlue}}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline
+Warranty liability & $0$ & $3,000$ & $4,000$ \\
+Warranty provision & $5,000$ & $6,000$ & $6,500$ \\
+Warranty expenditure & $(2,000)$ & $(5,000)$ & $(8,000)$ \\ \hline
+Warranty liability c/f & $3,000$ & $4,000$ & $2,500$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+We can compare the carrying value of this to the tax base.
+\begin{multline}
+\text{Tax base of balance sheet liability} = \text{Carrying value} - \text{Amount of liability...} \\ \text{...that will pass through future returns}
+\end{multline}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {lrrr}, rows = {fg = RoyalBlue}}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline
+Carrying value & $3,000$ & $4,000$ & $2,500$ \\
+Tax base & $0$ & $0$ & $0$ \\
+Timing difference & $3,000$ & $4,000$ & $2,500$ \\ \hline
+DTA (30\%) & $900$ & $1,200$ & $750$ \\
+$\Delta$DTA & $+900$ & $+300$ & $-450$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+Combining the treatment of the depreciation and warranty cost, we can now convert from tax payable to tax expense using equation \ref{taxexpense}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {clrrr}, rows = {fg = RoyalBlue}}
+\hline[1.25pt]
+& & \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline
+& Tax payable & $8,865$ & $10,458$ & $10,955$ \\
+$+$ & $\Delta$ DTL & $600$ & $600$ & $600$ \\
+$-$ & $\Delta$ DTA & $(900)$ & $(300)$ & $450$ \\ \hline
+& Tax expense & $8,565$ & $10,758$ & $12,005$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+}
+\end{itemize}
+
+\subsubsection{Realizability of DTLs / DTAs}
+\begin{itemize}
+\item A valuation allowance reduces a DTA. This is based on the likelihood of realisation.
+\begin{itemize}
+\item[IFRS] Only show net figure
+\item[US GAAP] Full DTA shown, offset by valuation allowance
+\end{itemize}
+Increasing the valuation allowance decreases the income (VA$\uparrow$, DTA$\downarrow$, Tax expense$\uparrow$, Income$\downarrow$)
+
+\item A DTL should be treated as a liability if expected to reverse. If it is not expected to reverse, reduce the DTL and increase the equity.
+\end{itemize}
+
+
+\subsubsection{Tax rate reconciliation}
+\begin{itemize}
+\begin{multicols}{2}
+\item Required deferred tax disclosures
+\begin{itemize}
+\item DTL / DTA -- any valuation allowance and net change in valuation allowance
+\item Unrecognised deferred tax liability of undistributed earnings of subsidiaries and joint ventures 
+\item Current-year tax effect of each type of temporary difference 
+\item Components of income tax expense
+\item Tax loss carry-forwards and credits
+\item Reconciliation between effective and statutory tax rate
+\end{itemize}
+
+\item Analysis
+\begin{itemize}
+\item Be aware of differences in the reconciliation
+\item Cumulative differences from impairments, post-retirement benefits
+\item Restructuring charges may create a DTA
+\item Unrealised gains are DTL -- they are not taxed until realised
+\item Decreasing valuation allowance on a DTA is a good thing, as it suggests future taxable income will be higher
+\end{itemize}
+
+\end{multicols}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}
+
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {lrrr}, rows = {fg = RedViolet}}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c} Y1 & \SetCell[r=1,c=1]{c} Y2 & \SetCell[r=1,c=1]{c} Y3 \\ \hline
+Statutory rate & 35\% & 35\% & 35\% \\
+State income taxes & 2.1\% & 2.2\% & 2.3\% \\
+Benefits and foreign operations & (6.5\%) & (6.3\%) & (2.7\%) \\
+Tax rate changes & 0.0\% & 0.0\% & 0.0\% \\
+Capital gains on asset sales & 0.0\% & (3.0\%) & 0.0\% \\
+Special items & (1.6\%) & 8.7\% & 2.5\% \\
+Other, net & 0.8\% & 0.7\% & (1.4\%) \\ \hline
+Effective tax rate & 29.8\% & 37.3\% & 33.7\% \\ \hline[1.25pt]
+\end{tblr}
+\caption{An example of what tax reconciliation may show}
+\end{table}
+
+
+
+}
+
+
+
+\end{itemize}
+
+
+
+\subsection{Reporting quality}
+\begin{itemize}
+
+\item The quality of financial reporting is high if
+\begin{itemize}
+\item Reporting is compliant with IFRS / US GAAP
+\item Information is relevant, neutral, complete, free from errors, and decision useful
+\item Statements accurately represent the economic reality of activity of the business
+\end{itemize}
+
+\item Earnings quality is high if
+\begin{itemize}
+\item Earnings are sustainable
+\item Earnings provide adequate return to investors
+\end{itemize}
+
+\item Biased accounting choices may be
+\begin{itemize}
+\item Aggressive choices -- Increase current period earnings, financial position
+\item Conservative choices -- Decrease current period earnings, financial position
+\end{itemize}
+Conservative bias may also result from accounting standards themselves
+
+\item Management may smooth earnings by making conservative choices when earnings are high and aggressive choices when earnings are low. This introduces bias through the focus of reports
+
+\item Conditions for low quality reporting
+\begin{enumerate}
+\item Motivation
+\begin{itemize}
+\item Meet / exceed benchmark EPS
+\item Increase compensation, reputation
+\item Drive up stock price
+\item Avoid violation of debt covenants (highly levered, unprofitability)
+\item Improve view of companies from investors, analysts, customers
+\end{itemize}
+
+
+\item Opportunity
+\begin{itemize}
+\item Weak internal controls
+\item Inadequate board oversight
+\item Range of acceptable treatments in GAAP
+\item Minimal consequences
+\end{itemize}
+
+
+\item Rationalisation
+
+\end{enumerate}
+
+\item Mechanisms to monitor quality include
+\begin{itemize}
+\item Government regulation
+\begin{itemize}
+\item Security registration
+\item Audits, disclosure requirements
+\item Management responsibility 
+\item Enforcement
+\end{itemize}
+\item Auditors
+\begin{itemize}
+\item Opinion on financial reporting
+\item US only -- assessment of internal controls
+\end{itemize}
+\item Private contracts may have loan covenants, specific methods to calculate accounting measures, financial figures for return on investment
+\end{itemize}
+
+\item Non-GAAP presentation
+\begin{itemize}
+\item Companies may present pro-forma accounts to influence expectation
+\begin{itemize}
+\item[IFRS] Non-IFRS measures must be defined, explained, and reconciled
+\item[US GAAP] Non-GAAP measures may not be displayed more prominently. GAAP compliant measures should still be disclosed, alongside necessary explanation and reconciliation
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Accounting choices and estimates}
+\begin{itemize}
+\item Revenue recognition choices
+\begin{itemize}
+\item Shipping terms -- recognise at shipping point or destination
+\item Discounts to increase orders in the current period
+\item Delay shipments to defer revenue to a later period
+\item Increase shipments to distributors
+\item Bill and hold transactions -- recognise revenues for goods not yet shipped
+\end{itemize}
+
+\item Management of accruals
+\begin{itemize}
+\item Allowance for bad deb, warranty expense
+\end{itemize}
+
+\item Depreciation method
+\begin{itemize}
+\item Straight-line vs accelerated
+\end{itemize}
+
+\item Depreciation estimates
+\begin{itemize}
+\item Economic life, salvage value
+\end{itemize}
+
+\item Valuation allowance
+\begin{itemize}
+\item Contra account to DTA
+\end{itemize}
+
+\item Inventory cost flow assumptions
+\begin{itemize}
+\item Prices $\uparrow$, so $\text{FIFO COGS} < \text{WAC COGS} < \underbrace{\text{LIFO COGS}}_{\text{Only for US GAAP}}$
+\end{itemize}
+
+\item Capitalisation vs expensing
+\begin{itemize}
+\item Defers expense to future periods
+\end{itemize}
+
+\item Impairments
+\begin{itemize}
+\item Delaying recognition of impairment chargees
+\end{itemize}
+
+\item Related party transactions
+\begin{itemize}
+\item Can move earnings in / out of firm
+\end{itemize}
+
+\item Managing operating cash flow
+\begin{itemize}
+\item Capitalisation -- outflow through CFI
+\item Expensing -- outflow through CFO
+\item Stretching payables -- CFO $\uparrow$
+\item Capitalising construction interest, then depreciate going forwards
+\item Under IFRS
+\begin{itemize}
+\item Interest / dividends \underline{paid} $\Rightarrow$ CFF / CFO
+\item Interest / dividends \underline{received} $\Rightarrow$ CFI / CFO
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsection{Warning signs}
+\begin{itemize}
+\item Indicate if more analysis required, determine if there is a business purpose, or if statements are being manipulated
+\item If multiple warning signs are present, do not invest
+\item Revenue recognition warnings 
+\begin{itemize}
+\item Growth not in line with peers
+\item Change in revenue recognition method
+\item Bill and hold transactions
+item Changes in rebate estimates
+\item Receivables turnover $\left( \frac{\text{Revenue}}{\text{Avg. receivables}}\right)$, total asset turnover$\left( \frac{\text{Revenue}}{\text{Total avg. assets}}\right)$ decreasing over time
+\item Non-operating or one-time items included in revenue
+\end{itemize}
+
+\item Inventory warning signs
+\begin{itemize}
+\item Inventory turnover ratio $\left(\frac{\text{COGS}}{\text{Avg. inventory}}\right)$ declining over time
+\item Decrease in inventory units under LIFO -- Results in unsustainably low COGS
+\end{itemize}
+
+\item Capitalisation and cash flow warning signs
+\begin{itemize}
+\item Capitalisation of costs not capitalised by peers
+\item Ratio of $\text{CFO}:\text{Net income}$ is less than 1, or declining over time
+\end{itemize}
+
+\item Other signs
+\begin{itemize}
+\item Depreciation methods, useful lives, salvage values out of line with peers
+\item Fourth quarter earning surprises
+\item Significant related-party transactions
+\item Recurring ``Non-recurring'' expenses
+\item Lack of transparency / disclosure
+\item Any emphasis on non-GAAP earning figures
+\item Numerous acquisitions -- Fair value of net assets is subjective
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection{Financial ratios}
+\begin{itemize}
+\item Use of ratios
+\begin{itemize}
+\item Project future earnings / cash flows
+\item Evaluate firm's flexibility
+\item Assess management's performance
+\item Evaluate changes in firm and / or industry
+\item Compare firm with competition
+\item Cross-sectional analysis
+\item Time-series analysis
+\end{itemize}
+
+\item Limitations
+\begin{itemize}
+\item Should not be used in isolation
+\item Different accounting treatments may have been used
+\item Difficult for multi-industry companies
+\item Target / comparable ratios difficult to find
+\end{itemize}
+
+\item Vertical common-size statements
+\begin{gather*}
+\frac{\text{Income statement account}}{\text{Sales}} \\
+\frac{\text{Balance sheet account}}{\text{Total assets}}
+\end{gather*}
+
+\item Horizontal common-size statements
+\begin{itemize}
+\item Each line shown relative to some baseline
+\end{itemize}
+
+\item Graphs
+\begin{itemize}
+\item Facilitate comparisons over time 
+\item Communicate conclusions
+\end{itemize}
+
+\item Categories of ratios
+\begin{itemize}
+\item Activity -- Efficiency of operations
+\item Liquidity -- Ability to meet short-term obligations
+\item Solvency -- Ability to meet long-term obligations
+\item Profitability -- Ability to generate a profit from sales
+\end{itemize}
+
+\item If using items from only one of the income statement or balance sheet, use values from the current income statement or balance sheet as relevant.
+\item If using a combination, use values from the current income statement, and average value of the balance sheet item $\left( \frac{\text{Beginning} + \text{Ending}}{2} \right)$
+\end{itemize}
+
+\subsubsection{Activity ratios}
+
+\begin{equation*}
+\text{Receivables turnover} = \frac{\text{Revenue}}{\text{Avg. receivables}}
+\end{equation*}
+
+\begin{equation*}
+\text{Days of sales outstanding (DSO)} = \frac{365}{\text{Receivables turnover}}
+\end{equation*}
+\begin{itemize}
+\item Days taken to pay by customers -- compare to the credit terms extended by suppliers
+
+\begin{equation*}
+\text{Inventory turnover} = \frac{\text{COGS}}{\text{Avg. inventory}}
+\end{equation*}
+\item High inventory turnover can imply effective management, or that the company does not hold enough inventory
+
+\begin{equation*}
+\text{Days of inventory on hand (DOH)} = \frac{365}{\text{Inventory turnover}}
+\end{equation*}
+
+\begin{equation*}
+\text{Payables turnover} = \frac{\text{COGS}}{\text{Avg. trade payables}}
+\end{equation*}
+\item High payables turnover implies the amount owed to suppliers is relatively low. This could be due to the company no taking advantage of credit terms, or from the company benefiting from a prompt payment discount
+
+\begin{equation*}
+\text{Number of days of payables} = \frac{365}{\text{Payables turnover}}
+\end{equation*}
+\item Days taken to pay suppliers. If low, it could imply a short-term cash flow issue, or also a prompt payment discount
+
+\begin{equation*}
+\text{Fixed asset turnover} = \frac{\text{Revenue}}{\text{Avg. net fixed assets*}}
+\end{equation*}
+\item[] *Net of accumulated depreciation
+\item Gives an indication of how well assets generate revenue
+
+\begin{equation*}
+\text{Total asset turnover} = \frac{\text{Revenue}}{\text{Avg total assets}}
+\end{equation*}
+\item Low turnover implies an inefficient use of assets, but this is also impacted by the age of assets
+
+\begin{equation*}
+\text{Working capital turnover} = \frac{\text{Revenue}}{\text{Average working capital}}
+\end{equation*}
+\item Where average working capital is given by current assets less current liabilities
+
+
+\end{itemize}
+\subsubsection{Liquidity ratios}
+
+\begin{equation*}
+\text{Current ratio} = \frac{\text{Current assets}}{\text{Current liabilities}}
+\end{equation*}
+
+\begin{align*}
+\text{Quick ratio} &= \frac{\text{Current assets}-\text{Inventory}}{\text{Current liabilities}} \\
+&= \frac{\text{Cash} + \text{Receivables} + \text{Short-term marketable securities}}{\text{Current liabilities}}
+\end{align*}
+
+\begin{equation*}
+\text{Cash ratio} = \frac{\text{Cash} + \text{Short-term marketable securities}}{\text{Current liabilities}}
+\end{equation*}
+
+\begin{itemize}
+\item For all of these, a higher measure is better
+
+\begin{equation*}
+\text{Defensive interval} = \frac{\text{Cash} + \text{Receivables} + \text{Short-term marketable securities}}{\text{Daily cash expenditure*}}
+\end{equation*}
+\item[] *This covers goods, SG\&A, R\&D, etc.
+\item This metric defines the number of days of spending covered by liquid assets
+
+\begin{multline*}
+\text{Cash conversion cycle (CCC)} = \text{Days of inventory on hand} \\ + \text{Days sales outstanding} - \text{Days payables outstanding}
+\end{multline*}
+\item A low cash conversion cycle is better
+
+\end{itemize}
+
+
+
+
+\subsubsection{Solvency ratios}
+\begin{equation*}
+\text{Debt-to-assets ratio} = \frac{\text{Total debt}}{\text{Total assets}}
+\end{equation*}
+
+\begin{equation*}
+\text{Debt-to-capital ratio} = \frac{\text{Total debt}}{\underbrace{\text{Total debt} + \text{Total equity}}_{\text{Capital structure}}}
+\end{equation*}
+
+\begin{equation*}
+\text{Debt-to-equity ratio} = \frac{\text{Total debt}}{\text{Total shareholder equity}}
+\end{equation*}
+
+\begin{equation*}
+\text{Financial leverage ratio} = \frac{\text{Avg. total assets}}{\text{Avg. total equity}} = \frac{A}{A-L}
+\end{equation*}
+
+\begin{equation*}
+\text{Interest coverage} = \frac{\text{EBIT}}{\text{Interest payments}}
+\end{equation*}
+
+\begin{equation*}
+\text{Debt-to-EBITDA} = \frac{\text{Total debt}}{\text{EBITDA}}
+\end{equation*}
+\begin{itemize}
+\item Indicates the number of years required to pay off debt
+
+\begin{equation*}
+\text{Fixed charge coverage} = \frac{\text{EBIT}+\text{Lease payments}}{\text{Interest payments}+\text{Lease payments}}
+\end{equation*}
+
+\end{itemize}
+
+\subsubsection{Profitability ratios}
+
+\begin{align*}
+\text{Gross profit margin} &= \frac{\text{Gross profit}}{\text{Revenue}} \\
+&=\frac{\text{Revenue}-\text{COGS}}{\text{Revenue}}
+\end{align*}
+
+\begin{align*}
+\text{Operating profit margin} &= \frac{\text{Operating income}}{\text{Revenue}} \\
+&=\frac{\text{Gross profit}-\text{Operating costs}}{\text{Revenue}} \\
+&\approx \frac{\text{EBIT}}{\text{Revenue}}
+\end{align*}
+\begin{itemize}
+\item EBIT also contains some non-operating items, such as dividends and capital gain / loss
+
+\begin{equation*}
+\text{Pretax margin} = \frac{\text{EBT (after interest}}{\text{Revenue}}
+\end{equation*}
+
+\begin{equation*}
+\text{Net income margin} = \frac{\text{Net income}}{\text{Revenue}}
+\end{equation*}
+
+\begin{align*}
+\text{Return on assets (ROA)} &= \frac{\text{Net income}}{\text{Avg. total assets}} \\
+\underbrace{\text{Return on assets}}_{\text{Alternative}}&=\frac{\text{Net income} + (\text{Interest expense})(1-\text{tax rate})}{\text{Avg. total assets}}
+\end{align*}
+
+\begin{equation*}
+\text{Operating ROA} = \frac{\text{Operating income}}{\text{Avg. total assets}}
+\end{equation*}
+
+\begin{equation*}
+\text{Return on total capital} = \frac{\text{EBIT}}{\text{Shot + long-term debt and equity}}
+\end{equation*}
+
+\begin{equation*}
+\text{Return on invested capital} = \frac{\text{After-tax operating profit}}{\text{Avg. invested capital}}
+\end{equation*}
+\item $\text{After tax operating profit} = \text{Net income} + \text{Post-tax income expense}$
+\item $\text{Avg. invested capital} = \text{Avg. book value of equity and debt}$
+
+\begin{equation*}
+\text{Return on equity (ROE)} = \frac{\text{Net income}}{\text{Avg. total equity}}
+\end{equation*}
+
+\begin{equation*}
+\text{Return on common equity} = \frac{\text{Net income} - \text{Preferred dividend}}{\text{Avg. common equity}}
+\end{equation*}
+
+\end{itemize}
+
+\subsubsection{Industry specific financial ratios}
+\begin{itemize}
+\item[]
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,c] Q[m,3,c]}, width = 0.9\textwidth}
+\hline
+Services / consulting & Sales per employee \\ \hline
+\SetCell[r=2]{c} Retail & Growth in same-store sales \\ & Sales per square foot \\ \hline
+\SetCell[r=2]{c} Hotel industry & Average daily rate \\ & Occupancy rate \\ \hline
+Subscription services & Average revenue per user \\ \hline
+\SetCell[r=5]{c} Financial services & Capital adequacy \\ & Value at risk (VaR) \\ & Reserve requirements \\ & Liquid asset requirement \\ & $\text{Net interest margin} = \dfrac{\text{Interest income}}{\text{Interest earning assets}}$ \\ \hline
+\end{tblr}
+\end{table}
+\end{itemize}
+
+
+\newpage
+
+\subsubsection{Examples}
+
+\begin{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] c Q[m,1,r] c Q[m,1,r]}, width = 0.8\textwidth, rows = {fg = RedViolet}}
+\textbf{Balance sheet} & & \textbf{T} & & \textbf{T-1} \\
+Cash + equivalents && $105$ && $95$ \\
+Accounts receivable && $205$ && $195$ \\
+Inventories && $310$ && $290$ \\ \cline{3,5}
+Current assets && $620$ && $580$ \\ \\
+
+Gross PP\&E && $1,800$ && $1,700$ \\
+Accumulated depreciation && $360$ && $340$ \\ \cline{3,5}
+Net PP\&E && $1,440$ && $1,360$ \\ \cline{3,5}
+Non-current assets && $1,440$ && $1,360$ \\ \\ \cline{3,5}
+
+Total assets && $2,060$ && $1,940$ \\ \\
+
+Accounts payable && $110$ && $90$ \\
+Short-term debt && $160$ && $140$ \\
+Current potion of long-term debt && $55$ && $45$ \\ \cline{3,5}
+Current liabilities && $325$ && $275$ \\ \\
+
+Long-term debt && $610$ && $690$ \\
+Deferred tax && $105$ && $95$ \\ \\
+
+Common stock && $700$ && $700$ \\
+Retained earnings && $320$ && $180$ \\ \cline{3,5}
+Total equity && $1,020$ && $880$ \\ \\ \cline{3,5}
+
+Total liabilities and equity && $2,060$ && $1,940$
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] c Q[m,1,r]}, rows = {fg = RedViolet}, width = 0.8\textwidth}
+\textbf{Current year I / S} && \textbf{T} \\
+Sales revenue && $4,000$ \\
+Cost of goods sold && $3,000$ \\ \cline{3}
+Gross profit && $1,000$ \\
+Operating expenses && $650$ \\ \cline{3}
+Operating profit && $350$ \\
+Interest expense && $50$ \\ \cline{3}
+Pretax income && $300$ \\
+Taxes && $100$ \\ \cline{3}
+Net income && $200$
+\end{tblr}
+\end{table}
+
+}
+{\color{RoyalBlue}
+\item We can calculate the current ratio
+\begin{equation*}
+\text{Current ratio} = \frac{\text{CA}}{\text{CL}} = \frac{620}{325} = 1.9
+\end{equation*}
+
+\item We can calculate the total asset turnover as
+\begin{equation*}
+\text{Total asset turnover} = \frac{\text{Revenue}}{\text{Avg. total assets}} = \frac{4,000}{\frac{(2,060+1,940)}{2}}=2.0
+\end{equation*}
+
+\item The net profit margin is
+\begin{equation*}
+\text{Net profit margin} = \frac{\text{Net income}}{\text{Revenue}} = \frac{200}{4,000} = 5\%
+\end{equation*}
+
+\item The return on common equity is 
+\begin{align*}
+\text{Return on common equity} &= \frac{\text{Net income}-\text{Preference dividends}}{\text{Avg. common equity}} \\
+&=\frac{200-0}{\frac{(1,020+880)}{2}} = 21.1\%
+\end{align*}
+
+\item The debt-to-equity ratio is 
+\begin{align*}
+\text{Debt-to-equity ratio} &= \frac{\text{Total debt}}{\text{Total shareholder equity}} \\
+&=\frac{160+55+610}{1,020} = 80.9\%
+\end{align*}
+}
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} What conclusions can be drawn from the following?
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, rows = {fg = RedViolet}, width = 0.8\textwidth}
+\hline[1.25pt]
+& \textbf{T} & \textbf{T-1} & \textbf{T-2} \\ \hline
+Current ratio & $2.0$ & $1.5$ & $1.2$ \\
+Quick ratio & $0.5$ & $0.8$ & $1.0$ \\
+DOH & 60 & 50 & 30 \\
+DSO & 20 & 30 & 40 \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+
+}
+
+{\color{RoyalBlue}
+
+\item Over time, we can see that the current ratio is rising while the quick ratio is falling. This implies either inventory is rising, or other current assets are falling in aggregate.
+\item When looking at days of inventory on hand, we see that this is rising. This tells us that inventory is rising, rather than low cash.
+\item Looking at days sales outstanding, this tells us that cash is being collected faster
+\item[]
+\item A logical conclusion from this is that inventory is accumulating, and collections are accelerated in order to make up for poor inventory management
+}
+
+\newpage
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} What conclusions can be drawn from the following?
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, rows = {fg = RedViolet}, width = 0.8\textwidth}
+\hline[1.25pt]
+& \textbf{T} & \textbf{T-1} & \textbf{Industry avg.} \\ \hline
+Current ratio & $1.9$ & $2.1$ & $1.5$ \\
+Total asset turnover & $2.0$ & $2.3$ & $2.4$ \\
+Net profit margin & 5.0\% & 5.8\% & 6.5\% \\
+Return on equity & 21.1\% & 24.1\% & 19.8\% \\ 
+Debt-to-equity & 80.9\% & 99.4\% & 35.7\% \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+}
+{\color{RoyalBlue}
+\item Conclusions:
+\begin{itemize}
+\item Liquidity -- Higher than average, but lower than last year
+\item Activity -- Lower than last year \underline{average}
+\item Profitability -- Below industry average
+\item Solvency -- More leverage than average
+\end{itemize}
+
+}
+
+\end{itemize}
+
+\subsection{Dupont analysis}
+\begin{itemize}
+\item Dupont analysis is a way of splitting up the return on equity calculation into smaller pieces
+
+\begin{equation}
+\text{Return on equity} = \underbrace{\frac{\text{Net income}}{\text{Equity}}}_{\underbrace{\frac{\text{Net income}}{\text{Total assets}}}_{\overbrace{\underbrace{\frac{\text{Net income}}{\text{Revenue}}}_{\text{Net profit margin}}\times\underbrace{\frac{\text{Revenue}}{\text{Total assets}}}_{\text{Asset turnover}}}^\text{ROA}} \times \underbrace{\frac{\text{Total assets}}{\text{Equity}}}_{\text{Financial leverage ratio}}}
+\end{equation}
+
+In its constituent components, the three-part Dupont analysis looks like this:
+
+\begin{equation*}
+\text{ROE} = \underbracket{\frac{\text{Net income}}{\text{Revenue}}}_{\text{Net profit margin}} \times \underbracket{\frac{\text{Revenue}}{\text{Total assets}}}_{\text{Asset turnover}} \times \underbracket{\frac{\text{Total assets}}{\text{Equity}}}_{\text{Leverage}}
+\end{equation*}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} What conclusions can be drawn from the following?
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] Q[m,1,c] Q[m,1,c] Q[m,1,c] c}, rows = {fg = RedViolet}, width = 0.8\textwidth}
+\hline[1.25pt]
+& \textbf{T} & \textbf{T-1} & \textbf{T-2} \\ \hline
+ROE & 17.4\% & 18.0\% & 18.1\% \\ \hline
+Net profit margin & 5.34\% & 6.37\% & 7.05\% & $\downarrow$ \\
+Asset turnover & 1.171 & 1.207 & 1.326 & $\downarrow$ \\
+Leverage & 2.778 & 2.339 & 1.933 & $\uparrow$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+}
+{\color{RoyalBlue}
+\item Increasing leverage offsets decline in margin and asset turnover
+}
+
+\end{itemize}
+
+\subsubsection{Dupont system extended (5 part)}
+\begin{itemize}
+
+\item The return on equity calculation can be split up further as follows
+\begin{equation}
+\text{ROE} = \underbrace{\frac{\text{Net income}}{\text{EBT}}}_{\text{Tax burden}} \times \underbrace{\frac{\text{EBT}}{\text{EBIT}}}_{\text{Interest burden}} \times \underbrace{\frac{\text{EBIT}}{\text{Revenue}}}_{\text{EBIT margin*}} \times \frac{\text{Revenue}}{\text{Total assets}} \times \frac{\text{Total assets}}{\text{Equity}}
+\end{equation}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} What conclusions can be drawn from the following?
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,l] Q[m,1,c] Q[m,1,c]}, rows = {fg = RedViolet}, width = 0.8\textwidth}
+\hline[1.25pt]
+& \textbf{Company A} & \textbf{Company B} \\ \hline
+Revenue & 500 & 900 \\
+EBIT & 35 & 100 \\
+Interest & 5 & 0 \\
+EBT & 30 & 100 \\
+Taxes & 10 & 40 \\
+Net income & 20 & 60 \\
+Avg. assets & 250 & 300 \\
+Avg. equity & 150 & 250 \\ \\ \hline \\
+
+ROE & 13.3\% & 24.0\% \\
+Tax burden & 0.667 & 0.600 \\
+Interest burden & 0.857 & 1.000 \\
+EBIT margin & 0.070 & 0.111 \\
+Asset turnover & 2.000 & 3.000 \\
+Leverage & 1.667 & 1.200 \\ \hline[1.25pt]
+
+\end{tblr}
+\end{table}
+}
+{\color{RoyalBlue}
+\item From this, and using the Dupont analysis breakdown in the lower half of the table, we can see that Company A hs a higher tax burden, higher interest burden, lower asset turnover, and lower EBIT margin, but is more leveraged than Company B
+
+}
+
+
+\end{itemize}
+
+\subsection{Financial statement modelling}
+\begin{itemize}
+\item Business risk
+\begin{itemize}
+\item Use coefficient of variation for size-adjusted measures. This will aid analysis of assessing relative and absolute degrees of risk faced by a firm
+\begin{gather}
+\text{CV Sales} = \frac{\text{Std. dev. sales}}{\text{Mean sales}} \\ \nonumber \\
+\text{CV Operating income} = \frac{\text{Std. dev. operating income}}{\text{Mean operating income}} \\ \nonumber \\
+\text{CV Net income} = \frac{\text{Std. dev. net income}}{\text{Mean net income}}
+\end{gather}
+\end{itemize}
+
+\item Model building
+\begin{itemize}
+\item Common size statements and ratios can be used to model / forecast results
+\begin{itemize}
+\item Expected relationships
+\item Earnings model
+\item Revenue-driven models
+\end{itemize}
+\item Sensitivity of analysis
+\item Scenario analysis
+\item Simulation
+\end{itemize}
+
+\item Financial statement modelling for pro-forma financial statements
+\begin{itemize}
+\item Estimate sales and COGS
+\item Estimate SG\&A and financing costs
+\item Estimate tax expense and cash taxes
+\item[]
+\item Estimate balance sheet items that flow from income statement
+\item Use depreciation and CapEx to estimate capital expenditure and net PP\&E on balance sheet
+\item[]
+\item Form pro-forma balance sheet and income statement
+\item Prepare cash flow statement
+\end{itemize}
+
+
+\item Biases in forecasting
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,l] Q[m,1,l]}, width = 0.95\textwidth}
+\hline[1.25pt]
+%\textbf{Bias} & \textbf{Tendencies} & \textbf{Mitigating activities} \\ \hline
+\SetCell[r=2]{l} Overconfidence & Faith in estimates & Scenario analysis, critique \\
+& Underestimating error & Past success in forecasting \\ \hline
+\SetCell[r=2]{l} Illusion of control & Using complex models' & Use only variables with known forecasting power \\
+& ``Expert opinion'' & Relevance of opinion \\ \hline
+\SetCell[r=2]{l} Conservatism (anchoring) & \SetCell[r=2]{l} Resistance to incorporating new information & Use simple models \\ & & Audit of forecasting errors \\ \hline
+\SetCell[r=2]{l} Representativeness bias & Classifying by past known classifications & \SetCell[r=2]{l} Consider inside / outside views \\ & Base rate prioritises generic information over specifics & \\ \hline
+Confirmation bias & Looks for agreeable opinions & Look for diverse opinions \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\end{itemize}
+
+\subsection{Porter's five force analysis}
+\label{sec-porter}
+\begin{itemize}
+\item Porter's five forces are
+\begin{enumerate}
+\item Threat of substitute products
+\begin{itemize}
+\item If threat high, low pricing power
+\end{itemize}
+
+\item Intensity of rivalry
+\begin{itemize}
+\item If competition high, pricing power is low. 
+\item Pricing power low when
+\begin{itemize}
+\item Industry concentration low
+\item Fixed cost, exit barriers high
+\item Industry growth slow
+\item Products not differentiated
+\end{itemize}
+\end{itemize}
+
+\item Bargaining power of suppliers
+\begin{itemize}
+\item If supplier bargaining power high, prospect for earning growth lower
+\end{itemize}
+
+\item Bargaining power of consumers
+\begin{itemize}
+\item If consumer bargaining power high, pricing power low
+\end{itemize}
+
+\item Threat of new entrants
+\begin{itemize}
+\item If threat high, low pricing power, low prospect for earnings growth
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+
+\subsection{Input cost price inflation}
+\begin{itemize}
+\item Firms with commodity-type inputs may hedge their exposure
+\item Vertically-integrated firms are less affected firms are less affected by input cost price inflation
+\item Analyst determines whether price increase passed on to customer
+\item Effect of price increase depends on elasticity of demand and actions of rivals
+
+
+\item Forecast horizon
+\begin{itemize}
+\item May be based on expected holding period
+\item Must include mid-cycle for cyclical firms
+\item If recent material events (acquisitions, merger, restructuring) have occurred, then the horizon should allow for the proper manifestation of these events
+\item Methods for valuation could include
+\begin{itemize}
+\item Multiples approach
+\item DCF
+\end{itemize}
+\end{itemize}
+
+\item[]
+\item[]
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,l] Q[m,1,r]}, width = 0.8\textwidth, rows = {fg = RedViolet}}
+\hline[1.25pt]
+\textbf{[\$ terms]} & & \SetCell[r=1,c=1]{c} \textbf{T} \\ \hline
+Revenue & 1000 @ \$100 & $100,000$ \\
+COGS &  1000 @ \$40 & $40,000$ \\ \cline{3}
+Gross profit & & $60,000$ \\
+SG\&A & & $30,000$ \\ \cline{3}
+Operating profit & & $30,000$ \\ \\ \hline \\
+Gross profit margin & & \SetCell[r=1,c=1]{c} 60.0\% \\
+Operating profit margin & & \SetCell[r=1,c=1]{c} 30.0\% \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+\newpage
+\item Now we can consider the following scenarios
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,l] Q[m,1,r]}, width = 0.8\textwidth, rows = {fg = RoyalBlue}, row{1} = {fg = RedViolet}}
+\SetCell[c=3]{l} Price rise of 5\%, entire rise passed on to customer, no change in units sold && \\ \hline[1.25pt]
+\textbf{[\$ terms]} & & \SetCell[r=1,c=1]{c} \textbf{T} \\ \hline
+Revenue & 1000 @ \$105 & $105,000$ \\
+COGS &  1000 @ \$45 & $45,000$ \\ \cline{3}
+Gross profit & & $60,000$ \\
+SG\&A & & $30,000$ \\ \cline{3}
+Operating profit & & $30,000$ \\ \\ \hline \\
+Gross profit margin & & \SetCell[r=1,c=1]{c} 57.1\% \\
+Operating profit margin & & \SetCell[r=1,c=1]{c} 28.6\% \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,l] Q[m,1,r]}, width = 0.8\textwidth, rows = {fg = RoyalBlue}, row{1} = {fg = RedViolet}}
+\SetCell[c=3]{l} Price rise of 5\%, entire rise passed on to customer, units sold decreases by 5\% \\ \hline[1.25pt]
+\textbf{[\$ terms]} & & \SetCell[r=1,c=1]{c} \textbf{T} \\ \hline
+Revenue & 950 @ \$105 & $99,750$ \\
+COGS &  950 @ \$45 & $42,750$ \\ \cline{3}
+Gross profit & & $57,000$ \\
+SG\&A & & $30,000$ \\ \cline{3}
+Operating profit & & $27,000$ \\ \\ \hline \\
+Gross profit margin & & \SetCell[r=1,c=1]{c} 57.1\% \\
+Operating profit margin & & \SetCell[r=1,c=1]{c} 27.1\% \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,3,l] Q[m,1,l] Q[m,1,r]}, width = 0.8\textwidth, rows = {fg = RoyalBlue}, row{1} = {fg = RedViolet}}
+\SetCell[c=3]{l} Price rise of 5\%, entire rise passed on to customer, units sold decreases by 10\% \\ \hline[1.25pt]
+\textbf{[\$ terms]} & & \SetCell[r=1,c=1]{c} \textbf{T} \\ \hline
+Revenue & 900 @ \$105 & $94,500$ \\
+COGS &  900 @ \$45 & $40,500$ \\ \cline{3}
+Gross profit & & $54,000$ \\
+SG\&A & & $30,000$ \\ \cline{3}
+Operating profit & & $24,000$ \\ \\ \hline \\
+Gross profit margin & & \SetCell[r=1,c=1]{c} 57.1\% \\
+Operating profit margin & & \SetCell[r=1,c=1]{c} 25.4\% \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+}
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+

@@ -1,0 +1,2778 @@
+\documentclass[../notes_compiled.tex]{subfiles}
+
+
+\begin{document}
+
+\section{Fixed Income}
+
+\subsection{Fixed income instrument features}
+\begin{itemize}
+\item Major fixed-ncome instruments include loans and bonds.
+\begin{itemize}
+\item Loans are privte, non-tradable agreements between a borrower and a lender
+\item Bonds are standardized, tradable securities in which investors lend capital to the issuer of the bond. 
+\begin{itemize}
+\item The issuer promises to pay the principal borrowed plus some amount of interest ``coupon’’
+\end{itemize}
+\item The coupon is often a fixed percentage of the face ``par’’ value and is paid periodically
+\end{itemize}
+\item Bond issuers include
+\begin{itemize}
+\item Corporations
+\item Sovereign governments
+\item Non-sovereign governments (local governments, munis)
+\item Quasi-government entities (i.e. GNMA $\rightarrow$ MBS securities)
+\item Supranational entities (i.e. European Investment Bank
+\item Special purpose entities (ABS)
+\end{itemize}
+\item Credit risk from a bond issuer is quantified by its credit rating
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.75,c] Q[m,0.25,c] rcl Q[m,0.75,c] rcl}, width = 0.8\textwidth}
+\SetCell[r=2]{c}\textbf{Credit Risk} && \textbf{AAA}& $\longrightarrow$& \textbf{BBB$-$} && \textbf{BB} & $\longrightarrow$ & \textbf{D} \\
+&& \SetCell[c=3]{c} \emph{Investment Grade} && & & \SetCell[c=3]{c}\emph{High Yield}
+\end{tblr}
+\end{table}
+
+and the credit rating is liable to change over time.
+
+
+\item Basic features of most bonds include
+\begin{itemize}
+\item Maturity
+\item Principal / Par value /Face value / Nominal
+\item Coupon rate (Annual \%)
+\item Coupon frequency (Annual / Semi-annual)
+\item Zero coupon bond (Pays no interest / coupons, sold at a discount, all interest comes as capital gain)
+\item Floating rate notes (Coupon at a variable market rate (MRR + margin))
+\item Seniority (In issuer bankruptcy, senior debt ranks before junior ``subordinated’’)
+\item Contingency provisions ``embedded options’’
+\begin{itemize}
+\item Callable bond -- Issuer holds right to call bond early at a fixed call price
+\item Putable bond -- Investor holds right to sell bond back to issuer at a fixed price
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Bond yields and returns}
+\begin{itemize}
+\item Yields
+\begin{itemize}
+\item While fixed-coupon bonds pay a fixed rate of interest, bond yields may fluctuate, affecting bond prices
+\item Bonds have an inverse price / yield relationship
+\item Yields are reflective of the credit risk of an issuer. The credit spread is the spread over the risk-free rate.
+\end{itemize}
+\item The components of bond returns include
+\begin{itemize}
+\item Coupons -- Typically fixed by terms of the bond
+\item Reinvestment interest -- Associated with reinvestment risk
+\item Capital gain / loss -- Price risk
+\begin{itemize}
+\item[] Reinvestment risk and price risk offset each other
+\end{itemize}
+\end{itemize}
+\item Bond indetures are the legal contract between the issuer and the bondholder. It defines the obligations of, and restrictions imposed on the issuer
+\item Sources of repayment include
+\begin{itemize}
+\item Sovereign bonds are repaid from taxes on economic activity and / or the ability to create new currency
+\item Local government bonds are repaid from local government taxes or revenue from operational infrastructure
+\item Secured bonds are repaid from the issuers operating cash flow, with the added security of a legal claim ``lien’’ on a specific collateral
+\item Unsecured bonds have no added security
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Bond covenants}
+\begin{itemize}
+\item Bond covenants are specific requirements that the issuer must filfill within the bond indenture
+\item Affirmative covenants specify requirements the issuer must fulfill;
+\begin{itemize}
+\item Provide timely reports to bondholders
+\item Bond holder’s right to redeem at par / premium in a merger
+\item Cross-default provision -- Any issuer defaults also apply to this bond
+\item ``Pari Passu’’ clause ensures the bond continues to have a senior claim
+\end{itemize}
+\item Negative covenants place restrictions on the issuer so that the risk of default does not increase
+\begin{itemize}
+\item Entering into sale / leaseback agreements
+\item Pledges of collateral
+\item Negative pledge clause -- issuance of more senior debt
+\item Incurrence test -- Additional borrowings, share repurchases, dividend payment permissible contingent on financial ratios meeting a threshold
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Fixed income cash flows and types}
+\begin{itemize}
+\item Bullet structure
+\begin{itemize}
+\item Principal repaid in a single payment at maturity. Coupons are merely interest payments
+\end{itemize}
+\item Partially amortising
+\begin{itemize}
+\item Periodic payments include interst + principal with a balloon payment at the end of the term
+\end{itemize}
+\item Fully amortising
+\begin{itemize}
+\item Equal payments each period, including interest and principal that fully repay the loan over the lifetime of the bond
+\end{itemize}
+\item Sinking fund
+\begin{itemize}
+\item Bonds are retired or redeemed early on scheduled dates. Lower credit risk, higher reinvestment risk associated with these.
+\end{itemize}
+\item Waterfall structure
+\begin{itemize}
+\item Used for MBS / ABS securities, this tends to abide by the following structure
+\vspace{-.4cm}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{\imgpath collateral_pool_diagram.pdf}
+  \caption{Waterfall structure of payments from a collateral pool through the tranches in order of seniority}
+  \label{fig-waterfall}
+\end{figure}
+\vspace{-.4cm}
+\end{itemize}
+\item Floating rate notes
+\begin{itemize}
+\item FRNs pay periodic interest based on a market reference rate, the ``MRR’’ plus a fixed margin
+\item Most FRNs pay quarterly coupons, and use a 90-day MRR
+\item It is important to adjust the annual MRR / margin for quarterly payments as follows
+\begin{equation}
+\text{Quarterly payment} = \frac{\text{MRR} + \text{Margin}}{4}
+\end{equation}
+\end{itemize}
+\item[] The following coupon structures are less common, but worth knowing about.
+\item Step-up coupon bonds
+\begin{itemize}
+\item Structured so that the coupon rate increases over time according to a pre-determines schedule. This protects against rising rates
+\end{itemize}
+\item Leveraged loans
+\begin{itemize}
+\item Coupon rate increases if credit quality of issuer decreases (i.e. If the total $\sfrac{\text{Debt}}{\text{EBITDA}}$ increases)
+\end{itemize}
+\item Credit-linked note
+\begin{itemize}
+\item Coupon rate increases if the credit rating of the issuer deteriorates
+\end{itemize}
+\item Payment-in-kind bond ``PIK’’
+\begin{itemize}
+\item Allows the issuer to pay coupon payments by increasing the principal owed
+\item Firms issue PIK bonds in anticipation of cash flow problems
+\item A PIK is indicative of ahigh level of existing leverage / debt service
+\end{itemize}
+\item Index-linked bonds
+\begin{itemize}
+\item Coupon payments / principal values are based on a specific published index, such as inflation linked bonds
+\item Capital-indexed bonds pay a constant coupon rate, but the principal sum is linked to inflation (TIPS)
+\item Interest-indexed bonds have a coupon payment adjusted for inflation
+\end{itemize}
+\item Green bonds
+\begin{itemize}
+\item The coupon rate is increased if environmental targets are not met by the issuer
+\end{itemize}
+\item Deferred coupon bonds
+\begin{itemize}
+\item Regular payments start at a future date after issuance
+\end{itemize}
+\item Zero coupon bonds
+\begin{itemize}
+\item Sold at a discount, redeemed at par. This minimises the reinvestment rate risk
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Fixed income contingency provisions}
+\begin{itemize}
+\item A contingency provision in a contract describes an action that may be taken if an event ``contingency’’ occurs
+\begin{itemize}
+\item Embedded options are contingency provisions in bond indentures. They give rights to either the bond issuer (callable) or holder (putable)
+\end{itemize}
+\item Callable bonds give the issuer the right to redeem all / part of the bond issue at a fixed price.
+\begin{itemize}
+\item Investors require a higher yield as compensation. If rates decrease, the issuer can recall the bonds and refinance at a lower rate. This brings additional risk to the investor
+\end{itemize}
+\item Putable bonds give the bond holder the right to sell the bond back to the issuer at a fixed price
+\begin{itemize}
+\item The embedded put provides a price floor to the bond holder
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth, rows = {fg = RedViolet}}
+\hline[1.25pt]
+\textbf{Straight bond} & \textbf{Callable bond} & \textbf{Putable bond} \\ \hline
+5\% yield & 7\% yield & 3\% yield \\
+--- & Highest yield & Lowest yield \\
+--- & Lowest price& Highest price \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\item Convertible bonds give the bond holder the right to exchange the bond for a specific number of common shares
+\vspace{-.4cm}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath convertible_bonds.pdf}
+  \caption{Diagram showing convertible bond behaviour based on stock price}
+\end{figure}
+\vspace{-.5cm}
+\item[] Convertible bonds will have the following defined:
+\begin{itemize}
+\item Conversion ratio -- The number of shares gained on conversion
+\item Conversion value -- The market value of shares gained on conversion
+\item Conversion price -- The par value per share at which the bond may be converted
+\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Warrants}
+\begin{itemize}
+\item Warrants are an alternative way to give obndholders an opportunity for additional returns
+\begin{itemize}
+\item Attaching warrants to straight bonds gives the holder the right ot buy common shares at a fixed price
+\item Warrants can be detached from the bond issue and traded separately
+\end{itemize}
+\item Contingent convertible bonds convert from debt to equity \underline{if} a specific event occurs
+\end{itemize}
+
+\subsubsection{Domestic and foreign bonds}
+\begin{itemize}
+\item Domestic bonds are those issued by an issuer in its home coutry and domestic currency
+\item Foreign bonds are those with a foreign issuer, trade in domestic currency, and are used to raise capital in the broader market
+\item A national bond market includes the trading of both types of bond issues
+\item[]
+\item Eurobonds
+\begin{itemize}
+\item Eurobonds are sold by an international syndicate and issued simultaneously to investors in many countries
+\item They are issued outside the jurisdiction of a single country, and issued in a currency other than the issuer’s domestic urrency
+\item Eurobonds can reach a large investor pool, and are used to avoid regulation, no tax witholding, for example  issuance of USD denominated bonds without registering with the SEC, so cannot be traded there
+\end{itemize}
+\item Global bonds
+\begin{itemize}
+\item Eurobonds that trade in a domestic bond market
+\end{itemize}
+\item International bonds
+\begin{itemize}
+\item Foreign bonds / global bonds / Eurobonds
+\end{itemize}
+\item Sukuk bonds
+\begin{itemize}
+\item Sharia-compliant bonds, following Islamic law. They have restrictions on interest payments and use of proceeds
+\end{itemize}
+\end{itemize}
+\subsubsection{Taxation of bond income}
+\begin{itemize}
+\item Interest income paid to bondholders is often taxed as ordinary income at the same rate as wage / salary
+\begin{itemize}
+\item Municipal bonds -- interest income issued by municipal governments is often exempt from tax
+\end{itemize}
+\item Capital gains / losses may occur when bonds are sold redeemed. CGT rates are often lower.
+\begin{itemize}
+\item Original-issue discount bonds may generate income tax liabilities, such as zero coupon bonds
+\end{itemize}
+\end{itemize}
+
+\subsection{Fixed income and trading}
+\subsubsection{Fixed income classifications}
+\begin{itemize}
+\item The types of issuer may include government, corporations, special purpose entites, or others
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.75,c] Q[m,0.25,c] rcl Q[m,0.75,c] rcl}, width = 0.8\textwidth}
+\textbf{S\&P / Fitch} && \textbf{AAA}& $\longrightarrow$& \textbf{BBB$-$} && \textbf{BB} & $\longrightarrow$ & \textbf{D} \\
+\textbf{Moody’s} && \textbf{Aaa}& $\longrightarrow$& \textbf{Baa3} && \textbf{Ba1} & $\longrightarrow$ & \textbf{C} \\
+&& \SetCell[c=3]{c} \emph{Investment Grade} && & & \SetCell[c=3]{c}\emph{High Yield}
+\end{tblr}
+\end{table}
+\item Maturity of bonds is broadly in three categories
+\begin{itemize}
+\item Money market -- $<1$ year
+\item Intermediate term $1-10$ years
+\item Long-term $10+$ years
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = \textwidth}
+\hline[1.25pt]
+& \textbf{Short} & \textbf{Intermediate} & \textbf{Long} \\
+& $<1$ year & $1-10$ years & $10+$ years \\ \hline
+\textbf{Default-risk free} & Treasury bills & Treasury notes & Treasury bond \\ \hline
+\SetCell[r=4]{c}\textbf{Investment grade} & Repo agreements \\
+& Commercial paper & \SetCell[c=2]{c} Unsecured corporate bonds & \\
+& ABCP & ABS & MBS \\
+& (Asset-backed commercial paper) \\ \hline
+\SetCell[r=2]{c}\textbf{High yield} & & Secured corporate bonds \\
+& & Leveraged loans \\ \hline[1.25pt]
+\end{tblr}
+\caption{The liquidity-return trade-off for bonds and debt-instruments broken down by maturity and risk classification. A higher yield is demanded by lower-quality issuers and longer-term issues}
+\end{table}
+
+\end{itemize}
+
+\subsubsection{Investment grade funding}
+\begin{itemize}
+\item Commercial paper is issued by investment-grade companies to fund short term working capital requirements
+\item Intermediate-term debt is used to fund medium-term investment and permanent working capital
+\item Long-term debt funding is used to fund capital investment in fixed assets
+\item Short and medium-term issues may be covered by a bank syndicate
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1.1,c] Q[m,1,c]}, width = \textwidth}
+\hline[1.25pt]
+& \textbf{Short} & \textbf{Intermediate} & \textbf{Long} \\ \hline
+\SetCell[r=3]{c}\textbf{Default-risk free} & \SetCell[c=3]{c}$\longleftarrow$ Financial intermediaries $\longrightarrow$ & & \\
+&  & $\longleftarrow$ Central banks $\longrightarrow$ & $\uparrow$ \\
+& Money market funds & & Pension funds \\
+\SetCell[r=2]{c} \textbf{Investment grade} & \SetCell[r=2]{c}Corporate issuers & Bond funds / ETFs  & Insurance companies\\
+& & Asset managers & $\downarrow$ \\
+\SetCell[r=2]{c} \textbf{High yield} & & Hedge funds \\ 
+& & Distressed debt funds \\ \hline[1.25pt]
+\end{tblr}
+\caption{Typical investor positioning across risk brackets and maturity}
+\end{table}
+\end{itemize}
+
+\subsection{Fixed income indices}
+\begin{itemize}
+\item Corporations tend to have multiple bond issues as opposed to a handful of shareclasses (preferred / common). The issues vary based on maturity and coupon payment which will reflect the financial position of economic position at the time of issue
+\item Bonds mature and need to be replaced over time, leading to higher turnover in indices
+\item Bonds are issued across multiple sectors. Changes in debt issuance trends (maturity, credit quality, etc.) affect bond indices over time
+\item Aggregate indices contain a broad selection of bonds. Narrower-focus indices focus on geography, credit quality, sector, and maturity
+\item Bond indices may also include ESG factors in their construction. This tends to screen out particular industries
+\end{itemize}
+
+\subsubsection*{Primary markets}
+\begin{itemize}
+\item[] Primary markets are for the sale of newly-issued bonds
+\item A public offering is registered with regulators for sale ot the public
+\item A private placement is not registered for public sale and is only sold to selected investors
+\item A debut issuer is one issuing bonds for the first time, typically to replace bank loans in its capital structure. Shelf registration with a regulator via a master prospectus is used for frequent bond issuance
+\end{itemize}
+
+\subsubsection*{Financial intermediaries}
+\begin{itemize}
+\item Investment banks arrange the sale of new issues, and may underwrite the issue. Typically, the intermediary will carry out a roadshow before the issue
+\begin{itemize}
+\item An underwritten offering is a bond price guarantee ofered by the intermediary
+\item A best efforts agreement carries no guarantee, but the intermediary charges commission
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Secondary markets}
+\begin{itemize}
+\item[] Secondary markets are for trading of previously-issued bonds
+\item Most trading in the secondary market is OTC by dealers, who post bid / ask quotes
+\item Bid-ask spread varies across bonds, based on liquidity
+\item Bonds with greater liquidity tend to be on-the-run bonds (most-recent issues), developed market bonds, and higher-quality corporate bonds
+\end{itemize}
+
+\subsubsection*{Distressed debt}
+\begin{itemize}
+\item Distressed debt refers to bonds from issuers that themselves are in financial distress
+\item Some investors are restricted from holding distressed debt
+\item Typically, distressed debt trades well below par, but investors may be attracted to distressed bonds due to the high yield that comes from the risk associated with them
+\end{itemize}
+
+\subsection{Fixed income markets for corporate issuers}
+\subsubsection{Non-financial corporations}
+\begin{itemize}
+\item Non-financial companies usually raise external funds for investment in short-term assets via loan financing or security based financing
+\begin{itemize}
+\item Loan financing -- Credit lines, securted loans
+\item Security-based financing -- Commercial paper (IG, $<1$yr)
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{External loan financing}
+\begin{itemize}
+\item Uncommitted line of credit
+\begin{itemize}
+\item Least costly as interest only paid on borrowings
+\item Least reliable as banks may refuse to honour the line of credit
+\end{itemize}
+\item Committed line of credit
+\begin{itemize}
+\item Formal written agreement, so more reliable for the borrower
+\item Up-front fees, risk of non-renewal
+\end{itemize}
+\item Revolving (operating) line of credit
+\begin{itemize}
+\item Revolvers are for longer-term loant, may contain restrictive covenants and similar up-front fees
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Secured loans}
+\begin{itemize}
+\item Secured (asset-backed) loans are backed by some form of collateral. Receivables can act as collateral for loans at a discount to face value. The discount size is indicative of the credit risk associated with the issuer / loan
+\end{itemize}
+
+\subsubsection*{Commercial paper}
+\begin{itemize}
+\item Short-term, investment grade, unsecured debt security
+\begin{itemize}
+\item Interest cost is lower than a bank loan
+\item Maturity $\lesssim3$ months
+\item Used to fund working capital ``Bridge funding’’
+\end{itemize}
+\item Rollover risk
+\begin{itemize}
+\item Liquidity risk if the CP cannot be issued / rolled over
+\end{itemize}
+\item Eurocommercial paper is the international equivalent
+\end{itemize}
+
+\subsubsection{Financial corporations}
+\begin{itemize}
+\item Commercial and retail deposits are a major source of funding
+\begin{itemize}
+\item Checking accounts -- Demand deposits
+\item Operational deposits -- Cash management for large customers
+\item Savings deposits -- Specified maturity / interest rate
+\item Certificate of deposit -- Specified maturity $<1$ yr
+\item Negotiable CDs -- Can be sold before maturity
+\item Interbank funds and repos -- Banks lending to each other
+\item[] Excess funds are held in money market and capital market securities
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Central bank fund market}
+\begin{itemize}
+\item Banks must satistfy a reserve requirement
+\item Banks with excess funds may lend at the central bank funds rate ``Interbank market’’
+\item Central bank acts as the lender of last resort, providing liquidity
+\end{itemize}
+
+\subsubsection*{Asset-backed commercial paper}
+\begin{itemize}
+\item ABCP is a short-term form of an ABS
+\begin{itemize}
+\item Financial institution transfers short-term loans made by the bank to a special purpose entity in exchange for cash
+\item The SPE sells ABCP to investors with a backup credit liquidity line provided by the bank
+\item Investors have purchased a liquid short-term note with interest and principal payments from a loan portfolio
+\begin{equation*}
+\text{Assets off balance sheet} \Rightarrow \text{Lower reserves required}
+\end{equation*}
+\vspace{-1cm}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{\imgpath ABCP.pdf}
+\caption{ABS payment structures. The SPE then sells securitised instruments on to investors.}
+\end{figure}
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Repurchase agreements ``Repos’’}
+\begin{itemize}
+\item A repo is an agreement to sell a security to a counterparty, and buy it back later at a higher price
+\begin{itemize}
+\item Repos are used for short-term funding
+\item Repo rate is annualised interest implied by the buy / sell price
+\item Securities sold are collateral for the loan and an initial margin of excess collateral is required
+\item Overnight (one-day) / term (otherwise) repos
+\end{itemize}
+\item Repo collateral is usually high-quality, liquid, sovereign bonds. Special collateral may contain hard-to-source, illiqid collateral. The repo rate may be lower ``discounted’’
+\item The contractual terms are agreed under a master repurchase agreement
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{\imgpath repo.pdf}
+\caption{Repo payment structure. The borrower enters into a repo agreement, and the lender a reverse-repo agreement. The borrower initially sells a security, with the intention of repurchasing it at a later date.}
+\end{figure}
+In this arrangement, the borrower is usually looking for short-term funding, and posts the security as collateral for the loan. The lender is usually an entity with excess liquidity, and benefits from this by earning the repo rate on the loan amount. The lender also obtains collateral which reduces the risk of the loan
+\item A tri-party repo involves a third party which holds both cash and security.
+\vspace{-.3cm}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{\imgpath tri_party_repo.pdf}
+\caption{Tri-party repo payment structure. The tri-party agent serves as a custodian, holding cash and security for both the borrower and lender in this agreement, thereby shifting risk for both borrower and lender to the custodian instead of each other.}
+\end{figure}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a firm selling a $\$1,000,000$ market vale bond, and repurchasing it 90 days later at a repo rate of 2\% and initial margin of 3\%.
+}
+{\color{RoyalBlue}
+\begin{align*}
+\text{Purchase price } (\text{Loan amount}) &= \frac{\text{Market value of securities}}{1+\text{Initial margin}} \\
+&=\frac{\$1,000,000}{1.03} \\
+&=\$970,874
+\end{align*}
+\begin{align*}
+\text{Repurchase price} &= \text{Loan amount} \times \left[ 1+\text{Repo rate}\times\frac{\text{Days}}{360}\right] \\
+&=\$970,874 \times \left[ 1+0.02\times{90}{360}\right] \\
+&=\$975,728 \hspace{1cm} \left[\text{Principal} + \text{Interest}\right]
+\end{align*}
+\begin{align*}
+\text{Haircut} &= \frac{\text{Market value} - \text{Loan amount}}{\text{Market value}} = 2.91\%
+\end{align*}
+}
+\item Variation margin may be required should the market value of the collateral fall. In this case, the repo lender will ask the borrower for additional collateral.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} continued from before, suppose that after 30 days the market value of the bond has fallen to $\$990,000$. Calculate the variation margin.
+}
+{\color{RoyalBlue}
+\item[] To find the adjusted loan amount,
+\begin{align*}
+\text{Adjusted loan} &= \$970,874 \times \left[ 1+0.02\times\frac{30}{360}\right] \\
+&= \$972,492\text{, amount owed after 30 days}
+\end{align*}
+We can then apply the haircut, by multiplying this adjusted amount by 1 + the initial margin, to get
+\begin{equation*}
+\text{Adjusted loan amount} = \$972,492 \times 1.03 = \$1,001,667
+\end{equation*}
+The variation margin is then given by this adjusted loan amount less the new market value of collateral
+\begin{align*}
+\text{Variation margin} &=\text{Adjusted loan amount} - \text{MV of collateral} \\
+&=\$1,001,667 - \$990,000 \\
+&=\$11,667
+\end{align*}
+so extra \$11,667 of collateral required
+}
+The variation margin may be negative, in the event that the market value of the collateral rises, in which case the borrower may request the release of part of the collateral.
+
+\end{itemize}
+
+\subsubsection{Repo applications}
+\begin{itemize}
+\item The main uses of repo agreements are
+\begin{itemize}
+\item Financial institutions use repos to finance trading positions
+\item Lenders, such as mutual funds and pension funds, earn the repo rate on assets
+\item Central banks use repos to enact monetary policy
+\item Short sellers (hedge funds), use repos to borrow securities
+\item Reverse repo if motivation is to borrow a security
+\item Special trade if a security is scare / hard to source (negative repo rate)
+\end{itemize}
+\item Factors affecting the repo rate; The repo rate is:
+\begin{itemize}
+\item High when short-term rates are high
+\item Low when credit quality of collateral is high
+\item High when term is longer
+\item Low when collateral is hard to source
+\item High if repo is undercollateralised
+\item High if the collateral is not delivered (unsecured)
+\end{itemize}
+\item Repos are a source of debt financing. Overuse can lead to financial distress or insolvency. Risk include
+\begin{itemize}
+\item Default risk -- Borrower of cash fails to repay at end of repo
+\item Collateral risk -- Value of collateral falls in the event of default
+\item Margining risk -- Relating to calculation / payment of margin
+\item Legal risk -- Contracts not able to be legally enforced
+\item Netting and selttlement risk -- Netting of cashflows across contracts
+\end{itemize}
+\item Tri-party repos can help mitigate some of these risks
+\begin{itemize}
+\item A third party intermediary acts as an agent to arrange / administer repo transactions
+\item Credit risk is \underline{not} reduced
+\item Cost efficiencies are improved, providing easier access to capital
+\item Valuation / safekeeping of assets is done by custodian
+\end{itemize}
+\item Bilateral repos have no intermediary
+\end{itemize}
+
+\subsubsection{Investment-grade versus high yield issues}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,l]}, width = 0.75\textwidth}
+\hline[1.25pt]
+\SetCell[r=1,c=1]{c}\textbf{Investment grade} & \SetCell[r=1,c=1]{c}\textbf{High yield} \\ \hline
+Risk of rating downgrade is dominant risk & Risk of default is dominant risk \\
+Narrow credit spreads & Wide credit spreads \\
+Less variation in yield across maturities & Greater variation in yield across maturities \\
+Few covenants & Many covenants \\
+& Collateral  required \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\begin{itemize}
+\item Rollover risk is lower for IG issues due to standardisation across multiple maturities. There are fewer maturity options for HY issuers
+\item The ability to repay earlier is more common with HY issues. HY may use leveraged loans / callable debt that contains prepayment options
+\item HY returns are more uncertain and equity-like. IG returns have lower uncertainty, and behave as traditional bonds
+\end{itemize}
+
+\subsection{Fixed income markets for government issuers}
+\subsubsection{Sovereign government debt}
+\begin{itemize}
+\item National governments issue bonds to raise funds for spending on public gods / services, and investment in public infrastructure. Typically, they have have the following attributes
+\begin{itemize}
+\item High credit rating (backed by taxes)
+\item Largest debt issuers
+\item Assessing ability to pay comes from assessment of the economic balance sheet (forward-looking), and particular focus on cahs transactions in place of accruals
+\end{itemize}
+\end{itemize}
+\subsubsection*{Developed and emerging market issuers}
+\begin{itemize}
+\item Developed markets
+\begin{itemize}
+\item Stable, diversified economies with consistent and transparent fiscal policy
+\end{itemize}
+\item Faster growing, less stable, more concentrated economies, and less-stable tax revenues. There is greater reliance on dominant national industry / commodities
+\item Debt management policy
+\begin{itemize}
+\item Developed market debt -- Denominated in a reserve
+\item Emerging market debt -- May be borrowed domestically or externally (Local / hard currency issues)
+\end{itemize}
+\item Ricardian equivalence comes from
+\begin{itemize}
+\item Taxpayers expecting government debt to be offset by future higher tax. Therefore the government should be indifferent about collecting tax as opposed to raising debt.
+\begin{itemize}
+\item Short-term borrowing avoids term premiums and reduces costs, but introduces rollover risk
+\item In practice, governments diversify debtmaturities and issue debt at regular intervals
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Non-sovereign government debt}
+\begin{itemize}
+\item Issued by state / provinces / counties / SPEs
+\begin{itemize}
+\item Local and regional authorities may issue \underline{general obligation bonds} which are backed by local tax-raising powers
+\item Quasi-government bonds are issued by government agencies for specific purposes (i.e. GNMA)
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Supranational bonds}
+\begin{itemize}
+\item Issued to promote international trade, and set up by multiple sovereign governments
+\item High credit quality since they are backed by sovereigns
+\end{itemize}
+
+\subsubsection{Public auctions}
+\begin{itemize}
+\item Sovereign issuers use regular public auctions to issue government debt securities
+\begin{itemize}
+\item Non-competitive bids are allocated first and are guaranteed to have their allocation met
+\item Competitive bids are ranked in order of highest price and allocated top down
+\item Cut-off yield is the yield of lowest price competitive bid that receives an allocation
+\end{itemize}
+\item In a single price auction, all investors pay at the cut-off price / yield, irrespective of the bid made
+\item In a multiplce-price auction successful bidders pay the price that they bid
+\item To minimise volatility, government issuers will choose a single-price auction. Lower volatility means a successful auction is more likely
+\item Primary dealers are \underline{designated financial institutions}. They are required to make competitive bids in auctions, and submite bids on behalf of third parties. They also act as ounterparties to the central bank for open market operations
+\item Once issued, sovereign debt trades in quote-driven OTC dealer markets. Trading is most active for on-the-run bonds
+\end{itemize}
+
+\subsection{Fixed income bond valuations: Prices and yields}
+\begin{itemize}
+\item Bonds are typically valued using DCF valuation, where the price is given by the sum of the present value of all future cash flows. Recalling equation \ref{dcf},
+\begin{equation*}
+PV = \frac{FV_{N}}{\left( 1+\frac{r}{m}\right)^{m\cdot N}}.
+\end{equation*}
+For a straight bond, $FV_{N}$ is equal to the coupon payment for all $N$, and $m$ defines the coupon frequency.
+\item Sensitivity of bond price to changes in yield come from
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] c Q[m,1,c]}, width = 0.5\textwidth}
+\underline{Longer} maturity & \SetCell[r=3]{c}  $\Longrightarrow$ & \SetCell[r=3]{c} Higher sensitivity \\
+\underline{Lower} coupon \\
+\underline{Lower} initial yield
+\end{tblr}
+\end{table}
+\begin{align*}
+\text{Coupon}&=\text{Yield} & &\text{Trades \underline{at} par} \\
+\text{Coupon}&<\text{Yield} & &\text{Trades \underline{below} par} \\
+\text{Coupon}&>\text{Yield} & &\text{Trades \underline{above} par} \\
+\end{align*}
+The components of return include coupon, reinvestment interest, and any capital gain / loss incurred upon purchase / sale of the asset
+\end{itemize}
+
+\subsubsection{Flat price, full price, and accrued interest}
+\begin{itemize}
+\item Bonds accrue coupon interest between payment dates which increases the value of the bond
+\begin{gather}
+\text{Bond price at last coupon payment date (No accrued interest)} \nonumber \\
+\text{Flat price ``Clean’’} = \text{Full price $-$ Accrued interest} \nonumber \\
+\text{Full price ``Dirty’’} = \text{\underline{Includes} accrued interest} \nonumber \\ \\
+\text{Full price} = \text{Flat price} + \text{Accrued interest}
+\end{gather}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 5\% semi-annual bond making coupon payments onf June 15 and December 15, with a yield to maturity of 4\%. There are four coupons remaining, when the bond is purchased on August 21
+}
+{\color{RoyalBlue}
+\begin{table}[h!]
+\centering
+\small
+\begin{tblr}{colspec = {lcc}, rows = {fg = RoyalBlue}}
+\SetCell[r=1,c=1]{c}\textbf{Date}& \textbf{Cash flow} \\
+\SetCell[r=1,c=1]{c}$\cdots$ & $\cdots$ & $\uparrow$ \\
+Jun-15 & 2.5 & Past \\ \hline
+Dec 15 & 2.5 & Future \\
+Jun-15 & 2.5 & $\downarrow$ \\
+Dec-15 & 2.5 \\
+Jun-15 & 102.5
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {lrl Q[m,1,c] lrl}, rows = {fg = RoyalBlue}, width = 0.95\textwidth}
+June & +15 & days & & June & +15 & days \\
+July & +31 & days & & July & +31 & days \\
+August & +21 & days & & August & +31 & days \\ \cline{1-3}
+& 67 & days accrued & & September & +30 & days \\
+& & & & October & +31 & days \\
+& & & & November & +30 & days \\
+& & & & December & +31 & days \\ \cline{5-Z}
+& & & & & 183 & days between coupons
+\end{tblr}
+\end{table}
+\item[] Alternatively we could assume 30 days / month, 360 days / year, which is known as ``30 / 360’’ as opposed to the exact calculation done above, which is called ``Actual / Actual’’
+
+At next coupon payment, 
+\begin{align*}
+N&=4  & I / Y &= 2.5\%  & PV &= & PMT &=2.5 & FV &= 100
+\end{align*}
+Then, using CPT PV, the calculator gives a PV of $\$101.904$ for value of the bond at the next coupon payment. The accrued interest is given by
+\begin{equation*}
+\text{Accrued interest} = \$2.5 \times \frac{67}{183} = 0.915,
+\end{equation*}
+and the full price is given by
+\begin{equation*}
+\text{Full price} = \$101.904 \times (1.02)^{\frac{67}{183}} = \$102.646,
+\end{equation*}
+therefore the flat price is given
+\begin{equation*}
+\text{Flat price} = \$102.646 - \$0.915 = \$101.731
+\end{equation*}
+}
+\end{itemize}
+
+\subsubsection{Price-yield relationship of bonds}
+\begin{itemize}
+\item The price and yield of bonds exhibit an inverse relationship, while it can be approximated to a linear relationship locally, convexity attempts to correct for the non-linearity in the relationship
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath price_yield.pdf}
+  \caption{Price-yield relationship of bonds. The linear approximation overestimates the price decrease when yields rise, and underestimates the price rise when yields fall}
+\end{figure}
+\item At maturity, bonds are redeemed at par value. As time passes, bonds ``pull to par’’, assuming no further changes in the yield from time of purchase.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{\imgpath pull_to_par.pdf}
+  \caption{Pull-to-par effect on bond prices. If a bond is initially purchased below par, then the bond exhibits capital gain throughout the holding period. If a bond is initially purchased above par, then it returns additional income to the investor}
+  \label{pull-to-par}
+\end{figure}
+\item We can use matrix pricing in order to estimate the price or yield-to-maturity for illiquid bonds. By matching bond features to traded bonds as closely as possible (Credit quality, maturity, coupon), we can estimate the required YTM of an illiquid bond
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Suppose we are given the following, and asked to recreate the attributes of a 3 year A+ rated bond paying 4\% annually.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,2,c]}, rows = {fg = RedViolet}, width = 0.5\textwidth}
+\hline[1.25pt]
+\textbf{Rating} & \textbf{Maturity} & \textbf{Yield to maturity} \\ \hline
+A+ & 2yr & $YTM=4.3\%$ \\
+A+ & 5yr & $YTM=5.1\%$ \\
+A+ & 5yr & $YTM=5.3\%$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+}
+{\color{RoyalBlue}
+\item[] We can do this by interpolation. Looking first at the second two bonds given, we can take the arithmetic mean of the $YTM$ to give an average of 5.2\% for a 5-year A+ bond. We then take a simple weighted average of the 2-year bond and the average 5-year bond to replicate a 3-year bond, which can be done as follows;
+\begin{gather*}
+\text{Years:}\phantom{mmm}\frac{2}{3}\cdot 2 + \frac{1}{3}\cdot5 = 3 \\
+\Longrightarrow\frac{2}{3}\cdot 4.3\% + \frac{1}{3}\cdot5.2\% = 4.6\%
+\end{gather*}
+
+Then, we can use equation \ref{dcf} as before to calculate the price,
+\begin{align*}
+N&=3  & I / Y &= 4.6\%  & PV &= & PMT &=4 & FV &= 100
+\end{align*}
+Then, using CPT PV, the calculator gives a PV of $\$98.35$ for value of the bond at the next coupon payment.
+}
+
+\item Matrix pricing and interpolation can also be used to estimate spreads over the risk free rate for newly issued corporate bonds.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Estimate the spread for a newly issued A-rated bond with a maturity of 6 years given the following
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,2,c] Q[m,2,c]}, rows = {fg = RedViolet}, width = 0.6\textwidth}
+\hline[1.25pt]
+\textbf{Maturity} & \textbf{Yield to maturity} \\ \hline
+4yr Tsy bond & $YTM=1.48\%$ \\
+6yr Tsy bond & $YTM=2.15\%$ \\
+5yr A-rated corp bond & $YTM=2.64\%$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+}
+{\color{RoyalBlue}
+Again, using simple interpolation, the $YTM$ of a 5yr treasury is given by
+\begin{equation*}
+\frac{1.48\% + 2.15\%}{2} = 1.815\%.
+\end{equation*}
+Then, comparing this to the corporate bond given, the estimated 5 year spread is
+\begin{equation*}
+2.64\% - 1.815\% = 0.825\%.
+\end{equation*}
+Assuming the spread is constant with respect to time to maturity, applying this to the 6 year treasury $YTM$, we recover
+\begin{equation*}
+2.15\% + 0.825\% = 2.975\%
+\end{equation*}
+
+
+}
+
+\end{itemize}
+
+\subsection{Yield and yield-spread measures}
+\begin{itemize}
+\item The yield to maturity, $YTM$, is simply the IRR of the bond (see \S\ref{irr} for more on the IRR, and \S\ref{ssec-twrr-mwrrr} for how this is used in a whole-portfolio context)
+\item The greater the periodicity of coupon payments, the more compoundin periods, and the greater the effective annual yield.
+\begin{equation}
+\text{Annual yield} = \left(1+\frac{YTM}{n}\right)^{n}-1, \label{annualyield}
+\end{equation}
+where $n$ is the number of compounding periods per year
+\item It may be required to directly compare bond yields when the periodicity of coupon payment is different
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a semi-annual bond with a $YTM$ of 4\%. What yield should be used to compare this to a quarterly or annual bond with the same quoted $YTM$?
+}
+{\color{RoyalBlue}
+The effective annual yield of the semi-annual bond is
+\begin{equation*}
+\left( 1 + \frac{0.04}{2}\right)^{2} -1 = 4.04\%.
+\end{equation*}
+The quarterly yield is given by
+\begin{equation*}
+\left( 1 + \frac{0.04}{2}\right)^{2} -1 = 0.995\%,
+\end{equation*}
+and so the quoted annual rate on a quarterly basis is
+\begin{equation*}
+4\times 0.995\%= 3.98\%.
+\end{equation*}
+The effective annual yield of the semi-annual bond is
+\begin{equation*}
+\left( 1 + \frac{0.04}{2}\right)^{2} -1 = 3.98\%.
+\end{equation*}
+Alternatively, this result could be reached by decomposing the effective annual yield by rearranging equation \ref{annualyield} in terms of the $YTM$,
+\begin{equation*}
+\underbrace{\left(\left(1+0.404\right)^{\frac{1}{4}}-1\right)}_{0.995\%}\times4 = 3.98\%
+\end{equation*}
+}
+\end{itemize}
+
+\subsubsection{Street convention versus true yield}
+\begin{itemize}
+\item Bond yields calculated using the stated coupon payment dates follow \underline{street convention}
+\begin{itemize}
+\item Coupon payments are made on the first business day following the scheduled payment date, if the scheduled date is a weekend / holiday
+\end{itemize}
+\item The yield calculated due to actual coupon payment dates is known as the \underline{true yield}
+\item[] In general, the true yield is slightly below street convention
+\end{itemize}
+
+\subsubsection{Daycount conventions}
+\begin{itemize}
+\item Corporate bonds tend to use 30 / 160, whereas government bonds tend to use actual / actual. In order to compare corporate government yields, restate corporate yields using the actual / actual convention by multiplying the yield by $\frac{365}{360}$
+\end{itemize}
+
+\subsubsection{Yield conventions}
+\begin{itemize}
+\item The \underline{current yield} only considers one source of return -- the annual interest income ``Income / running yield’’,
+\begin{equation}
+\text{Current yield} = \frac{\text{Annual cash coupon payment}}{\text{Bond price}}.
+\end{equation}
+This ignores capital gains and any reinvestment income.
+\item The \underline{simple yield} takes the discount / premium into account by assuming linear declining of discount / premium until par value is redeemed at maturity, much in the same way as shown in figure \ref{pull-to-par},
+\begin{equation}
+\text{Current yield} = \frac{\text{Annual cash coupon payment}}{\text{Bond price}}.
+\end{equation}
+\item For callable bonds, yields are not quite as simple.
+\begin{itemize}
+\item For a callable bond, the investor’s yield will depend on if / when the bond is called. The yield-to-call can be calculated for each possible call date and price.
+\item The yield-to-worst is the lowest of the various yields-to-call or the yield-to-maturity.
+\item[] An issuer is likely to exercise the call option if rates fall
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 5yr semi-annual bond paying a 6\% coupon, trading at \$102 on 1-Jan-2024. The bond may be called at \$102 on / after 1-Jan-2027, or \$101 on / after 1-Jan-2028. Calculate the yield-to-worst of this bond
+}
+{\color{RoyalBlue}
+\item[] YTM:
+\begin{align*}
+N&=10  & I / Y &=  & PV &=102 & PMT &=3 & FV &= 100
+\end{align*}
+Then, using CPT $I / Y$, the calculator gives an $I / Y$ of $2.768\%$, so an annual stated yield of $2\times 2.768\% = 5.54\%$
+
+\item[] Yield to first call:
+\begin{align*}
+N&=6  & I / Y &=  & PV &=102 & PMT &=3 & FV &= 102
+\end{align*}
+Then, using CPT $I / Y$, the calculator gives an $I / Y$ of $2.941\%$, so an annual stated yield of $2\times 2.941\% = 5.88\%$
+
+\item[] Yield to second call:
+\begin{align*}
+N&=10  & I / Y &=  & PV &=102 & PMT &=3 & FV &= 101
+\end{align*}
+Then, using CPT $I / Y$, the calculator gives an $I / Y$ of $2.768\%$, so an annual stated yield of $2\times 2.830\% = 5.66\%$
+
+\item[] The yield-to-worst is then the minimum of these three, so is 5.54\%, which is the same as the yield-to-maturity
+}
+\end{itemize}
+
+
+\subsubsection{Option-adjusted yield}
+\begin{itemize}
+\item The option-adjusted yield / option-adjusted spread removes the effect of an embedded option to allow for direct comparison of yield with a straight bond
+\begin{equation}
+\text{Callable bond value} = \text{Straight vond value} - \text{Call option value}
+\end{equation}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,3,c] Q[m,1,c]}, width = 0.95\textwidth}
+\textbf{Callable bond} & \textbf{Straight bond} & \textbf{Putable bond} \\
+Issuer owns option & No option & Bond-holder owns option \\
+\emph{Lower price} & $\xrightarrow[\text{OAS}]{\text{Yield falls}}\hspace{.5cm}\text{Straight price}\hspace{.5cm}\xleftarrow[\text{OAS}]{\text{Yield rises}}$ & \emph{Higher price}
+\end{tblr}
+\end{table}
+\end{itemize}
+
+\subsubsection{Yield spread}
+\begin{itemize}
+\item The yield spread / benchmark spread is the difference in yield between a corporate bond and a benchmark security (typically a treasury bond of matching maturity). The benchmark bond should have a similar maturity and be an on-the-run bond (actively traded / liquid). Use interpolation / matrix methods if necessary.
+\end{itemize}
+
+\subsubsection{G-spread, I-spread, and Z-spread}
+\begin{itemize}
+\item The G-spread is defined as the excess yield demanded by an investor holding a corporate bond over some benchmark yield,
+\begin{equation}
+\text{G-spread} = \text{Corporate bond yield} - \text{Interpolated benchmark bond yield}
+\end{equation}
+\item The I-spread is defined as the excess return over the interbank MRR used in swap contracts. It is used primarily for bonds denominated in Euros
+\item The zero-volatility spread, or z-spread, is defined as the spread which when added to each spot rate of the benchmark curve, produces the market price of the bond. It contains the required yield demanded for taking on:
+\begin{multicols}{2}
+\begin{itemize}
+\item Credit risk \item Liquidity risk \item Tax risk \item Optionality risk
+\end{itemize}
+\end{multicols}
+The z-spread is found by trial and error, or by numerical methods as opposed to analytically
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 3yr, 8\% semi-annual corporate bond priced at 103.165. The 1yr and 4yr treasury yields are 3\% and 5\% respectively.
+}
+{\color{RoyalBlue}
+\item[] For the corporate bond,
+\begin{align*}
+N&=6  & I / Y &=  & PV &=-103.165 & PMT &=4 & FV &= 100
+\end{align*}
+Then, using CPT $I / Y$, the calculator gives an $I / Y$ of $3.4078\%$, so an annual stated yield of $2\times 3.4078\% = 6.81\%$, so this is the $YTM$ of the corporate bond.
+
+\item[] Interpolating the treasury bond yields to construct a synthetic 3yr treasury bond,
+\begin{equation*}
+\frac{1}{3}\cdot3\% + \frac{2}{3}\cdot5\% = 4.33\%.
+\end{equation*}
+
+Thus, the G-spread is given as
+\begin{equation*}
+\text{G-spread}=6.81\% - 4.33\% = 249\text{ bps}
+\end{equation*}
+
+
+}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 3yr 9\% annual coupon corporate bond trading at 89.464. The $YTM$ is 13.5\% and the $YTM$ of a 3yr treasury bond is 12\%. The 1yr, 2yr, and 3yr treasury yields are given as 4\%, 8.167\%, and 12.377\% respectively
+}
+{\color{RoyalBlue}
+The G-spread ($\equiv$ Yield spread) can simply be calculated as the the difference between the $YTM$ of the corporate bond and treasury bond,
+\begin{equation*}
+\text{G-spread}=13.5\%-12\% = 1.5\%.
+\end{equation*}
+
+The z-spread can be calculated using equation \ref{dcf} in its fully-expanded form,
+\begin{equation*}
+\frac{9}{(1+0.04+z)} + \frac{9}{(1+0.08167+z)^{2}} + \frac{109}{(1+0.12377+z)^{3}} = 89.464
+\end{equation*}
+and solving analytically for $z$. There are multiple ways this can be done, but I would suggest the use of a python script, and implementation of a fixed-point iteration method, or Newton-Raphson iteration. In this instance, $z=0.01667=166.7\text{ bps}$
+}
+\end{itemize}
+
+
+\subsubsection{Option-adjusted spread (OAS)}
+\begin{itemize}
+\item If we want to value the associated optionality contained within the yield, we can use the $OAS$
+\begin{align}
+\text{Option value} &= \text{z-spread}-OAS, \nonumber \\
+OAS&=\text{z-spread}-\text{Option value}.
+\end{align}
+The OAS applies to the government spot curve.
+
+\item Comparing the z-spread and $OAS$,
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec={Q[m,1,c] Q[m,0.8,c] Q[m,0.8,c]}, width = 0.6\textwidth}
+& \textbf{z-spread} & $OAS$ \\
+Credit risk & $\checkmark$ & $\checkmark$ \\
+Liquidity risk & $\checkmark$ & $\checkmark$ \\
+Tax risk & $\checkmark$ & $\checkmark$ \\
+Optionality & $\checkmark$ & $\times$
+\end{tblr}
+\end{table}
+\end{itemize}
+
+\subsection{Floating rate note yields}
+\begin{itemize}
+\item Floating rate note (FRN) values tend to be more stable because the coupon rate is reset periodically
+\begin{equation}
+\text{FRN coupon} = \text{MRR} + \text{Fixed margin}
+\end{equation}
+\begin{itemize}
+\item The MRR is reset using the current MRR and paid at the end of the period. Interest is paid in arrears
+\item The fixed margin is determined by the credit quality of the issuer, as well as liquidity / tax treatment
+\end{itemize}
+\begin{equation}
+\text{Quoted margin} = \text{Fixed margin}
+\end{equation}
+\end{itemize}
+
+\subsubsection{Quoted margin and discount margin}
+\begin{itemize}
+\item The fixed margin is defined in the bond indentures. The discount margin however reflects the credit risk of the issuer, and is variable. The yield of the bond is variable, and is given by 
+\begin{equation}
+\text{Yield} = \text{MRR} + \text{Discount margin}.
+\end{equation}
+This discount margin is incorporated into the $YTM$ of the bonds.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,2,c]}, width = 0.75\textwidth}
+$QM=DM$ & Coupon$=$Yield &Trades \underline{at} par \\
+$QM>DM$ & Coupon$>$Yield &Trades \underline{above} par \\
+$QM<DM$ & Coupon$<$Yield &Trades \underline{below} par 
+\end{tblr}
+\end{table}
+
+At issue, the quoted margin and discount margin are the same,
+\begin{equation*}
+\text{Quoted margin} = \text{Discount margin}.
+\end{equation*}
+
+For the purposes of any calculations using the calculator, the payment and interest per period are defined as
+\begin{align*}
+PMT&=MRR + DM & I/Y&=MRR+DM
+\end{align*}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a semi-annual bond with a quoted margin of 120 bps, which is to be paid on top of the 180 day MRR. On reset date, with 5 years to maturity, the $MRR=3\%$ (annualised), and the $DM=1.5\%$. Given also that the par value of the bond is $\$100,000$, compute the price of this bond.
+}
+{\color{RoyalBlue}
+
+\begin{align*}
+N&=10  & I / Y &=\frac{3\%+1.5\%}{2} & PV&= & PMT&=\frac{3\%+1.2\%}{2} & FV &= 100 \\
+&&&=2.25\%&&&&=2.1\%
+\end{align*}
+Then, using CPT $PMT$, the calculator gives an answer of $PV=\$98,670$
+
+
+}
+\end{itemize}
+
+\subsection{Money market instruments}
+\begin{itemize}
+\item A money market instrument is one which has a maturity of under a year. There are different conventions as to how the yield of such an instrument may be quoted.
+\end{itemize}
+\subsubsection{Add-on yield}
+\begin{itemize}
+\item The add-on yield is defined
+\begin{equation}
+\text{Quoted add-on yield}=\text{Holding period yield}\times\frac{365}{\text{Days to maturity}}.
+\end{equation}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consdier a 100-day bank CD with annualised add-on yield of 1.5\% (based on 365 day year. Calculate the purchase price of a $\$1,000$ investment into this CD security
+}
+{\color{RoyalBlue}
+\begin{align*}
+1.5\% \times \frac{100}{365} &= 0.41\%, \\ \\
+\$1,000 \times (1+0.0041) &= \$1,004.01,
+\end{align*}
+so an investor would receive $\$1,004.10$ after making an initial deposit of $\$1,000$.
+
+}
+\end{itemize}
+\subsubsection{Add-on yield}
+\begin{itemize}
+\item The discount yield is defined
+\begin{equation}
+\text{Quoted discount yield}=\text{Actual discount}\times\frac{360}{\text{Days to maturity}}.
+\end{equation}
+This is an annualised current discount from the face value received at maturity
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 180 day T-bill quoted at a discount yield of 2.2\% annualised. Calculate the price of the T-bill which has a face value of $\$989$.
+}
+{\color{RoyalBlue}
+
+\begin{align*}
+2.2\% \times \frac{180}{360} &=1.1\% \\ \\
+\$1,000 \times (1-0.011) &= \$989
+\end{align*}
+
+}
+
+For this, we can also compute the holding period yield,
+\begin{equation}
+\text{Holding period yield} = \text{Holding period return}
+\end{equation}
+{\color{RoyalBlue}
+The holding period yield is then
+\begin{equation*}
+\text{Holding period yield} = \frac{\$1,000}{\$989}-1 = 1.11\%,
+\end{equation*}
+which is higher than the discount yield
+}
+
+\item Converting yields to different conventions may also be necessary. The following examples are examples of this
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a $\$1,000$ face value, 90day T-bill priced with an annualised discount of 1.2\%. Calculate the marekt price and the annualised add-on yield based on a 365-day year
+}
+{\color{RoyalBlue}
+\begin{align*}
+\text{90-day discount}&=\$1,000 \times 1.2\% \times \frac{90}{360} \\
+&=\$3
+\end{align*}
+\begin{align*}
+\text{Current market price} &= \$1,000-\$3 \\
+&=\$997
+\end{align*}
+\begin{gather*}
+\text{90-day add-on yield}=\frac{\$3}{\$997} = 0.3009\% \\
+0.3009\%\times{365}{90}=1.2203\%
+\end{gather*}
+}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a $\$1,000,000$ negotiable CD with 120 dys to maturity, quoted with an add-on yield of 1.4\% based on a 365-day year. Calculate the payment at maturity and its bond-equivalent yield.
+}
+{\color{RoyalBlue}
+\begin{gather*}
+\$1,000,000\times \left( 1+1.4\%\times\frac{120}{365} \right) = \$1,004,602.74 \\ \\
+\text{Bond-equivalent yield} = \text{Add-on yield} = 1.4\%
+\end{gather*}
+}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a bank deposit for 100 days that is quoted with an add-on yield of $1.4\%$, based on a 360-day year. Calculate the bond-equivalent yield, and the yield on a semi-annual basis.
+}
+{\color{RoyalBlue}
+The bond-equivalent yield is
+\begin{equation*}
+\text{Bond-equivalent yield} = 1.4\%\times\frac{365}{360} = 1.5208\%.
+\end{equation*}
+
+The 100-day holding period yield is then
+\begin{equation*}
+\text{100-day HPY} = 1.5\%\times\frac{100}{360} = 0.4167\%.
+\end{equation*}
+
+Using this to calculate the effective annual yield, we get
+\begin{equation*}
+\text{Effective annual yield}=(1+0.004167\%)^{\frac{365}{100}}-1=1.5294\%.
+\end{equation*}
+
+The semi-annual yield is therefore
+\begin{equation*}
+\text{Semi-annual yield} = (1+1.5294\%)^{\frac{1}{2}}-1=0.7618\%.
+\end{equation*}
+
+The semi-annual bond basis is therefore
+\begin{equation*}
+\text{Semi-annual bond basis} = 0.7618\% \times 2 = 1.5236\%
+\end{equation*}
+}
+\end{itemize}
+
+
+\subsection{Term structure of interest rates}
+\subsubsection{Spot rates}
+\begin{itemize}
+\item A spot rates is an interest rate starting today for a specific period. These can be used as a discount rate for future cashflows.
+\item Zero-coupon bonds may be used to infer a spot rate. Recalling equation \ref{dcf}, we can re-write it slightly to allow the interest rate to be variable, and thus give
+\begin{equation}
+PV = \sum\frac{CF_{i}}{(1+\text{Spot}_{i})^{i}}
+\end{equation}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 3-year 5\% annual coupon bond, whete the 1-year, 2-year, and 3-year spot rates are 3\%, 4\% and 5\% respectively. Calculate both the value of the bond and the YTM of the bond.
+}
+{\color{RoyalBlue}
+The value of the bond can be calculated as
+\begin{equation*}
+PV = \frac{5}{(1.03)} + \frac{5}{(1.04)^{2}} + \frac{105}{(1.05)^{3}} = 100.18.
+\end{equation*}
+
+
+\item[] Using this, the YTM of the bond is therefore
+\begin{align*}
+N&=3  & I / Y &=  & PV &=-103.165 & PMT &=5 & FV &= 100
+\end{align*}
+Then, using CPT $I / Y$, the calculator gives an $I / Y$ of $4.93\%$.
+
+}
+\end{itemize}
+
+\subsubsection{Par yields}
+\begin{itemize}
+\item Par yields are defined as the coupon rate that a hypothetical bond at each maturity would need to offer, in order to be priced at par. [Normally solved through trial and error, or other numerical method]. Given a known set of spot rates on the yield curve, it can be calculated
+\begin{equation}
+100 = \frac{x}{(1+s_{1})} + \frac{x}{(1+s_{2})^{2}} + \cdots + \frac{100 + x}{(1+s_{n})^{n}},
+\end{equation}
+where $\{s_{i}\}$ are known and we are solving for $x$.
+\end{itemize}
+
+
+\subsubsection{Forward rates}
+\begin{itemize}
+\item Forward rates are for borrowing / ending for a specific period of time, starting at a defined future date. The nomenclature is
+\begin{equation*}
+f_{3y2y} = \text{Rate for a 2-year loan starting 3 years from today}.
+\end{equation*}
+Using the no-arbitrage principle, combining spot rates and forward rates should make no difference, for example
+{\color{RedViolet}
+\begin{align*}
+(1+s_{3})^{3} &= (1+s_{1})(1+f_{1y1y})(1+f_{2y1y}), \\
+&= (1 + s_{2})^{2}(1+f_{2y1y}), \\
+&= (1+s_{1})(1+f_{1y2y})^{2}.
+\end{align*}
+}
+\end{itemize}
+
+\subsubsection{Spot rate yield curves}
+\begin{itemize}
+\item The spot curve is a plot of spot rates of a particular issuer (such as the US Treasury) against maturity. Typically, we would expect an upward sloping yield curve, where one receives a higher yield for longer-maturity instruments. Under certain economic conditions, the yield curve may invert, and so the spot rate for longer maturity bonds is lower.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath yield_curve.pdf}
+  \caption{The US Treasury yield curve as of 24-July-2025. the early part of the curve is inverted, before becoming upward sloping. Yields are quoted on a semi-annual basis. Source: Federal Reserve Economic Data, \href{https://fred.stlouisfed.org/}{https://fred.stlouisfed.org/}, accessed 27-July-2025.}
+\end{figure}
+
+\item For coupon bonds, the yield curve shows the $YTM$ for a similar type of actively-traded coupon bonds at various maturities.
+\begin{itemize}
+\item Yields must be estimated from bond prices due to illiquidity, so on-the-run bonds are typically used
+\item Gaps in the curve may exist due to insufficient on-the-run securities of a particular maturity existing
+\item Tax distortions are caused by bonds trading above / below par
+\end{itemize}
+
+\item The par-bond yield curve is the yield curve of par yields for various maturities. This avoids the practical issues when using coupon bond yields (constructed from spot curves)
+
+\item The forward yield curve gives the forward rates for bonds or money market securities for annual periods in the future
+\begin{itemize}
+\item Forward rates drive spot rates, which drive par yields
+\item Forward rates are typically quoted on a semi-annual basis
+\end{itemize}
+\end{itemize}
+
+\subsection{Interest rate risk and return}
+\begin{itemize}
+\item The sources of return on a fixed income instrument are
+\begin{enumerate}
+\item Coupon and prinicpal payments
+\item Interest from reinvested coupons over the holding period
+\item Any capital gain / loss
+\end{enumerate}
+\begin{equation}
+\text{Yield per annum} = \left[ \frac{\text{End price} + \text{Coupons} + \text{Interest}}{\text{Beginning price}}\right]^{\frac{1}{N}} -1
+\end{equation}
+\begin{gather*}
+N=\text{Time horizon} \hspace{1cm} I / Y = \hspace{1cm} PV =\text{Beginning price} \\
+PMT=0 \hspace{1cm} FV=\text{End price + coupons + interest}
+\end{gather*}
+\begin{itemize}
+\item An investor who holds a fixed-rate bond to maturity will earn an annualised return equal to the YTM of the bond when purchased if the YTM is unchanged over the life of the bond
+\item An investor who sells the bond before maturity will earn a rate of return equal to the YTM at purchase if the YTM has not changed since purchase
+\item If the market YTM increases between purchase and the first coupon being paid, an investor holding the bond to maturity will earna a higher realized return than the original YTM when purchased
+\item If the market YTM increases between purchase and the first coupon being paid, an investor holding the bond for a short period will earn a lower realised return than the original YTM when purchased
+\item[]
+\item[$\Rightarrow$] Over longer periods, reinvestment interest becomes more significant. In order to offset the price / reinvestment risk, an investor should match Macaulay Duration to investment horizon
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Horizon yield}
+\begin{itemize}
+\item Horizon yield is the compound annual return over the investment horizon
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 6\% annual-pay 3yr bond, purchased as 7\% YRM and held to maturity. Calculate the compound annual return.
+
+}
+{\color{RoyalBlue}
+\item[] First we calculate the beginning price
+\begin{align*}
+N&=3  & I / Y &= 7 & PV &= & PMT &=6 & FV &=100
+\end{align*}
+so the price is $97.376$.
+
+\item[] Now calculating the $FV$ of the coupons and reinvested interest
+\begin{align*}
+N&=3  & I / Y &= 7 & PV &=0 & PMT &=-6 & FV &=
+\end{align*}
+gives the $FV$ of the coupons + any reinvestment income as 19.289. There are three payments of 6, so the interest income is 1.289
+
+\item[] The overall return is therefore
+\begin{align*}
+N&=3  & I / Y &=  & PV &=97.376 & PMT &=0 & FV &=100 + 19.289
+\end{align*}
+which gives $I / Y = 7$, as expected.
+}
+\end{itemize}
+
+\subsubsection{Carrying value}
+\begin{itemize}
+\item The carrying value of the bond is defined as the value at some point after purchase, assuming the original yield has not change. 
+\begin{itemize}
+\item Pull-to-par as time goes by, (see figure \ref{pull-to-par}) on a constant yield-price trajectory, assuming YTM is unchanged.
+\item Balance sheet value is reported at carrying value. Capital gain / loss measured at the carrying value
+\end{itemize}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider an investor who has purchased a 20yr bond, paying a 5\% semi-annual coupon, bought at a YTM of 6\%. The investor sells it in 5 years for 91.40.
+}
+
+
+{\color{RoyalBlue}
+The carrying value in 5 years is 
+\begin{align*}
+N&=30  & I / Y &= 3 & PV &= & PMT &=2.5 & FV &=100
+\end{align*}
+giving a $PV$ of 90.20. The capital gain / loss is therefore
+\begin{equation*}
+91.40 - 90.20 = 1.20
+\end{equation*}
+capital gain per 100 face value owned.
+\item[]
+}
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:}  Consider a 3yr 6\% annual bond with a YTM of 7\% bought for 97.376. The bond is sold after 2 years when the YTM is still 7\%. Determine the carrying value and annualised return
+}
+
+
+{\color{RoyalBlue}
+The carrying value is given by 
+\begin{align*}
+N&=1  & I / Y &= 7 & PV &= & PMT &=6 & FV &=100
+\end{align*}
+giving $PV=99.065$.
+
+The coupon and reinvested interest income is given by
+\begin{align*}
+N&=2  & I / Y &= 7 & PV &=0 & PMT &=-6 & FV &=
+\end{align*}
+$FV=12.420$, of which 12 is from coupon payments, and the remaining 0.420 is from reinvestment income.
+
+The overall return is given by
+\begin{align*}
+N&=2  & I / Y &= & PV &=97.376 & PMT &=0 & FV &=112.420
+\end{align*}
+so $I / Y$ is 7\%, as expected, since the YTM is unchanged.
+\item[]
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 3yr 6\% annual bond with a YTM of 7\% bought for 97.376. The investor holds the bond for a period of 1 year, and the YTM rises to 8\% before the first coupon
+}
+
+
+{\color{RoyalBlue}
+The coupon payments and reinvestment interest income is given by
+\begin{align*}
+N&=3  & I / Y &= 8 & PV &=0 & PMT &=6 & FV &=
+\end{align*}
+$FV=19.478$. 
+
+The overall return is therefore
+\begin{align*}
+N&=3  & I / Y &=  & PV &=97.376 & PMT &=0 & FV &=119.478
+\end{align*}
+which gives an $I / Y=7.06\%$. This is higher that the original 7\% since the bond is held to maturity.
+\item[]
+}
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 3yr 6\% annual bond with a YTM of 7\% bought for 97.376. The investor holds the bond to maturity, and the YTM rises to 8\% before the first coupon
+}
+{\color{RoyalBlue}
+
+
+The carrying value is given by 
+\begin{align*}
+N&=2  & I / Y &= 8 & PV &= & PMT &=6 & FV &=100
+\end{align*}
+giving $PV=96.433$.
+
+The coupon and reinvested interest income is simply 6, the value of the coupon payment after one year, as this has no time to accrue any interest.
+
+The overall return is given by
+\begin{align*}
+N&=1  & I / Y &= & PV &=97.376 & PMT &=0 & FV &=96.433 + 6
+\end{align*}
+so $I / Y$ is 5.19\%, lower than the original YTM, as there is no time for the reinvestment rate to offset the capital loss incurred.
+}
+\item[]Over short time-horizons, the price risk dominates
+\item[]
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 3yr 6\% annual bond with a YTM of 7\% bought for 97.376. The investor holds the bond to maturity, and the interest rate falls to 6\% before the first coupon is paid.
+}
+{\color{RoyalBlue}
+The coupon payments and reinvestment interest income is given by
+\begin{align*}
+N&=3  & I / Y &= 6 & PV &=0 & PMT &=6 & FV &=
+\end{align*}
+$FV=19.102$. 
+
+The overall return is therefore
+\begin{align*}
+N&=3  & I / Y &=  & PV &=97.376 & PMT &=0 & FV &=119.102
+\end{align*}
+which gives an $I / Y=6.94\%$. This is lower that the original 7\% since the bond is held to maturity.
+}
+\item[] Over long  horizons, the reinvestment rate risk dominates
+
+\item In summary
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,c] Q[m,3,l]}, width = 0.6\textwidth}
+\hline[1.25pt]
+Short horizon & Price risk dominates \\
+\SetCell[r=2]{c}Long horizon & Reinvestment risk dominates \\
+& (No price risk if held to maturity) \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\end{itemize}
+
+\subsubsection{Balancing price and reinvestment risk}
+\begin{itemize}
+\item Price and reinvestment risk must be considered when investing in fixed income securities. Holding a bond to maturity eliminates all price risk, but reinvestment risk becomes significant.
+
+\item The price risk and reinvestment risk perfectly offset when the \underline{Macaulay duration} matches the investment horizon exactly. The Macaulay duration is defined
+\begin{equation}
+\text{Macaulay duration} = \frac{\sum{\frac{CF_{i}}{(1+r)^{t_{i}}}\times t_{i}}}{\sum{\frac{CF_{i}}{(1+r)^{t_{i}}}}}. \label{Macaulay}
+\end{equation}
+In other words, it is the weighted-average time to receive future cash flows.
+\item The duration gap is defined
+\begin{equation}
+\text{Duration gap} = \text{Macaulay duration} - \text{Investment horizon}.
+\end{equation}
+A positive duration gap is dominated by price risk, and a negative duration gap by reinvestment risk.
+
+\item Making reference to sensitivity to interest rates,
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,c] Q[m,3,c]}, width = 0.6\textwidth}
+\hline[1.25pt]
+Low yields & Steeper curve on price-yield curve \\
+Low coupon & Wait longer to receive cash flows \\
+Long maturity & Higher duration \\
+ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+{\color{RedViolet}
+\item Consider a 5yr 11\% annual coupon bond, priced at 86.59 with a YTM of 15\%. Calculate the Macaulay duration of this bond.
+}
+
+{\color{RoyalBlue}
+\item[] Using equation \ref{Macaulay}, we find
+\begin{equation*}
+\frac{1\times\frac{1}{1.15} + 2\times\frac{11}{1.15^{2}}  + 3\times\frac{11}{1.15^{3}}  + 4\times\frac{11}{1.15^{4}}  + 5\times\frac{111}{1.15^{5}}}{\frac{1}{1.15} + \frac{11}{1.15^{2}}  + \frac{11}{1.15^{3}}  + \frac{11}{1.15^{4}}  + \frac{111}{1.15^{5}}} = \frac{348.99}{86.59}=4.03 \text{ years}
+\end{equation*}
+}
+\end{itemize}
+
+\subsubsection{Modified duration}
+\begin{itemize}
+\item The \underline{modified duration} is defined
+\begin{equation}
+\text{Modified Duration} = \frac{\text{Macaulay Duration}}{1 + \text{YTM}}, \label{mod-dur}
+\end{equation}
+where Macaulay duration is defined in equation \ref{Macaulay}. Generally, the YTM in the denominator should be the interest per period, so in the case of a semi-annual coupon bond, it should be replaced with $\frac{\text{YTM}}{2}$.
+\item Mathematically, the Modified Duration can be thought of as the derivative of price with respect to yield. If we recall equation \ref{dcf}, and sum over all future cash flows, we get
+\begin{equation}
+PV = \sum\frac{CF_{i}}{(1+\text{YTM})^{t_{i}}}.
+\end{equation}
+For simplicity, we take $t_i = i, \phantom{,}\forall\phantom{,} t_{i}$. Taking the derivative, we get
+\begin{align}
+\frac{\partial \phantom{,}PV}{\partial \phantom{,}\text{YTM}} &= \sum\frac{\partial}{\partial \phantom{,}\text{YTM}}\left[\frac{CF_{i}}{(1+\text{YTM})^{i}}\right], \label{deriv-dur}\\
+&= \sum\frac{CF_{i}}{(1+\text{YTM})^{i+1}}\cdot-i\cdot\underbrace{\frac{\partial \phantom{,}PV}{\partial \phantom{,}\text{YTM}}\left[(1+\text{YTM})\right]}_{=1}, \nonumber \\
+&=- \sum\frac{i\cdot CF_{i}}{(1+\text{YTM})^{i+1}}, \nonumber \\
+&=- \frac{1}{(1+\text{YTM})}\sum\frac{i\cdot CF_{i}}{(1+\text{YTM})^{i}}, \nonumber \\
+&=- \frac{\left[\sum\frac{i\cdot CF_{i}}{(1+\text{YTM})^{i}}\right]}{(1+\text{YTM})}, \nonumber \\
+&=-\frac{\text{Macaulay Duration}}{(1 + \text{YTM})}. \nonumber
+\end{align}
+The tangent to a price-yield curve will be negative at all points, but is always expressed as a positive number, so the sign is just convention.
+\item The modified duration is just a linear approximation as to how the price varies when the yield changes., so we can approximate
+\begin{equation}
+\text{Price}(\text{YTM}) \approx \text{Price}|_{\text{YTM}_{0}} - [\text{Mod. Dur.}] \times \Delta \text{YTM} \label{taylor-one}
+\end{equation}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath price_yield_duration.pdf}
+  \caption{Price-yield curve for a bond with a tangent line drawn modified duration, and arrows marking the difference between the linear approximation and the actual price-yield curve.}
+  \label{fig-duration}
+\end{figure}
+Figure \ref{fig-duration} clearly demonstrates that the linear approximation provided by modified duration underestimates the price after any change. If yields were to fall, the linear approximation underestimates the appeciation in price, and if yields were to rise, the linear approximation overestimates the fall in price,
+\begin{equation*}
+\text{Estimated price} < \text{True price}.
+\end{equation*}
+Larger changes in yield lead to a worse estimate.
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 5yt 11\% annual coupon bond. With a YTM of 15\%, it is priced at 86.59, and has a Mod Dur of 3.5. The expected change in yield is $+50$ bps. Calculate the change in price.
+}
+{\color{RoyalBlue}
+\begin{align*}
+\Delta \text{Price} &= -3.5\times 0.5\% \\
+&= -1.75\%
+\end{align*}
+\begin{gather*}
+86.59 \times (1-0.0175) = 85.075
+\end{gather*}
+Using a full repricing method, the $PV$ is 85.092, which is higher than the estimate above.
+}
+\end{itemize}
+
+\subsubsection{Approximate modified duration}
+\begin{itemize}
+\item Modified duration is an exact calculation, and may be computationally intensive. Instead, we can use approximate modified duration. This is an approximation using the average of the price rise /fall from $V_{+}$ and $V_{-}$ to give an estimate of the gradient. This is demonstrated in Figure \ref{fig-approx-mod-dur}.
+\begin{equation}
+\text{Approx. Mod. Dur.} = \frac{V_{-} - V_{+}}{2\Delta\text{YTM}} \cdot \frac{1}{V_{0}}, \label{approx-mod-dur}
+\end{equation}
+where:
+\begin{itemize}
+\item[] $V_{0}$ is the current price
+\item[] $V_{-}$ is the price at $\text{YTM}-\Delta\text{YTM}$
+\item[] $V_{+}$ is the price at $\text{YTM}+\Delta\text{YTM}$
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath price_yield_duration_approx.pdf}
+  \caption{Price-yield relationship with approximate modified duration shown.}
+  \label{fig-approx-mod-dur}
+\end{figure}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 5yr 11\% annual bond priced at 86.57. $V_{+} = 85.092$ and $V_{-} = 88.127$. $\Delta\text{YTM} = 50$bps. Calculate the approximate modified duration.
+}
+
+
+{\color{RoyalBlue}
+Using equation \ref{approx-mod-dur},
+\begin{equation*}
+\text{Approx. Mod. Dur.} = \frac{88.127 - 85.092}{2\times0.005} \cdot \frac{1}{86.57} = 3.505
+\end{equation*}
+}
+
+\end{itemize}
+
+\subsubsection{Money duration}
+\begin{itemize}
+\item So far, all of these duration measures refer to a relative, (\%) price change of the bond. The \underline{dollar deviation} incorporates money values rather than relative values into price / yield change estimates from the (approximate) modified duration.
+\begin{align}
+\text{\% price change} &= -\text{Mod. Dur.} \times \Delta\text{YTM}, \nonumber \\
+\text{Money duration} &= - \text{Mod Dur.} \times \Delta\text{YTM} \times \text{Bond price}.
+\end{align}
+This gives the approximate change in absolute value for a given change in yield.
+\item As before, this is more accurate for $\Delta\text{YTM} \ll 1$
+\item This is used to determine the price value of a basis point (PVBP, DV01, BPV) (having meanings ``price value of a basis point’’, ``dollar value 01’’, ``basis point value’’). These all are equivalent and refer to the price change in \$ terms of a 1bp change in yield.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a bond with Mod. Dur. $=7.42$. It has a full price of 101.32 per 100 face value, and a par value of $2,000,000$. Calculate the impact of a 25bp increase in YTM on the market value.
+}
+{\color{RoyalBlue}
+Recalling equation \ref{mod-dur},
+\begin{equation*}
+\text{Mod. Dur.} = \frac{\text{Macaulay Duration}}{1+\text{YTM per period}}.
+\end{equation*}
+
+The market value of the bond is given by 
+\begin{equation*}
+\text{Market value} = 2,000,000 \times \frac{101.32}{100} = 2,026,400,
+\end{equation*}
+
+so the fall in market value is therefore
+\begin{align*}
+\Delta \text{Mkt. val.} &= -\text{Mod. Dur.} \times \Delta \text{Yield} \times \text{Mkt. val.}, \\
+&= -7.42\times 0.0025 \times 2,026,400, \\
+&=-37,589.72.
+\end{align*}
+In reality, as shown by figure \ref{fig-duration}, this is an overestimate of the fall in value.
+
+}
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 20yr annual-paying straight bond, priced at 101.39, with a par value of $1,000,000$. Calculate the DV01 effect on the full par value of the bond
+}
+
+{\color{RoyalBlue}
+The current YTM is given by 
+\begin{align*}
+N&=20  & I / Y &= & PV &=-101.39 & PMT &=6 & FV &=100
+\end{align*}
+so $I / Y$ is 5.88\%.
+\item[] A 1 bp move either way gives a new YTM of $5.87\%$ in the downward move, and $5.89\%$ in the upward move.
+\item[] First calculating $V_{-}$,
+\begin{align*}
+N&=20  & I / Y &=5.87 & PV &= & PMT &=6 & FV &=100
+\end{align*}
+so $V_{-}$ is 101.507.
+
+\item[] Now calculating $V_{+}$,
+\begin{align*}
+N&=20  & I / Y &=5.87 & PV &= & PMT &=6 & FV &=100
+\end{align*}
+so $V_{+}$ is 101.273.
+
+\item[] The price change per 100 par value is therefore
+\begin{equation*}
+\frac{101.507 - 101.273}{2} = 0.1117
+\end{equation*}
+per 100 par value, which for the full $1,000,000$ is a price change of $1,170$.
+}
+
+
+\end{itemize}
+
+\subsubsection{Convexity}
+\begin{itemize}
+\item Modified duration is a linear approximation of the price / yield relationship. As figure \ref{fig-duration} shows, the accuracy of the approximation decreases as you move further from the point of expansion.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath price_yield_convexity.pdf}
+  \caption{The convexity approximation for a bond is a closer approximation to the true yield-price relationship, and we can see clearly that the approximation is a better match than just the linear approximation}
+\end{figure}
+
+\item We can improve this approximation by adding a second order term to the Taylor expansion given by equation \ref{taylor-one}, which would take the form
+\begin{equation}
+\text{Price}(\text{YTM}) \approx \text{Price}|_{\text{YTM}_{0}} - [\text{Mod. Dur.}] \times \Delta \text{YTM} + \frac{1}{2}\text{Cvxty.}\times (\Delta\text{YTM})^{2}\times P_{0}. \label{taylor-two}
+\end{equation}
+\item Recalling the derivation for modified duration from equation \ref{deriv-dur}, we can extend this to calculate the convexity exactly by taking the second derivative of price with respect to YTM.
+
+\begin{align}
+\frac{\partial^{2} \phantom{,}PV}{\partial \phantom{,}\text{YTM}^{2}} &= \sum\frac{\partial^{2}}{\partial \phantom{,}\text{YTM}^{2}}\left[\frac{CF_{i}}{(1+\text{YTM})^{i}}\right], \label{deriv-cvxty} \\
+&=- \sum\frac{\partial}{\partial\phantom{,}\text{YTM}}\left[\frac{i\cdot CF_{i}}{(1+\text{YTM})^{i+1}}\right], \nonumber \\
+&= - \sum -(i+1) \cdot \frac{i\cdot CF_{i}}{(1+\text{YTM})^{i+2}} \cdot \underbrace{\frac{\partial}{\partial\phantom{,}\text{YTM}} \left[(1+\text{YTM})\right]}_{=1} \nonumber \\
+&= \sum \frac{i(i+1)\cdot CF_{i}}{(1+\text{YTM})^{i+2}} \nonumber \\
+& = \frac{\sum \frac{i(i+1)\cdot CF_{i}}{(1+\text{YTM})^{i}}}{(1+\text{YTM})^{2}} \nonumber
+\end{align}
+
+The convexity of a single cash flow at period $i$ is given by
+\begin{equation*}
+\text{Convexity}|_{i} = \frac{i(i+1)}{(1+\text{YTM})^{2}}.
+\end{equation*}
+For a coupon-paying bond, the convexity is simply the weighted-average convexity of individual cashflows. as can be seen above.
+
+\item Again, similar to duration, we can calculate an approximate convexity, using a similar method detailed in equation \ref{fig-approx-mod-dur}.
+
+\begin{align*}
+\text{Approximate convexity} &= \frac{V_{-}+V_{+}-2V_{0}}{(\Delta\text{YTM})^{2}\cdot V_{0}} \\
+&= \left[ \frac{\frac{V_{-} - V_{0}}{\Delta\text{YTM}} - \frac{V_{+} - V_{0}}{\Delta\text{YTM}}}{\Delta\text{YTM}} \cdot\frac{1}{V_{0}} \right] \nonumber
+\end{align*}
+
+\item Convexity is impacted by the same factors affecting duration, such as a long maturity, a low coupon rate, and a low YTM.
+\item If duration is equal between bonds, the one with cash flows dispersed over a greater time will have a greater convexity
+
+\begin{equation}
+\%\Delta\text{Price} = -\text{Mod. Dur.} \times \Delta \text{YTM} + \frac{1}{2}\times \text{Convexity} \times (\Delta\text{YTM})^{2}
+\end{equation}
+
+\item In the same vein as duration, money convexity converts relative changes to monetary price changes.
+\begin{equation}
+\Delta\text{Bond price} = -\text{Money Dur.} \times \text{YTM} + \frac{1}{2}\times \text{Money cvxty.} \times (\Delta\text{YTM})^{2}
+\end{equation}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consdier a 5yr 11\% coupon bond with a YTM of 15\% and price of 86.59138. It has Mod. Dur = 3.5 and Cvx = 16.9. Estimate the new price with $\Delta\text{YTM} = -50$bps
+}
+{\color{RoyalBlue}
+\begin{align*}
+\%\Delta P &= -3.5 \times (-0.005) + \frac{1}{2}\times 16.9 \times (0.005)^{2} \\
+&=1.75\% + 0.0211\% \\
+&=1.7711\%
+\end{align*}
+
+The new price is therefore
+\begin{align*}
+\text{New price} &= 86.59138 \times 1.017711, \\
+&=88.125.
+\end{align*}
+
+Using full reval, the new price would be calculated 88.127.
+}
+
+{\color{RedViolet}
+Now, taking the full par value of the bond to be $10,000,000$,
+}
+
+{\color{RoyalBlue}
+\begin{align*}
+\text{Money duration} &= \text{Mod. Dur.} \times \text{Price} \\
+&= 3.5 \times 0.8659138 \times 10,000,000 \\
+& = 30,306,983 \\ \\
+\text{Money convexity} & = \text{Convexity} \times \text{Price} \\
+&=16.9 \times 0.8659138 \times 10,000,000 \\
+&=145,339,432 \\ \\
+\text{Duration effect} &= -\text{Money duration} \times \Delta\text{YTM} \\
+&= -30,306,983 \times -0.005 \\
+&= 151,934,92 \\ \\
+\text{Convexity effect} &= \frac{1}{2} \times \text{Money convexity} \times (\Delta\text{YTM})^{2} \\
+&= \frac{1}{2} \times 146,339,432 \times 0.005^{2} \\
+&=1,829.25 \\ \\
+\text{Total change} &= 153,364.17
+\end{align*}
+}
+\end{itemize}
+
+\subsubsection{Portfolio duration and convexity}
+\begin{itemize}
+\item There are two apporaches to aggregate several bonds in a portfolio
+\begin{itemize}
+\item Single calculation of portfolio duration adn convexity, based upon aggregate cash flows of all bonds in the portfolio
+\item Weighted average of bond deviation / convexity by market value. This assumes a parallel shift in YTM.
+\end{itemize}
+\end{itemize}
+
+\subsection{Curve-based and empirical fixed income risk measures}
+\begin{itemize}
+\item Recalling the following measures, these are all easily applicable and intuitive for straight bonds, that is bonds which have no embedded optionality in them.
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,3,l]}, width = 0.75\textwidth}
+\hline[1.25pt]
+Macaulay Duration & Weighted average time to receive cash flows \\
+Modified Duration & $\dfrac{\text{Macaulay}}{1+\text{Yield}}=$ First order taylor expansion \\
+Approximate modified duration & Two-point gradient formula \\
+Money duration & Monetary impact of duration \\
+DV01 & Dollar value of a 1bp move \\ \hline[1.25pt]
+\end{tblr}
+\caption{Table showing duration metrics applicable to straight bonds}
+\end{table}
+
+\item If instead we are interested in bonds with embedded options, such as callable and putable bonds, these have uncertain future cash flows
+\begin{itemize}
+\item A fall in rates impacts a callable bond as this benefits the issuer
+\item A rise in rates impacts a putable bond as this benefits the investor ``Floor price’’
+\end{itemize}
+These are referred to as \underline{contingent cash flows}, as they only occur if a particular scenario occurs.
+\item The reason these are appropriate risk measures for straight bonds is that the YTM is well-defined, and all cash flows are certain, due to the absence of any options. The Macaulay duration (equation \ref{Macaulay}) and Modified Duration (equation \ref{mod-dur}) are both \underline{yield-based risk measures}.
+\item For bonds with embedded options, we need to use \underline{curve-based risk measures}
+\end{itemize}
+
+\subsubsection{Effective duration and effective convexity}
+\begin{itemize}
+\item Effective duration is a measure of interest rate sensitivity for bonds with embedded options. This is a curve-based statistic. It is similar to the modified duration, but instead of a shock to a specific point on the yield curve, it involves a shock across the curve, impacting all maturity yields. A similar shock may be applied to define effective convexity.
+\begin{align}
+\text{Effective duration} &= \frac{V_{-}-V_{+}}{2V_{0}\cdot\Delta\text{Curve}} \\
+\text{Effective duration} &= \frac{V_{-}+V_{+}-2V_{0}}{V_{0}\cdot[\Delta\text{Curve}]^{2}}
+\end{align}
+\item Using these in a Taylor expansion of the price,
+\begin{equation*}
+\%\Delta\text{Expected price change} = - \text{Eff. Dur.} \times \Delta \text{Curve} + \frac{1}{2}\text{Eff. Cvx.} \times [\Delta \text{Curve}]^{2}
+\end{equation*}
+For a straight bond, $\text{Mod. Dur.} \equiv \text{Eff. Dur.}$, since $\Delta\text{Curve} \equiv \Delta \text{YTM}$.
+\end{itemize}
+
+\subsubsection{Price-yield relationship for callable bonds}
+\begin{itemize}
+\item A callable bond is one where the issuer holds the right to call in the bond at a specified price.
+\item If yields fall, the price of a straight bond would rise, but the price of the callable bond is capped at the call price. This causes negative convexity in the price-yield curve at low yields for the bond. Because of this, investors tend to require a higher yield, or lower price to compensate them for this additional risk.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath callable_bond.pdf}
+  \caption{The price-yield relationship of a callable bond is shown in purple, compared to that of a straight bond. The price ceiling is also shown. For yields lower than the point of inflection, the curve exhibits negative convexity}
+\end{figure}
+
+\item A callable bond is preferable to investors during stable period. In times of volatility, an investor is more likely to sell callables.
+\item Also note that MBS securities have an embedded short call option
+
+\end{itemize}
+
+\subsubsection{Price-yield relationship for putable bonds}
+\begin{itemize}
+\item A putable bond is one where the bond holder holds the right to sell the bond back to the issuer at a specified price.
+\item If yields rise, the price of the bond is floored at the put price. The pt option becomes more valuable as the probability of it being exercised becomes higher.
+\item Opposite to callable bonds, they show excess convexity at high yields, so a larger rise in yields results in a lesser fall in price.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{\imgpath putable_bond.pdf}
+  \caption{The price-yield relationship of a putable bond is shown in purple, compared to that of a straight bond. The price floor is also shown. For high yields, the price asymptotically approaches the price floor.}
+\end{figure}
+\end{itemize}
+
+\subsection{Key-rate duration}
+\begin{itemize}
+\item The key-rate duration (KRD) measures the impact of non-parallel shifts in the benchmark yield curve. Up until this point, we have only been considering parallel shifts, but it is perfectly conceivable that the yield curve may move in different manners.
+\item Examples of the various types of shifts in the yield curve are shown in figure \ref{fig-yield-shifts}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.95\textwidth]{\imgpath yield_changes.pdf}
+  \caption{Different changes to the yield curve. For each of these, the x-axis shows maturity and y-axis shows yield. We see the base curve in black in each of the charts, and possible types of shift from the base curve.}
+  \label{fig-yield-shifts}
+\end{figure}
+
+\item KRD is defined as the sensitivity of the value of a portfolio to changes in the benchmark yield of a specific maturity, holding alll other yields constant.
+
+\item KRDs can be calculated by using the following steps:
+\begin{enumerate}
+\item Calculate the Macaulay duration
+\item Use this to determine the Modified Duration
+\item KRD is then given by the weight of exposure to that point multiplied by the modified duration at that point,
+\begin{equation}
+\text{KRD}_{i} = \text{Mod. Dur.} \times w_{i}.
+\end{equation}
+\item Any relative change in price is given by the product of KRD and change in yield
+\begin{equation}
+\%\Delta\text{Price} = -\text{KRD}\times\Delta\text{Yield}
+\end{equation}
+\end{enumerate}
+
+\item Each maturity has its own KRD.
+
+\begin{equation}
+\text{Effective duration} = \sum\text{KRD}_{i}
+\end{equation}
+Shaping risk is the effect of a non-parallele shift in the yield curve of a bond portfolio. The effect of this non-parallel shift is quantified by KRD.
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider an equal-weighted portfolio invested in two zero-coupon bonds (ZCB). The first has 3 years to maturity and has a YTM of 5\%. The other has 10 years to maturity, and has a YTM of 6\%. Both have an annual compounding period. What is the performance of the portfolio if the 5yr yield rises 50bps and 10yr yield falls by 25bps.
+}
+{\color{RoyalBlue}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,0.8,c] Q[m,0.8,c] Q[m,1,c] Q[m,1,c]}, rows = {fg = RoyalBlue}, width = 0.85\textwidth}
+\hline[1.25pt]
+\textbf{Bond} & \textbf{Macaulay} & \textbf{Mod. Dur.} & \textbf{KRD} \\ \hline
+5yr & 5yrs & $\frac{5}{1.05}=4.672$ & $0.5\times4.762=2.381$ \\
+10yr & 10yrs & $\frac{10}{1.06}=9.434$ & $0.5\times9.434=4.717$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+Then, using this to work out the price impact,
+\begin{align*}
+\%\Delta\text{Price} &=\underbrace{-2.381\times0.0050}_{-0.0119} + \underbrace{-4.717\times-0.0025}_{+0.0118} \\
+&=-1.19\% + 1.18\% \\
+&=-0.01\%
+\end{align*}
+}
+\end{itemize}
+
+\subsubsection{Empirical and analytical duration}
+\begin{itemize}
+\item Analytical measures are based on mathematical analysis. This includes Macaulay duration, Mod Dur, approx. Dur., and eff. Dur.
+\item Empirical measures are based on estimates using historical moves of benchmark yield changes and bond price changes. This is useful for riskier bonds, when benchmark yields and credit spreads are decorrelated
+
+\end{itemize}
+
+\subsection{Credit risk}
+\begin{itemize}
+\item Credit risk can largely be broken up into four main pieces.
+\begin{multicols}{2}
+\begin{itemize}
+\item Probability of default
+\item Loss given default / recovery rate
+\item Exposure
+\item Liquidity risk
+\end{itemize}
+\end{multicols}
+
+\item Bottom-up credit analysis focuses on the risk of coupon / principal sums not being paid by the issuer
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,4,l]}, width = 0.9 \textwidth}
+\hline[1.25pt]
+Capacity & Borrower’s ability to make payments on time \\
+Character & Borrower’s commitment to debt obligations \\
+Capital & Capital available to borrower to reduce reliance on debt financing \\
+Collateral & Value of assets pledged to lender as security against loans \\
+Covenants & Legal terms agreed by all parties \\ \hline[1.25pt]
+\end{tblr}
+\caption{Factors likely to be used by an analyst when conducting bottom-up credit analysis on an issuer}
+\end{table}
+
+
+\item Top-down credit analysis focuses on the macro environment of the issuer
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,4,l]}, width = 0.9 \textwidth}
+\hline[1.25pt]
+Conditions & General economic conditions affectng ability to make payments \\
+Country & Geopolitical environment, legal and political systems that apply to the debt \\
+Currency & Movements in exchange rates affecting a borrower’s ability to service foreign-denominated debt \\ \hline[1.25pt]
+\end{tblr}
+\caption{Factors likely to be used by an analyst when conducting top-down credit analysis on an issuer}
+\end{table}
+
+\item Sources of repayment
+\begin{itemize}
+\item Sources of repayment are dependent not only on the nature of the borrower, but also the specific terms of the bond issue
+\item Secured corporate issues are backed by the operating cash flows and investments of the issuer, as well as the fact that any cash flows from collateral assets are pledged as security
+\item Unsecured corporate issues are backed by the operating cash flows and investments of the issuer
+\item Secondary sources include asset sales, divestiture of subsidiaries, or additional debt / equity issuance
+\end{itemize}
+
+\item Sovereign debt
+\begin{itemize}
+\item Sovereign debt is generally backed by tax revenue, tariffs, and other fees
+\item Additional debt issuance and sale of public assets (privatisation) are other ways of raising money
+\item Sovereign credit risk factors include poor economic conditions, political uncertainty, fiscal deficits, and high debt levels
+\end{itemize}
+
+\item Illiquidity and solvency
+\begin{itemize}
+\item Deault can result from a debt issuer being insolvent, or having insufficient liquidity
+\begin{itemize}
+\item Insolvency is reached when the value of any assets is less than liabilities
+\item Illiquidity is when there is insufficient cash to meet obligations
+\end{itemize}
+\end{itemize}
+
+\item A cross-default clause protects investors by stating that any default on one bond casues a default on all issues. \underline{Pari-Passu} ensures bonds of equal rank are treated equally
+
+\end{itemize}
+
+\subsubsection{Measuring credit risk}
+\begin{itemize}
+\item Measuring credit risk involves assessing the expected loss from a debt investment in the event of issuer default.
+\begin{gather}
+\text{Expected loss} = \underbrace{\text{Probability of default}}_{\text{Annualised basis} }\times \text{Loss given default} \\
+\text{Credit spread} \approx \text{Probability of default} \times \text{Loss given default (\%)} \label{spread}
+\end{gather}
+
+\item In order to estimate the probability of default, an analyst may look at any of the following
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c]}, width = 0.95\textwidth}
+\hline[1.25pt]
+EBIT Margin & High EBIT margin implies lower risk \\
+Interest coverage ratio, $\dfrac{\text{EBIT}}{\text{Interest}}$ & High coverage implies the issuer is likely to be able to make required interest payments \\
+Leverage multiples $\left(\text{e.g.} \dfrac{\text{Debt}}{\text{EBITDA}}\right)$ & Low leverage multiples suggest a comparatively low debt burden on the company \\
+CFO & A high cash flow to net debt ratio suggest the debt payments are easily serviceable \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\begin{itemize}
+\item[] Detriorating financial strength impacts the probability of default
+\end{itemize}
+
+\item In order to estimate the loss given default, the debt seniority (senior / junior / subordinated) and whether the debt is backed by collateral are useful indicators.
+\begin{itemize}
+\item[] Senior secured debt has a lower loss given default
+\end{itemize}
+
+
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 4\% coupon bond trading at par. The issuer has a probability of default of 3\%, and a recovery rate of 75\%. A government security of similar maturity is trading with YTM = 2.5\%.
+}
+
+
+{\color{RoyalBlue}
+Since it is trading at par,
+\begin{equation*}
+\text{Corp YTM} = 4\%.
+\end{equation*}
+
+Using equation \ref{spread}, the spread demanded by an issuer is approximately
+\begin{equation*}
+\text{Required spread} = 0.03\times(1-0.75) = 0.03\times0.25 = 0.75\%.
+\end{equation*}
+
+The inferred spread from comparing the YTM of the government bond and the corporate bond is $4\%-2.5\%=1.5\%$. As this is greater than the required spread, this does adequately compensate the investor.
+}
+\end{itemize}
+
+
+\subsubsection{Credit ratings}
+\begin{itemize}
+\item Credit rating agencies assign forward-looking ratings to both issuers and specific bond issues, based on qualitative and quantitative credit risk factors
+\item Investors use these ratings to compare credit-worthiness of bonds. Changes in ratings provide a broad overview of changing market conditions
+\item Credit migration risk is the risk of a credit downgrade
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] c | c Q[m,1,c] Q[m,1,c]}, width = 0.85\textwidth}
+\hline[1.25pt]
+\SetCell[c=2]{c}\textbf{Investment Grade} & &\SetCell[c=2]{c} & & \SetCell[c=2]{c}\textbf{High Yield / Junk} \\ \hline
+Moody’s & S\&P, Fitch &\SetCell[c=2]{c} & & Moody’s & S\&P, Fitch \\ \hline[1.25pt]
+Aaa & AAA & & & Ba1 & BB+ \\
+Aa1 & AA+ & & & Ba2 & BB \\
+Aa2 & AA & & & Ba3 & BB \\
+Aa3 & AA$-$ & & & B1 & B+ \\
+A1 & A+ & & & B2 & B \\
+A2 & A & & & B3 & B$-$ \\
+A3 & A$-$ & & & Caa1 & CCC+ \\
+Baa1 & BBB+ & & &  Caa2 & CCC \\
+Baa2 & BBB & & &  Caa3 & CCC$-$ \\
+Baa3 & BBB$-$ & & &  C, C & C, D \\ \hline[1.25pt]
+\end{tblr}
+\caption{Table showing the different rating schemes used by the three main rating agencies. The lower the rating, the more equity-like the behaviour of a bond is observed to be.}
+\end{table}
+
+\item Using credit ratings is not an infallible method to assess a particular issuer or bond issue.
+\begin{itemize}
+\item Ratings lag market pricing -- Spreads change much faster than ratings
+\item Risks may be difficultto assess (i.e. litigation, natural disasters)
+\end{itemize}
+Additional due diligence should be employed.
+
+\item Credit rating agencies give a rating to both issuers as well as specific bond issues
+\begin{itemize}
+\item Issuer -- Corporate family rating (CFR)
+\item Bond issue -- Corporate credit rating (CCR)
+\end{itemize}
+Differences may arise between ratings of CFR and CCR. This is called notching, but is a practice less common for investment-grade rated firms.
+\end{itemize}
+
+
+\subsubsection{Credit spread risk}
+\begin{itemize}
+\item Credit spread risk is the risk of yield spreads widening and bond price falling. As default is unlikely to occur suddenly, credit spread risk is a primary concern for investors
+\item Drivers include
+\begin{itemize}
+\item Macroeconomic factors (economic contraction)
+\item Issuer-specific factors (ligiation, natural disasters)
+\item Market trading factors (market crisis, i.e. GFC)
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Macroeconomic factors}
+\begin{itemize}
+\item Credit cycles are strongly correlated to the economic cycle
+\begin{itemize}
+\item Economic expansions -- Credit curves fall and steepen, as the near-term probability of default falls
+\item Economic contractions -- Credit curves rise and flatten, and the HY curve may invert as the near-term probability of default rises
+\item High-yield spreads are more sensitive to changes in the economic conditions, with a wider dispersion of yield spreads across issuers
+\item Flight to quality -- In a crisis, investors sell risky assets and buy safe assets. Bid-ask spread widen more for HY than IG bonds typically
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Issuer-specific factors}
+\begin{itemize}
+\item Issuer-specific factors have a significant impact on yield spread level and volatility. The financial performance of the issuer has a significant impact on credit rating and yield spread of the debt.
+\item Comparisons may be drawn by comparing an issuer’s yield spread to the average yield spread with a similar credit rating.
+\item Greater difficulty in servicing the debt will bring a higher yield
+\end{itemize}
+
+
+\subsubsection*{Market factors}
+\begin{itemize}
+\item This is linked to transaction costs of trading a bond
+\begin{itemize}
+\item Bid-ask spread\footnote{An investor would sell at bid and buy at ask. As such, $\text{Bid} > \text{Ask}$, always.} -- Wider spread implies a higher t-cost, and so a higher market liquidity risk
+\item Larger issuers are those with more debt outstanding, and have more actively traded debt
+\item Market stress and crisis may impact both of these
+\end{itemize}
+
+
+\item In summary;
+\begin{gather*}
+\text{Mid-price} = \frac{\text{Bid} + \text{Offer}}{2} \label{mid}\\
+\text{Liquidity spread} = \text{Yield}|_{\text{Bid}} - \text{Yield}|_{\text{Ask}} \label{liq-spread} \\
+\text{Credit spread} = \text{Yield spread over bmk} - \text{Liquidity spread} \label{credit-spread}
+\end{gather*}
+
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a 10yr 5\% annual coupon bond, with a bid / offer of 99.5 \ 100.5. The benchmark 10yr yield is 3\%. Decompose the spread into credit and liquidity
+}
+
+{\color{RoyalBlue}
+\item[] From equation \ref{mid},
+\begin{equation*}
+\text{Mid-price} = \frac{100.5 + 99.5}{2}.
+\end{equation*}
+
+Then, calculating liquidity spread, the bid yield is
+\begin{align*}
+N&=10  & I / Y &= & PV &=-99.5 & PMT &=6 & FV &=100
+\end{align*}
+giving $I / Y = 5.065$.
+
+\item[] The ask yield is
+\begin{align*}
+N&=10  & I / Y &= & PV &=-100.5 & PMT &=6 & FV &=100
+\end{align*}
+giving $I / Y = 4.935$.
+
+\item[] Using equation \ref{liq-spread}, we find
+\begin{equation*}
+\text{Liquidity spread} = 5.065\% - 4.935\% = 0.130\%.
+\end{equation*}
+
+The $\text{yield}|_{\text{mid}}=5\%$, since it is trading at par. The yield spread is therefore
+\begin{equation*}
+\text{Yield spread} = 5\% - 3\% = 2\%,
+\end{equation*}
+
+and the credit spread is therefore
+\begin{equation*}
+\text{Credit spread} = 2\% - 0.130\% = 1.87\%
+\end{equation*}
+}
+
+\end{itemize}
+
+
+\subsection{Credit analysis for government issuers}
+\begin{itemize}
+\item The term government issuers encompasses sovereign issuers and non-sovereign issuers, such as agencies, government sector bonds, and supranationals
+\item Sovereign government debt
+\begin{itemize}
+\item The ability to service debt comes from the ability to tax economic activity in its jurisdiction.
+\item Credit assessment is based on the factors which provide stable economic growth with low inflation
+\item Qualitatitive and quantitative factors are relevant ot establish credit worthiness
+\end{itemize}
+
+\item The term non-sovereign government debt includes
+\begin{itemize}
+\item Agencies
+\begin{itemize}
+\item Quasi-government entities, backed by law
+\item Implicit government support, established for a specific purpose
+\end{itemize}
+\item Government sector banks
+\begin{itemize}
+\item Issuing bonds for specific projects
+\end{itemize}
+\item Supranational issuers
+\begin{itemize}
+\item World bank, IMF
+\item Projects to alleviate poverty, encourage growth
+\end{itemize}
+\item Regional governments (States $\rightarrow$ Municipal bonds) issue
+\begin{itemize}
+\item General obligation bonds -- These are unsecured instruments, and are backed by instruments
+\item Revenue bonds -- These are covered by revenue from specific projects (i.e. tolls). Credit analysis of these is similar to corporate bonds. The focus should be on cash flows and debt coverage ratios.
+\end{itemize}
+\end{itemize}
+
+\item Qualitative factors include
+\begin{itemize}
+\item Institutions and policy factors
+\begin{itemize}
+\item ``Capacity’’ -- Economic stability
+\item ``Character’’ -- Willingness to repay
+\end{itemize}
+\item Fiscal flexibility factors
+\begin{itemize}
+\item Ability to increase taxes / reduce spending to ensure debt payments can be made
+\end{itemize}
+\item Monetary effectiveness factors
+\begin{itemize}
+\item Ability of the central bank to vary the money supply and interest rates to encourage stable growth
+\item Independence and credibility of the central bank
+\end{itemize}
+\item Economic flexibility factors
+\begin{itemize}
+\item Growth trends
+\item Income per capita
+\item Diversity of income
+\end{itemize}
+\item External status factors
+\begin{itemize}
+\item Status of local currency in international markets
+\item Countries with reserve currencies are widely held for foreign reserves at central banks
+\end{itemize}
+\end{itemize}
+
+\item Quantitative factors include
+\begin{itemize}
+\item Fiscal strength
+\begin{itemize}
+\item Low debt burden ratios, such as
+\begin{align*}
+\text{Debt}&:\text{GDP}, & \text{Debt}&:\text{Revenue}, & \text{Interest}&:\text{Revenue}.
+\end{align*}
+\end{itemize}
+\item Economic growth and stability
+\begin{multicols}{2}
+\begin{itemize}
+\item High real GDP growth 
+\item Large real economy size
+\item High GDP per capita
+\item Low GDP growth volatility
+\end{itemize}
+\end{multicols}
+\item External stability
+\begin{multicols}{2}
+\begin{itemize}
+\item High foreign currency reserves to GDP and to debt
+\item Low debt to GDP
+\item Over-reliance on a single commodity
+\end{itemize}
+\end{multicols}
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection{Credit analysis for corporate issuers}
+\begin{itemize}
+\item Similar to governments, analysis includes both qualitative and quantitative factors.
+\item Qualitative factors include
+\begin{itemize}
+\item Business model -- Business risk
+\item Comptetitive landscape -- Expected changes
+\item Deviations in revenue -- Issuer specific, industry specific, external
+\item Covenants -- Rights to issue further dbt, past actions of management
+\item Accounting policies -- Capitalising vs expensing, off-balance sheet expenses, changing auditors
+\end{itemize}
+
+\item Quantitative factors include
+\begin{itemize}
+\item Estimating future cash flows
+\begin{itemize}
+\item Factors driving probability of default \underline{and} loss given default
+\item Expected changes over the economic cycle
+\item Top-down, bottom-up, hybrid analysis
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c]}, width = 0.6\textwidth}
+\hline[1.25pt]
+\textbf{Top-down} & \textbf{Bottom-up} \\ \hline
+Industry size & Issuer-specifc assets \\
+Market share & Liabilities \\
+External shocks & Cash flows \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\end{itemize}
+\end{itemize}
+
+\item Factors that indicate higher-quality issuers include
+\begin{itemize}
+\item Strong operating profits, recurring revenues
+\item Low levels of leverage, less reliance of debt on capital structure
+\item High coverage of debt service payments from periodic income
+\item High levels of liquidity to meet short-term debt payments
+\end{itemize}
+
+\item Financial ratios used in credit analysis include
+\begin{itemize}
+\item EBITDA (Operating income + depreciation + amortisation)
+\begin{itemize}
+\item This does not adjust for capital expenditures or changes in working capital. Cash needed for these uses is not available to debt holders
+\end{itemize}
+\item CFO (Net cash paid / received in continuing operations)
+\begin{itemize}
+\item Net income + non-cash charges $-$ Increase in working capital
+\item Disclosed in the cash flow statement
+\end{itemize}
+\item FFO (Funds from operation)
+\begin{itemize}
+\item Net income + depreciation + amortisation + deferred tax + non-cash
+\item CFO excluding the change in working capital
+\end{itemize}
+\item FCF (Free cash flow)
+\begin{itemize}
+\item CFO $-$ fixed asset expenditure + net interest expense
+\item Represents discretionary cash flow of the company
+\item Could be paid to providers of finance after all obligations met
+\end{itemize}
+\item RCF (Retained cash flow)
+\begin{itemize}
+\item CFO $-$ dividends paid
+\end{itemize}
+\end{itemize}
+
+\item Ratios for corporate credit analysis include
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1.4,c] Q[m,2.8,c]}, width = 0.95\textwidth}
+\hline[1.25pt]
+\textbf{Type} & \textbf{Name} & \textbf{Calculation} \\ \hline
+Profitability & EBIT margin & $\dfrac{\text{EBIT}}{\text{Revenue}}$ \\
+Coverage & EBIT to interest expense & $\dfrac{\text{EBIT}}{\text{Interest expense}}$ \\
+Leverage & Debt to EBITDA & $\dfrac{\text{Debt}}{\text{EBITDA}}$ \\
+Leverage & RCF to net debt & $\dfrac{\text{RCF}}{(\text{Debt}-\text{Cash \& marketable securities})}$ \\ \hline[1.25pt]
+\end{tblr}
+\caption{Table listing commonly used ratios for corporate credit analysis}
+\end{table}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider the following two companies. Calculate the relevant ratios to determine what conclusions may be drawn about the two companies.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,l] r r}, width = 0.6\textwidth, rows = {fg = RedViolet}}
+\hline[1.25pt]
+& \SetCell[r=1,c=1]{c}\textbf{ABC corp.} & \SetCell[r=1,c=1]{c}\textbf{DEF corp.} \\ \hline
+Revenue & $2,200,000$ & $11,000,000$ \\
+Depr. and Amort. & $220,000$ & $900,000$ \\
+EBIT & $550,000$ & $2,250,000$ \\
+CFO & $300,000$ & $850,000$ \\
+Interest expense & $40,000$ & $160,000$ \\
+Total debt & $1,900,000$ & $2,700,000$ \\
+Cash + Marketable sec. & $500,000$ & $1,000,000$ \\
+Dividends & $30,000$ & $200,000$ \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+}
+
+{\color{RoyalBlue}
+\item[] Calculating the relevant ratios, we find
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1.5,l] c c}, width = 0.6\textwidth, rows = {fg = RoyalBlue}}
+\hline[1.25pt]
+& \textbf{ABC corp.} & \textbf{DEF corp.} \\
+EBIT Margin & \textbf{0.25} & 0.205 \\
+$\text{EBIT}:\text{Interest expense}$ & 13.75 & \textbf{14.06} \\
+$\text{Debt}:\text{EBITDA}$ & 2.47 & \textbf{0.857} \\
+$\text{RCF}:\text{Net debt}$ & 0.193 & \textbf{0.38} \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+
+Looking at this, we can conclude that while ABC corp. is more profitable, DEF corp is less reliant on debt
+}
+
+
+\end{itemize}
+
+
+\subsubsection{Priority of claims}
+\begin{itemize}
+\item In the event of default, each class of debt is ranked equally. The value of any remaining assets could deteriorate from loss of cusstomers / employees, as well as any legal costs.
+\item In order of highest to lowest seniority, the ranking of debt with regards to priority of claims over assets is given in table \ref{tbl-priority}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] |[1pt] Q[m,1,c] c}, width = 0.6\textwidth}
+\SetCell[c=2]{c}\textbf{Most senior} & & First lien on a specific asset \\
+& & Second lien ``Senior secured’’ \\
+& & Junior secured \\
+& & Senior unsecured \\
+& & Senior subordinated \\
+& & Subordinated \\
+& & Junior subordinated \\
+& & \emph{[Equity preferred]} \\
+\SetCell[c=2]{c}\textbf{Least senior} & & \emph{[Equity common]}
+\end{tblr}
+\caption{Ranking of different tiers of debt with regards to priority of claims over any assets}
+\label{tbl-priority}
+\end{table}
+
+
+
+\item Structural subordination occurs when both a parent company and subsidiary have outstanding debt. In theory, any cash from the subsidiary may be swept up by the parent company to service its own debt. This is called \underline{upstreaming}. Covenants may however be put in place to restrict this, in which case subsidiary bonds would have priority claim on the subsidiary cash.
+
+
+\end{itemize}
+
+\subsection{Fixed income securitisation}
+
+\begin{itemize}
+\item The securitisation process involves the following steps:
+\begin{enumerate}
+\item Bank makes loans to customers (``originates’’ the loan)
+\item Loans are pooled and sold to a special purpose entity / vehicle (``collateral pool’’)
+\item SPE issues fixed income securities supported by the cash flows from the collateral
+\end{enumerate}
+
+\item Securities are created from the underlying loan cash flows, and then sold on to investors. The loan pool serves as collateral for investors. We recall figure \ref{fig-waterfall} which demonstrates the csecuritisation process and the split into different tranches.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{\imgpath collateral_pool_diagram.pdf}
+  \caption*{Repeat of Figure \ref{fig-waterfall}: Waterfall structure of payments from a collateral pool through the tranches in order of seniority}
+\end{figure}
+
+\item In effect, the lender sells cash flows to the SPE, in order to boost their own liquidity. The process of securitisation connects owners of capital with those that require capital, and removes the originating bank from the process.
+\item The SPE is independent from any financial troubles of the lender.
+\item Different tranches of instrument allow for the risk level to be chosen. The equity tranche usually offers no fixed coupon payment, so the price behaves more like an equity than a bond.
+
+\item Benefits to the lender include
+\begin{itemize}
+\item Improvement in liquidity, through selling illiquid loans for cash.
+\item Risk is removed from the balance sheet
+\item Lower capital requires (as lower risk-weighted assets)
+\item Allows for increased business activity and profitability. The originator receives cash, which is used to make more loans
+\end{itemize}
+
+\item Benefits to investors include
+\begin{itemize}
+\item Tailored risk / return profile of tranche to meet requirements
+\item Allows access to returns from the collateral pool, without needing specialised resources and expertise in loan origination / servicing
+\item More liquid as a security than the underlying collateral
+\end{itemize}
+
+\item Benefits to economies and markets include
+\begin{itemize}
+\item Provides liquidity -- securitisation improves liquidity in financial markets
+\item Improved market efficiency (investor sets prices for market equilibrium)
+\item Lower financing costs (Originators receive cash in return for selling the loans)
+\item Lower leverage for originators
+\end{itemize}
+
+\item Risks to investors in ABS
+\begin{itemize}
+\item Cash flows from collateral to ABS are uncertain, due to variation and uncertainty in timing and size of cash flows
+\item Credit risk of collateral is passed on from the originator to the ABS investor
+\end{itemize}
+
+\item The trustee
+\begin{itemize}
+\item The trustee is appointed to overee the safekeeping of collateral owned by the SPE. This is a ``disinterested trustee’’, since there is no other interest in the structure. The SPE is ``bankruptcy-remote’’ from the originator.
+\end{itemize}
+
+\item ABS investors \underline{only} have claims against ABS collateral, and not on any assets of the originator. Important documents include
+\begin{itemize}
+\item Purchase agreement (Collateral sold to SPE)
+\item Prospectus (Terms of securitisation)
+\end{itemize}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} A motor company sells cars on retail installment plans. They are the originator of loans used by customers to finance their car purchases. Via a subsidiary, the motor company services the loans (responsible for payment taking and reposession). \\ \\
+Currently there are $50,000$ loans totalling $\$1,000,000,000$ which it wants to remove from the balance sheet. This acts as a source of funding / liquidity. In order to do this, they sell the loan to and SPE (in this case, an auto loan trust) for \$1B. This makes them ``bankruptcy-remote’’. \\ \\
+The SPE sells ABS to investors. The loan portfolio is the collateral which supports the ABS. Borrower cash flows are the source of funds used.
+}
+\end{itemize}
+
+
+\subsubsection*{ABS}
+\begin{itemize}
+\item Covered bonds are senior debt obligations (similar to ABS). They are:
+\begin{itemize}
+\item Typically mortgage loans (Issuer required to meet a particular cash flow schedule)
+\item Segregated from other issuer assets in a ``cover pool’’
+\item On the balance sheet, so no SPE is created. Assets remain on the balance sheet of issuer and need capital reserves
+\end{itemize}
+\item To mitigate credit risk,
+\begin{itemize}
+\item Over collateralisation (collateral is worth more than the loan itself)
+\item Dual recourse (Investors also have claim to issuer assets as well as the cover pool, in the event that the cover pool ceases to be sufficient)
+\item Mortgage LTV limits (Upper loan-to-value limits increase the collateral in the event of default
+\item Monitory (Typically through a third-party)
+\end{itemize}
+
+\item Covered bond provisions, in the event of issuer default
+\begin{itemize}
+\item Hard bullet-covered bonds are in default if the issuer fails to make a scheduled payment. (Acceleration in payments to covered bond holders)
+\item Soft bullet-covered bonds are those which may postpone default and payment acceleration for up to 1 year
+\item A conditional pass-through covered bond becomes a pass-through bond at maturity if any payments remain
+\end{itemize}
+
+\item Credit enhancement structures for ABS securities include
+\begin{itemize}
+\item Overcollateralisation (Value of collateral $>$ Value of ABS)
+\item Excess spread builds up reserves in an ABS structure by earning a higher coupon than is actually sold to investors
+\item Tranching into senior / mezzanine / equity
+\end{itemize}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider the following setup of an SPE
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {c Q[m,1,l] Q[m,0.8,r] Q[m,1,c]}, width = 0.7\textwidth, rows = {fg = RedViolet}}
+\SetCell[c=2]{c}\textbf{Tranche} & & \SetCell[r=1,c=1]{c}\textbf{Face value (\$)} & \textbf{Interest rate} \\ \hline
+A & Senior notes & $300,000,000$ & $\text{MRR}+0.5\%$ \\
+B & Subordinated & $80,000,000$ & $\text{MRR}+1.5\%$ \\
+C & Subordinated & $30,000,000$ & Variable \\ \cline{3}
+& & $410,000,000$
+\end{tblr}
+\end{table}
+
+\item[] In this structure, C will be the first tranche to absorb any losses. A has $\$110,000,000$ of protection, so bears the lowest credit risk of any of the tranches.
+
+
+}
+\end{itemize}
+
+\subsubsection*{Non-mortgage ABS}
+\begin{itemize}
+\item Business loans, accounts receivable, car loans, credit card loans
+\begin{itemize}
+\item Credit card receivables are backed by credit card debt
+\item Solar ABS are used to finance installation of solar panels on property
+\end{itemize}
+The ABS may be amortising or non-amortising, depending on the prospectus
+\end{itemize}
+
+\subsubsection*{Credit card, Solar ABS}
+\begin{itemize}
+\item Cash flows, interest, principal, membership, late fees
+\item Non-amortising (principal paid at borrower’s discretion
+\item Lockout period (interest-only) applies to principal payments. This prevents early repayment of the loan principal amount. This allows cash from investors to be used to buy additional receivables
+\item For solar ABS;
+\begin{itemize}
+\item This involves the use of ESG objectives, and may come in the form of both secured and unsecured loans
+\item Typically, these are made to individuals with high credit scores
+\item These often involve over collateralisation and excess spread
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Credit debt obligation instruments}
+\begin{itemize}
+\item CDOs, or credit debt obligations, are structured securities issued by an SPE for which the collateral offered is a pool of debt obligations
+\begin{itemize}
+\item CBOs (bond) are backed by corporate and EM debt
+\item CLOs (loan) are backed by a portfolio of leveraged bank loans
+\end{itemize}
+\item CDOs have a collateral manager, who dynamically buys and sells securities in the collateral pool to generate sufficient cash to make promised payments to investors
+\item CDOs are issued in subordinated tranches, much in the same way as shown in figure \ref{fig-waterfall}
+\end{itemize}
+
+\subsubsection{Types of CLO}
+\begin{itemize}
+\item Cash flow CLO (static)
+\begin{itemize}
+\item Generated from cash flows of underlying collateral
+\end{itemize}
+\item Market value CLO
+\begin{itemize}
+\item Generated from trading market value of underlying collateral
+\end{itemize}
+\item Synthetic CLO
+\begin{itemize}
+\item Generated through credit derivative contracts
+\item SPE sells credit insurance (CDS, Credit Default Swap), and earns the premiums, which are then paid to investors
+\item \underline{No collateral pool}
+\item Usually, investor funds are put into treasuries
+\end{itemize}
+\item CLO collateral
+\begin{itemize}
+\item Coverage of payment obligations
+\item Over collateralisation
+\item Diversification in collateral pool
+\item Credit quality limits
+\end{itemize}
+\end{itemize}
+
+\subsection{MBS securities}
+\begin{itemize}
+\item The borrower has the right to repay the loan early. In effect, they are long a call option. The borrower may repay faster or slower, depending on their individual circumstances
+\item The investor has no control. In effect they are short a call option, so will demand a higher yield to compensate them for that risk. Prepayment speed impacts the investor
+\item Prepayment risk
+\begin{itemize}
+\item Prepayments are repayments made in excess of the schedule for amortising loans
+\begin{itemize}
+\item Prepayment speeds: Uncertain -- MBS investors may be repaid faster or slower
+\item Contraction risk: Prepayments faster than expected (Occurs when rates fall)
+\item Extension risk: Prepayments slower than expected (Occurs when rates rise)
+\end{itemize}
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c]}, width = 0.8\textwidth}
+\hline[1.25pt]
+\textbf{Contraction risk} & \textbf{Extension risk} \\ \hline
+Rates fall & Rates rise \\
+Repayments rise & Repayments fall \\
+Pool contracts down, weighted average maturity falls & Pool contracts stable, weighted average maturity rises \\ \hline
+(Money in-hand, to be reinvested at a time of lower yields) & (Slower repayments so investor cannot capitalise on the higher yields available) \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+\item Time tranching may be used to balance extension / contraction risk
+\begin{itemize}
+\item This reapportions contraction / extension risk in an MBS structure. The SPE issues different bond classes with different maturities are issued.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
+\hline[1.25pt]
+\textbf{Shorter maturity} & \textbf{Longer maturity} \\ \hline
+Ealier prepayment & Later prepayment \\
+Extension risk lower & Contraction risk, reinvestment risk lower \\
+Contraction risk, reinvestment risk higher & Extension risk higher \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Residential mortgage loans (RMBS)}
+\begin{itemize}
+\item Residential property posted as collateral. This is generally more diversified and carries lower risk than CMBS (Commercial MBS)
+\item If the borrower defaults, the lender has a legal claim to the collateral.
+\begin{itemize}
+\item Takes possession of the property. Foreclosure means they can sell the property to recover the debt
+\end{itemize}
+\item LTV is the \% of collateral value loaned to the borrower. It is a measure of default risk
+\begin{gather*}
+\text{Low LTV} \Rightarrow \text{High borrower equity} \Rightarrow \text{Low risk} \\
+\text{High LTV} \Rightarrow \text{Low borrower equity} \Rightarrow \text{High risk}
+\end{gather*}
+
+\item Debt-to income ratio (DTI) is defined
+\begin{equation}
+\text{Debt-to-income} = \frac{\text{Monthly debt payments}}{\text{Monthly gross income}}.
+\end{equation}
+Prime loans tend to have a high LTV and low DTI
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider a borrower who wishes to take out a $300,000$ mortgage on a property valued at $400,000$. The annual interest rate is 6\%, repaid monthly over 25 years. The borrower has a pretax gros income of $80,000$.
+}
+{\color{RoyalBlue}
+\item[] The LTV is
+\begin{equation*}
+\text{LTV} = \frac{300,000}{400,000} = 75\%.
+\end{equation*}
+
+\item[] The monthly payment can be calculated as
+\begin{align*}
+N&=25\times12  & I / Y &=\frac{6\%}{12} & PV &=-300,000 & PMT &= & FV &=0
+\end{align*}
+which gives a monthly payment of $1,932.90$. Using this, the DTI is
+\begin{equation*}
+\text{DTI} = \frac{1,932.90}{\left( \frac{80,000}{12}\right)}=29\%
+\end{equation*}
+}
+
+\item Agency RMBS
+\begin{itemize}
+\item These are guaranteed by government / government-sponsored enterprises
+\begin{itemize}
+\item GNMA backed by US government
+\item FNMA, FHLMC, SLM backed by GSE
+\item High minimum underwriting standards required to qualify as collateral
+\end{itemize}
+The government guarantee reduces the credit risk associated with these securities
+\end{itemize}
+
+\item Non-agency RMBS
+\begin{itemize}
+\item These are issued by private entities, banks, and have no governmental guarantee.
+\item Credit enhancement through external insurance, letters of credit, tranching, and private guarantee
+\item The GFC caused losses ot non-agency RMBS backed by subprime mortgage collateral
+\end{itemize}
+
+\item Features of mortgages
+\begin{itemize}
+\item Prepayment penalty -- Additional payments to lenders if the principal is repaid early
+\item Non-recourse loans only have specified property as collateral
+\item Recourse loans give a claim to other assets owned by the borrower if foreclosure does not match the full outstanding debt repayment
+\item Negative equity if the mortgage balance exceeds the property value
+\end{itemize}
+
+\item Mortgage pass-through securities
+\begin{itemize}
+\item These represent a claim on the cash flows from a pool of mortgages (Net administration)
+\begin{itemize}
+\item Weighted average maturity and weighted average coupon are weighted by the outstanding principal balance
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] c Q[m,1,c] c Q[m,1,c]}, width = 0.75\textwidth}
+\textbf{\{Mortgages\}} & $\longrightarrow$ & \textbf{Pool} & $\longrightarrow$ & \textbf{\{Investors\}}
+\end{tblr}
+\end{table}
+\end{itemize}
+
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} Consider the following.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.85\textwidth}
+\hline[1.25pt]
+\textbf{Interest rate (\%)} & \textbf{Beginning balance} & \textbf{Current balance} & \textbf{Original term (months)} & \textbf{Time to maturity (months)} \\ \hline
+2.6 & $100,000$ & 90 & 240 & 210 \\
+1.0 & $200,000$ & 72 & 300 & 100 \\
+5.4 & $300,000$ & 247 & 360 & 280 \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+Calculate the weighted average maturity and weighted average coupon.
+}
+{\color{RoyalBlue}
+\item[] The total balance is
+\begin{equation*}
+90 + 72 + 247 = 409
+\end{equation*}
+\item[] The WAM is calculated as
+\begin{equation*}
+\text{WAM} = 210 \times \frac{90}{409} + 100 \times \frac{72}{409} + 280 \times \frac{247}{409} = 233 \text{ months}
+\end{equation*}
+\item[] The WAC is calculated as
+\begin{equation*}
+\text{WAC} = 2.6 \times \frac{90}{409} + 1.0 \times \frac{72}{409} + 5.4 \times \frac{247}{409} = 4\%
+\end{equation*}
+}
+\end{itemize}
+
+\subsubsection{Collateralised mortgage obligations}
+\begin{itemize}
+\item A CMO is a security that is collateralised by pass-through MBS and pools of mortgages
+\item Each CMO has multiple bond tranches with diffeent exposure to prepayment risk
+\begin{itemize}
+\item Institutional investors have different tolerances for rpepayment risk
+\item Contraction risk and extension risk exposures can be minimised
+\item CMOs partition cash flows from RMBS to better match investor preferences
+\end{itemize}
+\item Sequential pay CMOs are those which pay principal payments to tranches in a specific order
+\begin{itemize}
+\item Highe priority tranche is shorter, and so is protected from extension risk
+\item Low priority tranche is longer and so is protected from contraction risk
+\end{itemize}
+\item Other CMO structures include
+\begin{itemize}
+\item Z-tranches (accrual / accretion bonds)
+\begin{itemize}
+\item No-interest paid for a specific period
+\end{itemize}
+\item Prinicipal-only securites [Rates $\downarrow$, Value $\uparrow$]
+\begin{itemize}
+\item Pay \underline{only} principal from collateral. Faster payments imply a higher return
+\end{itemize}
+\item Interest-only securities [Rates $\uparrow$, Value $\uparrow$]
+\begin{itemize}
+\item Pay \underline{only} interest from collateral. Slower payments imply a higher return
+\item These exhibit negative convexity since rates and value move in the same direction
+\end{itemize}
+\item Floating rate tranches
+\begin{itemize}
+\item Coupon linked to variable market reference rate
+\item Inverse floaters are possible (Coupon = x\% $-$ MRR)
+\end{itemize}
+\item Residual tranche
+\begin{itemize}
+\item Equity tranche (most junior tranche available)
+\end{itemize}
+\item Planned amortisation class tranches (PAC)
+\begin{itemize}
+\item Pay predictable level of payments to investors to protect them from both extension and contraction risk
+\item A ``support tranche’’ receives prepayments to protect CMO investors from acceleration of payments
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Commercial mortgage-backed securities}
+\begin{itemize}
+\item CMBS securities include apartments, industrial property and office buildings, amongst other holdings
+\begin{itemize}
+\item Typically there are fewer mortgages in the collateral pool, as each property involves larger loan sizes than RMBS
+\item Commercial mortgages are paid by real estate investers who rely on income from tenants to provide cash flows to service the loans
+\begin{equation}
+\text{Weighted-average mortgage proceeds} = \text{WAC}
+\end{equation}
+\end{itemize}
+\item There is a greater focus on credit risk
+\begin{itemize}
+\item Income generated from property pays the debt. The credit risk is calculated based on the property, not the issuer themselves
+\end{itemize}
+
+\item Debt service coverage ratio is defined as
+\begin{equation}
+\text{DSCR} = \frac{\text{Net operating income}}{\text{Debt service}},
+\end{equation}
+and LTV is defined in a similar manner to before, as
+\begin{equation}
+\text{LTV} = \frac{\text{Current mortgage amount}}{\text{Current appraised value}},
+\end{equation}
+where we use the appraised value due to lack of real-time data on property prices
+
+\item Call protections may be implemented, which restrict early return of principal.
+\item Loan-level protection includes
+\begin{itemize}
+\item Prepayment lockout -- Borrower cannot repay the loan within a given time frame
+\item Prepayment penalty points -- Penalty fee on principal repayments
+\item Defeasance -- Borrower buys government securities which are sufficient ot make the scheduled loan repayments. This allows the borrower to reomvoe lenders’ lien if sold
+\end{itemize}
+\item Balloon payment
+\begin{itemize}
+\item Commerical mortgages are not fully amortised, so some principal may remain
+\item Ballon risk is the risk fo the borrower being unable to arrange finance to make the balloon payment, leading to borrower default. In this event, a workout period may be agreed with the lender. This introduces extension risk.
+\end{itemize}
+\end{itemize}
+\end{document}
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.6\textwidth]{\imgpath ABCP.pdf}
+%  \caption{Figure with relative path}
+%\end{figure}

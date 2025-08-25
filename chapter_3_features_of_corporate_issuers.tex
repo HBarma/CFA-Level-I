@@ -1,0 +1,637 @@
+\documentclass[../notes_compiled.tex]{subfiles}
+
+
+\begin{document}
+
+\section{Features of Corporate Issuers}
+\subsection{Organisational forms of businesses}
+\begin{itemize}
+\item The following key questions are used to differentiate different organisational forms of businesses.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1.2,c] Q[m,1,c] Q[m,1,c]}, width = 0.9\textwidth}
+Legal entity & Management & Access to capital & Liability & Tax status
+\end{tblr}
+\end{table}
+\begin{enumerate}
+\item Sole proprietorship -- owned and operated by an individual
+\begin{itemize}
+\item Sole claim to profits
+\item Personally liable for claims against business
+\item Profits taxed as personal income [No separate legal entity]
+\end{itemize}
+\item General partnership -- owned and operated by 2+ individuals
+\begin{itemize}
+\item Partnership agreement states claims to profits and division of responsibilities for operation of the business
+\item General partners are personally liable for any claims
+\item Profits are taxed as personal income
+\end{itemize}
+\item Limited partnership -- general and limited partners own the business
+\begin{itemize}
+\item General partners operate the business, and are personally liable for any claims
+\item Limited partners are only liable for the amount they invest (a ``buy-in'')
+\item Partnership agreement states claim to and division of profits
+\item Profits are taxed as income
+\end{itemize}
+\item Corporation -- legal entity separate from the owners
+\begin{itemize}
+\item Owners appoint managers to operate the business
+\item Owners only are liable for the amount they invest
+\item Profits are taxed at the corporate level
+\item Dividends distributed are taxed as personal income, and so are subjected to \textbf{double taxation}
+\end{itemize}
+\end{enumerate}
+We also note the following definitions:
+\begin{gather}
+\text{Effective tax rate} = \frac{\text{Total tax paid}}{\text{Earnings before tax}} \\
+\text{After-tax income} = \text{Net income}
+\end{gather}
+\end{itemize}
+
+\subsection{Private and public corporations}
+\begin{itemize}
+\item Public corporations
+\begin{itemize}
+\item Shares trade on an organised exchange
+\item Minimum designated number of owners
+\item Free float is the number of shares not held by insiders, strategic investors, etc., and is commonly expressed as a \%.
+\end{itemize}
+\item A private corporation is one which does not meet any of the above criteria. Private corporations may however become public through:
+\begin{enumerate}
+\item IPO -- Allows for raising of outside funds
+\item Acquisition by a public company / corporation
+\item Direct listing of shares -- No external funds raised
+\item Special purpose acquisition company
+\end{enumerate}
+Similarly, public corporations may become private through
+\begin{enumerate}
+\item Leveraged buy-out (LBO) -- external investors take on a significant portion of debt to buy out all existing shareholders
+\item Management buy-out (MBO) -- existing managers of the company use debt to buy out all existing shareholders
+\end{enumerate}
+A private corporation can raise capital in equity through private placement of shares, though this may only be with accredited investors.
+\end{itemize}
+
+\subsection{Stakeholders and ESG factors}
+\begin{itemize}
+\item Claims of lenders and owners differ, as do their priorities when it comes to running the business and decision making. Debt holders have a legal claim to the principal and interest owed to them by a corporation. They have limited upside (full repayment), but have claim priority over equity holders. Equity holders (owners) have a residual claim to profits (after all other claims are paid). They have a potentially unlimited upside
+\end{itemize}
+\subsubsection{Impact of leverage on return on equity (ROE)}
+\begin{itemize}
+\item A company may take on leverage in order to increase the ROE for its shareholders. Return on equity is defined as
+\begin{equation}
+\text{ROE} = \frac{\text{Net Income}}{\text{Equity}}
+\end{equation}
+An example of how this may work can be seen below:
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,l] Q[m,1,c] Q[m,1,c]}, width = 0.85\textwidth, rows = {fg = RedViolet}}
+& \textbf{100\% equity} & \textbf{50\% equity 50\% debt} \\
+\textbf{+ Revenue} & 1000 & 1000 \\
+\textbf{-- Operating Expense} & 800 & 800 \\
+\textbf{-- Interest @10\%} & 0 & 50 \\ \hline[1.25pt]
+\textbf{= Net income} & 200 & 150 \\ \\
+\SetCell[r=1,c=1]{c}\textbf{Equity} & 1000 & 500 \\
+\SetCell[r=1,c=1]{c}\textbf{ROE} & $\frac{200}{1000} = 20\%$ & $\frac{150}{500}=30\%$
+\end{tblr}
+\end{table}
+and so it is clear how the introduction of a debt component increases the return on equity to shareholders. The greater the leverage, the greater the magnification of the ROE.
+\item In terms of preferences, equity holders would tend to favour increasing growth and taking on more risk in terms of management direction, but this may be opposed by debt holders, or even restricted by debt covenants.
+\item Corporate governance refers to internal controls and procedures for managing a company.
+\begin{itemize}
+\item Shareholder theory -- Focus on interest of company's owners
+\item Stakeholder theory -- Focus on interest of stakeholder groups and managing conflicts of interest
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
+\hline[1.25pt]
+&\textbf{Internal} & \textbf{External} \\ \hline[1.25pt]
+Shareholders & Board of directors & Creditors \\
+& Senior managers & Suppliers \\
+& Employees & Customers \\
+& & Government / regulator \\ \hline[1.25pt]
+\end{tblr}
+\caption{The split of stakeholders between those internal and external to the company}
+\end{table}
+The various stakeholders have different priorities. A non-exhaustive list for each can be found in table \ref{stakeholders}. 
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,0.5,c] Q[m,6,l]}, width = 0.75\textwidth}
+\hline[1.25pt]
+\textbf{Stakeholder} && \textbf{Priorities} \\ \hline[1.25pt]
+Shareholder && Maximise shareholder wealth \\
+Bondholder && Safety -- low risk strategy and undertakings \\
+Board of directors && Inside vs independent; supervisory vs management \\
+Employees && Stability, wage, career advancement \\
+Suppliers && Stability, growth, fair trade \\
+Customers && Quality, warranty, reasonable price \\
+Government && Tax, economic growth, compliance \\ \hline[1.25pt]
+\end{tblr}
+\caption{A table with a non-exhaustive list of priorities for each of the broad groups of stakeholders in a business}
+\label{stakeholders}
+\end{table}
+
+\item ESG considerations are evaluated by both equity and debt investors.
+\begin{itemize}
+\item Environmental and social factors are increasingly regulated
+\item ESG impact may be material, carrying downside risks
+\item Negative externalities (consequences of a company's actions) are regulated
+\item Debt investors are relatively less impacted by ESG-related risks. Longer-maturity debt is more likely to be affected
+\end{itemize}
+\item ESG factors
+\begin{itemize}
+\item Environmental factors can affect transition work and stranded assets
+\item Social factors can affect employee productivity, ability to hire / retain staff, and the company's image
+\item Governance factors can result in inadequate internal controls, resulting in shareholder losses
+\end{itemize}
+\end{itemize}
+
+\subsection{Corporate governance}
+\begin{itemize}
+\item The principal-agent relationship is one between the owners (shareholders) and managers of a business. There is an information asymmetry present -- the managers have access to much more information in the process of running the business. 
+\item An agent (senior managers) is hired to act in the interests of the principal (shareholders). However they have competing interests. A director / manager may prefer a lower level of risk to ensure stability, compared to shareholders who would be interested in maximising value.
+\end{itemize}
+\subsubsection{Stakeholder management}
+\label{voting}
+\begin{itemize}
+\item The relationship with shareholders is maintained through
+\begin{itemize}
+\item  AGM
+\item Extraordinary general meetings (for special resolutions)
+\item Proxy voting
+\begin{itemize}
+\item Majority -- one vote per share for each board seat
+\item Cumulative -- votes available to be cast for each shareholder is given by shares $\times$ seats. These can be split in any way between the candidates. So for instance, a shareholder may place all their votes for one board candidate. This gives more power to minority investors
+\end{itemize}
+\item Activist investors / shareholders
+\begin{itemize}
+\item Proxy contest
+\item Hostile takeovers
+\end{itemize}
+\end{itemize}
+
+\item The relationship with creditors is maintained through
+\begin{itemize}
+\item Bond indentures (agreements) and covenants (terms)
+\item Collateral -- secured debt
+\item Financial institution trustees to monitor compliance with covenants
+\item Creditor committees (may be required in the event of  bankruptcy)
+\end{itemize}
+
+
+\item Boards of directors include the following committees:
+\begin{enumerate}
+\item Audit
+\begin{itemize}
+\item Oversight of financial reporting, implementation of accounting policies
+\item Effectiveness of internal controls and internal audit function
+\item Recommendation of external auditors / compensation
+\item Acting on results of internal / external audits
+\end{itemize}
+\item Nominating / governance committee
+\begin{itemize}
+\item Oversight of corporate governance code (including board elections)
+\item Setting policies for nomination of candidates for board membership
+\item Implementing / setting a code of ethics
+\item Monitoring changes in laws an regulations
+\item Ensuring a firm remains compliant
+\end{itemize}
+\item Remuneration
+\begin{itemize}
+\item Compensation paid to directors / senior managers
+\item Employee benefit plans
+\item Should be comprised wholly of independent directors
+\end{itemize}
+\item Other industry-specific committees
+\end{enumerate}
+
+\item Relationship with employees, suppliers, customers, and government is maintained through
+\begin{itemize}
+\item Labour laws, employment contracts, unions
+\item Employee stock ownership plans (mitigates principal - agent dilemma)
+\item Social media
+\item Contracts with suppliers (fair, long-term minded)
+\item Regulations, governance codes
+\end{itemize}
+
+\item[]
+\item Risks of poor management include
+\begin{itemize}
+\item Exploitation of weaker groups of shareholders
+\item Accounting fraud
+\item Suboptimal risk taking
+\item Related-party transactions
+\item Legal and reputational risks
+\item Default / bankruptcy
+\end{itemize}
+
+\item[]
+\item Benefits of effective management include
+\begin{itemize}
+\item Higher operational efficiency, thus resulting in higher profits
+\item Alignment of interests of all stakeholders
+\item Reduction of legal and financial risks
+\end{itemize}
+\end{itemize}
+
+\subsection{Liquidity measures and management}
+\begin{itemize}
+\item The cash conversion cycle is an important metric for many business. It gives an estimate for how long it takes for cash to be put through the business. It is defined numerically as
+\begin{multline}
+\text{CCC} = \text{Days of inventory on hand} + \underbrace{\text{Days sales outstanding}}_{\text{Collection period}} - \\ \underbrace{\text{Days payables outstanding}}_{\text{Time to pay suppliers}}. \label{ccc}
+\end{multline}
+It is obvious that the cash conversion cycle is minimised by carrying low inventory, collecting payment very quickly, and having a long time to pay suppliers. However, each of these factors has their own considerations.
+\begin{itemize}
+\item If inventory is too low, sales may fall as insufficient inventory is held to cover any potential sales increase
+\item If collection period is too short, some potential customers may not be able to buy products
+\item If days payable is too long, supplier may charge more.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{The effective annual rate}
+\begin{itemize}
+\item The effective annual rate (EAR) is relevant when suppliers offer a discount for early repayment. It is defined
+\begin{equation}
+\text{EAR} = \left( 1+\frac{a}{1-a}\right)^{\frac{365}{c-b}}-1, \label{EAR}
+\end{equation}
+where the variables have the following definitions.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,5,l]}, width = 0.65\textwidth}
+$a$ & Discount (provided by supplier) \\
+$b$ & Number of days to pay to avail discount \\
+$c$ & Number of days without discount
+\end{tblr}
+\end{table}
+The notation for this is given as $a$/$b$ net $c$ terms.
+{\color{RedViolet}
+\item[] \textbf{EXAMPLE:} If a company is given a 2\% discount if invoices are paid within 10 days, and otherwise are given 30 days to pay, is the discount worth taking, given that the cost of borrowing from the bank is 8\%?
+}
+{\color{RoyalBlue}
+\item[] Equation \ref{EAR} tells us that
+\begin{equation*}
+\text{EAR} = \left(1+\frac{0.02}{0.98}\right)^{\frac{365}{30-10}}-1 = 44.6\%.
+\end{equation*}
+So, the cost of not using the discount is $44.6\%$. Given the bank loan interest rate is 8\%, then the company is better off taking the discount and financing the early purchase with a loan from the bank as they are only paying 8\%, instead of 44.6\%.
+}
+\end{itemize}
+
+\subsubsection{Liquidity sources}
+\begin{itemize}
+\item In general, a business will have two broad categories of liquidity sources:
+\begin{enumerate}
+\item Primary sources 
+\begin{itemize}
+\item Cash, marketable securities on hand
+\item Bank loans
+\item Cash generated from business
+\end{itemize}
+\item Secondary sources
+\begin{itemize}
+\item Suspension of dividends
+\item Delaying / reducing capital expenditures
+\item Selling assets
+\item Issuing equity . debt
+\item Restructuring debt
+\item Bankruptcy
+\end{itemize}
+\end{enumerate}
+A company will maintain a cash buffer to cover changes in the CCC (equation \ref{ccc}). The cost of liquidity is given by
+\begin{equation}
+\text{Cost of liquidity} = \frac{\text{Cost of liquidation}}{\text{Fair market value}}.
+\end{equation}
+
+\item An example of the cost of liquidity is as follows
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec={Q[m,2,c] Q[m,1,c] Q[m,0.85,c]}, width = 0.75\textwidth, rows = {fg = RedViolet}}
+\hline[1.25pt]
+& \textbf{Fair market value (\$,000)} & \textbf{Liquidation cost (\%)} \\ \hline[1.25pt]
+Cash and marketable securities & 100 & 0 \\
+Inventory and receivables & 200 & 15 \\
+Empty warehouse & 300 & 30 \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec={Q[m,1.5,c] Q[m,1,c]}, width = 0.65\textwidth, rows = {fg = RedViolet}}
+\hline[1.25pt]
+\textbf{Net Proceed} & \textbf{Liquidation cost} \\ \hline[1.25pt]
+$100\times (1-0) = 100$ & 0 \\
+$200\times (1-0.15) = 170$ & 30 \\
+$300\times (1-0.3) = 210$ & 90 \\ \hline[1.25pt]
+\end{tblr}
+\end{table}
+{\color{RedViolet}
+so, from this we can clearly see the cost of liquidity is given by
+\begin{equation*}
+\text{Cost of liquidity} = \frac{0+30+90}{100+200+300} = 20\%
+\end{equation*}
+}
+\item An increase in the CCC reduces liquidity:
+\begin{itemize}
+\item A drag on liquidity is where inflows lag (increase in DOH and DSO)
+\item A pull on liquidity is where outflows accelerate (reduced credit terms)
+\end{itemize}
+\item Apart from the CCC, we can analyse the working capital as a \% of sales relative to industry averages over time.
+\begin{equation}
+\text{Total working capital} = \text{Current assets} - \text{Current liabilities}
+\end{equation}
+\begin{multline}
+\text{Net working capital} = \text{Current assets (ex. cash and marketable securities)} - \\ \text{Current liabilities (ex. debt)}
+\end{multline}
+\item We can also quantify liquidity using the following ratios
+\begin{align}
+\text{Current ratio} &= \frac{\text{Current assets}}{\text{Current liabilities}} & &\text{(short-term)} \\
+\text{Quick ratio} &= \frac{\text{Cash + Short-term securities + Receivables}}{\text{Current liabilities}} & &\text{(Exclude inventory)} \\
+\text{Cash ratio} &= \frac{\text{Cash + Short-term securities}}{\text{Current liabilities}} & &\text{(cash on hand)}
+\end{align}
+\end{itemize}
+\subsection{Working capital and short-term funding}
+\begin{itemize}
+\item A business must allocate enough of their assets to working capital in order to meet operating needs of the business. This includes but is not limited to:
+\begin{itemize}
+\item Holding sufficient inventory
+\item Accounts receivable to extend credit to customers
+\item Cash to manage day-to-day fluctuations
+\end{itemize}
+Note that the working capital requirements will be determined by the nature of a specific business
+\item Working capital and liquidity strategies can vary as shown in table \ref{working-cap-liquidity}
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = { Q[m,1,c] Q[m,4,l]}, width = 0.85\textwidth}
+\textbf{Conservative strategies} & High working capital as percentage of sales \newline Finance with equity or long-term debt \newline $\rightarrow$ Greater financial flexibility, lower ROA \\
+\textbf{Aggressive strategies} & Low working capital as percentage of sales \newline Finance with short-term debt \newline $\rightarrow$ Higher ROA, higher risk of short-term funding gap \\
+\textbf{Moderate strategies} & Fund permanent current assets with equity / long-term debt \newline Fund variable / seasonal current assets with short-term debt
+\end{tblr}
+\caption{Table to show characteristics of different working capital and liquidity strategies}
+\label{working-cap-liquidity}
+\end{table}
+\item Short-term liquidity sources are affected by
+\begin{itemize}
+\item Company size -- easier for large firms
+\item Credit worthiness -- easier for mature firms
+\item Legal systems -- protections for lenders
+\item Regulatory concerns -- restrictions on debt
+\item Underlying assets
+\end{itemize}
+amongst other idiosyncratic factors
+\end{itemize}
+
+\subsection{Capital investments and project measures}
+\begin{itemize}
+\item Capital investments are those which have a life of greater than one year, or are multi-year projects. There are two types of capital allocation projects
+\begin{enumerate}
+\item Business maintenance investments
+\begin{itemize}
+\item Going concern (replacement, cost reduction)
+\item Regulatory / compliance projects
+\end{itemize}
+\item Business growth investments
+\begin{itemize}
+\item Expansion projects
+\item Other projects that increase company size / scope
+\end{itemize}
+\end{enumerate}
+
+\item Capital allocation process is used to determine / select profitable capital allocation projects. It involves the following steps
+\begin{enumerate}
+\item Generate ideas
+\item Analyse project proposals
+\item Create capital budget for the firm -- ``capital rationing''
+\item Monitor decisions and conduct a post-audit
+\end{enumerate}
+\end{itemize}
+
+\subsubsection{Net present value (NPV)}
+\begin{itemize}
+\item The net present value (NPV) is defined as
+\begin{equation}
+NPV = \text{Present value of inflows} - \text{Present value of outflows}.
+\end{equation}
+Mathematically, this is written as
+\begin{equation}
+NPV = \sum_{i=0}^{n} \frac{CF_{i}}{(1+k)^{i}},
+\end{equation}
+where $k$ is the cost of capital. The hurdle rate is the risk adjusted discount rate. For all projects, an $NPV$ greater than 0 results in a project being profitable.
+\item[] The NPV is the expected change in value of the firm, in current PV dollars from the project. For independent projects, all projects should be accepted where NPV is greater than 0.
+\end{itemize}
+
+\subsubsection{Internal rate of return (IRR)}
+\label{irr}
+\begin{itemize}
+\item This is the expected return on a project, in other words the discount rate that results in a PV of 0. Mathematically speaking, 
+\begin{equation*}
+PV_{inflows} = PV_{outflows}
+\end{equation*}
+If $NPV>0$, then $IRR>\text{cost of capital}$ AND $PV_{inflows}>\text{Initial cash outlay}$.
+\item Conventional cash flows have \textbf{only one} outflow at the beginning.
+\item For independent projects, IRR and NPV give the same accept / reject decisions.
+\item For mutually exclusive projects, , the IRR and NPV may differ, based on the timing of cash flows, or different sizes of cash outlay, $CF_{0}$
+\begin{itemize}
+\item IRR assumes CF reinvestment at project's IRR
+\item NPV assumes CF reinvestment at cost of capital (more conservative)
+\end{itemize}
+\item Looking at IRR alone can sometimes cause issues. In some cases, there may be multiple or no IRR that solves the problem. This is not the case when there is only one sign change from cash outflows, to cash inflows. \textbf{NPV does not have this problem}. IRR does however provide the relative cushion over the hurdle rate.
+\end{itemize}
+
+\subsubsection{Capital allocation principles and real options}
+\begin{itemize}
+\item Principles of capital allocation are
+\begin{itemize}
+\item Decisions should be based on changes in after-tax cash flows
+\item Only consider incremental ``relevant'' cash flows
+\begin{itemize}
+\item \textbf{Do not} consider sunk costs
+\item Consider cash opportunity costs
+\item Consider externalities -- cannibalisation of existing products, etc.
+\end{itemize}
+\item Timing of cash flows is important
+\item \textbf{Do not} consider project-specific financing costs
+\end{itemize}
+\item Common mistakes can be split into two broad categories
+\begin{itemize}
+\item Cognitive (calculations)
+\begin{itemize}
+\item Poor forecasting -- allocation of overhead expenses, neglecting competitor response
+\item Incorrectly accounting for inflation -- Real (nominal) cash flows discounted at real (nominal) rates
+\item Not considering the cost of internal funds -- retained earnings are \textbf{not} free
+\end{itemize}
+\item Behavioural
+\begin{itemize}
+\item Pet projects of senior managers
+\item Inertia in setting initial capital budget
+\item Basing decisions on EPS and ROE
+\item Failure to generate alternative ideas
+\end{itemize}
+\end{itemize}
+\item Real options are future actions a firm can take if they invest in a project today
+\begin{itemize}
+\item Timing option -- delay investment until more information is available
+\item Abandonment option -- Stop the project if $PV_{\text{stop}}>PV_{\text{continue}}$
+\item Expansion / growth option -- Price setting (based on demand); Production flexibility (inputs variety of product)
+\item Fundamental option -- Project payoffs depend on the price of the underlying.
+\begin{equation*}
+\text{Project NPV (without option)} >0\Rightarrow\text{Accept}
+\end{equation*}
+Otherwise, add the option value net of any associated costs and recheck if the present value is greater than zero.
+\end{itemize}
+\end{itemize}
+
+\subsection{Return on invested capital}
+\begin{itemize}
+\item Return on invested capital (ROIC) is defined as
+\begin{equation}
+ROIC = \frac{\text{After tax operating profit}}{\text{Average book value of invested capital}}.
+\end{equation}
+In this equation, the after tax operating profit is unlevered, and given by $EBIT-T$. The average book value of invested capital is the average debt and equity level, which includes equity, long-term date, and excludes working capital. This is an accounting metric, so ignores the time value of money.
+\item A firm can be said to be adding value if its $ROIC>\text{Required rate of return}$.
+\end{itemize}
+
+\subsection{Capital structure}
+\begin{itemize}
+\item Capital structure refers to the debt / equity ratio that comprises a firm
+\item Proportions of debt and equity are determined by the following factors
+\begin{itemize}
+\item Internal
+\begin{itemize}
+\item Industry / company characteristics
+\item Debt capacity
+\item Corporate tax rate
+\item Management preferences, industry norms
+\end{itemize}
+\item External
+\begin{itemize}
+\item Market conditions and business cycle
+\item Regulation
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Weighted average cost of capital}
+\label{sec-wacc}
+\begin{itemize}
+\item The weighted average cost of capital (WACC) is defined as
+\begin{equation}
+WACC = w_{d}r_{d}(1-t)+w_{e}r_{e}, \label{wacc}
+\end{equation}
+where the variables have the following definitions.
+\begin{table}[h!]
+\centering
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,5,l]}, width = 0.65\textwidth}
+$w_{d}$, $w_{e}$ & Weight of debt, equity in the capital structure \\
+$r_{d}$, $r_{e}$ & Required return of debt, equity \\
+$t$ & Tax rate
+\end{tblr}
+\end{table}
+
+The $(1-t)$ term reduces the cost of debt, because debt interest payments are usually made from pre tax earnings, rather than post-tax earnings.
+\end{itemize}
+
+\subsubsection{Industry / company characteristics}
+\begin{itemize}
+\item Companies with stable, predictable, recurring sales and cash flows are able to take on a higher proportion of debt. This tends to apply to companies with the following characteristics
+\begin{itemize}
+\item Non-cyclical
+\item Low operating leverage (low fixed costs)
+\item Subscription-based revenue models
+\end{itemize}
+\item Companies with high levels of assets available to be offered as collateral may also take on higher proportions of debt. This collateral may come in the form of
+\begin{itemize}
+\item Tangible assets
+\item Liquid assets
+\item Fungible assets (easy to substitute)
+\end{itemize}
+
+\item During business cycle expansions, debt is more widely available to companies, as well as being at lower cost to them. In addition, high corporate tax rates increase the value of the tax shield from deductibility of paid interest (the $(1-t)$ term in equation \ref{wacc}
+\item For some firms, capital adequacy regulations may demand a minimum level of equity
+\end{itemize}
+
+\subsection{Company Life Cycle Stage}
+\begin{enumerate}
+\item Start-up stage
+\begin{itemize}
+\item Equity only (high risk, little collateral to offer)
+\item Convertible debt for high-growth companies
+\end{itemize}
+\item Growth stage
+\begin{itemize}
+\item Revenue and cash flow increasing
+\item Mostly equity but some debt. Often, the debt is collateralised with assets
+\end{itemize}
+\item Mature stage
+\begin{itemize}
+\item Risk lower, cash flow significant and stable
+\item Debt used widely, both secured and unsecured debt is available at low cost
+\end{itemize}
+\end{enumerate}
+
+
+
+
+\subsection{Business model features and types}
+\begin{multicols}{2}
+\begin{itemize}
+\item Customers
+\begin{itemize}
+\item B2B 
+\item B2C 
+\item Government
+\end{itemize}
+\item Differentiation from competitors
+\begin{itemize}
+\item Price
+\item Quality
+\item Innovative solution
+\end{itemize}
+\item Sales method
+\begin{itemize}
+\item Direct
+\item Through intermediaries (wholesalers / retailers)
+\item Alternatives to outright sales
+\begin{itemize}
+\item Subscription models
+\item Licensing and franchising
+\end{itemize}
+\end{itemize}
+\item Key assets and supplies
+\begin{itemize}
+\item Expertise
+\item Skilled employees
+\item Patents
+\item Software
+\item Supplies
+\item[]
+\item[]
+\end{itemize}
+\item Pricing strategies
+\begin{itemize}
+\item Price discrimination
+\item Tiered, dynamic, auction pricing
+\item Penetration pricing -- temporarily low to grow market share
+\item Freemium pricing -- basic fee, add-ons at cost
+\item Hidden revenue pricing -- i.e. advertising revenue
+\item Bundling
+\item Razors and blades
+\item Options and add-ons
+\end{itemize}
+\item Value proposition
+\begin{itemize}
+\item Customer's perception with respect to competitors
+\item \textbf{Value chain} -- assets of the firm and firm activities that will create value and exploit competitive advantages
+\end{itemize}
+\item Private label manufacturers
+\begin{itemize}
+\item Licensing agreements
+\item Value-added resellers (customisation)
+\end{itemize}
+\item Network effects -- Increase in network value as it grows
+\item Crowd sourcing -- User input increases value of the product
+\end{itemize}
+\end{multicols}
+
+\end{document}
