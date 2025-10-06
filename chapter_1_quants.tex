@@ -8,24 +8,24 @@
 \subsection{Interest rates and return measurement}
 \label{ssec-rates-and-return}
 \begin{itemize}
-\item Interest rates measure the time value of money
-\item Equilibrium interest rates are equivalent to a \textbf{required rate of return}, and may also be referred to as a \textbf{discount rate}. This can be considered to be the \emph{opportunity cost of current consumption}.
-\item The \textbf{real risk-free rate} is a theoretical construct, and has no embedded risk of inflation or default. This is a \emph{time preference}, and implies the desire to consume in the present as opposed to the future.
+\item Interest rates measure the time value of money.
+\item Equilibrium interest rates are equivalent to a \textbf{required rate of return}, and may also be referred to as a \textbf{discount rate}. This can be considered to be the \underline{opportunity cost of current} \underline{consumption}.
+\item The \textbf{real risk-free rate} is a theoretical construct, and has no embedded risk of inflation or default. This is a \underline{time preference}, and implies the desire to consume in the present as opposed to the future.
 \item The \textbf{nominal risk-free rate} includes an inflation premium.
 \begin{align}
 (1+r_{f,\text{ nominal}}) &= (1+r_{f,\text{ real}})\times(1+r_{\text{inflation}}),
 \label{nominal} \\
 r_{f,\text{ nominal}} &\simeq r_{f,\text{ real}} + r_{\text{inflation}}.
 \end{align}
-\item There are several risk premia which may also be added to turn the nominal risk-free interest rate into a nominal interest rate. These may include the following:
+\item There are several risk premia which may also be added to turn the real risk-free interest rate into a nominal interest rate. These may include the following:
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[t,1.5,l] Q[t,5,l]}, width = 0.9\textwidth}
 \hline[1.25pt]
 Default risk & Risk of payments not being made on time \\
 Liquidity risk & Risk of not being able to sell at fair value if an investment must be sold quickly\\
-Maturity risk & Risk due to capital being tied up for longer, as the prices of longer-term bonds are typically subject to greater volatility \\
+Maturity risk & Risk due to capital being tied up for longer, as the prices of longer-term bonds are typically more volatile \\
 \hline[1.25pt]
 \end{tblr}
 \caption{Risk premia used to convert a real interest rate into a nominal interest rate}
@@ -45,11 +45,11 @@ r_{f,\text{ nominal}} \approx r_{f,\text{ real}} + \text{inflation premium} +\te
 \begin{itemize}
 \item The \textbf{holding period return} is the return from an investment over any chosen period, and can be expressed as either of the two equivalent formulae below.
 \begin{align}
-HPR &= \frac{P_{1} - P_{0}+\sum CF}{P_{0}}, \label{hpr} \\
+HPR &= \frac{P_{1}+\sum CF - P_{0}}{P_{0}}, \label{hpr} \\
 HPR &= \frac{P_{1}+\sum CF}{P_{0}}-1.
 \end{align}
 
-\item[] In order to annualise an $HPR$, this can be done using the following.
+\item[] In order to annualise an $HPR$, this can be done using the following,
 \begin{equation}
 r_{\text{annualised}} = (1+HPR)^{\frac{365}{\text{days}}}-1. \label{annualhpr}
 \end{equation}
@@ -57,7 +57,7 @@ r_{\text{annualised}} = (1+HPR)^{\frac{365}{\text{days}}}-1. \label{annualhpr}
 
 \item Holding period returns may be linked over multiple time periods.
 \begin{itemize}
-\item The arithmetic mean ignores any compounding effects
+\item The arithmetic mean ignores any compounding effects,
 \begin{equation}
 \overline{x}_{\text{Arithmetic}} = \frac{\sum_{i=1}^{N} x_{i}}{N}.
 \end{equation}
@@ -65,10 +65,10 @@ r_{\text{annualised}} = (1+HPR)^{\frac{365}{\text{days}}}-1. \label{annualhpr}
 \begin{equation}
 \overline{x}_{\text{Geometric}} = \sqrt[N]{\prod_{i=1}^{N}(1+x_{i})} - 1.
 \end{equation}
-\item[] where each $r_{i}$ is over the same time period.
+\item[] where each $x_{i}$ is over the same time period.
 \end{itemize}
 
-\item The \textbf{harmonic mean} is defined as follows
+\item The \textbf{harmonic mean} is defined as follows,
 \begin{equation}
 \overline{x}_{\text{Harmonic}} = \frac{N}{\sum_{i=1}^{N}\frac{1}{x_{i}}}. \label{harmonic-mean}
 \end{equation}
@@ -78,26 +78,26 @@ r_{\text{annualised}} = (1+HPR)^{\frac{365}{\text{days}}}-1. \label{annualhpr}
 x_{i} \equiv (1+r_{i}),
 \end{equation*}
 
-\item[] equation \ref{harmonic-mean} becomes
+\item[] Equation \ref{harmonic-mean} becomes
 \begin{equation}
 \overline{r}_{\text{Harmonic}} = \frac{N}{\sum_{i=1}^{N}\frac{1}{(1+r_{i})}} -1.
 \end{equation}
 
-\item The harmonic mean is used for the average cost per share of stock purchased over time, if each purchase is a constant dollar amount. In this case, each purchase price would be a positive value, and we would use the form of the harmonic mean in equation \ref{harmonic-mean}
+\item The harmonic mean is used for the average cost per share of stock purchased over time, if each purchase is a constant dollar amount. In this case, each purchase price would be a positive value, and we would use the form of the harmonic mean in Equation \ref{harmonic-mean}
 
-\item Of the three means, the arithmetic mean is most sensitive to outliers, and the harmonic mean is least sensitive. Thus, we can say in all cases:
-\begin{equation}
-\text{Harmonic mean} \leq \text{Geometric mean} \leq \text{Arithmetic mean}
-\end{equation}
+\item Of the three means, \underline{the arithmetic mean is most sensitive to outliers}, and the harmonic mean is least sensitive. Thus, we can say in all cases:
+\begin{equation*}
+\text{Harmonic mean} \leq \text{Geometric mean} \leq \text{Arithmetic mean}.
+\end{equation*}
 
 \item Another mathematical relation that is always true is 
-\begin{equation}
-\text{Arithmetic mean} \times \text{Harmonic mean} = \left[\text{Geometric mean}\right]^{2}
-\end{equation}
+\begin{equation*}
+\text{Arithmetic mean} \times \text{Harmonic mean} = \left[\text{Geometric mean}\right]^{2}.
+\end{equation*}
 
-\item Other methods of dealing with outliers include trimming or winsorizing the data, and can be seen in table \ref{winsorised}.
+\item Other methods of dealing with outliers include trimming or winsorizing the data, and can be seen in Table \ref{winsorised}.
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[t,1.5,l] Q[t,5,l]}, width = 0.9\textwidth}
 \hline[1.25pt]
@@ -114,21 +114,20 @@ Winsorized data & Winsorized data replaces the top and bottom most extreme value
 \subsubsection{Time-weighted and money-weighted rates of return}
 \label{ssec-twrr-mwrrr}
 \begin{itemize}
-\item The time-weighted rate of return is simply the annualised for individual sub-periods compounded together
+\item The time-weighted rate of return is simply the annualised for individual sub-periods compounded together.
 
-\item The money weighted rate of return is also known as the following
+\item The money weighted rate of return is also known as the following,
 
-\begin{equation}
+\begin{equation*}
 \text{MWRR} \equiv \begin{cases} \text{Internal Rate of Return (IRR) for a portfolio} \\ \text{Yield-to-Maturity (YTM) for a bond} \end{cases}
-\end{equation}
+\end{equation*}
 
 \item This can be expressed as the rate of return, $r$, that satisfies
 \begin{equation}
 \sum_{i}\frac{CF_{i}}{(1+r)^{i}} = 0. \label{mwrr}
 \end{equation}
 
-\item[] Learn to do this on the BA II Plus Calculator
-
+\item[] \textbf{Learn to do this on the BA II Plus Calculator}
 \textcolor{RedViolet}{
 \item[] \textbf{EXAMPLE:} Suppose at $T_{0}$, we buy a share for \$100. At $T_{1}$, we buy another share for \$120, and at $T_{2}$, we sell both shares for \$130 each. At the end of each period, every share pays a dividend of \$2.
 }
@@ -136,7 +135,7 @@ Winsorized data & Winsorized data replaces the top and bottom most extreme value
 \begin{itemize}
 \item[] \textbf{MWRR}
 \begin{itemize}
-\item[] Using equation \ref{mwrr}, we obtain the following.
+\item[] Using Equation \ref{mwrr}, we obtain the following.
 \begin{equation*}
  (100) + \frac{(120)+2}{(1+r)^{1}}+\frac{260+4}{(1+r)^{2}} = 0.
 \end{equation*}
@@ -162,10 +161,9 @@ HPR_{2}&=\frac{2\cdot130 + 2\cdot2}{2\cdot120}-1 = 10\%.
 \end{itemize}
 \end{itemize}
 }
-\item TWRR is \emph{not} affected by the timing of returns.  This is why it is the \textbf{preferred measurement of industry}
-\item MWRR is sensitive to the timing of cashflows. If a manager does have control over the cashflows, then MWRR is an appropriate measure
-
-\item If there is an inflow just before a period of poor performance, the MWRR will tend to be \textbf{lower} than TWRR
+\item TWRR is \underline{not} affected by the timing of returns.  This is why it is the \textbf{preferred measurement of industry}.
+\item MWRR is sensitive to the timing of cashflows. If a manager does have control over the cashflows, then MWRR is an appropriate measure.
+\item If there is an inflow just before a period of poor performance, the MWRR will tend to be \underline{lower} than TWRR.
 \end{itemize}
 
 
@@ -176,19 +174,17 @@ HPR_{2}&=\frac{2\cdot130 + 2\cdot2}{2\cdot120}-1 = 10\%.
 \begin{equation}
 PV = \frac{FV_{N}}{\left( 1+\frac{r}{m}\right)^{m\cdot N}}, \label{dcf}
 \end{equation}
-\item[] where the variables have the following definitions
-\begin{table}[h!]
+\item[] where the variables have the following definitions.
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cl}, width = 0.9\textwidth}
 $PV$ & Present Value of cashflow \\
 $FV$ & Future Value of cashflow \\
 $r$ & Interest rate \\
 $m$ & Number of compounding periods per year \\
-$N$ & Number of years \\
-$m\cdot N$ & Number of compounding periods
+$N$ & Number of years
 \end{tblr}
 \end{table}
-
 {\color{RedViolet}
 \item[] \textbf{EXAMPLE:} If you receive a payment of $\$1,000$ in a year. The stated rate is 6\% per annum. What is the $PV$ of this payment assuming (i) semi-annual, (ii) quarterly, (iii) monthly, and (iv) daily compounding?
 }
@@ -209,7 +205,7 @@ $m\cdot N$ & Number of compounding periods
 \end{multicols}
 }
 
-\item[] In the limit of equation \ref{dcf} where $m$ is taken to infinity, this gives continuous compounding. In this instance, we recover the following.
+\item[] In the limit of Equation \ref{dcf} where $m$ is taken to infinity, this gives continuous compounding. In this instance, we recover the following.
 \begin{equation}
 PV = FV \times e^{-r\times T},
 \end{equation}
@@ -218,7 +214,7 @@ PV = FV \times e^{-r\times T},
 r_{cc}=\ln(1+HPR).
 \end{equation}
 {\color{RedViolet}
-\item[] \textbf{EXAMPLE:} Consider a security bought for \$100, and sold for \$120 after one year has elapsed. Calculate the continuously compounded rate of return
+\item[] \textbf{EXAMPLE:} Consider a security bought for \$100, and sold for \$120 after one year has elapsed. Calculate the continuously compounded rate of return.
 }
 {\color{RoyalBlue}
 \begin{equation*}
@@ -239,7 +235,7 @@ r_{cc} = \ln\left(1+\frac{120}{100}\right) = 18.232\%.
 \item Real return -- Nominal return adjusted for inflation
 \item Leveraged return -- Return on the investment relative to cash paid upfront
 \end{itemize}
-\item The real return may be calculated as follows -- 
+\item The real return may be calculated as follows,
 \begin{equation}
 1+r_{\text{real}} = \frac{1+r_{\text{nominal}}}{1+r_{\text{inflation}}}.
 \end{equation}
@@ -249,7 +245,7 @@ r_\text{levered} = \frac{r\left( V_{O}+V_{B}\right)-r_{B}\times V_{B}}{V_{O}},
 \end{equation}
 
 where the variables have the following definitions
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cl}, width = 0.9\textwidth}
 $V_{O}$ & Present Value of cashflow \\
@@ -264,7 +260,7 @@ V_{0} = \frac{D_{1}}{k_{e}-g_{c}},
 \label{gordongrowth}
 \end{equation}
 where the variables have the following definitions
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cl}, width = 0.9\textwidth}
 $V_{0}$ & Stock price today \\
@@ -287,12 +283,11 @@ g_{c}=k_{e}-\frac{D_{1}}{V_{0}}.
 \label{ssec-tvm}
 
 \begin{itemize}
-\item The value of any security is the \emph{present value of all future cash flows}. Recalling equation \ref{dcf}, we find the \textbf{discount factor} to be
+\item The value of any security is the \underline{present value of all future cash flows}. Recalling Equation \ref{dcf}, we find the \textbf{discount factor} to be
 \begin{equation}
 \text{Discount Factor} = \frac{1}{(1+r)^{t}}
 \end{equation}
-\item[] where $r$ of course can be replaced with $\frac{r}{m}$ and $t$ with $m\cdot t$.
-\item This method of valuing a security can be applied to many different financial instruments
+\item[] where $r$ of course can be replaced with $\frac{r}{m}$ and $t$ with $m\cdot t$. This method of valuing a security can be applied to many different financial instruments
 {\color{RedViolet}
 \item[] \textbf{EXAMPLE:} Consider a zero-coupon bond with 15 years to maturity with a par value of $\$1,000$. Calculate its present value.
 }
@@ -302,22 +297,23 @@ PV = \frac{\$1,000}{1.04^{15}}=\$555.26
 \end{equation*}
 }
 {\color{RedViolet}
-This also works for negative yields. If instead, the interest rate offered is -0.5\%, calculate the new present value
+This also works for negative yields. If instead, the interest rate offered is -0.5\%, calculate the new present value.
 }
 {\color{RoyalBlue}
 \begin{equation*}
 PV = \frac{\$1,000}{0.995^{15}} = \$1,078.09
 \end{equation*}
 }
+\clearpage
 \item[] Zero-coupon bond
 \begin{itemize}
-\item[] A zero-coupon bond pays a single cashflow equal to its face value at maturity. The present value of a ZCB can be calculated using equation \ref{dcf}, as there is only one cashflow.
+\item[] A zero-coupon bond pays a single cashflow equal to its face value at maturity. The present value of a ZCB can be calculated using Equation \ref{dcf}, as there is only one cashflow.
 \end{itemize}
 \item[] Fixed-coupon bond
 \begin{itemize}
-\item[] A fixed-coupon bond requires applying equation \ref{dcf} to all future cashflows, and summing the present value of each of those cashflows. The \textbf{coupon rate} is given as a percentage of the face value, and defines the interest paid per period. The yield to maturity however is implied by the price of the bond.
+\item[] A fixed-coupon bond requires applying Equation \ref{dcf} to all future cashflows, and summing the present value of each of those cashflows. The \textbf{coupon rate} is given as a percentage of the face value, and defines the interest paid per period. The yield to maturity however is implied by the price of the bond.
 \item[] For fixed-coupon bonds, price and yield exhibit an inverse relationship. 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {lc}}
 \hline[1.25pt]
@@ -327,12 +323,13 @@ $\text{Coupon} > \text{Yield}$ & Trade above par (premium) \\ \hline[1.25pt]
 \end{tblr}
 \caption{Relationships between coupon and yield, and the trading price of fixed income instruments}
 \end{table}
+\vspace{-.5cm}
 \begin{equation}
-\text{Price} = \underbrace{\text{Coupon} \times \frac{1}{\text{Yield}} \left[1-\frac{1}{(1+\text{Yield})^{n}}\right]}_{\text{Same as annuity}} + \frac{\text{notional}}{(1+\text{Yield})^{n}}
+\text{Price} = \underbrace{\text{Coupon} \times \frac{1}{\text{Yield}} \left[1-\frac{1}{(1+\text{Yield})^{n}}\right]}_{\text{Same as annuity}} + \frac{\text{notional}}{(1+\text{Yield})^{n}}.
 \end{equation}
 A perpetuity is an annuity with $n\rightarrow\infty$, which yields
 \begin{equation}
-\text{Price} = \frac{\text{Coupon}}{\text{Yield}}
+\text{Price} = \frac{\text{Coupon}}{\text{Yield}}.
 \end{equation}
 
 \end{itemize}
@@ -342,14 +339,14 @@ A perpetuity is an annuity with $n\rightarrow\infty$, which yields
 \end{itemize}
 \item[] Common stock
 \begin{itemize}
-\item[] While common stock conventionally does not have a fixed or guaranteed dividend payment, as dividend payments are a result of management discretion, we can make assumptions on the future dividend payments in order to estimate the value of a stock. In the case of constant growth, equation \ref{gordongrowth} can be used to value the stock. For a multi-stage growth model, different regimes of dividend growth are calculated separately and then combined to give a total price. In all cases, cashflows are discounted using the required rate of return.
+\item[] While common stock conventionally does not have a fixed or guaranteed dividend payment, as dividend payments are a result of management discretion, we can make assumptions on the future dividend payments in order to estimate the value of a stock. In the case of constant growth, Equation \ref{gordongrowth} can be used to value the stock. For a multi-stage growth model, different regimes of dividend growth are calculated separately and then combined to give a total price. In all cases, cashflows are discounted using the required rate of return.
 \begin{equation}
 \text{Assets} = \text{Equity} + \text{Liabilities}.
 \end{equation}
 \end{itemize}
 \item[] Preferred stock
 \begin{itemize}
-\item[] Preferred stock pays a constant dividend. The value of a preferred stock can be derived from equation \ref{gordongrowth} by setting $g=0$. This is equivalent to a perpetuity instrument.
+\item[] Preferred stock pays a constant dividend. The value of a preferred stock can be derived from Equation \ref{gordongrowth} by setting $g_{c}=0$. This is equivalent to a perpetuity instrument.
 \end{itemize}
 \end{itemize}
 
@@ -373,14 +370,14 @@ A perpetuity is an annuity with $n\rightarrow\infty$, which yields
 \begin{enumerate}
 \item Constant future dividend (This is simply a preferred stock)
 \begin{itemize}
-\item This can be recovered from equation \ref{gordongrowth} by setting $g$ to 0,
+\item This can be recovered from Equation \ref{gordongrowth} by setting $g$ to 0,
 \begin{equation}
 V_{0} = \frac{D_{1}}{k_{e}}.
 \end{equation}
 \end{itemize}
 \item Constant growth rate of dividend
 \begin{itemize}
-\item This is given by Gordon’s growth model, and is shown in equation \ref{gordongrowth}, which as we recall is
+\item This is given by Gordon’s growth model, and is shown in Equation \ref{gordongrowth}, which as we recall is
 \begin{equation*}
 V_{0} = \frac{D_{1}}{k_{e}-g_{c}}.
 \end{equation*}
@@ -404,7 +401,7 @@ All dividends here are discounted using the required rate of return.
 \item[] \textbf{EXAMPLE:} Consider a call option with an exercise price of \$55. The underlying asset is currently trading at \$50, and the expiry of the option is in one year. The two hypothesised scenarios are that the asset will either be trading at \$60 (up-scenario) or \$42 (down-scenario), and the risk free rate for that time period is 3\%. Determine the value of the call option.
 }
 {\color{RoyalBlue}
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,2,c]}, width = 0.75\textwidth, rows = {fg = RoyalBlue}}
 \textbf{$V_{0}$} & \textbf{$V_{1}$} & \textbf{Option payoff} \\
@@ -449,17 +446,17 @@ c_{0} &= 0.278 \times \$50 - \$11.34 \\
 \begin{itemize}
 \item In general, in the world of finance:
 \begin{align*}
-\text{Central tendency} &\Rightarrow \text{Expected return} \\
-\text{Dispersion} &\Rightarrow \text{Risk}
+\text{Central tendency} &\Rightarrow \text{Expected return}, \\
+\text{Dispersion} &\Rightarrow \text{Risk}.
 \end{align*}
 \item Measure of central tendency include the arithmetic, geometric and harmonic means, median, mode, and trimmed and winsorized means.
 \item Quantiles give information about the dispersion of a data-set, or in other words, the variability about the central tendency.
 \item The Interquartile Range is given by the difference between the $3^{\text{rd}}$ and $1^{\text{st}}$ quartiles. The range is the difference the largest and smallest values.
-\item Mean absolute deviation is the average absolute deviation from the arithmetic mean
+\item Mean absolute deviation is the average absolute deviation from the arithmetic mean, and is defined
 \begin{equation}
 \text{MAD} = \frac{\sum_{i=1}^{n}\left|x_{i}-\overline{x}\right|}{n}.
 \end{equation}
-\item Variance is given by the mean squared deviation of all values from their mean. Standard deviation is simply the square root of the variance
+\item Variance is given by the mean squared deviation of all values from their mean. Standard deviation is simply the square root of the variance:
 \begin{align}
 \sigma^{2} &= \frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n}, \label{p-var} \\
 \sigma &= \sqrt{\frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n}}. \label{p-stdev}
@@ -469,12 +466,12 @@ c_{0} &= 0.278 \times \$50 - \$11.34 \\
 s^{2} &= \frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n-1}, \label{s-var} \\
 s &= \sqrt{\frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n-1}}. \label{s-stdev}
 \end{align}
-\item The Coefficient of variation is given by
+\item The coefficient of variation is given by
 \begin{equation}
 CV= \frac{\sigma_{x}}{\overline{x}},
 \end{equation}
 \item[] where a lower $CV$ implies less risk per unit of return
-\item Target downside deviation has a similar calculation to the sample standard deviation in equation \ref{s-stdev}, 
+\item Target downside deviation has a similar calculation to the sample standard deviation in Equation \ref{s-stdev}, 
 \begin{equation}
 S_{target} = \sqrt{\frac{\sum_{x_{i}< B}^{n}\left(x_{i}-B\right)^{2}}{n-1}},
 \end{equation}
@@ -543,9 +540,9 @@ S_{\text{target}} = \sqrt{\frac{(24-12)^{2} + (20-24)^{2} + (23-24)^{2}}{5-1}} =
 \text{Mode} < \text{Median} < \text{Mean}.
 \end{equation*}
 
-This is demonstrated in figure \ref{fig-positive-skew}.
+This is demonstrated in Figure \ref{fig-positive-skew}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{\imgpath positive_skew.pdf}
   \caption{Difference between a pure Gaussian (Normal) distribution and one with a positive skew. The mode is at the peak of the distribution, and the median and mean are skewed positively by some large positive outliers.}
@@ -558,9 +555,9 @@ This is demonstrated in figure \ref{fig-positive-skew}.
 \text{Mean} < \text{Median} < \text{Mode}.
 \end{equation*}
 
-This is demonstrated in figure \ref{fig-negative-skew}.
+This is demonstrated in Figure \ref{fig-negative-skew}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{\imgpath negative_skew.pdf}
   \caption{Difference between a pure Gaussian (Normal) distribution and one with a positive skew. The mode is at the peak of the distribution, and the median and mean are skewed negatively by some large positive outliers.}
@@ -620,27 +617,24 @@ E(x) = \sum p_{i}x_{i}.
 \item[]If the probabilities sum to 1, then we may use the population standard deviation. Otherwise, keep using the sample standard deviation.
 {\color{RedViolet}
 \item[] \textbf{EXAMPLE:}
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1.5,c] Q[m,1.5,c]}, rows = {fg = RedViolet}, width = 0.95\textwidth}
-\hline[1.25pt]
 $P(X_{i})$ & $R(X_{i})$ & $E(X_{i})$ & $[R_{i}-E(R)]^{2}$ & $P(X_{i})\cdot [[R_{i}-E(R)]^{2}$ \\ \hline
 30\% & 20\% & 0.06 & 0.0049 & 0.00147 \\
 50\% & 12\% & 0.06 & 0.0001 & 0.00005 \\
 20\% & 5\% & 0.06 & 0.0064 & 0.00128 \\ \cline{3,5}
 & & $E(R) = 0.13$ & & $\sigma^{2}=0.0028$ \\
-&&&& $\sigma=0.0529$ \\ \hline[1.25pt]
+&&&& $\sigma=0.0529$
 \end{tblr}
 \end{table}
-
-
 }
 \end{itemize}
 
 \subsubsection{Bayes’ formula}
 \begin{itemize}
 \item Probability trees are used to work out conditional probabilities, that is given one event has occurred, what is the probability of a second event occurring.
-\item Bayes' Formula, defined as 
+\item Bayes' Formula is defined as 
 \begin{equation}
 P(A|B) = \frac{P(B|A)\times P(A)}{P(B)}. \label{bayes}
 \end{equation}
@@ -654,7 +648,7 @@ P(A|B) = \frac{P(A\cap B)}{P(A\cap B)+P(A'\cap B)}.
 
 
 {\color{RoyalBlue}
-Recalling equation \ref{bayes}
+Recalling Equation \ref{bayes},
 \begin{align*}
 P(A|B) &= \frac{P(B|A) \times P(A)}{P(B)} \\
 &= \frac{0.7\times0.6}{0.5} \\
@@ -673,19 +667,19 @@ Sample covariance is calculated the same way as normal, with a divisor of $n-1$.
 
 \item[] Combining variances of two risky assets is done as follows:
 \begin{equation}
-\Var(R_{P}) = {\sigma_{A}}^{2}{w_{A}}^{2} + {\sigma_{B}}^{2}{w_{B}}^{2} + 2w_{A}w_{B}\Cov(A,B). \label{port-var}
+\Var(R_{P}) = {\sigma_{A}}^{2}{w_{A}}^{2} + {\sigma_{B}}^{2}{w_{B}}^{2} + 2w_{A}w_{B}\Cov(A,B), \label{port-var}
 \end{equation}
 \item[] where the last term may be rewritten
 \begin{equation*}
 2w_{A}w_{B}\Cov(A,B) \equiv 2w_{A}w_{B}\rho_{A,B}\sigma_{A}\sigma_{B}.
 \end{equation*}
-\item[] More generally, equation \ref{port-var} can be expressed as
+\item[] More generally, Equation \ref{port-var} can be expressed as
 \begin{equation}
 \Var(R_{P}) = \vec{\sigma}^{\mathrm{T}}\cdot\underline{\underline{w}}\cdot\underline{\underline{\rho}}\cdot\underline{\underline{w}}\cdot\vec{\sigma}.
 \end{equation}
 {\color{RedViolet}
 \item[] \textbf{EXAMPLE:} Consider the following joint-probability function. Calculate the covariance.
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cccccc}, rows = {fg = RedViolet}}
 $R_{A}$ \textbackslash$R_{B}$ & & 30\% & 10\% & 0\% & $E(R_{B})=14\%$ \\
@@ -696,6 +690,7 @@ $E(R_{A})=13\%$
 \end{tblr}
 \end{table}
 }
+\vspace{-1cm}
 {\color{RoyalBlue}
 \begin{align*}
 \Cov_{AB} &= 0.3 \cdot(0.20-0.13)(0.30-0.14) \\
@@ -704,30 +699,31 @@ $E(R_{A})=13\%$
 \end{align*}
 }
 \end{itemize}
-
+\vspace{-.5cm}
 \subsection{Shortfall risk and Roy's safety-first ratio}
 \begin{itemize}
 \item Shortfall risk is defined as the probability that a portfolio's return or value will be below a specified target return or value over a specified period. Specifying a minimum level of acceptable return, it is defined
 \begin{equation}
 \mathrm{RSF} = \frac{E(R_{P})-R_{L}}{\sigma_{P}},
 \end{equation}
-\item[] where $R_{L}$ is the minimum acceptable threshold return. A higher value for the RSF criteria gives a lower probability of shortfall. For a Gaussian distribution, the RSF criteria is equivalent to a z-score. A z-score is the number of standard deviations away from the mean a particular value.
+\item[] where $R_{L}$ is the minimum acceptable threshold return. A higher value for the RSF criteria gives a lower probability of shortfall. For a Gaussian distribution, the RSF criteria is equivalent to a $z$-score. A $z$-score is the number of standard deviations away from the mean a particular value.
 \end{itemize}
 
 
 \subsection{Lognormal distributions}
 \begin{itemize}
-\item We have been making use of Gaussian distributions, but stock prices are bounded at 0. We can however think of the returns on a stock being normally distributed, if the asset's future price is taken to be the continuously compounded return of its current price. This yields the following result
+\item We have been making use of Gaussian distributions, but stock prices are in reality bounded at 0. We can however think of the returns on a stock being normally distributed, if the asset's future price is taken to be the continuously compounded return of its current price. This yields the following result
 \begin{equation}
 P_{T} = P_{0} \times e^{r_{0}T}.
 \end{equation}
 
-An example of a lognormal distribution plotted on a graph can be seen in figure \ref{fig-lognormal}.
+An example of a lognormal distribution plotted on a graph can be seen in Figure \ref{fig-lognormal}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\textwidth]{\imgpath lognormal.pdf}
   \caption{Lognormal distribution. This is bounded at $P=0$, and asymptotically approaches 0. This is a probability density function, so the $x$-axis is price, and the height of the curve represents the likelihood of the security being priced at any given price.}
+  \label{fig-lognormal}
 \end{figure}
 
 \item Identically distributed returns are stationary, that is to say the mean and variance are constant with respect to time.
@@ -745,7 +741,7 @@ An example of a lognormal distribution plotted on a graph can be seen in figure 
 \item simulate pension fund assets and liabilities over time
 \item value returns of non-normally distributed assets
 \end{itemize}
-\item[] among other things. A key benefit of this is that is it \emph{not} dependent on historical data, but it is limited by the accuracy of the assumptions.
+\item[] among other things. A key benefit of this is that is it \underline{not} dependent on historical data, but it is limited by the accuracy of the assumptions.
 \item Steps in a Monte Carlo simulation:
 \begin{enumerate}
 \item Specify probability distributions of input parameters (i.e. mean, variance, skewness, etc.)
@@ -757,23 +753,23 @@ An example of a lognormal distribution plotted on a graph can be seen in figure 
 
 \subsection{The Central Limit Theorem}
 \begin{itemize}
-\item The Central Limit Theorem states that for any population with mean $z\mu$, and variance $\sigma^{2}$, as the sample size increases, the distribution of sample means approaches a normal distribution, with mean $\mu$ and variance $\frac{\sigma^{2}}{n}$.
-\item This sampling distribution is used for both hypothesis testing and confidence intervals.
+\item The Central Limit Theorem states that for any population with mean $\mu$, and variance $\sigma^{2}$, as the sample size $n$ increases, the distribution of sample means approaches a normal distribution, with mean $\mu$ and variance $\frac{\sigma^{2}}{n}$.
+\item This sampling distribution can be used for both hypothesis testing and confidence intervals.
 \item If $n>30$, then the sample distribution of sample means can be considered to be approximately normal.
 \item The following relations will be useful when we cover hypothesis testing, but for now, 
 \begin{itemize}
-\item If population $\sigma$ \emph{is} known,
+\item If population $\sigma$ \underline{is} known,
 \begin{equation}
 \sigma_{\overline{x}} = \frac{\sigma}{\sqrt{n}},\label{std-err-pop}
 \end{equation}
-\item[] which implies the use of a z distribution.
-\item If population $\sigma$ is \emph{not} known,
+\item[] which implies the use of a $z$ distribution.
+\item If population $\sigma$ \underline{is not} known,
 \begin{equation}
 s_{\overline{x}} = \frac{s}{\sqrt{n}},\label{std-err-smp}
 \end{equation}
-\item[] which implies the use of a student's T distribution.
+\item[] which implies the use of a student's $t$-distribution.
 \end{itemize}
-\item[] $\sigma_{\overline{x}}$ and $s_{\overline{x}}$ defines the standard error of the sampling distribution mean. For sufficiently large $n$, we can assume a z-distribution in any case.
+\item[] $\sigma_{\overline{x}}$ and $s_{\overline{x}}$ defines the standard error of the sampling distribution mean. For sufficiently large $n$, we can assume a $z$-distribution in any case.
 \item Sampling when we know the probability in the population of each sample member yields the following:
 \begin{equation}
 \mu_{\text{population}} - \overline{x} = \text{Sampling error}.
@@ -785,23 +781,27 @@ s_{\overline{x}} = \frac{s}{\sqrt{n}},\label{std-err-smp}
 \subsection{Sampling methods}
 \begin{itemize}
 \item Simple (random) sampling is the simplest method, where every member of a population has an equal probability of selection for the sample.
-\item Systematic sampling picks every $n^{th}$ member of a population to form an approximately random sample
+\item Systematic sampling picks every $n^{th}$ member of a population to form an approximately random sample.
 \item Non-probability sampling relies on the judgment of the researcher or low-cost / available data. This may however introduce bias, leading to a greater sampling error, due to methods being chosen for convenience over statistical robustness.
-\item Judgment sampling relies on analyst judgment to pick a representative sample from a population. This is highly susceptible to bias, as sampling choices are at analyst discretion
+\item Judgment sampling relies on analyst judgment to pick a representative sample from a population. This is highly susceptible to bias, as sampling choices are at analyst discretion.
 \item Stratified random sampling creates subgroups within a population based on one or more characteristics. Samples are selected from each group in proportion to the size of the subgroup. This ensures a characteristic is appropriately represented in a sample
 \item Bootstrap resampling is a method for generating data inputs to use in a simulation, and is used with sample data. The steps to carry out bootstrap resampling are as follows.
 \begin{enumerate}
-\item Start with an observed sample from a population (i.e. historical data)
+\item Start with an observed sample from a population. (i.e. historical data)
 \item Repeatedly draw samples of size $n$, replacing the data after each sample is taken.
-\item Infer population parameters from the sample data (i.e. $\mu$, $\sigma$, etc.)
+\item Infer population parameters from the sample data. (i.e. $\mu$, $\sigma$, etc.)
 \end{enumerate}
 \item Jacknife resampling is a less computationally demanding process. Similar to bootstrap resampling above, we take a sample of size $n$ from a larger population. Then from this sample, compute the mean repeatedly, each time, excluding one observation from the sample (and replacing before each subsequent mean is taken). The standard deviation of these sample means can then be used to estimate the standard error.
 \item Cluster sampling is where the overall population is divided into subsets ``clusters", and assumes each cluster is a representation of the wider population.
 \begin{itemize}
 \item One-stage cluster sampling
-\item[] Take random samples of clusters, and include all the data from each cluster in the sample
+\begin{itemize}
+\item Take random samples of clusters, and include all the data from each cluster in the sample
+\end{itemize}
 \item Two-stage cluster sampling
-\item[] Take random sampling of each cluster after having defined a sample of clusters
+\begin{itemize}
+\item Take random sampling of each cluster after having defined a sample of clusters
+\end{itemize}
 \begin{align*}
 \text{Homogeneity} & \begin{cases}&\text{Stratified sampling \textbf{within} groups} \\ &\text{Cluster sampling \textbf{between} groups} \end{cases}\\
 \text{Heterogeneity} & \begin{cases}&\text{Stratified sampling \textbf{between} groups} \\ &\text{Cluster sampling \textbf{within} groups} \end{cases}
@@ -814,13 +814,13 @@ s_{\overline{x}} = \frac{s}{\sqrt{n}},\label{std-err-smp}
 \begin{itemize}
 \item A hypothesis, used in a hypothesis test is a statement about the value of a population parameter developed to test a theory or belief. The steps involved are
 \begin{enumerate}
-\item State a hypothesis
-\item Select a test statistic
-\item Specify the level of significance required for the test
-\item State decision rule (reject null hypothesis if test statistic is in tail of distribution)
-\item Collect sample; calculate statistic
-\item Make a decision on the hypothesis
-\item Make a decision based on the test results
+\item State a hypothesis;
+\item Select a test statistic;
+\item Specify the level of significance required for the test;
+\item State decision rule; (reject null hypothesis if test statistic is in tail of distribution)
+\item Collect sample; calculate statistic;
+\item Make a decision on the hypothesis;
+\item Make a decision based on the test results.
 \end{enumerate}
 
 \item The \textbf{null hypothesis}, $H_{0}$, states that a value being tested for is either $=$, $<$, or $>$ a hypothesised value. In the case of a strict equality, this requires a two-tailed test. for inequalities, this requires a one-tailed test. The \textbf{alternative hypothesis}, $H_{A}$ is accepted if and only if $H_{0}$ is rejected. For example, 
@@ -846,7 +846,7 @@ H_{A}: \mu & \neq 0 & H_{A}: \mu & >0
     \label{fig-hypothesis-one}
   \end{minipage}
   \hfill \hfill
-  \caption{Example of a two-tailed (figure \ref{fig-hypothesis-two}) and one-tailed (figure \ref{fig-hypothesis-one}) hypothesis test at 5\% significance level. If the test statistic falls above the critical value (or below in the case of the lower bound of a two-tailed test), we should reject the null hypothesis.}
+  \caption{Example of a two-tailed (Figure \ref{fig-hypothesis-two}) and one-tailed (Figure \ref{fig-hypothesis-one}) hypothesis test at 5\% significance level. If the test statistic falls above the critical value (or below in the case of the lower bound of a two-tailed test), we should reject the null hypothesis.}
   \label{fig-hypothesis-test}
 \end{figure}
 
@@ -855,14 +855,14 @@ H_{A}: \mu & \neq 0 & H_{A}: \mu & >0
 
 \item Type I error
 \begin{itemize}
-\item[] A type I error occurs upon rejecting a null hypothesis even though it is true.
-\item[] The \textbf{significance level} is the probability of a type I error.
+\item A type I error occurs upon rejecting a null hypothesis even though it is true.
+\item The \textbf{significance level} is the probability of a type I error.
 \end{itemize}
 \item Type II error
 \begin{itemize}
-\item[] A type II error occurs upon failing to reject a null hypothesis if it is false.
-\item[] The power of the test is defined as $1-\text{[probability of type II error]}$. In other words, it is the probability of correctly rejecting the null when it is true. 
-\item[] This is driven by both the significance level and by the sample size, $n$. A lower significance increases the likelihood of a type II error, so lowers the power of the test.
+\item A type II error occurs upon failing to reject a null hypothesis if it is false.
+\item The \textbf{power of the test} is defined as $1-\text{[probability of type II error]}$. In other words, it is the \underline{probability of correctly rejecting the null when it is true}. 
+\item This is driven by both the significance level and by the sample size, $n$. A lower significance increases the likelihood of a type II error, so lowers the power of the test.
 \end{itemize}
 \item The \textbf{p-value} is defined as the smallest level of significance, whereby the null hypothesis can be rejected. This is equivalent to the probability of getting the test statistic by chance if the null is true. If the p-value is given as 0.0214 = 2.14\%, 
 \begin{itemize}
@@ -896,39 +896,39 @@ H_{A}: \mu & \neq 0 & H_{A}: \mu & >0
 \subsection{Parametric hypothesis tests}
 \subsubsection{Value of a population mean}
 \begin{itemize}
-\item For the value of a population mean, we use a z-test if the population variance is known. Otherwise, we use a t-test, and use the sample variance as an estimate for the population variance. 
+\item For the value of a population mean, we use a $z$-test if the population variance is known. Otherwise, we use a t-test, and use the sample variance as an estimate for the population variance. 
 \begin{equation}
-\text{z-statistic} = \frac{\overline{x}-\mu_{0}}{\left(\frac{\sigma}{\sqrt{n}}\right)},
+\text{$z$-statistic} = \frac{\overline{x}-\mu_{0}}{\left(\frac{\sigma}{\sqrt{n}}\right)},
 \end{equation}
 where the variables have the following definitions
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cl}, width = 0.9\textwidth}
 $\overline{x}$ & Sample mean \\
 $\mu_{0}$ & Hypothesised mean \\
 $\sigma$ & \textbf{Population} standard deviation \\
 $n$ & Sample size \\
-$\frac{\sigma}{\sqrt{n}}$ & Standard error, as defined in equation \ref{std-err-pop}
+$\frac{\sigma}{\sqrt{n}}$ & Standard error, as defined in Equation \ref{std-err-pop}
 \end{tblr}
 \end{table}
 \begin{equation}
-\text{t-statistic} = \frac{\overline{x}-\mu_{0}}{\left(\frac{s}{\sqrt{n}}\right)},
+\text{$t$-statistic} = \frac{\overline{x}-\mu_{0}}{\left(\frac{s}{\sqrt{n}}\right)},
 \end{equation}
 where the variables have the following definitions
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cl}, width = 0.9\textwidth}
 $\overline{x}$ & Sample mean \\
 $\mu_{0}$ & Hypothesised mean \\
 $s$ & \textbf{Sample} standard deviation \\
 $n$ & Sample size \\
-$\frac{s}{\sqrt{n}}$ & Standard error, as defined in equation \ref{std-err-smp}
+$\frac{s}{\sqrt{n}}$ & Standard error, as defined in Equation \ref{std-err-smp}
 \end{tblr}
 \end{table}
 
-\item The approximate ranges listed in table \ref{table-hypothesis} should be committed to memory for the exam.
+\item The approximate ranges listed in Table \ref{table-hypothesis} should be committed to memory for the exam.
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1.5,c] Q[m,1,c]}, width = 0.5\textwidth}
 \hline[1.25pt]
@@ -938,7 +938,7 @@ $\frac{s}{\sqrt{n}}$ & Standard error, as defined in equation \ref{std-err-smp}
 90\% & $1.65 \pm\sigma$ \\
 68\% & $1.00 \pm\sigma$ \\ \hline[1.25pt]
 \end{tblr}
-\caption{These approximate ranges correspond to confidence intervals for a Gaussian distribution only. For the purposes of hypothesis testing, this is equivalent to a z-statistic test.}
+\caption{These approximate ranges correspond to confidence intervals for a Gaussian distribution only. For the purposes of hypothesis testing, this is equivalent to a $z$-statistic test.}
 \label{table-hypothesis}
 \end{table}
 
@@ -952,12 +952,12 @@ $\frac{s}{\sqrt{n}}$ & Standard error, as defined in equation \ref{std-err-smp}
 H_{0}: \mu & =0, \\
 H_{A}: \mu & \neq 0.
 \end{align*}
-We have a large sample size, so we can use a z-test or t-test equivalently.
+We have a large sample size, so we can use a $z$-test or $t$-test equivalently.
 \begin{equation*}
-\text{t-stat} = \frac{\overline{x} - \mu}{\frac{s_{\overline{x}}}{\sqrt{n}}} = \frac{0.001 - 0}{\frac{0.0025}{\sqrt{250}}} = 6.33.
+\text{$t$-stat} = \frac{\overline{x} - \mu}{\frac{s_{\overline{x}}}{\sqrt{n}}} = \frac{0.001 - 0}{\frac{0.0025}{\sqrt{250}}} = 6.33.
 \end{equation*}
 
-From table \ref{table-hypothesis}, we know that the critical value for a two-tailed 5\% significance test is approximately 1.96. This is a two-tailed test, and so we recall the form of figure \ref{fig-hypothesis-two}. We can see quite easily that 6.33 falls in the dark-shaded area in the right-hand tail, so we reject the null hypothesis.
+From Table \ref{table-hypothesis}, we know that the critical value for a two-tailed 5\% significance test is approximately 1.96. This is a two-tailed test, and so we recall the form of Figure \ref{fig-hypothesis-two}. We can see quite easily that 6.33 falls in the dark-shaded area in the right-hand tail, so we reject the null hypothesis.
 
 \item[] This test has a 5\% chance of a type I error.
 
@@ -973,9 +973,9 @@ From table \ref{table-hypothesis}, we know that the critical value for a two-tai
 \begin{itemize}
 \item[Note:] Dependent / independent is determined by whether samples are linked
 \end{itemize}
-The t-statistic for a difference in means test is given by
+The $t$-statistic for a difference in means test is given by
 \begin{equation}
-\text{t-statistic} = \frac{(\overline{x}_{1}-\overline{x}_{2})-(\mu_{1}-\mu_{2})}{\sqrt{\frac{{s_{p}}^{2}}{n_{1}}+\frac{{s_{p}}^{2}}{n_{2}}}}, \label{t-stat-mean-diff}
+\text{$t$-statistic} = \frac{(\overline{x}_{1}-\overline{x}_{2})-(\mu_{1}-\mu_{2})}{\sqrt{\frac{{s_{p}}^{2}}{n_{1}}+\frac{{s_{p}}^{2}}{n_{2}}}}, \label{t-stat-mean-diff}
 \end{equation}
 where ${s_{p}}^{2}$ is the \underline{pooled variance estimator}, defined to be
 \begin{equation}
@@ -988,7 +988,7 @@ where ${s_{p}}^{2}$ is the \underline{pooled variance estimator}, defined to be
 &\text{Abnormal returns of horizontal mergers} & \mu&=1\% & \sigma&=1\% \\
 &\text{Abnormal returns of vertical mergers} & \mu&=2.5\% & \sigma&=2\%
 \end{align*}
-Assume the two distributions are independent Gaussians, with 120 degrees of freedom (recall $n_{1} + n_{2} -2 = \mathrm{d.o.f}$) We calculate the t-stat according to equation \ref{t-stat-mean-diff} to be $-5.474$. 
+Assume the two distributions are independent Gaussians, with 120 degrees of freedom (recall $n_{1} + n_{2} -2 = \mathrm{d.o.f}$) We calculate the $t$-stat according to Equation \ref{t-stat-mean-diff} to be $-5.474$. 
 
 Determine whether the abnormal returns are the same on average for horizontal and vertical mergers.
 }
@@ -1000,29 +1000,29 @@ H_{0}: \mu_{\mathrm{H}} - \mu_{\mathrm{V}} & =0, \\
 H_{A}: \mu_{\mathrm{H}} - \mu_{\mathrm{V}} & \neq 0.
 \end{align*}
 
-\item[] Looking up the critical value in a t-stat table, we find that the critical value for a t-test with 120 dof, at 5\% significance is $\pm1.98$. Since the t-stat of this test lies beyond the critical value, we should reject the null hypothesis.
+\item[] Looking up the critical value in a $t$-stat table, we find that the critical value for a t-test with 120 dof, at 5\% significance is $\pm1.98$. Since the $t$-stat of this test lies beyond the critical value, we should reject the null hypothesis.
 }
 
 
 
 
-If this is not the case, and the data sets are dependent, then we would use a paired comparison. This is a test of whether the average difference in some mean is significantly different than zero. The t-statistic used in this is defined as
+If this is not the case, and the data sets are dependent, then we would use a paired comparison. This is a test of whether the average difference in some mean is significantly different than zero. The $t$-statistic used in this is defined as
 \begin{equation}
-\text{t-statistic} = \frac{\overline{d}-\mu_{d}}{s_{\overline{d}}}, 
+\text{$t$-statistic} = \frac{\overline{d}-\mu_{d}}{s_{\overline{d}}}, 
 \end{equation}
 where the variables have the following definitions
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cl}, width = 0.9\textwidth}
-$\overline{d}$ & Sample mean difference \\
+$\overline{d}$ & \textbf{Sample} mean difference \\
 $\mu_{d}$ & Hypothesised difference in means \\
-$s_{\overline{d}}$ & standard error
+$s_{\overline{d}}$ & Standard error
 \end{tblr}
 \end{table}
 Also worth noting for this is that the degrees of freedom is $n-1$ for this type of test.
 
 {\color{RedViolet}
-\item[] \textbf{EXAMPLE:} Consider the following scenario. We are investigating the betas in an industry before / after deregulation. The betas may have gone up or down. Based on a sample size of 39 (hence $\mathrm{dof}=n-1=38$), the t-stat is calculated to be 10.26. At 5\% significance, evaluate whether the betas before / after deregulation has changed.
+\item[] \textbf{EXAMPLE:} Consider the following scenario. We are investigating the betas in an industry before / after deregulation. The betas may have gone up or down. Based on a sample size of 39 (hence $\mathrm{dof}=n-1=38$), the $t$-stat is calculated to be 10.26. At 5\% significance, evaluate whether the betas before / after deregulation has changed.
 }
 
 {\color{RoyalBlue}
@@ -1031,16 +1031,16 @@ Also worth noting for this is that the degrees of freedom is $n-1$ for this type
 H_{0}: \mu_{d}&=0, \\
 H_{A}: \mu_{d}&\neq0.
 \end{align*}
-We can look up the critical value for a t-stat with 38 dof, which is 2.024. Given 10.26 is greater than 2.024, we should reject the null hypothesis.
+We can look up the critical value for a $t$-stat with 38 dof, which is 2.024. Given 10.26 is greater than 2.024, we should reject the null hypothesis.
 }
 \end{itemize}
 \subsubsection{Value of a population variance}
 \begin{itemize}
-\item For a hypothesis test on the value of a population variance, use a chi squared test. This is a two-tailed test, where the test statistic is defined as 
+\item For a hypothesis test on the value of a population variance, use a $\chi^{2}$ test. This is a two-tailed test, where the test statistic is defined as 
 \begin{equation}
 {\chi_{n-1}}^{2} = \frac{(n-1)S^{2}}{{\sigma_{0}}^{2}}, \label{chi-square}
 \end{equation}
-The chi-square distribution is shown in figure \ref{fig-chi-square} for different degrees of freedom.
+The chi-square distribution is shown in Figure \ref{fig-chi-square} for different degrees of freedom.
 
 \begin{figure}[h]
   \centering
@@ -1061,7 +1061,7 @@ H_{0}: \sigma_{0}&=0.0016, \\
 H_{A}: \sigma_{0}&\neq0.0016.
 \end{align*}
 
-We look up in a table that the critical value for $\mathrm{dof}=24-1=23$ at the 5\% significance is 38.076. Then, recalling equation \ref{chi-square}, we calculate the test-statistic as
+We look up in a table that the critical value for $\mathrm{dof}=24-1=23$ at the 5\% significance is 38.076. Then, recalling Equation \ref{chi-square}, we calculate the test-statistic as
 \begin{equation*}
 \text{test-statistic}=\frac{(24-1)\cdot0.038^{2}}{0.04^{2}}=20.76.
 \end{equation*}
@@ -1112,11 +1112,11 @@ The larger variance dof is 30, and the smaller variance has a dof of 40. Looking
 \subsection{Non-parametric hypothesis tests}
 \subsubsection{Correlation between two datasets}
 \begin{itemize}
-\item For a test of correlation, the null hypothesis is that the population correlation coefficient is 0, effectively saying the population is independently distributed. The t-statistic for this test is given by
+\item For a test of correlation, the null hypothesis is that the population correlation coefficient is 0, effectively saying the population is independently distributed. The $t$-statistic for this test is given by
 \begin{equation}
-\text{t-statistic} = \frac{r\sqrt{n-2}}{1-r^{2}}, \label{t-stat-corr}
+\text{$t$-statistic} = \frac{r\sqrt{n-2}}{1-r^{2}}, \label{t-stat-corr}
 \end{equation}
-where there are $n-2$ degrees of freedom. The Spearman rank correlation test gives a correlation coefficient $r$ that may be used in equation \ref{t-stat-corr}, to give an indication of whether two data sets are correlated. This correlation coefficient $r$, is defined as
+where there are $n-2$ degrees of freedom. The Spearman rank correlation test gives a correlation coefficient $r$ that may be used in Equation \ref{t-stat-corr}, to give an indication of whether two data sets are correlated. This correlation coefficient $r$, is defined as
 \begin{equation}
 r=1-\frac{6\sum {d_{i}}^{2}}{n(n^{2}-1)}, \label{spearman}
 \end{equation}
@@ -1125,7 +1125,7 @@ where $d_{i}$ is the difference in rank between a pair of values in the two data
 {\color{RedViolet}
 \item[] \textbf{EXAMPLE:} Consider the following example
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.9\textwidth, rows = {fg = RedViolet}}
 \hline[1.25pt]
@@ -1139,14 +1139,14 @@ where $d_{i}$ is the difference in rank between a pair of values in the two data
 }
 
 {\color{RoyalBlue}
-\item[] Then, we can use equation \ref{spearman} to evaluate the Spearman rank correlation.
+\item[] Then, we can use Equation \ref{spearman} to evaluate the Spearman rank correlation.
 \begin{equation*}
 r = \frac{6\cdot \{1 + 0 + 1 + 4\}}{4(4^{2}-1)} = 0.4.
 \end{equation*}
 
-Then, using equation \ref{t-stat-corr} to calculate the t-stat, we find
+Then, using Equation \ref{t-stat-corr} to calculate the $t$-stat, we find
 \begin{equation*}
-\text{t-stat} = \frac{0.4\sqrt{4-2}}{1-0.4^{2}} = 0.9524.
+\text{$t$-stat} = \frac{0.4\sqrt{4-2}}{1-0.4^{2}} = 0.9524.
 \end{equation*}
 From here, we can do a hypothesis test as normal.
 }
@@ -1156,7 +1156,7 @@ From here, we can do a hypothesis test as normal.
 \subsubsection{Independence of two datasets}
 \begin{itemize}
 \item This is best illustrated with an example.
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {ccccc|[1.25pt]c}, width = 0.9\textwidth, rows = {fg = RedViolet}}
 & & \SetCell[r=1,c=4]{c} \textbf{Dividend yield} \\
@@ -1184,25 +1184,25 @@ which for this example is equal to 27.469. The number of degrees of freedom is g
 \begin{itemize}
 \item[Note:] Notation convention for this section is as follows:
 \begin{itemize}
-\item $Y_{i}$ represents an observed value
-\item $\widehat{Y}$ represents a predicted value
-\item $\overline{Y}$ represents a mean value
+\item $Y_{i}$ represents an \underline{observed} value
+\item $\widehat{Y}$ represents a \underline{predicted} value
+\item $\overline{Y}$ represents a \underline{mean} value
 \end{itemize}
 \item Simple linear regression explains variation of a dependent variable in terms of the variation in a single variable. 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {cc}, width = 0.9\textwidth}
-Dependent & ``explained, endogenous, predicted" \\
-Independent & ``explanatory, exogenous, predicting"
+Dependent & Explained / Endogenous / Predicted\\
+Independent & Explanatory / Exogenous / Predicting
 \end{tblr}
 \end{table}
 Suppose we want to consider the excess return of an index to explain the variation in excess return on a specific company's common stock, where excess return is defined as
-\begin{equation*}
-\text{Excess return} = R_{p}-R_{f}.
-\end{equation*}
-The line of best fit minimises the sum of squared vertical errors, (``the residuals")
 \begin{equation}
-SSE = \sum(Y_{i}-\widehat{Y})^{2}. \label{SSE}
+\text{Excess return} = R_{p}-R_{f}.
+\end{equation}
+The line of best fit minimises the sum of squared vertical errors, ``residuals"
+\begin{equation}
+\mathrm{SSE} = \sum(Y_{i}-\widehat{Y})^{2}. \label{SSE}
 \end{equation}
 \item A standard linear equation takes the form
 \begin{equation}
@@ -1212,32 +1212,34 @@ and introducing an error term, $\epsilon$, which is a random variable, possessin
 \begin{equation}
 Y_{i} = \underbrace{b_{0}+b_{1}X_{i}}_{\widehat{Y}}+\epsilon. \label{lin-eq}
 \end{equation}
-so in the process of minimising the $SSE$ defined in equation \ref{SSE}, we want to find $\{b_{0},b_{1}\}$ which minimises equation \ref{lin-eq}. We can solve for $b_{0}$ and $b_{1}$ analytically using the following, 
+So in the process of minimising the SSE defined in Equation \ref{SSE}, we want to find $\{b_{0},b_{1}\}$ which minimises Equation \ref{lin-eq}. We can solve for $b_{0}$ and $b_{1}$ analytically using the following, 
 \begin{align}
 \widehat{b}_{1}&=\frac{\Cov(X,Y)}{{\sigma_{X}}^{2}}, \\
 \widehat{b}_{0} &= \overline{Y}-\widehat{b}_{1}\overline{X}.
 \end{align}
-The assumptions of linear regression are that
+The assumptions of linear regression are that;
 \begin{itemize}
-\item Linear relationship is present between variables
-\item Variance of error / residual is constant (``Homoskedasticity")
-\item Error terms are independently distributed
-\item Error terms are normally distributed
+\item Linear relationship is present between variables;
+\item Variance of error / residual is constant; (Homoskedasticity)
+\item Error terms are independently distributed;
+\item Error terms are normally distributed.
 \end{itemize}
-Plotting residuals against the independent variable helps to check linearity. Heteroskedasticity is where the variance of the error terms is \underline{not} constant. Conditional heteroskedasticity is where the error term depends on the independent variable. 
+\item Plotting residuals against the independent variable helps to check linearity.
+\item Heteroskedasticity is where the variance of the error terms is \underline{not} constant.
+\item Conditional heteroskedasticity is where the error term depends on the independent variable. 
 \item Residuals may also be tested for normality, however with large sample sizes, normality assumptions may be relaxed.
 \end{itemize}
 
 \subsection{Analysis of variance (ANOVA) and goodness of fit}
 \begin{itemize}
-\item We have already defined the $SSE$ in equation \ref{SSE} to be the sum of squared errors. This is the \underline{unexplained variation}. Now we can introduce the $SSR$, or sum of squared regressions, defined as
+\item We have already defined the SSE in Equation \ref{SSE} to be the sum of squared errors. This is the \underline{unexplained variation}. Now we can introduce the SSR, or sum of squared regressions, defined as
 \begin{equation}
-SSR =\sum_{i}(Y_{i}-\overline{Y})^{2},
+\mathrm{SSR} =\sum_{i}(Y_{i}-\overline{Y})^{2},
 \end{equation}
-which gives us the \underline{explained variation}. Combining the $SSE$ and $SSR$, we obtain the sum of squared totals, $SST$,
+which gives us the \underline{explained variation}. Combining the SSE and SSR, we obtain the sum of squared totals, SST,
 \begin{align}
-SSE + SSR &= \sum_{i}(Y_{i}-\widehat{Y}_{i})^{2} + \sum_{j}(Y_{j}-\overline{Y})^{2}, \\
-SST &= \sum_{i}(Y_{i}-\overline{Y})^{2}.
+\mathrm{SSE} + \mathrm{SSR} &= \sum_{i}(Y_{i}-\widehat{Y}_{i})^{2} + \sum_{j}(Y_{j}-\overline{Y})^{2}, \\
+\mathrm{SST} &= \sum_{i}(Y_{i}-\overline{Y})^{2}.
 \end{align}
 \end{itemize}
 
@@ -1252,26 +1254,26 @@ SST &= \sum_{i}(Y_{i}-\overline{Y})^{2}.
 
 \subsubsection{Mean square regression and error}
 \begin{itemize}
-\item The mean square regression, $MSR$, and mean square error, $MSE$, are defined as
+\item The mean square regression, MSR, and mean square error, MSE, are defined as
 \begin{align}
-MSR &= \frac{SSR}{k}, \\
-MSE &= \frac{SSE}{n-k-1},
+\mathrm{MSR} &= \frac{\mathrm{SSR}}{k}, \\
+\mathrm{MSE} &= \frac{\mathrm{SSE}}{n-k-1},
 \end{align}
 where $k$ is the number of independent variables. MSE is effectively variance around the forecast value.
 \item We can then define the standard error of the estimate, SEE, as
 \begin{equation}
-SEE = \sqrt{MSE}
+\mathrm{SEE} = \sqrt{\mathrm{MSE}}.
 \end{equation}
-Using these, we can construct an anova table, such as in table \ref{anova-table}, here for the case $k=1$.
+Using these, we can construct an anova table, such as in Table \ref{anova-table}, here for the case $k=1$.
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.75\textwidth}
 \hline[1.25pt]
  & DoF & Sum of squares & Mean square \\
-Regression (Explained) & 1 & $SSR$ & $\frac{SSR}{1}$\\
-Error (Unexplained) & $n-2$ & $SSE$ & $\frac{SSE}{n-2}$ \\
-Total & $n-1$ & $SST$ & \\
+Regression (Explained) & 1 & SSR & $\frac{\mathrm{SSR}}{1}$\\
+Error (Unexplained) & $n-2$ & SSE & $\frac{\mathrm{SSE}}{n-2}$ \\
+Total & $n-1$ & SST & \\
 \hline[1.25pt]
 \end{tblr}
 \caption{Analysis of variance ``ANOVA" table for $k=1$}
@@ -1283,7 +1285,7 @@ Total & $n-1$ & $SST$ & \\
 \begin{itemize}
 \item The coefficient of determination, denoted $R^{2}$ measures the percentage of the total variation in $Y$ explained by variation in $X$. It is defined
 \begin{equation}
-R^{2} = \frac{SSR}{SST}.
+R^{2} = \frac{\mathrm{SSR}}{\mathrm{SST}}.
 \end{equation}
 In the case of simple regression, this reduces to 
 \begin{equation}
@@ -1292,9 +1294,9 @@ R^{2} = {\Corr_{X,Y}}^{2}.
 A high value of $R^{2}$ implies the variation is well modelled, in other words, the model does a good job at explaining changes in the dependent variable.
 \item The standard error of the estimate measures accuracy of the predicted values from the regression equation, and is defined as 
 \begin{equation}
-SEE = \sqrt{\frac{SSE}{n-2}} = \sqrt{MSE},
+\mathrm{SEE} = \sqrt{\frac{\mathrm{SSE}}{n-2}} = \sqrt{\mathrm{MSE}},
 \end{equation}
-recalling the expression for the $SSE$ given in equation \ref{sse}. A low $SEE$ implies the model is a better fit.
+recalling the expression for the SSE given in Equation \ref{SSE}. A low $SEE$ implies the model is a better fit.
 \end{itemize}
 \subsubsection{Constructing an F-statistic}
 \begin{itemize}
@@ -1304,11 +1306,11 @@ H_{0}: \text{slope coefficient}&=0 \hspace{1cm}\text{(All coefficients are 0)}, 
 H_{A}: \text{slope coefficient}&\neq0 \hspace{1cm}\text{(At least one coefficient is not 0)}.
 \end{align*}
 This is a one-tailed test (significance is the right-hand tail probability.
-\item The F stat is given by 
+\item The $F$-stat is given by 
 \begin{equation}
-F=\frac{\frac{SSR}{k}}{\frac{SSE}{n-k-1}}=\frac{MSR}{MSE},
+F=\frac{\frac{\mathrm{SSR}}{k}}{\frac{\mathrm{SSE}}{n-k-1}}=\frac{\mathrm{MSR}}{\mathrm{MSE}},
 \end{equation}
-and we can see that the critical F is determined by two degrees of freedom -- one in the numerator and one in the denominator.
+and we can see that the critical $F$ is determined by two degrees of freedom -- one in the numerator and one in the denominator.
 \end{itemize}
 \subsubsection{Regression coefficient t-test}
 \begin{itemize}
@@ -1323,7 +1325,7 @@ and the t-test statistic is constructed to be
 \end{equation}
 where the standard error, $s_{\widehat{b}_{1}}$ is defined
 \begin{equation}
-s_{\hat{b}_{1}} = \frac{SEE}{\sqrt{\sum(X_{i}-\overline{X})^{2}}}.
+s_{\hat{b}_{1}} = \frac{\mathrm{SEE}}{\sqrt{\sum(X_{i}-\overline{X})^{2}}}.
 \end{equation}
 \end{itemize}
 
@@ -1336,9 +1338,9 @@ s_{\hat{b}_{1}} = \frac{SEE}{\sqrt{\sum(X_{i}-\overline{X})^{2}}}.
 \item A confidence interval is a prediction interval around a predicted value. For example, the standard error of the estimate is a standard deviation around the forecast value.
 \item To come up with a confidence interval for predicted $Y$, we would use the standard error of forecast, $s_{f}$, due to joint uncertainty from intercept and slope estimates, and is defined as
 \begin{equation}
-{s_{f}}^{2} = SEE^{2}\left[ 1+\frac{1}{n}+\frac{(X-\overline{X})^{2}}{(n-1){s_{X}}^{2}}\right]. \label{sf}
+{s_{f}}^{2} = \mathrm{SEE}^{2}\left[ 1+\frac{1}{n}+\frac{(X-\overline{X})^{2}}{(n-1){s_{X}}^{2}}\right]. \label{sf}
 \end{equation}
-We can see in equation \ref{sf} that as $n\rightarrow\infty$, $s_{f}\rightarrow SEE$. Our confidence interval is then given by
+We can see in Equation \ref{sf} that as $n\rightarrow\infty$, $s_{f}\rightarrow \mathrm{SEE}$. Our confidence interval is then given by
 \begin{equation}
 \widehat{Y}\pm t_{c}\times s_{f},
 \end{equation}
@@ -1350,7 +1352,7 @@ where $t_{c}$ is two-tailed, with $n-2$ degrees of freedom.
 \item When the relationship between $S$ and $Y$ is not linear, fitting a linear model is no longer appropriate. We may however be able to linearise the relationship by transforming one or both of the variables.
 \end{itemize}
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,2,c] Q[m,2,c]}, width = 0.75\textwidth}
 \hline[1.25pt]
@@ -1370,9 +1372,9 @@ log -- log & $\ln(Y)$ vs $\ln(X)$ & $\ln(Y)=b_{0} + b_{1}\ln(X)$ \\
 \subsubsection{Types of data}
 \begin{itemize}
 \item Big Data includes the following
-\begin{table}[h!]
+\begin{table}[H]
 \centering
-\begin{tblr}{colspec = {Q[m,1,c] Q[m,2,c]}, width = 0.75\textwidth}
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,1.5,c]}, width = 0.65\textwidth}
 \hline[1.25pt]
 \SetCell[r=3,c=1]{c} Traditional & Financial Markets \\
 & Company financial statements \\
@@ -1388,9 +1390,9 @@ Internet of things & Anything on Wi-Fi \\
 \label{datatypes}
 \end{table}
 \item Data can also be quantified by volume, velocity and variety, which can be seen in the below table
-\begin{table}[h!]
+\begin{table}[H]
 \centering
-\begin{tblr}{colspec = {Q[m,1,c] Q[m,2,l]}, width = 0.6\textwidth}
+\begin{tblr}{colspec = {Q[m,1,c] Q[m,2,c]}, width = 0.6\textwidth}
 \hline[1.25pt]
 Volume & Grows by order of magnitude \\
 Velocity & Speed of transmission of data (real-time is low-latency) \\
@@ -1402,7 +1404,7 @@ Variety & Structure in which data is stored \\
 \end{table}
 
 \item Data structure varies in the following ways:
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,2,c]}, width = 0.6\textwidth}
 \hline[1.25pt]
@@ -1415,19 +1417,19 @@ Unstructured & Videos \\
 \label{datastructures}
 \end{table}
 \item Data science and data processing involve the extraction, processing, and visualisation of data. Data process involves the following steps:
-\begin{multicols}{2}
+\begin{multicols}{3}
 \begin{enumerate}
-\item Capture,
-\item Curation,
-\item Storage,
-\item Search,
-\item Transfer.
+\item[1.] Capture,
+\item[4.] Search,
+\item[2.] Curation,
+\item[5.] Transfer.
+\item[3.] Storage,
 \item[]
 \end{enumerate}
 \end{multicols}
 Visualisation of the depends on the type. Word clouds, may be used for more text-based data. Charts are better suited to numbers-based data
 \item Big data relies on high quality data. This must account for outliers, and so requires processing and organisation of data.
-\item AI refers to the simulation of human cognition
+\item AI refers to the simulation of human cognition.
 \item A neural network refers to replication of processes similar to those of the human brain
 \item Machine learning refers to a computer algorithm designed to learn, detect and recognise patterns through either supervised or unsupervised learning. Machine learning requires a lot of data:
 \begin{gather*}
@@ -1439,7 +1441,7 @@ Supervised learning requires the input and output data to be clearly labelled. U
 \item Under-fitting of data occurs when parameters are mis-interpreted as noise, and the model fails to identify legitimate patterns
 \end{itemize}
 \subsubsection{Applications to investment management}
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tblr}{colspec = {Q[m,1,l] Q[m,1,c]}, width = 0.75\textwidth}
 \hline[1.25pt]
