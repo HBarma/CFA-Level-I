@@ -1114,7 +1114,7 @@ The larger variance dof is 30, and the smaller variance has a dof of 40. Looking
 \begin{itemize}
 \item For a test of correlation, the null hypothesis is that the population correlation coefficient is 0, effectively saying the population is independently distributed. The $t$-statistic for this test is given by
 \begin{equation}
-\text{$t$-statistic} = \frac{r\sqrt{n-2}}{1-r^{2}}, \label{t-stat-corr}
+\text{$t$-statistic} =  \frac{r\sqrt{n-2}}{\sqrt{1-r^2}}, \label{t-stat-corr}
 \end{equation}
 where there are $n-2$ degrees of freedom. The Spearman rank correlation test gives a correlation coefficient $r$ that may be used in Equation \ref{t-stat-corr}, to give an indication of whether two data sets are correlated. This correlation coefficient $r$, is defined as
 \begin{equation}
@@ -1129,7 +1129,7 @@ where $d_{i}$ is the difference in rank between a pair of values in the two data
 \centering
 \begin{tblr}{colspec = {Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c] Q[m,1,c]}, width = 0.9\textwidth, rows = {fg = RedViolet}}
 \hline[1.25pt]
-\textbf{\{1\}} & \textbf{\{2\}} & \textbf{Rank 1} & \textbf{Rank 2} & $d$ & $d_{i}$ \\ \hline
+\textbf{\{1\}} & \textbf{\{2\}} & \textbf{Rank 1} & \textbf{Rank 2} & $d_{i}$ & $d_{i}^{2}$ \\ \hline
 100 & 65 & 1 & 2 & -1 & 1 \\
 120 & 80 & 4 & 4 & 0 & 0 \\
 104 & 71 & 2 & 3 & -1 & 1 \\
@@ -1457,5 +1457,6 @@ Supervised learning requires the input and output data to be clearly labelled. U
 \end{tblr}
 \caption{Applications of fintech and AI to investment management}
 \end{table}
+
 
 \end{document}
